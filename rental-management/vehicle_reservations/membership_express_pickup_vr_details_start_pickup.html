@@ -24,11 +24,11 @@
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down" style="max-width: 600px;">
                     <div class="modal-content">
                         <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
-                            <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Are You Sure?</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Ready to Start the Pick-up?</h5>
 
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
                         </div>
-                        <div class="modal-body px-5" style="position: relative; flex: 1 1 auto;">
+                        <div class="modal-body px-5 py-0" style="position: relative; flex: 1 1 auto;">
                             <div id="modal-inside-header" style="display: none;">
                                 <p style="margin-bottom: 0; font-size: 2rem; font-weight: 700;">Membership e-gift</p>
                             </div>
@@ -106,9 +106,46 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mb-4" style="float: right; display: flex; align-items: center; gap: 1rem;">
+                                <button
+                                    type="button"
+                                    class="btn btn-link"
+                                    data-bs-dismiss="modal"
+                                    style="
+                                        display: flex;
+                                        text-decoration: none;
+                                        color: #5d5d5d;
+                                        font-size: 0.9375rem;
+                                        line-height: initial;
+                                        align-items: center;
+                                        text-transform: uppercase;
+                                        gap: 0.25rem;
+                                        margin-left: auto;
+                                        height: fit-content;
+                                        font-weight: 600;
+                                        text-decoration: underline;
+                                    "
+                                >
+                                    Go Back
+                                </button>
+
+                                <a
+                                    href="#"
+                                    id="adjust_button"
+                                    class="btn btn-primary btn-lg btn-with-icon"
+                                    tabindex="-1"
+                                    role="button"
+                                    aria-disabled="false"
+                                    ata-bs-toggle="modal"
+                                    data-bs-target="#showPickupCheck"
+                                    style="display: flex; align-items: center; padding: 0.875rem 1.75rem; background-color: #fe7b10; border-radius: 8px; color: #fff; border: 0; height: auto;"
+                                >
+                                    <span style="">Continue to Pick-up</span><span class="material-icons-outlined btn-icon" style="margin-left: 0.25rem; margin-right: 0;">exit_to_app</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <div style="float: right; display: flex; align-items: center; gap: 1rem;">
+                        <div class="modal-footer" style="display: none;">
+                            <div style="float: right; display: none; align-items: center; gap: 1rem;">
                                 <button
                                     type="button"
                                     class="btn btn-link"
