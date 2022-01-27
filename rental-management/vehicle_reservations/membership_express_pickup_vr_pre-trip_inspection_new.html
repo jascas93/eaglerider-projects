@@ -19,7 +19,56 @@
 
     <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
         <main>
-            <style scoped=""></style>
+            <style scoped="">
+                .fw-500 {
+                    font-weight: 500 !important;
+                }
+                @media (max-width: 767px) {
+                    #page_title_text {
+                        text-align: left !important;
+                    }
+                    table#t01 {
+                        border: 0;
+                    }
+                    table#t01 thead {
+                        border: none;
+                        clip: rect(0 0 0 0);
+                        height: 1px;
+                        margin: -1px;
+                        overflow: hidden;
+                        padding: 0;
+                        position: absolute;
+                        width: 1px;
+                    }
+                    table#t01 tr {
+                        border-bottom: 3px solid #ddd;
+                        display: grid;
+                    }
+                    table#t01 td {
+                        border-bottom: 1px solid #ddd;
+                        display: block;
+                        font-size: 0.9em;
+                        text-align: right;
+                    }
+                    table#t01 td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-right: 10px;
+                    }
+                    table#t01 td:last-child {
+                        border-bottom: 0;
+                    }
+                    table#t01 tbody tr:nth-child(even) {
+                        background-color: #fffaf6;
+                    }
+
+                    p.table-cell-with-icons {
+                        justify-content: flex-end;
+                    }
+                }
+            </style>
             <header>
                 <div class="px-3 py-2 bg-dark text-white visible-for-large" style="background-color: #303030 !important; display: none;">
                     <div class="container">
@@ -225,13 +274,14 @@
                     <div id="canvas-body-header" style="background-color: #efefef;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="page_title_hdr" style="display: flex; justify-content: space-between; padding: 1rem 0; width: auto; gap: 1rem;">
-                                        <div style="width: auto;">
+                                <div class="col-12">
+                                    <div class="row mx-0 py-3">
+                                        <div class="col-12 col-md-6 px-0">
                                             <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-transform: uppercase;">Pre-Trip Vehicle Condition Inspection</h3>
                                         </div>
-                                        <div style="width: auto;">
-                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600;">RLAX010000107771</h3>
+
+                                        <div class="col-12 col-md-6 px-0">
+                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-align: right;">RLAX010000107771</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -251,7 +301,7 @@
                                 <div class="col-12">
                                     <div style="background-color: #ffecdd; padding: 1rem 0;">
                                         <div class="row" style="">
-                                            <div class="small-12 medium-12 columns">
+                                            <div class="col-12">
                                                 <div>
                                                     <div style="display: flex; align-items: center; padding: 0.5rem 0rem; color: #fe7b10; border-bottom: 2px solid; width: fit-content;">
                                                         <span style="line-height: initial; margin-left: 0.25rem; font-weight: 800; font-family: 'Roboto Slab', serif; font-size: 0.9375rem;">Membership Express Pick-up</span>
@@ -290,25 +340,38 @@
                                 <p style="margin-bottom: 0; font-size: 1.25rem;">Vehicle Information</p>
                             </div>
                             <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-striped" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
-                                        <thead>
+                                <div class="table-wrapper">
+                                    <table class="table table-striped" id="t01" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
+                                        <thead style="">
                                             <tr>
-                                                <th scope="col" style="">Transaction Time</th>
-                                                <th scope="col">Vehicle Model</th>
-                                                <th scope="col">Vehicle Code</th>
-                                                <th scope="col">Last Odometer</th>
+                                                <th style="" scope="col">
+                                                    Transaction<br />
+                                                    Time
+                                                </th>
+
+                                                <th scope="col">
+                                                    Vehicle<br />
+                                                    Model
+                                                </th>
+                                                <th scope="col">
+                                                    Vehicle<br />
+                                                    Code
+                                                </th>
+                                                <th scope="col">
+                                                    Last<br />
+                                                    Odometer
+                                                </th>
                                                 <th scope="col">Agent</th>
                                             </tr>
                                         </thead>
                                         <tbody style="border-top: initial;">
                                             <tr>
-                                                <td>Dec 1, 2021 10:32 AM PST</td>
+                                                <td data-label="Transaction Time">Dec 1, 2021 10:32 AM PST</td>
 
-                                                <td>Harley-Davidson® Electra Glide®</td>
-                                                <td style="color: #fe7b10; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase;">EC-EG-J0045</td>
-                                                <td>13,100 mi</td>
-                                                <td>Jason Castillo (Los Angeles)</td>
+                                                <td data-label="Vehicle Model">Harley-Davidson® Electra Glide®</td>
+                                                <td data-label="Vehicle Code"><span style="color: #fe7b10; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase;">EC-EG-J0045</span></td>
+                                                <td data-label="Last Odometer">13,100 mi</td>
+                                                <td data-label="Agent">Jason Castillo (Los Angeles)</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -421,9 +484,6 @@
                                                     width: fit-content;
                                                     margin: 2rem auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-form-type="other"
-                                                data-dashlane-label="true"
                                             >
                                                 <span class="material-icons-outlined btn-icon">add</span><span style="">Add Images</span>
                                             </a>
@@ -675,9 +735,6 @@
                                     role="button"
                                     aria-disabled="false"
                                     style="display: flex; align-items: center; padding: 0.875rem 1.75rem; background-color: #fe7b10; border-radius: 8px; color: #fff; border: 1px solid; height: auto; width: fit-content; margin-right: auto;"
-                                    data-dashlane-rid="fdcc2540b277f285"
-                                    data-form-type="other"
-                                    data-dashlane-label="true"
                                 >
                                     <span class="material-icons btn-icon">save</span><span style="">Save</span>
                                 </a>
@@ -731,7 +788,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-3">
-                                <form data-dashlane-rid="e3f2ad65cda4c0a8" data-form-type="newsletter">
+                                <form >
                                     <h5 style="color: #fff;">Subscribe to our newsletter</h5>
                                     <p style="color: #fff;">Monthly digest of whats new and exciting from us.</p>
                                     <div class="d-flex w-100 gap-2">
@@ -741,18 +798,11 @@
                                             type="text"
                                             class="form-control"
                                             placeholder="Email address"
-                                            data-dashlane-rid="1e2f4377b589492a"
-                                            data-kwimpalastatus="alive"
-                                            data-kwimpalaid="1643118458329-1"
-                                            data-form-type="email"
                                         />
                                         <button
                                             class="btn btn-primary"
                                             type="button"
                                             style="background-color: #fe7b10; border-color: #fe7b10;"
-                                            data-dashlane-rid="fe768811c0ec68fa"
-                                            data-dashlane-label="true"
-                                            data-form-type="action,subscribe"
                                         >
                                             Subscribe
                                         </button>
