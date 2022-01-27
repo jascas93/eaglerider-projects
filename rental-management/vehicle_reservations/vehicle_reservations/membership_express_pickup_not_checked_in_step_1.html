@@ -1889,14 +1889,9 @@
 
         <script type="text/javascript">
             function pageRedirect() {
-                var delay = 4000; // time in milliseconds
-
-                // Display message
-                document.getElementById("message").innerHTML = "Please wait, you are redirecting to the new page.";
-
-                setTimeout(function () {
-                    window.location = "https://www.google.com";
-                }, delay);
+                setTimeout(function() {
+                    window.location.href = 'https://www.google.com';
+                }, 5000);
             }
         </script>
     </body>
