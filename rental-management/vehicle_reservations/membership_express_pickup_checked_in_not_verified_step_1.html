@@ -20,6 +20,9 @@
     <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
         <main>
             <style scoped="">
+                #page_title_text {
+                    text-align: left !important;
+                }
                 .progress-tracker {
                     display: flex;
                     padding: 0;
@@ -162,6 +165,9 @@
                     }
                 }
                 @media (max-width: 576px) {
+                    .save_time_checkin {
+                        flex-flow: wrap;
+                    }
                     table#t01 {
                         border: 0;
                     }
@@ -177,7 +183,7 @@
                     }
                     table#t01 tr {
                         border-bottom: 3px solid #ddd;
-                        display: block;
+                        display: grid;
                     }
                     table#t01 td {
                         border-bottom: 1px solid #ddd;
@@ -219,16 +225,16 @@
                                         <p style="margin-bottom: 0; font-size: 1.25rem;">Renter's Reservation Info</p>
                                     </div>
                                     <div style="border: 1px solid #dadada;">
-                                        <div class="row mx-0 py-3" data-dashlane-rid="1c16a251c86db574">
+                                        <div class="row mx-0 py-3">
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" data-dashlane-rid="00e528465b129a93" data-form-type="" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" />
                                                     <label for="floatingSelectGrid">First Name</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" />
                                                     <label for="floatingInput">Middle Name</label>
                                                 </div>
                                             </div>
@@ -243,8 +249,6 @@
                                                         disabled=""
                                                         readonly=""
                                                         style=""
-                                                        data-dashlane-rid="00e528465b129a93"
-                                                        data-form-type="name,first"
                                                     />
                                                     <label for="floatingSelectGrid">Last Name</label>
                                                 </div>
@@ -258,9 +262,7 @@
                                                         aria-label="Pick-up Location"
                                                         disabled=""
                                                         readonly=""
-                                                        data-dashlane-rid="11ebde80d5400dbf"
                                                         style="background-color: #dadada;"
-                                                        data-form-type="address,country"
                                                     >
                                                         <option selected="">United States</option>
                                                         <option value="1">One</option>
@@ -281,15 +283,13 @@
                                                         disabled=""
                                                         readonly=""
                                                         style=""
-                                                        data-dashlane-rid="00e528465b129a93"
-                                                        data-form-type="name,first"
                                                     />
                                                     <label for="floatingSelectGrid">Street Address</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="name" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" />
                                                     <label for="floatingInput">Address 2</label>
                                                 </div>
                                             </div>
@@ -304,8 +304,6 @@
                                                         disabled=""
                                                         readonly=""
                                                         style=""
-                                                        data-dashlane-rid="00e528465b129a93"
-                                                        data-form-type="name,first"
                                                     />
                                                     <label for="floatingSelectGrid">City</label>
                                                 </div>
@@ -318,9 +316,7 @@
                                                         aria-label="Pick-up Location"
                                                         disabled=""
                                                         readonly=""
-                                                        data-dashlane-rid="11ebde80d5400dbf"
                                                         style="background-color: #dadada;"
-                                                        data-form-type="address,region"
                                                     >
                                                         <option selected="">California</option>
                                                         <option value="1">One</option>
@@ -341,8 +337,6 @@
                                                         disabled=""
                                                         readonly=""
                                                         style=""
-                                                        data-dashlane-rid="00e528465b129a93"
-                                                        data-form-type="name,first"
                                                     />
                                                     <label for="floatingSelectGrid">Zip / Postal Code</label>
                                                 </div>
@@ -355,7 +349,7 @@
                                         <p style="margin-bottom: 0; font-size: 1.25rem;">Driver License Info</p>
                                     </div>
                                     <div style="border: 1px solid #dadada;">
-                                        <div class="row mx-0 py-0" data-dashlane-rid="1c16a251c86db574">
+                                        <div class="row mx-0 py-0">
                                             <div class="col-12 py-3 d-flex justify-content-center" style="background-color: #fff7f1;">
                                                 <div
                                                     style="background-image: url(https://jascas93.github.io/web-assets/dl_dummy_front.png); height: 250px; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat;"
@@ -363,37 +357,37 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mx-0 py-3" data-dashlane-rid="1c16a251c86db574">
+                                        <div class="row mx-0 py-3">
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" style="" data-dashlane-rid="00e528465b129a93" data-form-type="" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" style="" />
                                                     <label for="floatingSelectGrid">First Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" />
                                                     <label for="floatingInput">Middle Name</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" style="" data-dashlane-rid="00e528465b129a93" data-form-type="name,first" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" style="" />
                                                     <label for="floatingSelectGrid">Last Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="11/21/1980" style="" data-dashlane-rid="00e528465b129a93" data-form-type="name,first" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="11/21/1980" style="" />
                                                     <label for="floatingSelectGrid">Date of Birth<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mx-0 py-3" data-dashlane-rid="1c16a251c86db574">
+                                        <div class="row mx-0 py-3">
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="I1234568" style="background-color: #fff7f1;" data-dashlane-rid="00e528465b129a93" data-form-type="" />
+                                                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="I1234568" style="background-color: #fff7f1;" />
                                                     <label for="floatingSelectGrid">Driver License Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                                 </div>
                                             </div>
@@ -407,8 +401,6 @@
                                                         placeholder=""
                                                         value="03/05/2026"
                                                         style="background-color: #fff7f1;"
-                                                        data-dashlane-rid="00e528465b129a93"
-                                                        data-form-type=""
                                                     />
                                                     <label for="floatingSelectGrid">Expiration Date<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                                 </div>
@@ -416,7 +408,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,country">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                         <option selected="">United States</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -428,7 +420,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,region">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                         <option selected="">California</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -440,7 +432,7 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-floating mb-3">
-                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="background-color: #fff7f1;" data-form-type="address,region">
+                                                    <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" style="background-color: #fff7f1;">
                                                         <option selected="">Yes</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -450,7 +442,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mx-0 pb-0" data-dashlane-rid="1c16a251c86db574">
+                                        <div class="row mx-0 pb-0">
                                             <div
                                                 class="col-12"
                                                 style="
@@ -752,13 +744,14 @@
                     <div id="canvas-body-header" style="background-color: #efefef;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="page_title_hdr" style="display: flex; justify-content: space-between; padding: 1rem 0; width: auto; gap: 1rem;">
-                                        <div style="width: auto;">
+                                <div class="col-12">
+                                    <div class="row mx-0 py-3">
+                                        <div class="col-12 col-md-6 px-0">
                                             <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-transform: uppercase;">Vehicle Reservation Pick-Up</h3>
                                         </div>
-                                        <div style="width: auto;">
-                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600;">RLAX010000107771</h3>
+
+                                        <div class="col-12 col-md-6 px-0">
+                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-align: right;">RLAX010000107771</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -928,7 +921,7 @@
 
                         <div class="row mt-5">
                             <div class="col-lg-12">
-                                <div style="background-color: #ffecdd; padding: 0.25rem 1rem; border-radius: 5px; border: 1px solid #ffac71; display: flex; align-items: center; justify-content: space-between;">
+                                <div class="save_time_checkin" style="background-color: #ffecdd; padding: 0.25rem 1rem; border-radius: 5px; border: 1px solid #ffac71; display: flex; align-items: center; justify-content: space-between;">
                                     <p style="margin-bottom: 0; color: #3a3a3a; font-weight: 500;">Send a link to your renter to complete their Online Check-In.</p>
 
                                     <button type="button" class="btn btn-link px-0" id="liveToastBtn" onclick="pageRedirect();" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; height: auto;">
@@ -987,9 +980,6 @@
                                                     width: fit-content;
                                                     margin-left: auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-dashlane-label="true"
-                                                data-form-type=""
                                             >
                                                 <span class="material-icons btn-icon">policy</span><span style="">Verify Now</span>
                                             </a>
@@ -998,13 +988,13 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" data-dashlane-rid="00e528465b129a93" data-form-type="" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">First Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" />
                                                 <label for="floatingInput">Middle Name</label>
                                             </div>
                                         </div>
@@ -1019,8 +1009,6 @@
                                                     disabled=""
                                                     readonly=""
                                                     style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
                                                 />
                                                 <label for="floatingSelectGrid">Last Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1036,9 +1024,6 @@
                                                     value="11/21/1980"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">Date of Birth<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1055,9 +1040,6 @@
                                                     value="I1234568"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">Driver License Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1073,9 +1055,6 @@
                                                     value="03/05/2026"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">Expiration Date<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1088,9 +1067,7 @@
                                                     aria-label="Pick-up Location"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
                                                     style="background-color: #dadada;"
-                                                    data-form-type="address,country"
                                                 >
                                                     <option selected="">Yes</option>
                                                     <option value="1">One</option>
@@ -1109,9 +1086,7 @@
                                                     aria-label="Pick-up Location"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
                                                     style="background-color: #dadada;"
-                                                    data-form-type="address,region"
                                                 >
                                                     <option selected="">United States</option>
                                                     <option value="1">One</option>
@@ -1129,9 +1104,7 @@
                                                     aria-label="Pick-up Location"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
                                                     style="background-color: #dadada;"
-                                                    data-form-type="address,region"
                                                 >
                                                     <option selected="">California</option>
                                                     <option value="1">One</option>
@@ -1152,7 +1125,7 @@
                             </div>
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada;">
-                                    <div class="row mx-0 py-3" data-dashlane-rid="1c16a251c86db574">
+                                    <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
                                                 <input
@@ -1164,8 +1137,6 @@
                                                     disabled=""
                                                     readonly=""
                                                     style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
                                                 />
                                                 <label for="floatingSelectGrid">Email<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1181,8 +1152,6 @@
                                                     disabled=""
                                                     readonly=""
                                                     style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
                                                 />
                                                 <label for="floatingSelectGrid">Mobile Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1195,9 +1164,7 @@
                                                     aria-label="Pick-up Location"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
                                                     style="background-color: #dadada;"
-                                                    data-form-type="address,country"
                                                 >
                                                     <option selected="">United States</option>
                                                     <option value="1">One</option>
@@ -1217,16 +1184,13 @@
                                                     value="11860 S La Cienega Blvd"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">Street Address<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="name" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" />
                                                 <label for="floatingInput">Address 2</label>
                                             </div>
                                         </div>
@@ -1240,9 +1204,6 @@
                                                     value="Hawthorne"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">City<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1255,9 +1216,7 @@
                                                     aria-label="Pick-up Location"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
                                                     style="background-color: #dadada;"
-                                                    data-form-type="address,region"
                                                 >
                                                     <option selected="">California</option>
                                                     <option value="1">One</option>
@@ -1277,9 +1236,6 @@
                                                     value="90250"
                                                     disabled=""
                                                     readonly=""
-                                                    data-dashlane-rid="3846c5ce44289582"
-                                                    data-form-type=""
-                                                    style=""
                                                 />
                                                 <label for="floatingInput">Zip / Postal Code<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
@@ -1306,9 +1262,6 @@
                                                     width: fit-content;
                                                     margin-left: auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-dashlane-label="true"
-                                                data-form-type=""
                                             >
                                                 <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
                                             </a>
@@ -1381,7 +1334,7 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;" data-dashlane-rid="b8fc6ea2d4944365" data-form-type=""></textarea>
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea>
                                                 <label for="floatingTextarea2"></label>
                                             </div>
                                         </div>
@@ -1407,9 +1360,6 @@
                                                     width: fit-content;
                                                     margin-left: auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-form-type="other"
-                                                data-dashlane-label="true"
                                             >
                                                 <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
                                             </a>
@@ -1428,9 +1378,6 @@
                                     role="button"
                                     aria-disabled="false"
                                     style="display: flex; align-items: center; padding: 0.875rem 1.75rem; background-color: fe7b10; border-radius: 8px; color: #fff; border: 1px solid; height: auto; width: fit-content; margin-left: auto;"
-                                    data-dashlane-rid="fdcc2540b277f285"
-                                    data-form-type="other"
-                                    data-dashlane-label="true"
                                 >
                                     <span style="">Save &amp; Continue</span><span class="material-icons-outlined" style="margin-left: 0.25rem;">navigate_next</span>
                                 </a>
@@ -1484,7 +1431,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-3">
-                                <form data-dashlane-rid="e3f2ad65cda4c0a8" data-form-type="newsletter">
+                                <form>
                                     <h5 style="color: #fff;">Subscribe to our newsletter</h5>
                                     <p style="color: #fff;">Monthly digest of whats new and exciting from us.</p>
                                     <div class="d-flex w-100 gap-2">
@@ -1494,18 +1441,11 @@
                                             type="text"
                                             class="form-control"
                                             placeholder="Email address"
-                                            data-dashlane-rid="1e2f4377b589492a"
-                                            data-kwimpalastatus="alive"
-                                            data-kwimpalaid="1643118458329-1"
-                                            data-form-type="email"
                                         />
                                         <button
                                             class="btn btn-primary"
                                             type="button"
                                             style="background-color: #fe7b10; border-color: #fe7b10;"
-                                            data-dashlane-rid="fe768811c0ec68fa"
-                                            data-dashlane-label="true"
-                                            data-form-type="action,subscribe"
                                         >
                                             Subscribe
                                         </button>
