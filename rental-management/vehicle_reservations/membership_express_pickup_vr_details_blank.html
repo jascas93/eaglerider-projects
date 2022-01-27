@@ -19,7 +19,93 @@
 
     <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
         <main>
-            <style scoped=""></style>
+            <style scoped="">
+                .fw-500 {
+                    font-weight: 500 !important;
+                }
+                @media (max-width: 767px) {
+                    #page_title_text {
+                        text-align: left !important;
+                    }
+                    table#t01 {
+                        border: 0;
+                    }
+                    table#t01 thead {
+                        border: none;
+                        clip: rect(0 0 0 0);
+                        height: 1px;
+                        margin: -1px;
+                        overflow: hidden;
+                        padding: 0;
+                        position: absolute;
+                        width: 1px;
+                    }
+                    table#t01 tr {
+                        border-bottom: 3px solid #ddd;
+                        display: block;
+                    }
+                    table#t01 td {
+                        border-bottom: 1px solid #ddd;
+                        display: block;
+                        font-size: 0.9em;
+                        text-align: right;
+                    }
+                    table#t01 td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-right: 10px;
+                    }
+                    table#t01 td:last-child {
+                        border-bottom: 0;
+                    }
+                    table#t01 tbody tr:nth-child(even) {
+                        background-color: #fffaf6;
+                    }
+
+                    table#t02 {
+                        border: 0;
+                    }
+                    table#t02 thead {
+                        border: none;
+                        clip: rect(0 0 0 0);
+                        height: 1px;
+                        margin: -1px;
+                        overflow: hidden;
+                        padding: 0;
+                        position: absolute;
+                        width: 1px;
+                    }
+                    table#t02 tr {
+                        border-bottom: 3px solid #ddd;
+                        display: block;
+                    }
+                    table#t02 td {
+                        border-bottom: 1px solid #ddd;
+                        display: block;
+                        font-size: 0.9em;
+                        text-align: right;
+                    }
+                    table#t02 td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-right: 10px;
+                    }
+                    table#t02 td:last-child {
+                        border-bottom: 0;
+                    }
+                    table#t02 tbody tr:nth-child(even) {
+                        background-color: #fffaf6;
+                    }
+
+                    p.table-cell-with-icons {
+                        justify-content: flex-end;
+                    }
+                }
+            </style>
             <div class="modal fade" id="showAssignVehicle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="showAssignVehicleLabel1" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen">
                     <div class="modal-content">
@@ -29,22 +115,22 @@
                         </div>
                         <div class="modal-body" style="padding: 1.5rem;">
                             <div>
-                                <div class="row mt-3" data-dashlane-rid="1c16a251c86db574">
+                                <div class="row mt-3">
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Vehicle Code" value="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="Vehicle Code" value="" />
                                             <label for="floatingInput">Vehicle Code</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="License Plate #" value="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                            <input type="text" class="form-control" id="floatingInputGrid" placeholder="License Plate #" value="" />
                                             <label for="floatingInput">License Plate #</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,country">
+                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                 <option selected="">Harley-Davidson® Electra Glide®</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -55,7 +141,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,country">
+                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                 <option selected="">All Vehicle Statuses</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -66,7 +152,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,country">
+                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                 <option selected="">All Colors</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -77,7 +163,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating mb-3">
-                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" data-dashlane-rid="11ebde80d5400dbf" style="" data-form-type="address,country">
+                                            <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location">
                                                 <option selected="">All Locations</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -87,7 +173,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mb-3" data-dashlane-rid="1c16a251c86db574" data-form-type="other">
+                                <div class="row mb-3">
                                     <div class="col-md-12">
                                         <a
                                             href="#"
@@ -108,9 +194,6 @@
                                                 width: fit-content;
                                                 margin-left: auto;
                                             "
-                                            data-dashlane-rid="fdcc2540b277f285"
-                                            data-dashlane-label="true"
-                                            data-form-type=""
                                         >
                                             <span class="material-icons-outlined btn-icon">search</span><span style="">Search</span>
                                         </a>
@@ -197,9 +280,6 @@
                                                                 width: fit-content;
                                                                 margin-left: auto;
                                                             "
-                                                            data-dashlane-rid="fdcc2540b277f285"
-                                                            data-dashlane-label="true"
-                                                            data-form-type=""
                                                         >
                                                             <span style="">Assign</span>
                                                         </a>
@@ -420,13 +500,14 @@
                     <div id="canvas-body-header" style="background-color: #efefef;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="page_title_hdr" style="display: flex; justify-content: space-between; padding: 1rem 0; width: auto; gap: 1rem;">
-                                        <div style="width: auto;">
+                                <div class="col-12">
+                                    <div class="row mx-0 py-3">
+                                        <div class="col-12 col-md-6 px-0">
                                             <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-transform: uppercase;">Vehicle Reservation Details</h3>
                                         </div>
-                                        <div style="width: auto;">
-                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600;">RLAX010000107771</h3>
+
+                                        <div class="col-12 col-md-6 px-0">
+                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-align: right;">RLAX010000107771</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -584,34 +665,34 @@
                             </div>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-lg-12">
+                            <div class="col-12">
                                 <p style="margin-bottom: 0; font-size: 1.25rem;">Reservation Details</p>
                             </div>
-                            <div class="col-lg-12">
-                                <div class="table-responsive">
-                                    <table class="table table-striped" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
-                                        <thead>
+                            <div class="col-12">
+                                <div class="table-wrapper">
+                                    <table class="table table-striped" id="t01" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
+                                        <thead style="">
                                             <tr>
-                                                <th scope="col" style="">
-                                                    Submitted<br>
+                                                <th style="" scope="col">
+                                                    Submitted<br />
                                                     At
                                                 </th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">
-                                                    Club<br>
+                                                    Club<br />
                                                     Member
                                                 </th>
                                                 <th scope="col">
-                                                    Checked<br>
+                                                    Checked<br />
                                                     In
                                                 </th>
                                                 <th scope="col">
-                                                    Driver<br>
+                                                    Driver<br />
                                                     License
                                                 </th>
                                                 <th scope="col">Product</th>
                                                 <th scope="col">
-                                                    Sales<br>
+                                                    Sales<br />
                                                     Channel
                                                 </th>
                                                 <th scope="col">Company</th>
@@ -619,26 +700,26 @@
                                         </thead>
                                         <tbody style="border-top: initial;">
                                             <tr>
-                                                <td>Dec 1, 2021 8:50 AM PST</td>
-                                                <td style="color: #198754; font-weight: 500; letter-spacing: 0.25px;">Confirmed</td>
-                                                <td>
-                                                    <div style="display: flex; align-items: center; color: #198754; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle </span> <span>Yes</span>
-                                                    </div>
+                                                <td data-label="Submitted At">Dec 1, 2021 8:50 AM PST</td>
+                                                <td data-label="Status"><span class="text-success fw-500">Confirmed</span></td>
+                                                <td data-label="Club Member">
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #198754; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle </span>Yes
+                                                    </p>
                                                 </td>
-                                                <td>
-                                                    <div style="display: flex; align-items: center; color: #dc3545; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span> <span>No</span>
-                                                    </div>
+                                                <td data-label="Checked-In">
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span>No
+                                                    </p>
                                                 </td>
-                                                <td>
-                                                    <div style="display: flex; align-items: center; color: #dc3545; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span> <span>Not Verified</span>
-                                                    </div>
+                                                <td data-label="Driver License">
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span>No
+                                                    </p>
                                                 </td>
-                                                <td>Bike</td>
-                                                <td>Retail</td>
-                                                <td></td>
+                                                <td data-label="Product">Bike</td>
+                                                <td data-label="Sales Channel">Bike</td>
+                                                <td data-label="Company">-</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -910,11 +991,11 @@
                                 <p style="margin-bottom: 0; font-size: 1.25rem;">Payment Details</p>
                             </div>
                             <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-striped" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
-                                        <thead>
+                                <div class="table-wrapper">
+                                    <table class="table table-striped" id="t02" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
+                                        <thead style="">
                                             <tr>
-                                                <th scope="col" style="">
+                                                <th style="" scope="col">
                                                     Trx.<br />
                                                     Date
                                                 </th>
@@ -945,16 +1026,18 @@
                                         </thead>
                                         <tbody style="border-top: initial;">
                                             <tr>
-                                                <td style="color: #fe7b19; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase;">Dec 1, 2021</td>
-                                                <td>$208.75</td>
+                                                <td data-label="Trx. Date"><span style="font-weight: 600; color: #fe7b10;">DEC 1, 2021</span></td>
+                                                <td data-label="Amount">$208.75</td>
 
-                                                <td>Payment</td>
-                                                <td>Credit Card</td>
-                                                <td>VISA****1111</td>
-                                                <td>Jason Castillo</td>
-                                                <td>Los Angeles</td>
-                                                <td></td>
-                                                <td style="color: #06ac3f; font-weight: 600; letter-spacing: 0.25px;">Success</td>
+                                                <td data-label="Trx. Type">Payment</td>
+                                                <td data-label="Payment Method">Credit Card</td>
+                                                <td data-label="Account Detail">VISA****1111</td>
+                                                <td data-label="Taken By">Jason Castillo</td>
+                                                <td data-label="Payment Loc.">Los Angeles</td>
+                                                <td data-label="Company">-</td>
+                                                <td data-label="Status">
+                                                    <span class="text-success" style="font-weight: 500;">Success</span>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -967,82 +1050,40 @@
                             </div>
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada;">
-                                    <div class="row mx-0 py-3" data-dashlane-rid="1c16a251c86db574">
+                                    <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" data-dashlane-rid="00e528465b129a93" data-form-type="" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">First Name</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" />
                                                 <label for="floatingInput">Middle Name</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="Castillo"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">Last Name</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="jcastillo@eaglerider.com"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="jcastillo@eaglerider.com" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">Email</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="phone"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="310-536-6777"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="phone" class="form-control" id="floatingInputGrid" placeholder="" value="310-536-6777" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">Mobile Number</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
-                                                    style="background-color: #dadada;"
-                                                    data-form-type="address,country"
-                                                >
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled="" readonly="" style="background-color: #dadada;">
                                                     <option selected="">United States</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
@@ -1053,56 +1094,25 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="address"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="11860 S La Cienega Blvd"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="address" class="form-control" id="floatingInputGrid" placeholder="" value="11860 S La Cienega Blvd" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">Street Address</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" data-dashlane-rid="3846c5ce44289582" data-form-type="name" />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" />
                                                 <label for="floatingInput">Address 2</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="Hawthorne"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="Hawthorne" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">City</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-                                                    data-dashlane-rid="11ebde80d5400dbf"
-                                                    style="background-color: #dadada;"
-                                                    data-form-type="address,region"
-                                                >
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled="" readonly="" style="background-color: #dadada;">
                                                     <option selected="">California</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
@@ -1113,18 +1123,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="90250"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                    data-dashlane-rid="00e528465b129a93"
-                                                    data-form-type="name,first"
-                                                />
+                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="90250" disabled="" readonly="" style="" />
                                                 <label for="floatingSelectGrid">Zip / Postal Code</label>
                                             </div>
                                         </div>
@@ -1150,9 +1149,6 @@
                                                     width: fit-content;
                                                     margin-left: auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-dashlane-label="true"
-                                                data-form-type=""
                                             >
                                                 <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
                                             </a>
@@ -1170,7 +1166,7 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;" data-dashlane-rid="b8fc6ea2d4944365" data-form-type=""></textarea>
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea>
                                                 <label for="floatingTextarea2"></label>
                                             </div>
                                         </div>
@@ -1196,9 +1192,6 @@
                                                     width: fit-content;
                                                     margin-left: auto;
                                                 "
-                                                data-dashlane-rid="fdcc2540b277f285"
-                                                data-form-type="other"
-                                                data-dashlane-label="true"
                                             >
                                                 <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
                                             </a>
@@ -1255,283 +1248,15 @@
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-3">
-                                <form data-dashlane-rid="e3f2ad65cda4c0a8" data-form-type="newsletter">
+                                <form>
                                     <h5 style="color: #fff;">Subscribe to our newsletter</h5>
                                     <p style="color: #fff;">Monthly digest of whats new and exciting from us.</p>
                                     <div class="d-flex w-100 gap-2">
                                         <label for="newsletter1" class="visually-hidden">Email address</label>
-                                        <input
-                                            id="newsletter1"
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="Email address"
-                                            data-dashlane-rid="1e2f4377b589492a"
-                                            data-kwimpalastatus="alive"
-                                            data-kwimpalaid="1643118458329-1"
-                                            data-form-type="email"
-                                        />
-                                        <button
-                                            class="btn btn-primary"
-                                            type="button"
-                                            style="background-color: #fe7b10; border-color: #fe7b10;"
-                                            data-dashlane-rid="fe768811c0ec68fa"
-                                            data-dashlane-label="true"
-                                            data-form-type="action,subscribe"
-                                        >
+                                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
+                                        <button class="btn btn-primary" type="button" style="background-color: #fe7b10; border-color: #fe7b10;">
                                             Subscribe
                                         </button>
-                                        <span
-                                            data-dashlanecreated="true"
-                                            style="
-                                                color: initial;
-                                                font: initial;
-                                                font-feature-settings: initial;
-                                                font-kerning: initial;
-                                                font-optical-sizing: initial;
-                                                font-synthesis: initial;
-                                                font-variation-settings: initial;
-                                                forced-color-adjust: initial;
-                                                text-orientation: initial;
-                                                text-rendering: initial;
-                                                -webkit-font-smoothing: initial;
-                                                -webkit-locale: initial;
-                                                -webkit-text-orientation: initial;
-                                                -webkit-writing-mode: initial;
-                                                writing-mode: initial;
-                                                zoom: initial;
-                                                accent-color: initial;
-                                                place-content: initial;
-                                                place-items: initial;
-                                                place-self: initial;
-                                                alignment-baseline: initial;
-                                                animation: initial;
-                                                app-region: initial;
-                                                appearance: initial;
-                                                aspect-ratio: initial;
-                                                backdrop-filter: initial;
-                                                backface-visibility: initial;
-                                                background: url('chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/injected/logo-autofill-known.svg') center center / contain no-repeat;
-                                                background-blend-mode: initial;
-                                                baseline-shift: initial;
-                                                block-size: initial;
-                                                border-block: initial;
-                                                border: none;
-                                                border-radius: initial;
-                                                border-collapse: initial;
-                                                border-end-end-radius: initial;
-                                                border-end-start-radius: initial;
-                                                border-inline: initial;
-                                                border-start-end-radius: initial;
-                                                border-start-start-radius: initial;
-                                                bottom: initial;
-                                                box-shadow: initial;
-                                                box-sizing: initial;
-                                                break-after: initial;
-                                                break-before: initial;
-                                                break-inside: initial;
-                                                buffered-rendering: initial;
-                                                caption-side: initial;
-                                                caret-color: initial;
-                                                clear: initial;
-                                                clip: initial;
-                                                clip-path: initial;
-                                                clip-rule: initial;
-                                                color-interpolation: initial;
-                                                color-interpolation-filters: initial;
-                                                color-rendering: initial;
-                                                color-scheme: initial;
-                                                columns: initial;
-                                                column-fill: initial;
-                                                gap: initial;
-                                                column-rule: initial;
-                                                column-span: initial;
-                                                contain: initial;
-                                                contain-intrinsic-block-size: initial;
-                                                contain-intrinsic-size: initial;
-                                                contain-intrinsic-inline-size: initial;
-                                                content: initial;
-                                                content-visibility: initial;
-                                                counter-increment: initial;
-                                                counter-reset: initial;
-                                                counter-set: initial;
-                                                cursor: initial;
-                                                cx: initial;
-                                                cy: initial;
-                                                d: initial;
-                                                display: inline;
-                                                dominant-baseline: initial;
-                                                empty-cells: initial;
-                                                fill: initial;
-                                                fill-opacity: initial;
-                                                fill-rule: initial;
-                                                filter: initial;
-                                                flex: initial;
-                                                flex-flow: initial;
-                                                float: initial;
-                                                flood-color: initial;
-                                                flood-opacity: initial;
-                                                grid: initial;
-                                                grid-area: initial;
-                                                height: 16px;
-                                                hyphens: initial;
-                                                image-orientation: initial;
-                                                image-rendering: initial;
-                                                inline-size: initial;
-                                                inset-block: initial;
-                                                inset-inline: initial;
-                                                isolation: initial;
-                                                left: 817.938px;
-                                                letter-spacing: initial;
-                                                lighting-color: initial;
-                                                line-break: initial;
-                                                list-style: initial;
-                                                margin-block: initial;
-                                                margin: initial;
-                                                margin-inline: initial;
-                                                marker: initial;
-                                                mask: initial;
-                                                mask-type: initial;
-                                                max-block-size: initial;
-                                                max-height: initial;
-                                                max-inline-size: initial;
-                                                max-width: initial;
-                                                min-block-size: initial;
-                                                min-height: initial;
-                                                min-inline-size: initial;
-                                                min-width: 16px;
-                                                mix-blend-mode: initial;
-                                                object-fit: initial;
-                                                object-position: initial;
-                                                offset: initial;
-                                                opacity: 1;
-                                                order: initial;
-                                                origin-trial-test-property: initial;
-                                                orphans: initial;
-                                                outline: initial;
-                                                outline-offset: initial;
-                                                overflow-anchor: initial;
-                                                overflow-clip-margin: initial;
-                                                overflow-wrap: initial;
-                                                overflow: initial;
-                                                overscroll-behavior-block: initial;
-                                                overscroll-behavior-inline: initial;
-                                                overscroll-behavior: initial;
-                                                padding-block: initial;
-                                                padding: initial;
-                                                padding-inline: initial;
-                                                page: initial;
-                                                page-orientation: initial;
-                                                paint-order: initial;
-                                                perspective: initial;
-                                                perspective-origin: initial;
-                                                pointer-events: initial;
-                                                position: absolute;
-                                                quotes: initial;
-                                                r: initial;
-                                                resize: initial;
-                                                right: initial;
-                                                ruby-position: initial;
-                                                rx: initial;
-                                                ry: initial;
-                                                scroll-behavior: initial;
-                                                scroll-margin-block: initial;
-                                                scroll-margin: initial;
-                                                scroll-margin-inline: initial;
-                                                scroll-padding-block: initial;
-                                                scroll-padding: initial;
-                                                scroll-padding-inline: initial;
-                                                scroll-snap-align: initial;
-                                                scroll-snap-stop: initial;
-                                                scroll-snap-type: initial;
-                                                scrollbar-gutter: initial;
-                                                shape-image-threshold: initial;
-                                                shape-margin: initial;
-                                                shape-outside: initial;
-                                                shape-rendering: initial;
-                                                size: initial;
-                                                speak: initial;
-                                                stop-color: initial;
-                                                stop-opacity: initial;
-                                                stroke: initial;
-                                                stroke-dasharray: initial;
-                                                stroke-dashoffset: initial;
-                                                stroke-linecap: initial;
-                                                stroke-linejoin: initial;
-                                                stroke-miterlimit: initial;
-                                                stroke-opacity: initial;
-                                                stroke-width: initial;
-                                                tab-size: initial;
-                                                table-layout: initial;
-                                                text-align: initial;
-                                                text-align-last: initial;
-                                                text-anchor: initial;
-                                                text-combine-upright: initial;
-                                                text-decoration: initial;
-                                                text-decoration-skip-ink: initial;
-                                                text-indent: initial;
-                                                text-overflow: initial;
-                                                text-shadow: initial;
-                                                text-size-adjust: initial;
-                                                text-transform: initial;
-                                                text-underline-offset: initial;
-                                                text-underline-position: initial;
-                                                top: 2670.34px;
-                                                touch-action: initial;
-                                                transform: initial;
-                                                transform-box: initial;
-                                                transform-origin: initial;
-                                                transform-style: initial;
-                                                transition: initial;
-                                                user-select: initial;
-                                                vector-effect: initial;
-                                                vertical-align: initial;
-                                                visibility: visible;
-                                                border-spacing: initial;
-                                                -webkit-border-image: initial;
-                                                -webkit-box-align: initial;
-                                                -webkit-box-decoration-break: initial;
-                                                -webkit-box-direction: initial;
-                                                -webkit-box-flex: initial;
-                                                -webkit-box-ordinal-group: initial;
-                                                -webkit-box-orient: initial;
-                                                -webkit-box-pack: initial;
-                                                -webkit-box-reflect: initial;
-                                                -webkit-highlight: initial;
-                                                -webkit-hyphenate-character: initial;
-                                                -webkit-line-break: initial;
-                                                -webkit-line-clamp: initial;
-                                                -webkit-mask-box-image: initial;
-                                                -webkit-mask: initial;
-                                                -webkit-mask-composite: initial;
-                                                -webkit-perspective-origin-x: initial;
-                                                -webkit-perspective-origin-y: initial;
-                                                -webkit-print-color-adjust: initial;
-                                                -webkit-rtl-ordering: initial;
-                                                -webkit-ruby-position: initial;
-                                                -webkit-tap-highlight-color: initial;
-                                                -webkit-text-combine: initial;
-                                                -webkit-text-decorations-in-effect: initial;
-                                                -webkit-text-emphasis: initial;
-                                                -webkit-text-emphasis-position: initial;
-                                                -webkit-text-fill-color: initial;
-                                                -webkit-text-security: initial;
-                                                -webkit-text-stroke: initial;
-                                                -webkit-transform-origin-x: initial;
-                                                -webkit-transform-origin-y: initial;
-                                                -webkit-transform-origin-z: initial;
-                                                -webkit-user-drag: initial;
-                                                -webkit-user-modify: initial;
-                                                white-space: initial;
-                                                widows: initial;
-                                                width: 16px;
-                                                will-change: initial;
-                                                word-break: initial;
-                                                word-spacing: initial;
-                                                x: initial;
-                                                y: initial;
-                                                z-index: auto;
-                                            "
-                                        ></span>
                                     </div>
                                 </form>
                             </div>
