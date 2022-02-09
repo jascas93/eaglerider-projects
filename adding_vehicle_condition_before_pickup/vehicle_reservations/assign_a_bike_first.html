@@ -529,17 +529,17 @@
                             <div class="col">
                                 <div class="row gap-3 mx-0">
                                     <div class="col px-0">
-                                        <a href="#" id="pay_button" class="btn btn-primary-outlined btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a href="#" id="pay_button" class="btn btn-primary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons-outlined btn-icon-left">payment </span><span style="">Pay</span>
                                         </a>
                                     </div>
                                     <div class="col px-0">
-                                        <a href="#" id="modify_button" class="btn btn-primary-outlined btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a href="#" id="modify_button" class="btn btn-primary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons-outlined btn-icon-left">edit</span><span style="">Modify</span>
                                         </a>
                                     </div>
                                     <div class="col px-0">
-                                        <a href="#" id="adjust_button" class="btn btn-primary-outlined btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a href="#" id="adjust_button" class="btn btn-primary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons-outlined btn-icon-left">tune</span><span style="">Adjust</span>
                                         </a>
                                     </div>
@@ -548,13 +548,13 @@
                             <div class="col">
                                 <div class="row gap-3 mx-0">
                                     <div class="col px-0">
-                                        <a href="#" id="docs_button" class="btn btn-secondary-outlined btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a href="#" id="docs_button" class="btn btn-secondary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons-outlined btn-icon-left">description</span>
                                             <span style="">Docs</span>
                                         </a>
                                     </div>
                                     <div class="col px-0">
-                                        <a href="#" id="email_button" class="btn btn-secondary-outlined btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a href="#" id="email_button" class="btn btn-secondary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons-outlined btn-icon-left">
                                                 email
                                             </span>
@@ -562,14 +562,7 @@
                                         </a>
                                     </div>
                                     <div class="col px-0">
-                                        <a
-                                            href="#"
-                                            id="cancel_button"
-                                            class="btn btn-secondary btn-with-icon btn-not-allowed"
-                                            tabindex="-1"
-                                            role="button"
-                                            aria-disabled="false"
-                                        >
+                                        <a href="#" id="cancel_button" class="btn btn-secondary w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                             <span class="material-icons btn-icon-left" style="">
                                                 cancel
                                             </span>
@@ -816,7 +809,7 @@
                                                                 <a
                                                                     href="#"
                                                                     id="assign_button"
-                                                                    class="btn btn-primary btn-with-icon btn--shockwave is-active"
+                                                                    class="btn btn-primary btn-with-icon w-100 btn--shockwave is-active"
                                                                     tabindex="-1"
                                                                     role="button"
                                                                     aria-disabled="false"
@@ -950,7 +943,16 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <p style="margin-bottom: 0; font-size: 1.25rem;">Primary Rider Information</p>
+                                <div class="row">
+                                    <div class="col d-flex align-items-center">
+                                        <p style="margin-bottom: 0; font-size: 1.25rem;">Primary Rider Information</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" id="edit_rider_button" class="btn btn-primary-link btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                            <span class="material-icons-outlined btn-icon-left">edit</span><span style="">Edit</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada;">
@@ -969,7 +971,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" disabled="" readonly=""  />
+                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" disabled="" readonly="" />
                                                 <label for="floatingSelectGrid">Last Name</label>
                                             </div>
                                         </div>
@@ -1010,13 +1012,13 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="Hawthorne" disabled="" readonly=""/>
+                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="Hawthorne" disabled="" readonly="" />
                                                 <label for="floatingSelectGrid">City</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled="" readonly="" >
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled="" readonly="">
                                                     <option selected="">California</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
@@ -1032,39 +1034,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row mx-0 pb-3">
-                                        <div class="col-md-12">
-                                            <a
-                                                href="#"
-                                                id="modify_button"
-                                                class="btn btn-primary btn-lg btn-with-icon"
-                                                tabindex="-1"
-                                                role="button"
-                                                aria-disabled="false"
-                                                style="
-                                                    display: flex;
-                                                    align-items: center;
-                                                    padding: 0.875rem 1.75rem;
-                                                    background-color: #fff7f1;
-                                                    border-radius: 8px;
-                                                    color: #fe7b10;
-                                                    border: 1px solid;
-                                                    height: auto;
-                                                    width: fit-content;
-                                                    margin-left: auto;
-                                                "
-                                            >
-                                                <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <p style="margin-bottom: 0; font-size: 1.25rem;">Memo</p>
+                                <div class="row">
+                                    <div class="col d-flex align-items-center">
+                                        <p style="margin-bottom: 0; font-size: 1.25rem;">Memo</p>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" id="edit_memo_button" class="btn btn-primary-link btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                            <span class="material-icons-outlined btn-icon-left">edit</span><span style="">Edit</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada;">
                                     <div class="row mx-0 py-3">
@@ -1073,32 +1059,6 @@
                                                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea>
                                                 <label for="floatingTextarea2"></label>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row mx-0 pb-3">
-                                        <div class="col-md-12">
-                                            <a
-                                                href="#"
-                                                id="modify_button"
-                                                class="btn btn-primary btn-lg btn-with-icon"
-                                                tabindex="-1"
-                                                role="button"
-                                                aria-disabled="false"
-                                                style="
-                                                    display: flex;
-                                                    align-items: center;
-                                                    padding: 0.875rem 1.75rem;
-                                                    background-color: #fff7f1;
-                                                    border-radius: 8px;
-                                                    color: #fe7b10;
-                                                    border: 1px solid;
-                                                    height: auto;
-                                                    width: fit-content;
-                                                    margin-left: auto;
-                                                "
-                                            >
-                                                <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1111,62 +1071,8 @@
             <div id="footer" style="background: #303030;">
                 <div class="container" style="">
                     <footer class="py-5">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Rentals</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">BMW Motorcycle Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Harley Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Honda Motorcycle Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">KTM Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Yamaha Rentals</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Tours</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Guided Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Self Drive Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Popular Motorcycle Trips</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Locations</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Los Angeles</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Las Vegas</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Denver</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Orlando</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Chicago</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Information</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Site Map</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">EagleRider Reviews</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About EagleRider</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Insurance</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-3">
-                                <form>
-                                    <h5 style="color: #fff;">Subscribe to our newsletter</h5>
-                                    <p style="color: #fff;">Monthly digest of whats new and exciting from us.</p>
-                                    <div class="d-flex w-100 gap-2">
-                                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                                        <button class="btn btn-primary" type="button" style="background-color: #fe7b10; border-color: #fe7b10;">
-                                            Subscribe
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between py-4 border-top">
-                            <p style="color: #fff;">Copyright © 2021 EagleRider.</p>
+                        <div class="d-flex justify-content-between py-4">
+                            <p style="color: #fff;">Copyright © 2022 EagleRider.</p>
                             <ul class="list-unstyled d-flex">
                                 <li class="ms-3">
                                     <a class="link-dark" href="#">
