@@ -418,11 +418,12 @@
                                 </svg>
                             </div>
                             <div style="width: auto;">
-                                <div style="background: #fff; color: #303030; border-radius: 20px; padding: 0.5rem 0.75rem; display: flex; align-items: center; width: auto;">
-                                    <span class="material-icons">
+                                <button class="btn-avatar-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#avatarMenu" aria-controls="avatarMenu">
+                                    <span class="material-icons btn-icon-left">
                                         account_circle
                                     </span>
                                     <span>Jason C.</span>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -494,6 +495,15 @@
                     </div>
                 </div>
             </nav>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="avatarMenu" aria-labelledby="avatarMenu">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Hi, Jason!</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    ...
+                </div>
+            </div>
             <div id="main-canvas-wrapper">
                 <div id="main-canvas-body">
                     <div id="canvas-body-header" style="background-color: #efefef;">
