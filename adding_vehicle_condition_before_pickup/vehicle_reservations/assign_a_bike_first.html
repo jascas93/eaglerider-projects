@@ -29,85 +29,6 @@
                 .btn--shockwave.is-active:before {
                     margin: 0 8rem;
                 }
-                @media (max-width: 767px) {
-                    table#t01 {
-                        border: 0;
-                    }
-                    table#t01 thead {
-                        border: none;
-                        clip: rect(0 0 0 0);
-                        height: 1px;
-                        margin: -1px;
-                        overflow: hidden;
-                        padding: 0;
-                        position: absolute;
-                        width: 1px;
-                    }
-                    table#t01 tr {
-                        border-bottom: 3px solid #ddd;
-                        display: grid;
-                    }
-                    table#t01 td {
-                        border-bottom: 1px solid #ddd;
-                        display: block;
-                        font-size: 0.9em;
-                        text-align: right;
-                    }
-                    table#t01 td::before {
-                        content: attr(data-label);
-                        float: left;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        margin-right: 10px;
-                    }
-                    table#t01 td:last-child {
-                        border-bottom: 0;
-                    }
-                    table#t01 tbody tr:nth-child(even) {
-                        background-color: #fffaf6;
-                    }
-
-                    table#t02 {
-                        border: 0;
-                    }
-                    table#t02 thead {
-                        border: none;
-                        clip: rect(0 0 0 0);
-                        height: 1px;
-                        margin: -1px;
-                        overflow: hidden;
-                        padding: 0;
-                        position: absolute;
-                        width: 1px;
-                    }
-                    table#t02 tr {
-                        border-bottom: 3px solid #ddd;
-                        display: grid;
-                    }
-                    table#t02 td {
-                        border-bottom: 1px solid #ddd;
-                        display: block;
-                        font-size: 0.9em;
-                        text-align: right;
-                    }
-                    table#t02 td::before {
-                        content: attr(data-label);
-                        float: left;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        margin-right: 10px;
-                    }
-                    table#t02 td:last-child {
-                        border-bottom: 0;
-                    }
-                    table#t02 tbody tr:nth-child(even) {
-                        background-color: #fffaf6;
-                    }
-
-                    p.table-cell-with-icons {
-                        justify-content: flex-end;
-                    }
-                }
             </style>
             <header>
                 <div class="px-3 py-2 bg-dark hidden-for-md">
@@ -402,7 +323,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="table-wrapper">
-                                    <table class="table table-striped" id="t01" style="font-size: 0.9375rem; border: 1px solid #dadada;">
+                                    <table class="table table-striped tbl-responsive" id="t01" style="font-size: 0.9375rem; border: 1px solid #dadada;">
                                         <thead style="">
                                             <tr>
                                                 <th style="" scope="col">
@@ -709,7 +630,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="table-wrapper">
-                                    <table class="table table-striped" id="t02" style="font-size: 0.9375rem; border: 1px solid #dadada;">
+                                    <table class="table table-striped tbl-responsive" id="t02" style="font-size: 0.9375rem; border: 1px solid #dadada;">
                                         <thead style="">
                                             <tr>
                                                 <th style="" scope="col">
