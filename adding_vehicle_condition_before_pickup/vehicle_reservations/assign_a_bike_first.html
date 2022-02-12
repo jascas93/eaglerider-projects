@@ -5,6 +5,7 @@
         <meta name="description" content="" />
         <title>Assign a Bike First</title>
         <!-- Bootstrap core CSS -->
+
         <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <!-- Favicons -->
         <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
@@ -18,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
     </head>
-    <body data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever">
+    <body data-new-gr-c-s-check-loaded="14.1049.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
         <main>
             <style scoped="">
                 .btn--shockwave.is-active:before {
@@ -217,7 +218,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-                            <li class="nav-item"><a class="nav-link text-truncate" style="max-width: 166px" href="#">Configuration Wizard</a></li>
+                            <li class="nav-item"><a class="nav-link text-truncate" style="max-width: 166px;" href="#">Configuration Wizard</a></li>
                         </ul>
                     </div>
                 </div>
@@ -852,7 +853,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
                             </div>
                             <div class="modal-body" style="padding: 1.5rem;">
-                                <div>
+                                <div class="container">
                                     <div class="row mt-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
@@ -912,27 +913,8 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <a
-                                                href="#"
-                                                id="modify_button"
-                                                class="btn btn-primary btn-lg btn-with-icon"
-                                                tabindex="-1"
-                                                role="button"
-                                                aria-disabled="false"
-                                                style="
-                                                    display: flex;
-                                                    align-items: center;
-                                                    padding: 0.875rem 1.75rem;
-                                                    background-color: #fff7f1;
-                                                    border-radius: 8px;
-                                                    color: #fe7b10;
-                                                    border: 1px solid;
-                                                    height: auto;
-                                                    width: fit-content;
-                                                    margin-left: auto;
-                                                "
-                                            >
+                                        <div class="col-sm-12 col-md-4">
+                                            <a href="#" id="modify_button" class="btn btn-primary w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
                                                 <span class="material-icons-outlined btn-icon">search</span><span style="">Search</span>
                                             </a>
                                         </div>
@@ -940,16 +922,15 @@
                                 </div>
                                 <div>
                                     <div class="row mt-3">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
-                                                <thead>
+                                        <div class="table-wrapper">
+                                            <table class="table table-striped tbl-responsive" id="assignment_list" style="font-size: 0.9375rem; border: 1px solid #dadada;">
+                                                <thead style="">
                                                     <tr>
-                                                        <th scope="col" style="">
+                                                        <th scope="col">
                                                             Vehicle<br />
                                                             Model
                                                         </th>
-
-                                                        <th scope="col" style="">
+                                                        <th scope="col">
                                                             Vehicle<br />
                                                             Code
                                                         </th>
@@ -957,7 +938,10 @@
                                                             License<br />
                                                             Plate
                                                         </th>
-                                                        <th scope="col">Mileage</th>
+                                                        <th scope="col">
+                                                            Current<br />
+                                                            Odometer
+                                                        </th>
                                                         <th scope="col">
                                                             Mileage<br />
                                                             to Defleet
@@ -979,47 +963,45 @@
                                                             Owning<br />
                                                             Location
                                                         </th>
-
                                                         <th scope="col">Status</th>
                                                         <th scope="col"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody style="border-top: initial;">
                                                     <tr>
-                                                        <td>Harley-Davidson® Electra Glide®</td>
-                                                        <td style="color: #fe7b19; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase;">EC-EG-J0045</td>
+                                                        <td data-label="Vehicle Model">Harley-Davidson® Electra Glide®</td>
+                                                        <td data-label="Vehicle Code">
+                                                            <a href="#" class="btn btn-primary-link btn-not-allowed py-0" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">EC-EG-J0045</span></a>
+                                                        </td>
 
-                                                        <td>302081</td>
-                                                        <td>15000</td>
-                                                        <td>22000</td>
-                                                        <td></td>
-                                                        <td>7/8</td>
-                                                        <td>Black</td>
-                                                        <td>Los Angeles</td>
-                                                        <td>Los Angeles</td>
-                                                        <td style="color: #06ac3f; font-weight: 600; letter-spacing: 0.25px;">Available</td>
-                                                        <td>
+                                                        <td data-label="License Plate">302081</td>
+                                                        <td data-label="Mileage">15,000</td>
+                                                        <td data-label="Mileage to Defleet">22,000</td>
+                                                        <td data-label="Mileage to Service">-</td>
+                                                        <td data-label="Fuel Level">7/8</td>
+                                                        <td data-label="Color">Black</td>
+                                                        <td data-label="Current Location">Los Angeles</td>
+                                                        <td data-label="Owning Location">Los Angeles</td>
+                                                        <td data-label="Status">
+                                                            <span
+                                                                class="badge rounded-pill bg-success text-success"
+                                                                style="background-color: rgba(25, 135, 84, 0.15) !important; border: 1px solid rgba(25, 135, 84, 0.6) !important; letter-spacing: 0.25px; text-transform: uppercase;"
+                                                            >
+                                                                Available
+                                                            </span>
+                                                            <span class="text-success fw-500" style="border: 1px solid; padding: 0.25rem 0.5rem; border-radius: 20px; background-color: rgba(25, 135, 84, 0.08); display: none;">
+                                                                Available
+                                                            </span>
+                                                        </td>
+                                                        <td data-label="&nbsp;">
                                                             <a
                                                                 href="https://jascas93.github.io/eaglerider-projects/rental-management/vehicle_reservations/membership_express_pickup_vr_details_start_inspection.html"
-                                                                id="modify_button"
-                                                                class="btn btn-primary btn-lg btn-with-icon"
+                                                                class="btn btn-primary-link py-0"
                                                                 tabindex="-1"
                                                                 role="button"
                                                                 aria-disabled="false"
-                                                                style="
-                                                                    display: flex;
-                                                                    align-items: center;
-                                                                    padding: 0.75rem 1rem;
-                                                                    background-color: #fe7b10;
-                                                                    border-radius: 8px;
-                                                                    color: #fff;
-                                                                    border: 1px solid;
-                                                                    height: auto;
-                                                                    width: fit-content;
-                                                                    margin-left: auto;
-                                                                "
                                                             >
-                                                                <span style="">Assign</span>
+                                                                <span class="btn-link-text">Assign</span>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1036,35 +1018,5 @@
             </div>
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                // executes when HTML-Document is loaded and DOM is ready
-
-                // There is a little gap below the button so if you didn't have the timeout function delay it would remove the open class before you actually stop hovering the component.
-
-                //sets timer variable
-                var timer;
-
-                // when the button and button menu are hovered
-                $(".dropdown button, .dropdown-menu").hover(
-                    function () {
-                        // Clears the time on hover to prevent a que or waiting for the delay to finish from a previous hover event
-                        clearTimeout(timer);
-                        // Add the class .open and show the menu
-                        $(".dropdown").addClass("open");
-                    },
-                    function () {
-                        // Sets the timer variable to run the timeout delay
-                        timer = setTimeout(function () {
-                            // remove the class .open and hide the submenu
-                            $(".dropdown").removeClass("open");
-                        }, 500);
-                    }
-                );
-
-                // document ready
-            });
-            //# sourceURL=pen.js
-        </script>
     </body>
 </html>
