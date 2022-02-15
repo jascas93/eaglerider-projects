@@ -28,6 +28,45 @@
                 .btn--shockwave.is-active:after {
                     margin: 0 8rem;
                 }
+                /* Tables Resposive ********************/
+                @media (max-width: 991px) {
+                    table.tbl-responsive#assignment_list {
+                        border: 0;
+                    }
+                    table.tbl-responsive#assignment_list thead {
+                        border: none;
+                        clip: rect(0 0 0 0);
+                        height: 1px;
+                        margin: -1px;
+                        overflow: hidden;
+                        padding: 0;
+                        position: absolute;
+                        width: 1px;
+                    }
+                    table.tbl-responsive#assignment_list tr {
+                        border-bottom: 3px solid #ddd;
+                        display: grid;
+                    }
+                    table.tbl-responsive#assignment_list td {
+                        border-bottom: 1px solid #ddd;
+                        display: block;
+                        font-size: 0.9em;
+                        text-align: right;
+                    }
+                    table.tbl-responsive#assignment_list td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-right: 10px;
+                    }
+                    table.tbl-responsive#assignment_list td:last-child {
+                        border-bottom: 0;
+                    }
+                    table.tbl-responsive#assignment_list tbody tr:nth-child(even) {
+                        background-color: #fffaf6;
+                    }
+                }
             </style>
             <header>
                 <div class="px-3 py-2 bg-dark hidden-for-md">
