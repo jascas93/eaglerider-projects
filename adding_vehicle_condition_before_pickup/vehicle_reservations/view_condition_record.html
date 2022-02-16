@@ -1223,5 +1223,39 @@
             </div>
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function PopUp(data) {
+                var mywindow = window.open("", "", "left=0,top=0,width=950,height=600,toolbar=0,scrollbars=0,status=0,addressbar=0");
+
+                var is_chrome = Boolean(mywindow.chrome);
+                var isPrinting = false;
+                mywindow.document.write(data);
+                mywindow.document.close(); // necessary for IE >= 10 and necessary before onload for chrome
+
+                if (is_chrome) {
+                    mywindow.onload = function () {
+                        // wait until all resources loaded
+                        isPrinting = true;
+                        mywindow.focus(); // necessary for IE >= 10
+                        mywindow.print(); // change window to mywindow
+                        mywindow.close(); // change window to mywindow
+                        isPrinting = false;
+                    };
+                    setTimeout(function () {
+                        if (!isPrinting) {
+                            mywindow.print();
+                            mywindow.close();
+                        }
+                    }, 300);
+                } else {
+                    mywindow.document.close(); // necessary for IE >= 10
+                    mywindow.focus(); // necessary for IE >= 10
+                    mywindow.print();
+                    mywindow.close();
+                }
+
+                return true;
+            }
+        </script>
     </body>
 </html>
