@@ -859,14 +859,10 @@
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            // Get URL
             var url = window.location.href;
-            // Get DIV
-            var msg = document.getElementById("success_msg1");
-            // Check if URL contains the keyword
-            if (url.search("success") = 0) {
-                // Display the message
-                document.getElementById("success_msg1").style.display = "none";
+            if (url.search("success") < 1) {
+                document.getElementById("success_msg1").classList.remove("d-flex");
+                document.getElementById("success_msg1").classList.add("d-none");
             }
         </script>
     </body>
