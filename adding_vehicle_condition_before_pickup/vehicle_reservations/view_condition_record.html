@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
     </head>
-    <body data-new-gr-c-s-check-loaded="14.1049.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
+    <body data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
         <main>
             <style scoped="">
                 .btn--shockwave.is-active:before {
@@ -59,11 +59,17 @@
                     height: 100%;
                 }
                 .image-picker-placeholder {
+                }
+                .condition-img {
+                    width: 100%;
                     height: 150px;
+                    object-fit: cover;
                 }
 
                 @media print {
-
+                    .condition-img {
+                        height: calc(100vh - 20%);
+                    }
                 }
             </style>
             <header>
@@ -494,26 +500,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
                                                             src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -531,26 +535,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzRaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a58a98d3e3f469ded61483a0e2ae6e78aea4a2e1/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzRaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a58a98d3e3f469ded61483a0e2ae6e78aea4a2e1/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -567,26 +569,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOFlaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--003248b244514e5dcae4fd91ed9dc24ee607c792/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOFlaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--003248b244514e5dcae4fd91ed9dc24ee607c792/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -603,26 +603,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzBaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f5255e543d70a774e08c58f8f3c7eea1fef2c57/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzBaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f5255e543d70a774e08c58f8f3c7eea1fef2c57/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -639,26 +637,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1laT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a05d4ee8064bf6727de77151f1f260469ee2995/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1laT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a05d4ee8064bf6727de77151f1f260469ee2995/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -675,26 +671,24 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNE1aT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--952ea463e6cef8ef51988084dba6960de9d82eff/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNE1aT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--952ea463e6cef8ef51988084dba6960de9d82eff/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
                                                         <div class="d-flex align-items-center gap-2">
                                                             <div class="col">
-                                                                <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
-                                                                    class="btn btn-primary-link py-0 mb-1" tabindex="-1" role="button" aria-disabled="false"><span class="btn-link-text">RLAX010000107771</span></a>
+                                                                <a
+                                                                    href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html"
+                                                                    class="btn btn-primary-link py-0 mb-1"
+                                                                    tabindex="-1"
+                                                                    role="button"
+                                                                    aria-disabled="false"
+                                                                >
+                                                                    <span class="btn-link-text">RLAX010000107771</span>
+                                                                </a>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Dec 1 2021, 10:32 AM</p>
                                                                 <p style="font-size: 0.75rem; font-weight: 300; color: #3a3a3a; margin-bottom: 0;">Jason MacCombie (Los Angeles)</p>
                                                             </div>
@@ -739,19 +733,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
                                                             src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -775,19 +760,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzRaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a58a98d3e3f469ded61483a0e2ae6e78aea4a2e1/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzRaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a58a98d3e3f469ded61483a0e2ae6e78aea4a2e1/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -810,19 +786,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOFlaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--003248b244514e5dcae4fd91ed9dc24ee607c792/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOFlaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--003248b244514e5dcae4fd91ed9dc24ee607c792/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -845,19 +812,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzBaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f5255e543d70a774e08c58f8f3c7eea1fef2c57/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNzBaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3f5255e543d70a774e08c58f8f3c7eea1fef2c57/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -880,19 +838,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1laT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a05d4ee8064bf6727de77151f1f260469ee2995/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBN1laT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1a05d4ee8064bf6727de77151f1f260469ee2995/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -915,19 +864,10 @@
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
-                                                    <div
-                                                        class="image-picker-placeholder"
-                                                        style="
-                                                            background-image: url(https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNE1aT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--952ea463e6cef8ef51988084dba6960de9d82eff/3114953);
-                                                            background-size: cover;
-                                                            background-repeat: no-repeat;
-                                                            background-position: 50% 50%;
-                                                            border-radius: 2px;
-                                                        "
-                                                    >
+                                                    <div class="image-picker-placeholder">
                                                         <img
-                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOGdaT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6125bab54f4cadb720f63f74a2f6a61c584424f5/3114953"
-                                                            style="width: inherit; height: inherit; visibility: hidden;"
+                                                            src="https://www.eaglerider.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNE1aT2c9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--952ea463e6cef8ef51988084dba6960de9d82eff/3114953"
+                                                            class="condition-img"
                                                         />
                                                     </div>
                                                     <div class="mt-2">
@@ -1038,7 +978,10 @@
                                             <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html" class="list-group-item list-group-item-action">
                                                 Condition Report Added
                                             </a>
-                                            <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/view_condition_record.html" class="list-group-item list-group-item-action active">
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/view_condition_record.html"
+                                                class="list-group-item list-group-item-action active"
+                                            >
                                                 View Condition Record
                                             </a>
                                         </div>
