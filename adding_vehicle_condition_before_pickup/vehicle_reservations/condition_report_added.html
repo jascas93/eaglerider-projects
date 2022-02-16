@@ -261,7 +261,7 @@
                     <div class="container main-container-canvas">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center mt-3" role="alert">
+                                <div id="success_msg1" class="alert alert-success alert-dismissible fade show d-flex align-items-center mt-3" role="alert">
                                     <span class="material-icons me-2">
                                         check_circle
                                     </span>
@@ -858,5 +858,16 @@
             </div>
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            // Get URL
+            var url = window.location.href;
+            // Get DIV
+            var msg = document.getElementById("success_msg1");
+            // Check if URL contains the keyword
+            if (url.search("success") = 0) {
+                // Display the message
+                msg.style.display = "none !important";
+            }
+        </script>
     </body>
 </html>
