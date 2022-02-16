@@ -66,6 +66,11 @@
                     object-fit: cover;
                 }
 
+                @media (min-width: 420px) and (max-width: 575px) {
+                    .resize-img-col>* {
+                        width: 100%;
+                    }
+                }
                 @media print {
                     .condition-img {
                         height: calc(100vh - 20%);
@@ -496,7 +501,7 @@
                             </div>
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada; background: #fff7f1;">
-                                    <div class="row mx-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 px-2 py-3 g-3">
+                                    <div class="row mx-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 px-2 py-3 g-3 resize-img-col">
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
@@ -729,7 +734,7 @@
                             </div>
                             <div class="col-12" style="">
                                 <div style="border: 1px solid #dadada;">
-                                    <div class="row mx-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 px-2 py-3 g-3">
+                                    <div class="row mx-0 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 px-2 py-3 g-3 resize-img-col">
                                         <div class="col">
                                             <div class="card image-picker">
                                                 <div class="card-body" style="">
