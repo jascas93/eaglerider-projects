@@ -321,7 +321,16 @@
                             <div class="col">
                                 <div class="row gap-3 mx-0">
                                     <div class="col px-0">
-                                        <a href="#" id="pay_button" class="btn btn-primary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                        <a
+                                            href="#"
+                                            id="pay_button"
+                                            class="btn btn-primary-outlined w-100 btn-with-icon btn--shockwave is-active"
+                                            tabindex="-1"
+                                            role="button"
+                                            aria-disabled="false"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#showPayOptions"
+                                        >
                                             <span class="material-icons-outlined btn-icon-left">payment </span><span style="">Pay</span>
                                         </a>
                                     </div>
@@ -597,12 +606,10 @@
                                                                 <a
                                                                     href="#"
                                                                     id="assign_button"
-                                                                    class="btn btn-primary btn-with-icon w-100 btn--shockwave is-active"
+                                                                    class="btn btn-primary btn-with-icon w-100 btn-not-allowed"
                                                                     tabindex="-1"
                                                                     role="button"
                                                                     aria-disabled="false"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#showAssignVehicle"
                                                                 >
                                                                     <span class="material-icons-outlined btn-icon-left">two_wheeler</span><span style="">Assign a Vehicle</span>
                                                                 </a>
@@ -915,7 +922,7 @@
                 </div>
             </div>
             <div id="all_modals">
-                <div class="modal fade" id="showAssignVehicle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="showAssignVehicleLabel1" style="display: none;" aria-hidden="true">
+                <div class="modal fade" id="showPayOptions" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="showPayOptionsLabel1" style="display: none;" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen">
                         <div class="modal-content">
                             <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
