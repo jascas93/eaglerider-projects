@@ -219,6 +219,23 @@
                     ...
                 </div>
             </div>
+            <div class="modal fade" id="modifyOverlay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modifyOverlayLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="main-canvas-wrapper">
                 <div id="main-canvas-body" class="bg-light-color">
                     <div class="container main-container-canvas">
@@ -284,7 +301,7 @@
                                             <div class="col">
                                                 <div class="row gap-3 mx-0">
                                                     <div class="col px-0">
-                                                        <a href="#" id="modify_button" class="btn btn-primary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                                        <a href="#" id="modify_button" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#modifyOverlay">
                                                             <span class="material-icons-outlined btn-icon-left">edit</span><span style="">Modify</span>
                                                         </a>
                                                     </div>
