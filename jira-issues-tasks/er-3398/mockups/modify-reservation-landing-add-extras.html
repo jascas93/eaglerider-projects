@@ -594,7 +594,7 @@
         <meta class="foundation-mq" />
     </head>
 
-    <body class="en rp_extras" id="" style="">
+    <body class="en rp_extras" id="" style="cursor: default;">
         <svg xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
             <symbol id="footer_youtube" viewBox="0 0 44 45">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -1061,14 +1061,19 @@
                                                 class="flat secondary button no-margin all rent-my-bike"
                                                 style="
                                                     height: 2rem;
-                                                    background-color: rgba(255, 255, 255, 0.08) !important;
-                                                    color: rgba(255, 255, 255, 0.8) !important;
+
                                                     padding: 0.5rem 0.75rem 0.4375rem;
-                                                    border-color: #fff !important;
-                                                    color: #fe7b10 !important; /* border-color: #fe7b10 !important; */
+                                                    color: #fe7b10 !important;
+                                                    border-color: #fe7b10 !important;
                                                     margin: 0 0 0 2rem;
+                                                    background-color: rgba(255, 247, 241, 0.1) !important;
+                                                    display: flex;
+                                                    align-items: center;
                                                 "
                                             >
+                                                <span class="material-icons" style="font-size: 20px; margin-right: 0.25rem;">
+                                                    not_interested
+                                                </span>
                                                 Exit Without Modifying
                                             </a>
                                         </div>
@@ -1165,7 +1170,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="column shrink medium-3 large-12 reservation-path-steps_rps" style="/* display: none; */">
+                            <div class="column shrink medium-3 large-12 reservation-path-steps_rps" style="">
                                 <div class="rps_step done">
                                     <div class="rps_step-number">
                                         <svg class="">
@@ -1179,7 +1184,7 @@
 
                                     <div class="rps_step-name" style="display: inline-flex; align-items: center;">
                                         Pick-up &amp; Drop-off
-                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem;">
+                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem; border: 1px solid; border-radius: 50%; padding: 2px; background: #fff7f1;">
                                             edit
                                         </span>
                                     </div>
@@ -1198,7 +1203,7 @@
 
                                     <div class="rps_step-name" style="display: inline-flex; align-items: center;">
                                         Bike Selection
-                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem;">
+                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem; border: 1px solid; border-radius: 50%; padding: 2px; background: #fff7f1;">
                                             edit
                                         </span>
                                     </div>
@@ -1217,7 +1222,7 @@
 
                                     <div class="rps_step-name" style="display: inline-flex; align-items: center;">
                                         Add Extras
-                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem;">
+                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem; border: 1px solid; border-radius: 50%; padding: 2px; background: #fff7f1;">
                                             edit
                                         </span>
                                     </div>
@@ -1236,7 +1241,7 @@
 
                                     <div class="rps_step-name" style="display: inline-flex; align-items: center;">
                                         Review &amp; Update
-                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem;">
+                                        <span class="material-icons" style="display: inline-flex; font-size: 18px; margin-left: 0.25rem; border: 1px solid; border-radius: 50%; padding: 2px; background: #f0f0f0;">
                                             edit
                                         </span>
                                     </div>
@@ -1248,9 +1253,7 @@
                             <!-- reservation summary for desktop -->
                             <div class="column large-3 show-for-large">
                                 <div class="reservation-summary-rs">
-                                    <h3 class="rs_title show-for-medium">
-                                        Your Reservation
-                                    </h3>
+                                    <h3 class="rs_title show-for-medium">Modify Reservation</h3>
 
                                     <div class="small-12 columns wrapper-separate">
                                         <span class="rd-numbers">
@@ -1356,13 +1359,38 @@
                                     </div>
 
                                     <div class="btn-change">
-                                        <button class="button expanded js-warningButton">
+                                        <button class="button expanded js-warningButton" style="display: none;">
                                             Change
                                         </button>
+                                        <a
+                                            href="#"
+                                            tabindex="-1"
+                                            role="button"
+                                            aria-disabled="false"
+                                            style="
+                                                color: #fe7b10;
+                                                /* background-color: #fff7f1; */
+                                                border: 1px solid;
+                                                border-color: #fe7b10;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                height: auto;
+                                                padding: 0.875rem 1.75rem;
+                                                font-size: 0.875rem;
+                                                font-weight: 500;
+                                                text-transform: uppercase;
+                                                border-radius: 4px;
+                                                line-height: initial;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">edit</span><span style="">Change Details</span>
+                                        </a>
                                     </div>
                                 </div>
 
-                                <div class="ride_more_rm">
+                                <div class="ride_more_rm" style="display: none;">
                                     <h3 class="header_rm">
                                         ride more, save more
                                     </h3>
@@ -1452,16 +1480,74 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="rv_actions column small-12">
-                                                        <a class="button flat rv_specs-btn js-specsTrigger" href="Javascript:;" data-specsurl="/rentals/546/specification?v=v3">
-                                                            <svg class="">
-                                                                <use xlink:href="#specs"></use>
-                                                            </svg>
-                                                            Specs
+                                                    <div class="rv_actions small-12" style="padding-bottom: 1rem; gap: 2rem;">
+                                                        <a
+                                                            href="#"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-disabled="false"
+                                                            style="
+                                                                color: #fe7b10;
+                                                                background-color: #fff7f1;
+                                                                border: 1px solid;
+                                                                border-color: #fe7b10;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                height: auto;
+                                                                padding: 0.875rem 1.75rem;
+                                                                font-size: 0.875rem;
+                                                                font-weight: 500;
+                                                                text-transform: uppercase;
+                                                                border-radius: 4px;
+                                                                line-height: initial;
+                                                                width: 100%;
+                                                            "
+                                                        >
+                                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">edit</span><span style="">Change Model</span>
                                                         </a>
 
-                                                        <a class="button flat rv_change-btn" href="/reservation/motorcycles">
-                                                            Change
+                                                        <a
+                                                            href="#"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-disabled="false"
+                                                            style="
+                                                                color: #484848;
+                                                                background-color: #f0f0f0;
+                                                                border: 1px solid;
+                                                                border-color: #484848;
+
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                height: auto;
+                                                                padding: 0.875rem 1.75rem;
+                                                                font-size: 0.875rem;
+                                                                font-weight: 500;
+                                                                text-transform: uppercase;
+                                                                border-radius: 4px;
+                                                                line-height: initial;
+                                                                width: 100%;
+                                                                background-color: #fff;
+                                                            "
+                                                        >
+                                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">settings</span><span style="">View Specs</span>
+                                                        </a>
+                                                        <a
+                                                            class="button flat rv_change-btn"
+                                                            href="/reservation/motorcycles"
+                                                            style="border: 1px solid #fe7b10 !important; background: #fe7b10 !important; color: #fff !important; display: none;"
+                                                        >
+                                                            Change Model
+                                                        </a>
+                                                        <a
+                                                            class="button flat rv_specs-btn js-specsTrigger"
+                                                            href="Javascript:;"
+                                                            data-specsurl="/rentals/546/specification?v=v3"
+                                                            style="border-right: 0 !important; border: 1px solid #5d5d5d !important; color: #5d5d5d; display: none;"
+                                                        >
+                                                            View Specs
                                                         </a>
                                                     </div>
                                                 </div>
@@ -2155,7 +2241,32 @@
                                                         </table>
 
                                                         <div class="">
-                                                            <button type="button" class="button qc_checkout-btn js-checkoutTrigger">
+                                                            <a
+                                                                href="#"
+                                                                tabindex="-1"
+                                                                role="button"
+                                                                aria-disabled="false"
+                                                                style="
+                                                                    color: #fff;
+                                                                    background-color: #fe7b10;
+                                                                    border: 1px solid;
+                                                                    border-color: #fe7b10;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    height: auto;
+                                                                    padding: 0.875rem 1.75rem;
+                                                                    font-size: 0.875rem;
+                                                                    font-weight: 500;
+                                                                    text-transform: uppercase;
+                                                                    border-radius: 4px;
+                                                                    line-height: initial;
+                                                                    width: 100%;
+                                                                "
+                                                            >
+                                                                <span style="">Continue to Review</span><span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-left: 0.25rem;">arrow_forward</span>
+                                                            </a>
+                                                            <button type="button" class="button qc_checkout-btn js-checkoutTrigger" style="display: none;">
                                                                 Review<svg class="r-btn_svg"><use xlink:href="/assets/er_website/icons-b9aec13235faa916cc1e716f951fbe7208dd5e2dbf56718f31efe67cf5a751b9.svg#baseline-arrow_forward"></use></svg>
                                                             </button>
 
