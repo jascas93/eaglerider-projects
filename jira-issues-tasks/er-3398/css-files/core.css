@@ -1,0 +1,22 @@
+.visible-for-lgd {
+    display: none;
+}
+.visible-for-mdd {
+    display: none;
+}
+.hidden-for-mdd {
+    display: block;
+}
+@media (min-width: 992px) {
+    .visible-for-lgd {
+        display: block !important;
+    }
+}
+@media (min-width: 768px) {
+    .visible-for-mdd {
+        display: block !important;
+    }
+    .hidden-for-mdd {
+        display: none !important;
+    }
+}
