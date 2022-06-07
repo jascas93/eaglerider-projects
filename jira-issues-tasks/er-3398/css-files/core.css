@@ -30,6 +30,8 @@
     .visible-for-smd {
         display: block !important;
     }
+}
+@media (max-width: 575px) {
     .hidden-for-smd {
         display: none !important;
     }
