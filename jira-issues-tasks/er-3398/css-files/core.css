@@ -50,4 +50,13 @@
     .visible-for-smd {
         display: block !important;
     }
+    div#balance_value {
+        flex-flow: row;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid;
+        border-color: #aeaeae;
+        padding: 2px 16px;
+        border-radius: 20rem;
+    }
 }
