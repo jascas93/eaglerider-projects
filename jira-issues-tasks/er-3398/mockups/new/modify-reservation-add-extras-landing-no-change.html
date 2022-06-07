@@ -792,38 +792,27 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    id="main-canvas-footer"
-                    class="hidden-for-mdd"
-                    style="
-                        background-color: #242424;
-                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-                        padding-bottom: calc(0rem + env(safe-area-inset-bottom, 5rem));
-                    "
-                >
+                <div id="main-canvas-footer" class="hidden-for-mdd">
                     <div class="container-lg" style="">
                         <div class="row">
-                            <div class="col-12 col-sm">
-                                <div style="display: flex; align-items: center;" class="py-2 py-sm-3 justify-content-center justify-content-sm-start">
-                                    <div id="balance_value" style="display: flex; flex-flow: column; color: #fafafa;">
-                                        <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-center text-sm-start">$0</span>
+                            <div class="col">
+                                <div style="display: flex; align-items: center;" class="py-2 py-sm-3 justify-content-start">
+                                    <div style="display: flex; flex-flow: column; color: #fafafa;">
+                                        <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$0</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-auto hidden-below-smd">
                                 <div style="display: flex; align-items: center; justify-content: flex-start;" class="pb-2 py-sm-3">
-                                    <a href="#" id="go_back" class="btn btn-secondary-link-white btn-slim btn-with-icon hidden-below-smd" tabindex="-1" role="button" aria-disabled="false">
+                                    <a href="#" id="go_back" class="btn btn-secondary-link-white btn-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
                                         <span class="material-icons-outlined btn-icon-left">arrow_back</span> <span class="text-truncate btn-link-text">Bike Selection</span>
-                                    </a>
-                                    <a href="#" id="go_back" class="btn btn-secondary-outlined btn-slim btn-with-icon hidden-for-smd" tabindex="-1" role="button" aria-disabled="false">
-                                        <span class="material-icons-outlined btn-icon-left" style="margin-right: 0;">arrow_back</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="col col-sm-auto">
-                                <div style="display: flex; align-items: center; justify-content: flex-end;" class="pb-2 py-sm-3">
+                                <div style="display: flex; align-items: center; justify-content: flex-end;" class="py-2 py-sm-3">
                                     <a href="#" id="continue_to_review" class="btn btn-primary btn-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#showAssignVehicle">
-                                        <span>Continue to Review</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
+                                        <span class="hidden-below-xsd">Continue to Review</span><span style="display: none;" class="visible-for-xsd">Continue</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                     </a>
                                 </div>
                             </div>
