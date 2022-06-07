@@ -4,9 +4,7 @@
 .visible-for-mdd {
     display: none;
 }
-.hidden-for-mdd {
-    display: block;
-}
+
 @media (min-width: 992px) {
     .visible-for-lgd {
         display: block !important;
@@ -17,6 +15,11 @@
         display: block !important;
     }
     .hidden-for-mdd {
+        display: none !important;
+    }
+}
+@media (max-width: 992px) {
+    .hidden-below-lgd {
         display: none !important;
     }
 }
