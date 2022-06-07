@@ -17,9 +17,6 @@ input.form-check-input:disabled {
     cursor: not-allowed;
     pointer-events: all;
 }
-tr#vip_zero_td {
-    display: none;
-}
 .visible-for-lgd {
     display: none;
 }
