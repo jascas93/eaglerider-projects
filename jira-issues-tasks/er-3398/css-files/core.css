@@ -4,6 +4,9 @@
 .visible-for-mdd {
     display: none;
 }
+.visible-for-smd {
+    display: none;
+}
 
 @media (min-width: 992px) {
     .visible-for-lgd {
@@ -20,6 +23,14 @@
 }
 @media (max-width: 991px) {
     .hidden-below-lgd {
+        display: none !important;
+    }
+}
+@media (min-width: 576px) {
+    .visible-for-smd {
+        display: block !important;
+    }
+    .hidden-for-smd {
         display: none !important;
     }
 }
