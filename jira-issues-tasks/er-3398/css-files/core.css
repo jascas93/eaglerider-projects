@@ -13,6 +13,11 @@
         display: block !important;
     }
 }
+@media (max-width: 991px) {
+    .hidden-below-lgd {
+        display: none !important;
+    }
+}
 @media (min-width: 768px) {
     .visible-for-mdd {
         display: block !important;
@@ -21,11 +26,12 @@
         display: none !important;
     }
 }
-@media (max-width: 991px) {
-    .hidden-below-lgd {
+@media (max-width: 767px) {
+    .hidden-below-mdd {
         display: none !important;
     }
 }
+
 @media (min-width: 576px) {
 
 }
