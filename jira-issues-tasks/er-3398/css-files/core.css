@@ -39,10 +39,12 @@
 }
 
 @media (min-width: 576px) {
-
+    .hidden-for-smd {
+        display: none !important;
+    }
 }
 @media (max-width: 575px) {
-    .hidden-for-smd {
+    .hidden-below-smd {
         display: none !important;
     }
     .visible-for-smd {
