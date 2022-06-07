@@ -1055,7 +1055,7 @@
         <script type="text/javascript">
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("continue_to_review").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#");
-                document.getElementById("balance_value").innerHTML = "$35";
+                e.checked ? document.getElementById("balance_value").innerHTML = "$35" : document.getElementById("balance_value").innerHTML = "$0";
             }
         </script>
     </body>
