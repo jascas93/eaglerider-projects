@@ -266,11 +266,11 @@
                 </div>
                 <div class="offcanvas-body">...</div>
             </div>
-            <div class="modal fade show" id="exampleModal" style="display: block;" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modify_welcome" tabindex="-1" aria-labelledby="modify_welcomeLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="modify_welcomeLabel">Modal title</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1082,6 +1082,11 @@
                 e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none");
                 e.checked ? document.getElementById("total_value").innerHTML = "$243.97" : document.getElementById("total_value").innerHTML = "$208.97";
             }
+        </script>
+        <script type="text/javascript">
+            $(window).on("load", function () {
+                $("#modify_welcome").modal("show");
+            });
         </script>
     </body>
 </html>
