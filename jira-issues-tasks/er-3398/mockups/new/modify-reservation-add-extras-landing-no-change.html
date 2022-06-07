@@ -1647,10 +1647,10 @@
                 //If the checkbox has been checked
                 if (t.checked) {
                     //Set the disabled property to FALSE and enable the button.
-                    document.getElementById("continue_to_review").attr("href", "http://www.google.com/");
+                    document.getElementById("continue_to_review").setAttribute('href', 'http://google.com');
                 } else {
                     //Otherwise, disable the submit button.
-                    document.getElementById("continue_to_review").attr("href", "#");
+                    document.getElementById("continue_to_review").setAttribute('href', '#');
                 }
             }
         </script>
