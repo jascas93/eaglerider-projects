@@ -6,6 +6,9 @@ div#main-canvas-footer {
 div#steps-full-top {
     display: none;
 }
+div#steps-slim-top {
+    margin-bottom: 2rem;
+}
 .visible-for-lgd {
     display: none;
 }
