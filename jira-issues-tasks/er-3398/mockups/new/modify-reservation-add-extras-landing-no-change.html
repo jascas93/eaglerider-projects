@@ -656,7 +656,7 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div style="margin-right: auto; margin-left: 2rem; display: flex; align-items: center; gap: 1rem">
+                            <div style="margin-right: auto; margin-left: 2rem; display: flex; align-items: center; gap: 1rem;">
                                 <div style="display: flex; flex-flow: column; color: #fafafa;">
                                     <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span style="line-height: initial; font-size: 1.125rem; font-weight: 900; text-align: left;">$0</span>
                                 </div>
@@ -943,30 +943,8 @@
                                         </div>
                                     </div>
                                     <div style="padding: 0.5rem 1rem 0.75rem 1rem; position: relative;">
-                                        <a
-                                            href="#"
-                                            tabindex="-1"
-                                            role="button"
-                                            aria-disabled="false"
-                                            style="
-                                                color: #fe7b10;
-                                                border: 1px solid;
-                                                border-color: #fe7b10;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                height: auto;
-                                                padding: 0.875rem 1.75rem;
-                                                font-size: 0.875rem;
-                                                font-weight: 500;
-                                                text-transform: uppercase;
-                                                border-radius: 4px;
-                                                line-height: initial;
-                                                width: 100%;
-                                                text-decoration: none;
-                                            "
-                                        >
-                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">edit</span><span class="text-truncate">Change Details</span>
+                                        <a href="#" id="change_details" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                            <span class="material-icons-outlined btn-icon-left">edit</span><span class="text-truncate">Change Details</span>
                                         </a>
                                     </div>
                                 </div>
@@ -988,73 +966,11 @@
                                                     <p style="margin-bottom: 0; font-weight: 500;">Harley-Davidson® Street Glide® Touring Edition</p>
                                                     <div style="padding: 1rem;"><img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/546/images/size550/hd-street-glide-touring-edition-1.jpg?1612999393" style="width: 100%;" /></div>
                                                     <div class="d-flex align-center" style="gap: 1rem;">
-                                                        <a
-                                                            href="#"
-                                                            tabindex="-1"
-                                                            role="button"
-                                                            aria-disabled="false"
-                                                            style="
-                                                                color: #fe7b10;
-                                                                background-color: #fff7f1;
-                                                                border: 1px solid;
-                                                                border-color: #fe7b10;
-                                                                display: flex;
-                                                                align-items: center;
-                                                                justify-content: center;
-                                                                height: auto;
-                                                                padding: 0.875rem 1.75rem;
-                                                                font-size: 0.875rem;
-                                                                font-weight: 500;
-                                                                text-transform: uppercase;
-                                                                border-radius: 4px;
-                                                                line-height: initial;
-                                                                width: 100%;
-                                                                text-decoration: none;
-                                                            "
-                                                        >
-                                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">edit</span><span>Change Model</span>
+                                                        <a href="#" id="change_details" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                                            <span class="material-icons-outlined btn-icon-left">edit</span><span class="text-truncate">Change Model</span>
                                                         </a>
-                                                        <a
-                                                            href="#"
-                                                            tabindex="-1"
-                                                            role="button"
-                                                            aria-disabled="false"
-                                                            style="
-                                                                color: #484848;
-                                                                background-color: #f0f0f0;
-                                                                border: 1px solid;
-                                                                border-color: #484848;
-                                                                display: flex;
-                                                                align-items: center;
-                                                                justify-content: center;
-                                                                height: auto;
-                                                                padding: 0.875rem 1.75rem;
-                                                                font-size: 0.875rem;
-                                                                font-weight: 500;
-                                                                text-transform: uppercase;
-                                                                border-radius: 4px;
-                                                                line-height: initial;
-                                                                width: 100%;
-                                                                background-color: #fff;
-                                                                text-decoration: none;
-                                                            "
-                                                        >
-                                                            <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">settings</span><span>View Specs</span>
-                                                        </a>
-                                                        <a
-                                                            class="button flat rv_change-btn"
-                                                            href="/reservation/motorcycles"
-                                                            style="border: 1px solid #fe7b10 !important; background: #fe7b10 !important; color: #fff !important; display: none;"
-                                                        >
-                                                            Change Model
-                                                        </a>
-                                                        <a
-                                                            class="button flat rv_specs-btn js-specsTrigger"
-                                                            href="Javascript:;"
-                                                            data-specsurl="/rentals/546/specification?v=v3"
-                                                            style="border-right: 0 !important; border: 1px solid #5d5d5d !important; color: #5d5d5d; display: none;"
-                                                        >
-                                                            View Specs
+                                                        <a href="#" id="view_specs" class="btn btn-secondary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
+                                                            <span class="material-icons-outlined btn-icon-left">settings</span> <span class="text-truncate">View Specs</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -1104,7 +1020,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_vip_zero" style="cursor: pointer;" onclick="checkbox_changed(this)">
+                                                                    <input class="form-check-input" type="checkbox" id="add_vip_zero" style="cursor: pointer;" onclick="checkbox_changed(this)" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_vip_zero" style="font-size: 0.9375rem;">
@@ -1388,29 +1304,14 @@
                                                     <a
                                                         href="#"
                                                         id="continue_to_review"
+                                                        class="btn btn-primary btn-with-icon w-100"
                                                         tabindex="-1"
                                                         role="button"
                                                         aria-disabled="false"
-                                                        style="
-                                                            color: #fff;
-                                                            background-color: #fe7b10;
-                                                            border: 1px solid;
-                                                            border-color: #fe7b10;
-                                                            display: flex;
-                                                            align-items: center;
-                                                            justify-content: center;
-                                                            height: auto;
-                                                            padding: 0.875rem 1.75rem;
-                                                            font-size: 0.875rem;
-                                                            font-weight: 500;
-                                                            text-transform: uppercase;
-                                                            border-radius: 4px;
-                                                            line-height: initial;
-                                                            width: 100%;
-                                                            text-decoration: none;
-                                                        "
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#showAssignVehicle"
                                                     >
-                                                        <span>Continue to Review</span><span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-left: 0.25rem;">arrow_forward</span>
+                                                        <span>Continue to Review</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                                     </a>
                                                     <div style="font-size: 0.75rem; font-style: italic; background-color: #f9f9f9; border: 1px solid; border-color: #efefef; border-radius: 8px; padding: 0.5rem 1rem; margin-top: 1rem;">
                                                         <p style="margin-bottom: 0.25rem;">*Subject to availability.</p>
@@ -1422,57 +1323,11 @@
                                     </div>
                                 </div>
                                 <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 2rem;">
-                                    <a
-                                        href="#"
-                                        tabindex="-1"
-                                        role="button"
-                                        aria-disabled="false"
-                                        style="
-                                            color: #fff;
-                                            background-color: #484848;
-                                            border: 1px solid;
-                                            border-color: #484848;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            height: auto;
-                                            padding: 0.875rem 1.75rem;
-                                            font-size: 0.875rem;
-                                            font-weight: 500;
-                                            text-transform: uppercase;
-                                            border-radius: 4px;
-                                            line-height: initial;
-                                            width: fit-content;
-                                            text-decoration: none;
-                                        "
-                                    >
-                                        <span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-right: 0.25rem;">arrow_back</span><span>Bike Selection</span>
+                                    <a href="#" id="view_specs" class="btn btn-secondary-outlined btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                        <span class="material-icons-outlined btn-icon-left">arrow_back</span> <span class="text-truncate">Bike Selection</span>
                                     </a>
-                                    <a
-                                        href="#"
-                                        tabindex="-1"
-                                        role="button"
-                                        aria-disabled="false"
-                                        style="
-                                            color: #fff;
-                                            background-color: #fe7b10;
-                                            border: 1px solid;
-                                            border-color: #fe7b10;
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            height: auto;
-                                            padding: 0.875rem 1.75rem;
-                                            font-size: 0.875rem;
-                                            font-weight: 500;
-                                            text-transform: uppercase;
-                                            border-radius: 4px;
-                                            line-height: initial;
-                                            width: fit-content;
-                                            text-decoration: none;
-                                        "
-                                    >
-                                        <span>Continue to Review</span><span class="material-icons-outlined btn-icon-left" style="font-size: 22px !important; margin-left: 0.25rem;">arrow_forward</span>
+                                    <a href="#" id="continue_to_review" class="btn btn-primary btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#showAssignVehicle">
+                                        <span>Continue to Review</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                     </a>
                                 </div>
                             </div>
@@ -1644,15 +1499,8 @@
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            function checkbox_changed(t) {
-                //If the checkbox has been checked
-                if (t.checked) {
-                    //Set the disabled property to FALSE and enable the button.
-                    document.getElementById("continue_to_review").setAttribute('href', 'http://google.com');
-                } else {
-                    //Otherwise, disable the submit button.
-                    document.getElementById("continue_to_review").setAttribute('href', '#');
-                }
+            function checkbox_changed(e) {
+                e.checked ? document.getElementById("continue_to_review").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#");
             }
         </script>
     </body>
