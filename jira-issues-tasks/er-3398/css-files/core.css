@@ -51,7 +51,7 @@
         display: block !important;
     }
     div#balance_value {
-        flex-flow: row;
+        flex-flow: row !important;
         align-items: center;
         gap: 0.5rem;
         border: 1px solid;
