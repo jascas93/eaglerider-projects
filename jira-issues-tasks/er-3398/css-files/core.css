@@ -7,6 +7,9 @@
 .visible-for-smd {
     display: none;
 }
+.visible-below-mdd {
+    display: none;
+}
 
 @media (min-width: 992px) {
     .visible-for-lgd {
@@ -29,6 +32,9 @@
 @media (max-width: 767px) {
     .hidden-below-mdd {
         display: none !important;
+    }
+    .visible-below-mdd {
+        display: block !important;
     }
 }
 
