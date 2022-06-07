@@ -823,7 +823,7 @@
                                                             </tr>
                                                             <tr style="background: #3a3a3a; color: #fff;">
                                                                 <td>Balance</td>
-                                                                <td>$0</td>
+                                                                <td id="balance_value">$0</td>
                                                             </tr>
                                                         </tfoot>
                                                     </table>
@@ -1055,6 +1055,7 @@
         <script type="text/javascript">
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("continue_to_review").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#");
+                document.getElementById("balance_value").innerHTML = "$35";
             }
         </script>
     </body>
