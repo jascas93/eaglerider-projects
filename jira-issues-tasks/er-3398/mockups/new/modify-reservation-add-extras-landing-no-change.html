@@ -140,7 +140,7 @@
                             </div>
                             <div style="margin-right: auto; margin-left: 2rem; display: flex; align-items: center; gap: 1rem;">
                                 <div class="hidden-below-mdd" style="display: flex; flex-flow: column; color: #fafafa;">
-                                    <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span id="balance_value" style="line-height: initial; font-size: 1.125rem; font-weight: 900; text-align: left;">$0</span>
+                                    <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span id="balance_value_top" style="line-height: initial; font-size: 1.125rem; font-weight: 900; text-align: left;">$0</span>
                                 </div>
                                 <div>
                                     <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/reservation_details.html" id="exit_btn" class="btn btn-primary-outlined-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
@@ -868,7 +868,7 @@
                             <div class="col">
                                 <div style="display: flex; align-items: center;" class="py-2 py-sm-3 justify-content-start">
                                     <div style="display: flex; flex-flow: column; color: #fafafa;">
-                                        <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span id="balance_value" style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$0</span>
+                                        <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span id="balance_value_bottom" style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$0</span>
                                     </div>
                                 </div>
                             </div>
@@ -1056,6 +1056,8 @@
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("continue_to_review").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#");
                 e.checked ? document.getElementById("balance_value").innerHTML = "$35" : document.getElementById("balance_value").innerHTML = "$0";
+                e.checked ? document.getElementById("balance_value_top").innerHTML = "$35" : document.getElementById("balance_value_top").innerHTML = "$0";
+                e.checked ? document.getElementById("balance_value_bottom").innerHTML = "$35" : document.getElementById("balance_value_bottom").innerHTML = "$0";
             }
         </script>
     </body>
