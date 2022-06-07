@@ -1083,10 +1083,13 @@
                 e.checked ? document.getElementById("total_value").innerHTML = "$243.97" : document.getElementById("total_value").innerHTML = "$208.97";
             }
         </script>
-        <script>
-            $(document).ready(function(){
+        <script type="text/javascript">
+            window.onload = function () {
+                OpenBootstrapPopup();
+            };
+            function OpenBootstrapPopup() {
                 $("#modify_welcome").modal("show");
-            });
+            }
         </script>
     </body>
 </html>
