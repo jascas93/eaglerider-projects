@@ -27,12 +27,13 @@
     }
 }
 @media (min-width: 576px) {
-    .visible-for-smd {
-        display: block !important;
-    }
+
 }
 @media (max-width: 575px) {
     .hidden-for-smd {
         display: none !important;
+    }
+    .visible-for-smd {
+        display: block !important;
     }
 }
