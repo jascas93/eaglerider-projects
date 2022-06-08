@@ -35,7 +35,9 @@ tr#vip_zero_td {
 body.modal-open div#main-canvas-wrapper {
     filter: blur(3px);
 }
-
+.btn-primary-link:hover>div>p.btn-link-text {
+    text-decoration: underline;
+}
 @media (min-width: 992px) {
     .visible-for-lgd {
         display: block !important;
