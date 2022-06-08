@@ -107,8 +107,6 @@ body.modal-open div#main-canvas-wrapper {
     justify-content: center;
 }
 .model-per-day-name {
-    border-bottom: 1px solid;
-    border-color: #dadada;
     padding-bottom: 0.25rem;
 }
 .rental-length-price-total {
@@ -125,12 +123,14 @@ body.modal-open div#main-canvas-wrapper {
     line-height: initial;
 }
 .model-card-savings {
-    background-color: #019d9d;
-    color: #fafafa;
+    color: #008D90;
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem;
     border-radius: 0 0 0.5rem 0.5rem;
+    background-color: #D9EFEE;
+    border: 1px solid;
+    border-color: #019D9D;
 }
 .model-card-select-btn {
     margin-top: 1rem;
