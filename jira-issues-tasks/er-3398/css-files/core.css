@@ -86,6 +86,29 @@ body.modal-open div#main-canvas-wrapper {
     padding: 0.5rem 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
 }
+.model-per-day-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.model-per-day-name {
+    border-bottom: 1px solid;
+    border-color: #dadada;
+    padding-bottom: 0.25rem;
+}
+.rental-length-price-total {
+    font-weight: 600;
+    line-height: initial;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-danger-rgb),var(--bs-text-opacity))!important;
+}
+.old-rental-length-price-total {
+    font-size: 0.8rem;
+    color: #797979;
+    text-decoration: line-through;
+    margin-left: 0.25rem;
+    line-height: initial;
+}
 /* END */
 @media (min-width: 992px) {
     .visible-for-lgd {
