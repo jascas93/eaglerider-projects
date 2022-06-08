@@ -78,6 +78,9 @@ body.modal-open div#main-canvas-wrapper {
     justify-content: center;
     box-shadow: 2px 3px 5px rgb(0 0 0 / 18%);
 }
+.bike-card-img-wrapper {
+    position: relative;
+}
 .bike-card-img {
     width: 100%;
 }
