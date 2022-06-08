@@ -100,10 +100,10 @@ body.modal-open div#main-canvas-wrapper {
     background-color: #F7F7F7;
     padding: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
-    position: relative;
 }
 .bike-card-footer.club {
     background-color: #FFF7F1 !important;
+    position: relative;
 }
 .model-per-day-price {
     display: flex;
