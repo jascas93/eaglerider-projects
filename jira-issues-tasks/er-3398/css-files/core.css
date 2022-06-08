@@ -32,6 +32,9 @@ tr#vip_zero_td {
 .visible-below-mdd {
     display: none;
 }
+body.modal-open div#main-canvas-wrapper {
+    filter: blur(3px);
+}
 
 @media (min-width: 992px) {
     .visible-for-lgd {
