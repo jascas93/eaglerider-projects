@@ -38,6 +38,9 @@ body.modal-open div#main-canvas-wrapper {
 .btn-primary-link:hover>div>p.btn-link-text {
     text-decoration: underline;
 }
+.input-focus-on-load {
+    box-shadow: 0 0 0 0.25rem #b2e0dc;
+}
 @media (min-width: 992px) {
     .visible-for-lgd {
         display: block !important;
