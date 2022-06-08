@@ -1117,6 +1117,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
+            window.onload = function() {
+              document.getElementById("add_vip_zero").classList.add("input-focus-on-load");
+            }
+        </script>
+        <script type="text/javascript">
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("continue_to_review").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#");
                 e.checked ? document.getElementById("balance_value").innerHTML = "$35" : document.getElementById("balance_value").innerHTML = "$0";
@@ -1132,11 +1137,6 @@
             };
             function OpenBootstrapPopup() {
                 $("#modify_welcome").modal("show");
-            }
-        </script>
-        <script type="text/javascript">
-            window.onload = function() {
-              document.getElementById("add_vip_zero").focus();
             }
         </script>
     </body>
