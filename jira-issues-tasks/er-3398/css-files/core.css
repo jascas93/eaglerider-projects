@@ -84,6 +84,7 @@ body.modal-open div#main-canvas-wrapper {
 .bike-card-footer {
     background-color: #F7F7F7;
     padding: 0.5rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
 }
 /* END */
 @media (min-width: 992px) {
