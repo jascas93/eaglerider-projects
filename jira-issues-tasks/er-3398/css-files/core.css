@@ -44,6 +44,54 @@ body.modal-open div#main-canvas-wrapper {
 .input-focus-on-load {
     box-shadow: 0 0 0 0.25rem #b2e0dc;
 }
+/* BIKE LISTING CARD */
+.card.h-100.bike-listing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    height: 100%;
+}
+.bike-card-header {
+    padding: 1rem;
+}
+.bike-card-model-name {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: initial;
+}
+.bike-card-class-name {
+    font-size: 0.875rem;
+    color: #797979;
+    margin-bottom: 0;
+    line-height: initial;
+    margin-top: 0.25rem;
+}
+.view-specs-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.625rem;
+    background: #5d5d5d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 18%);
+}
+.bike-card-img {
+    width: 100%;
+}
+.bike-card-footer {
+    background-color: #F7F7F7;
+    padding: 0.5rem 1rem;
+}
+/* END */
 @media (min-width: 992px) {
     .visible-for-lgd {
         display: block !important;
