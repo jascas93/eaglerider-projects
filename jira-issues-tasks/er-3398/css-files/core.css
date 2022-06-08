@@ -45,7 +45,7 @@ body.modal-open div#main-canvas-wrapper {
     box-shadow: 0 0 0 0.25rem #b2e0dc;
 }
 /* BIKE LISTING CARD */
-.card.h-100.bike-listing-card {
+.bike-listing-card {
     position: relative;
     display: flex;
     flex-direction: column;
