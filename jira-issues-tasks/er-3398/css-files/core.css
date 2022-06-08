@@ -104,6 +104,20 @@ body.modal-open div#main-canvas-wrapper {
 .bike-card-footer.club {
     background-color: #FFF7F1 !important;
     position: relative;
+    overflow: hidden;
+}
+.club-ribbon {
+    position: absolute;
+    top: 4px;
+    left: -36px;
+    line-height: 18px;
+    font-size: 12px;
+    background-color: #f26b00;
+    width: 100px;
+    transform: rotate(-45deg);
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
 }
 .model-per-day-price {
     display: flex;
