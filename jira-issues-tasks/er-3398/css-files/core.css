@@ -110,12 +110,15 @@ body.modal-open div#main-canvas-wrapper {
     line-height: initial;
 }
 .model-card-savings {
-    background-color: #B22804;
+    background-color: #019d9d;
     color: #fafafa;
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem;
     border-radius: 0 0 0.5rem 0.5rem;
+}
+.model-card-select-btn {
+    margin-top: 1rem;
 }
 /* END */
 @media (min-width: 992px) {
