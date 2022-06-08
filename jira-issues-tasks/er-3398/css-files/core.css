@@ -50,9 +50,12 @@ body.modal-open div#main-canvas-wrapper {
     border: 1px solid rgba(0,0,0,0.125);
     border-radius: 0.5rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .bike-card-header {
     padding: 1rem;
+    flex: 1 1 auto;
 }
 .bike-card-model-name {
     margin-bottom: 0;
