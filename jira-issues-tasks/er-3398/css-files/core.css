@@ -141,14 +141,14 @@ body.modal-open div#main-canvas-wrapper {
     line-height: initial;
 }
 .model-card-savings {
-    color: #008D90;
+    color: #F26B10;
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.25rem;
     border-radius: 0 0 0.5rem 0.5rem;
-    background-color: #D9EFEE;
+    background-color: #FFECDD;
     border: 1px solid;
-    border-color: #019D9D;
+    border-color: #F26B10;
 }
 .model-card-select-btn {
     margin-top: 1rem;
