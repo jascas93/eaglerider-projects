@@ -143,12 +143,14 @@
                                 </div>
                                 <div>
                                     <a
-                                        href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/reservation_details.html"
+                                        href="#"
                                         id="exit_btn"
                                         class="btn btn-primary-outlined-slim btn-with-icon"
                                         tabindex="-1"
                                         role="button"
                                         aria-disabled="false"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#exit_modify"
                                     >
                                         <span class="material-icons-outlined btn-icon-left">not_interested</span><span class="text-truncate hidden-below-smd">Exit without Modifying</span>
                                         <span class="text-truncate visible-for-smd">Exit</span>
@@ -1225,6 +1227,29 @@
                                         </div>
                                     </div>
                                     <div style="display: flex; align-items: center; justify-content: center;"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Let's Go!</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="exit_modify" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exit_modifyLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Are You Sure?</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Any edited changes will be lost.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" id="modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
+                                        <span>Close and Go Back</span>
+                                    </a>
+                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/reservation_details.html" id="modal_continue_modify" class="btn btn-primary btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                        <span>Continue to Exit</span><span class="material-icons-outlined btn-icon-right">launch</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
