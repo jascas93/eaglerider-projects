@@ -101,7 +101,7 @@ body.modal-open div#main-canvas-wrapper {
     padding: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
 }
-.bike-card-footer .club {
+.bike-card-footer.club {
     background-color: #FFF7F1 !important;
 }
 .model-per-day-price {
