@@ -169,9 +169,16 @@ input.form-check-input:disabled {
     border: 3px solid;
     border-color: #f26b00;
 }
+.bike-card-img-wrapper.current-bike-selection {
+    border-top: 1px solid #f26b00;
+    border-bottom: 1px solid #f26b00;
+}
 .bike-card-header.current-bike-selection {
     background-color: #FFD7BA;
     border-radius: 0.3rem 0.3rem 0 0;
+}
+.bike-card-footer.club.current-bike-selection {
+    background-color: #FFECDD;
 }
 a.btn.current-bike-selection {
     background-color: #5d5d5d;
