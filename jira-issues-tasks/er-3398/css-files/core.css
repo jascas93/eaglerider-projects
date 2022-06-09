@@ -187,6 +187,9 @@ a.btn.current-bike-selection {
     opacity: 1;
 }
 /* END */
+.right-side-quote {
+    display: none;
+}
 .visible-for-lgd {
     display: none;
 }
