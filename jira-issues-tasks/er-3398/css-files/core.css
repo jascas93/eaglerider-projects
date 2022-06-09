@@ -169,7 +169,7 @@ input.form-check-input:disabled {
     border: 3px solid;
     border-color: #f26b00;
 }
-a.btn.btn-not-allowed.disallowed.current-bike-selection {
+a.btn.current-bike-selection {
     background-color: #5d5d5d;
 }
 /* END */
