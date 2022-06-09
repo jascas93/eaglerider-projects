@@ -64,6 +64,7 @@ input.form-check-input:disabled {
     font-weight: 500;
     font-size: 0.9375rem;
     line-height: initial;
+    padding-right: 0.125rem;
 }
 .bike-card-class-name {
     font-size: 0.875rem;
