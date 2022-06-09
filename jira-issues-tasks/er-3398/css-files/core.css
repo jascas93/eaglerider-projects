@@ -222,6 +222,9 @@ p.content-label-details {
     margin-bottom: 0;
     font-size: 1.125rem;
 }
+div#quote_info {
+    top: 4.5rem;
+}
 .right-side-quote {
     display: none;
 }
