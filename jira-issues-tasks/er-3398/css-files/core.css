@@ -190,7 +190,7 @@ a.btn.current-bike-selection {
 .content-label-mark {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 p.content-label-mark {
     font-weight: 600;
