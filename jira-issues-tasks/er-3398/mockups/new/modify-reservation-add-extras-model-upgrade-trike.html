@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
         <title>ER-3398: Modify Reservation–Add Extras Model Upgrade Trike</title>
+
         <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
         <link href="https://getbootstrap.com/docs/5.1/examples/headers/headers.css" rel="stylesheet" />
@@ -139,19 +140,11 @@
                             </div>
                             <div style="margin-right: auto; margin-left: 2rem; display: flex; align-items: center; gap: 1rem;">
                                 <div class="hidden-below-mdd" style="display: flex; flex-flow: column; color: #fafafa;">
-                                    <span style="line-height: initial; font-weight: 500;">Balance (USD)</span> <span id="balance_value_top" style="line-height: initial; font-size: 1.125rem; font-weight: 900; text-align: left;">$0</span>
+                                    <span style="line-height: initial; font-weight: 500;">Balance (USD)</span>
+                                    <span id="balance_value_top" style="line-height: initial; font-size: 1.125rem; font-weight: 900; text-align: left;">$103.57</span>
                                 </div>
                                 <div>
-                                    <a
-                                        href="#"
-                                        id="exit_btn"
-                                        class="btn btn-primary-outlined-slim btn-with-icon"
-                                        tabindex="-1"
-                                        role="button"
-                                        aria-disabled="false"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#exit_modify"
-                                    >
+                                    <a href="#" id="exit_btn" class="btn btn-primary-outlined-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#exit_modify">
                                         <span class="material-icons-outlined btn-icon-left">not_interested</span><span class="text-truncate hidden-below-smd">Exit without Modifying</span>
                                         <span class="text-truncate visible-for-smd">Exit</span>
                                     </a>
@@ -292,7 +285,11 @@
                                 </a>
                             </div>
                             <div class="col" style="padding-top: 1.5rem; padding-bottom: 1.5rem; border-bottom: 8px solid; border-color: #f26b00;">
-                                <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html" class="btn btn-primary-link py-0" style="text-transform: capitalize;">
+                                <a
+                                    href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html"
+                                    class="btn btn-primary-link py-0"
+                                    style="text-transform: capitalize;"
+                                >
                                     <div style="display: flex; align-items: center; color: #f26b00; font-weight: 600; justify-content: center;">
                                         <div
                                             style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center; margin-right: 0.875rem;"
@@ -423,7 +420,11 @@
                                         </a>
                                     </div>
                                     <div class="col" style="padding-top: 1.5rem; padding-bottom: 1.5rem; border-bottom: 8px solid; border-color: #f26b00;">
-                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html" class="btn btn-primary-link py-0" style="text-transform: capitalize;">
+                                        <a
+                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html"
+                                            class="btn btn-primary-link py-0"
+                                            style="text-transform: capitalize;"
+                                        >
                                             <div style="display: flex; align-items: center; color: #f26b00; font-weight: 600; justify-content: center;">
                                                 <div style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center; margin-right: 0.875rem;">
                                                     <span class="material-icons" style="color: #fff; font-size: 20px;">done</span>
@@ -501,9 +502,15 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Current Selected Bike Model</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p style="margin-right: 0; margin-bottom: 0; font-weight: 400; color: #5d5d5d; font-size: 0.875rem;">
+                                            <p style="margin-right: 0; margin-bottom: 0; font-weight: 300; color: #797979; font-size: 0.75rem; font-style: italic; text-decoration: line-through;">
                                                 Harley-Davidson® Street Glide® Touring Edition
-                                                <a href="https://www.eaglerider.com/losangeles/street-glide-touring-edition" target="_blank">
+                                                <a href="https://www.eaglerider.com/losangeles/street-glide-touring-edition" target="_blank" style="display: none;">
+                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                </a>
+                                            </p>
+                                            <p style="margin-right: 0; margin-bottom: 0; font-weight: 500; color: #5d5d5d; font-size: 0.875rem;">
+                                                Harley-Davidson® Tri Glide® Ultra
+                                                <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank" style="color: inherit; text-decoration: none;">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
                                                 </a>
                                             </p>
@@ -573,10 +580,19 @@
                                         <div class="row">
                                             <div class="col-md-7">
                                                 <div>
-                                                    <p style="margin-bottom: 0; font-weight: 500;">Harley-Davidson® Street Glide® Touring Edition</p>
-                                                    <div style="padding: 1rem;"><img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/546/images/size550/hd-street-glide-touring-edition-1.jpg?1612999393" style="width: 100%;" /></div>
+                                                    <p style="margin-bottom: 0; font-weight: 500;">Harley-Davidson® Tri Glide® Ultra</p>
+                                                    <div style="padding: 1rem;">
+                                                        <img src="https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg" style="width: 100%;" />
+                                                    </div>
                                                     <div class="d-flex align-center flex-column flex-sm-row gap-3">
-                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html" id="change_details" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                                        <a
+                                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html"
+                                                            id="change_details"
+                                                            class="btn btn-primary-outlined w-100 btn-with-icon"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-disabled="false"
+                                                        >
                                                             <span class="material-icons-outlined btn-icon-left">edit</span><span class="text-truncate">Change Model</span>
                                                         </a>
                                                         <a href="#" id="view_specs" class="btn btn-secondary-outlined w-100 btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false">
@@ -590,7 +606,7 @@
                                                         <div class="col-12">
                                                             <div style="box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px; padding: 0.75rem 1rem; border-radius: 5px; background-color: #fff7f1;">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" id="add_model_guarantee" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_model_guarantee" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_model_guarantee" style="font-size: 0.9375rem; font-weight: 500;">
@@ -630,7 +646,7 @@
                                                                     </a>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input input-focus-on-load" type="checkbox" id="add_vip_zero" onclick="checkbox_changed(this)" />
+                                                                    <input class="form-check-input" type="checkbox" id="add_vip_zero" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_vip_zero" style="font-size: 0.9375rem;">
@@ -642,7 +658,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_vip_plus" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_vip_plus" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_vip_plus" style="font-size: 0.9375rem;">
@@ -679,7 +695,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_sli_300" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_sli_300" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_sli_300" style="font-size: 0.9375rem;">
@@ -716,7 +732,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_rsa" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_rsa" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_rsa" style="font-size: 0.9375rem;">
@@ -753,7 +769,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_toll" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_toll" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_toll" style="font-size: 0.9375rem;">
@@ -790,7 +806,7 @@
                                                                     </span>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_helmet" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_helmet" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_helmet" style="font-size: 0.9375rem;">
@@ -808,7 +824,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_helmet_full" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_helmet_full" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_helmet_full" style="font-size: 0.9375rem;">
@@ -827,7 +843,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input" type="checkbox" id="add_jacket" disabled />
+                                                                    <input class="form-check-input" type="checkbox" id="add_jacket" disabled="" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="fadd_jacket" style="font-size: 0.9375rem;">
@@ -869,12 +885,12 @@
                                                         </thead>
                                                         <tbody style="border-top: initial;">
                                                             <tr>
-                                                                <td>1 Day @ $224 /Day</td>
-                                                                <td>$224</td>
+                                                                <td>1 Day @ $335 /Day</td>
+                                                                <td>$335</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="text-danger">Membership Discount</td>
-                                                                <td class="text-danger">-$49.80</td>
+                                                                <td class="text-danger">-$67</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Unlimited Miles</td>
@@ -882,7 +898,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>Environmental Surcharge</td>
-                                                                <td>$11.65</td>
+                                                                <td>$17.42</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>DOT Helmet for Rider and Passenger (or Country approved Helmet)</td>
@@ -894,7 +910,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td>Total Taxes &amp; Fees**</td>
-                                                                <td>$18.12</td>
+                                                                <td>$27.12</td>
                                                             </tr>
                                                             <tr id="vip_zero_td" class="d-none">
                                                                 <td>
@@ -907,7 +923,7 @@
                                                         <tfoot style="font-weight: 600; background: #efefef;">
                                                             <tr>
                                                                 <td>Total (USD)</td>
-                                                                <td id="total_value">$208.97</td>
+                                                                <td id="total_value">$312.54</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Total Paid</td>
@@ -915,20 +931,13 @@
                                                             </tr>
                                                             <tr style="background: #3a3a3a; color: #fff;">
                                                                 <td>Balance</td>
-                                                                <td id="balance_value">$0</td>
+                                                                <td id="balance_value">$103.57</td>
                                                             </tr>
                                                         </tfoot>
                                                     </table>
                                                 </div>
                                                 <div>
-                                                    <a
-                                                        href="#"
-                                                        id="continue_to_review_btn_top"
-                                                        class="btn btn-primary btn-with-icon w-100"
-                                                        tabindex="-1"
-                                                        role="button"
-                                                        aria-disabled="false"
-                                                    >
+                                                    <a href="#" id="continue_to_review_btn_top" class="btn btn-primary btn-with-icon w-100 btn--shockwave is-active" tabindex="-1" role="button" aria-disabled="false">
                                                         <span>Continue to Review</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                                     </a>
                                                     <div style="font-size: 0.75rem; font-style: italic; background-color: #f9f9f9; border: 1px solid; border-color: #efefef; border-radius: 8px; padding: 0.5rem 1rem; margin-top: 1rem;">
@@ -941,10 +950,17 @@
                                     </div>
                                 </div>
                                 <div class="hidden-below-mdd" style="display: flex; align-items: center; justify-content: space-between; margin-top: 2rem;">
-                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html" id="back_bike_selection" class="btn btn-secondary-link btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                    <a
+                                        href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html"
+                                        id="back_bike_selection"
+                                        class="btn btn-secondary-link btn-with-icon"
+                                        tabindex="-1"
+                                        role="button"
+                                        aria-disabled="false"
+                                    >
                                         <span class="material-icons-outlined btn-icon-left">arrow_back</span> <span class="text-truncate btn-link-text">Bike Selection</span>
                                     </a>
-                                    <a href="#" id="continue_to_review_btn_bottom" class="btn btn-primary btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                    <a href="#" id="continue_to_review_btn_bottom" class="btn btn-primary btn-with-icon btn--shockwave is-active" tabindex="-1" role="button" aria-disabled="false">
                                         <span>Continue to Review</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                     </a>
                                 </div>
@@ -959,20 +975,27 @@
                                 <div style="display: flex; align-items: center;" class="py-2 py-sm-3 justify-content-start">
                                     <div style="display: flex; flex-flow: column; color: #fafafa;">
                                         <span style="line-height: initial; font-weight: 500;">Balance (USD)</span>
-                                        <span id="balance_value_bottom" style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$0</span>
+                                        <span id="balance_value_bottom" style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$103.57</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-auto hidden-below-smd">
                                 <div style="display: flex; align-items: center; justify-content: flex-start;" class="pb-2 py-sm-3">
-                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html" id="go_back" class="btn btn-secondary-link-white btn-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                    <a
+                                        href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html"
+                                        id="go_back"
+                                        class="btn btn-secondary-link-white btn-slim btn-with-icon"
+                                        tabindex="-1"
+                                        role="button"
+                                        aria-disabled="false"
+                                    >
                                         <span class="material-icons-outlined btn-icon-left">arrow_back</span> <span class="text-truncate btn-link-text">Bike Selection</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="col col-sm-auto">
                                 <div style="display: flex; align-items: center; justify-content: flex-end;" class="py-2 py-sm-3">
-                                    <a href="#" id="footer_continue" class="btn btn-primary btn-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                    <a href="#" id="footer_continue" class="btn btn-primary btn-slim btn-with-icon btn--shockwave is-active" tabindex="-1" role="button" aria-disabled="false">
                                         <span class="hidden-below-xsd">Continue to Review</span><span style="display: none;" class="visible-for-xsd">Continue</span><span class="material-icons-outlined btn-icon-right">arrow_forward</span>
                                     </a>
                                 </div>
@@ -1243,11 +1266,18 @@
                                 </div>
                                 <div class="modal-footer justify-content-between">
                                     <div class="row w-100 g-3">
-                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start  order-last order-sm-first">
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
                                             <a href="#" id="exit_modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal"><span>Close and Go Back</span></a>
                                         </div>
                                         <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
-                                            <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/reservation_details.html" id="continue_to_exit" class="btn btn-primary btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/reservation_details.html"
+                                                id="continue_to_exit"
+                                                class="btn btn-primary btn-with-icon"
+                                                tabindex="-1"
+                                                role="button"
+                                                aria-disabled="false"
+                                            >
                                                 <span>Continue to Exit</span><span class="material-icons-outlined btn-icon-right">launch</span>
                                             </a>
                                         </div>
@@ -1261,6 +1291,7 @@
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--
         <script type="text/javascript">
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("add_vip_zero").classList.remove("input-focus-on-load") : document.getElementById("add_vip_zero").classList.add("input-focus-on-load"),
@@ -1272,5 +1303,6 @@
                     e.checked ? (document.getElementById("total_value").innerHTML = "$243.97") : (document.getElementById("total_value").innerHTML = "$208.97");
             }
         </script>
+    -->
     </body>
 </html>
