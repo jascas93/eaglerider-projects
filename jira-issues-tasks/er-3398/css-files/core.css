@@ -29,6 +29,9 @@ input.form-check-input:disabled {
 .select-focus-on-load {
     box-shadow: 0 0 0 0.25rem #ffc396;
 }
+.btn-primary.btn-not-allowed.disallowed.select-focus-on-load:hover {
+    box-shadow: none;
+}
 .btn-primary-link:hover>div>p.btn-link-text {
     text-decoration: underline;
 }
