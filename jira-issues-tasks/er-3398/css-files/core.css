@@ -109,7 +109,7 @@ input.form-check-input:disabled {
     border-radius: 0 0 0.5rem 0.5rem;
 }
 .bike-card-footer.club {
-    background-color: #FFF7F1 !important;
+    background-color: #FFF7F1;
     position: relative;
     overflow: hidden;
 }
