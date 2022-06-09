@@ -3,12 +3,18 @@ div#main-canvas-footer {
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
     padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
 }
+body.modal-open div#main-canvas-wrapper {
+    filter: blur(3px);
+}
 div#steps-full-top {
     display: none;
 }
 div#steps-slim-top {
     background-color: #fff;
     box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+tr#vip_zero_td {
+    background-color: #FFF7F1;
 }
 input.form-check-input {
     cursor: pointer;
@@ -17,32 +23,17 @@ input.form-check-input:disabled {
     cursor: not-allowed;
     pointer-events: all;
 }
-tr#vip_zero_td {
-    background-color: #FFF7F1;
+.input-focus-on-load {
+    box-shadow: 0 0 0 0.25rem #b2e0dc;
 }
-.visible-for-lgd {
-    display: none;
-}
-.visible-for-mdd {
-    display: none;
-}
-.visible-for-smd {
-    display: none;
-}
-.visible-below-mdd {
-    display: none;
-}
-body.modal-open div#main-canvas-wrapper {
-    filter: blur(3px);
+.select-focus-on-load {
+    box-shadow: 0 0 0 0.25rem #ffc396;
 }
 .btn-primary-link:hover>div>p.btn-link-text {
     text-decoration: underline;
 }
 .btn-primary-link>div>p.btn-link-text {
     text-align: left;
-}
-.input-focus-on-load {
-    box-shadow: 0 0 0 0.25rem #b2e0dc;
 }
 .btn-not-allowed.disallowed {
     opacity: 70%;
@@ -170,6 +161,18 @@ body.modal-open div#main-canvas-wrapper {
     justify-content: center;
 }
 /* END */
+.visible-for-lgd {
+    display: none;
+}
+.visible-for-mdd {
+    display: none;
+}
+.visible-for-smd {
+    display: none;
+}
+.visible-below-mdd {
+    display: none;
+}
 @media (min-width: 992px) {
     .visible-for-lgd {
         display: block !important;
