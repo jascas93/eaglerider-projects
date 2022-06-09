@@ -183,6 +183,8 @@ input.form-check-input:disabled {
 a.btn.current-bike-selection {
     background-color: #5d5d5d;
     border-color: #5d5d5d;
+    pointer-events: none;
+    opacity: 1;
 }
 /* END */
 .visible-for-lgd {
