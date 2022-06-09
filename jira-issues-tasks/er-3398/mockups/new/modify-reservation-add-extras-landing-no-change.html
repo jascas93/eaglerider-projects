@@ -1281,7 +1281,7 @@
                 OpenWelcomePopup();
             };
         </script>
-    -->
+
         <script type="text/javascript">
             var url = window.location.href;
             function OpenWelcomePopup() {
@@ -1291,5 +1291,14 @@
                 OpenWelcomePopup();
             }
         </script>
+    -->
+        <script>
+            $(document).ready(function () {
+                if (window.location.href.indexOf("?welcome=1") > 0) {
+                    $("#modify_welcome").modal("show");
+                }
+            });
+        </script>
+
     </body>
 </html>
