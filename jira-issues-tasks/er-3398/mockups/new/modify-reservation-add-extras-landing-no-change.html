@@ -1272,13 +1272,24 @@
                     e.checked ? (document.getElementById("total_value").innerHTML = "$243.97") : (document.getElementById("total_value").innerHTML = "$208.97");
             }
         </script>
+    <!--
         <script type="text/javascript">
-            function OpenBootstrapPopup() {
+            function OpenWelcomePopup() {
                 $("#modify_welcome").modal("show");
             }
             window.onload = function () {
-                OpenBootstrapPopup();
+                OpenWelcomePopup();
             };
+        </script>
+    -->
+        <script type="text/javascript">
+            var url = window.location.href;
+            function OpenWelcomePopup() {
+                $("#modify_welcome").modal("show");
+            }
+            if (url.search("welcome") >= 1) {
+                OpenWelcomePopup();
+            }
         </script>
     </body>
 </html>
