@@ -44,6 +44,14 @@ body.modal-open div#main-canvas-wrapper {
 .input-focus-on-load {
     box-shadow: 0 0 0 0.25rem #b2e0dc;
 }
+.btn-not-allowed.disallowed {
+    opacity: 70%;
+}
+.btn-primary.btn-not-allowed.disallowed:hover, .btn-primary.btn-not-allowed.disallowed:focus, .btn-primary.btn-not-allowed.disallowed:active {
+    background-color: #fe7b10;
+    border-color: #fe7b10;
+    box-shadow: none;
+}
 /* BIKE LISTING CARD */
 .bike-listing-card {
     background-color: #fff;
