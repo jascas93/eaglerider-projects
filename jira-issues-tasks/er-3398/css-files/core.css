@@ -169,8 +169,13 @@ input.form-check-input:disabled {
     border: 3px solid;
     border-color: #f26b00;
 }
+.bike-card-header.current-bike-selection {
+    background-color: #FFD7BA;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
 a.btn.current-bike-selection {
     background-color: #5d5d5d;
+    border-color: #5d5d5d;
 }
 /* END */
 .visible-for-lgd {
