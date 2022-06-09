@@ -165,6 +165,10 @@ input.form-check-input:disabled {
     align-items: center;
     justify-content: center;
 }
+.bike-listing-card.current-bike-selection {
+    border: 3px solid;
+    border-color: #f26b00;
+}
 /* END */
 .visible-for-lgd {
     display: none;
