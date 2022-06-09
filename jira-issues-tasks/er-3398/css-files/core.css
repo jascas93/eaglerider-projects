@@ -169,6 +169,9 @@ input.form-check-input:disabled {
     border: 3px solid;
     border-color: #f26b00;
 }
+.bike-listing-card.current-bike-selection>a.btn.btn-not-allowed.disallowed {
+    background-color: #5d5d5d;
+}
 /* END */
 .visible-for-lgd {
     display: none;
