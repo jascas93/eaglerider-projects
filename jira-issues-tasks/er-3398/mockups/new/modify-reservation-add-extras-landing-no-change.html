@@ -1277,6 +1277,15 @@
                 });
             }
         </script>
+        <script>
+            $(document).ready(function () {
+                setTimeout(function() {
+                    if (window.location.href.indexOf("?upsell=1") > 0) {
+                        $("#add_vip_zero").trigger('click');
+                    }
+                },10);
+            });
+        </script>
         <script type="text/javascript">
             function checkbox_changed(e) {
                 e.checked ? document.getElementById("add_vip_zero").classList.remove("input-focus-on-load") : document.getElementById("add_vip_zero").classList.add("input-focus-on-load"),
