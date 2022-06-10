@@ -1223,46 +1223,19 @@
                                             <div style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center;">
                                                 <span class="material-icons" style="color: #fff; font-size: 20px;">done</span>
                                             </div>
-                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #f26b00;"></span>
-                                            <div
-                                                style="
-                                                    border-radius: 50%;
-                                                    border: 0.1875rem solid;
-                                                    border-color: #f26b00;
-                                                    color: #f26b00;
-                                                    width: 1.875rem;
-                                                    min-width: 1.875rem;
-                                                    height: 1.875rem;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                "
-                                            >
-                                                <span style="font-weight: 900;">3</span>
+                                            <div style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center;">
+                                                <span class="material-icons" style="color: #fff; font-size: 20px;">done</span>
                                             </div>
-                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #aeaeae;"></span>
-                                            <div
-                                                style="
-                                                    border-radius: 50%;
-                                                    border: 0.1875rem solid;
-                                                    border-color: #aeaeae;
-                                                    color: #898989;
-                                                    width: 1.875rem;
-                                                    min-width: 1.875rem;
-                                                    height: 1.875rem;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                "
-                                            >
-                                                <span>4</span>
+                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #f26b00;"></span>
+                                            <div style="border-radius: 50%; border: 0.1875rem solid; border-color: #f26b00; color: #f26b00; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center;">
+                                                <span style="font-weight: 900;">4</span>
                                             </div>
                                         </div>
                                         <div style="margin-top: 0.25rem; display: flex; align-items: center; justify-content: space-between;">
                                             <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #f26b00;">Pickup &amp; Dropoff</p>
                                             <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #f26b00;">Bike Selection</p>
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 900; font-size: 0.875rem; color: #f26b00;">Add Extras</p>
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #797979;">Review &amp; Update</p>
+                                            <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #797979;">Add Extras</p>
+                                            <p style="margin-bottom: 0; text-align: center; font-weight: 900; font-size: 0.875rem; color: #f26b00;">Review &amp; Update</p>
                                         </div>
                                     </div>
                                     <div style="display: flex; align-items: center; justify-content: center;"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Let's Go!</button></div>
@@ -1309,5 +1282,12 @@
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                if (window.location.href.indexOf("?welcome=1") > 0) {
+                    $("#modify_welcome").modal("show");
+                }
+            });
+        </script>
     </body>
 </html>
