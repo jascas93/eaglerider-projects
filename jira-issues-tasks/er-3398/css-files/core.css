@@ -190,14 +190,12 @@ a.btn.current-bike-selection {
 .content-label-mark {
     display: flex;
     align-items: center;
-    margin-bottom: 0.25rem;
 }
 p.content-label-mark {
     font-weight: 600;
     font-size: 0.875rem;
     text-transform: uppercase;
     color: #81909A;
-    line-height: initial;
     letter-spacing: 0.35px;
 }
 p.content-label-details {
