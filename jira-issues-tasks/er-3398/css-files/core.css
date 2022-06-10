@@ -54,6 +54,7 @@ input.form-check-input:disabled {
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .bike-card-header {
     padding: 1rem;
