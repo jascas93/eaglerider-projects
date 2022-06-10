@@ -223,6 +223,7 @@ p.content-label-details {
 }
 div#quote_info {
     top: 4.5rem;
+    margin-bottom: -10rem;
 }
 .quote-price-details {
     background-color: #FCFCFC;
