@@ -636,7 +636,7 @@
                                                                     </a>
                                                                 </div>
                                                                 <div class="form-check mb-1">
-                                                                    <input class="form-check-input input-focus-on-load btn--shockwave is-active" type="checkbox" id="add_vip_zero" onclick="checkbox_changed(this);start_shockwave(this);" />
+                                                                    <input class="form-check-input input-focus-on-load btn--shockwave is-active" type="checkbox" id="add_vip_zero" onclick="checkbox_changed(this);" />
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <label class="form-check-label" for="add_vip_zero" style="font-size: 0.9375rem;">
@@ -1288,17 +1288,11 @@
                 e.checked ? (document.getElementById("balance_value_bottom").innerHTML = "$35") : (document.getElementById("balance_value_bottom").innerHTML = "$0"),
                 e.checked ? (document.getElementById("total_value").innerHTML = "$243.97") : (document.getElementById("total_value").innerHTML = "$208.97"),
                 e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none"),
-                e.checked ? document.getElementById("continue_to_review_btn_top").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_top").classList.remove("btn--shockwave", "is-active");
+                e.checked ? document.getElementById("continue_to_review_btn_top").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_top").classList.remove("btn--shockwave", "is-active"),
+                e.checked ? document.getElementById("continue_to_review_btn_top").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_top").classList.remove("btn--shockwave", "is-active"),
+                e.checked ? document.getElementById("continue_to_review_btn_bottom").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_bottom").classList.remove("btn--shockwave", "is-active"),
+                e.checked ? document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active") : document.getElementById("footer_continue").classList.remove("btn--shockwave", "is-active");
             }
         </script>
-    <!--
-        <script type="text/javascript">
-            function start_shockwave(s) {
-                s.checked ? document.getElementById("continue_to_review_btn_top").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_top").classList.remove("btn--shockwave", "is-active"),
-                s.checked ? document.getElementById("continue_to_review_btn_bottom").classList.add("btn--shockwave", "is-active") : document.getElementById("continue_to_review_btn_bottom").classList.remove("btn--shockwave", "is-active"),
-                s.checked ? document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active") : document.getElementById("footer_continue").classList.remove("btn--shockwave", "is-active"),
-            }
-        </script>
-    -->
     </body>
 </html>
