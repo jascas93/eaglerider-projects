@@ -219,30 +219,6 @@
                     ...
                 </div>
             </div>
-            <div class="modal fade" id="modifyOverlay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modifyOverlayLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
-                                <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Modify Reservation</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Modifying your reservation will allow you to reselect reservation details. Rates and prices may vary, and you may exit at any time.</p>
-                                <p>You will be taken to the reservation booking path to continue your modifications.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" id="modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
-                                    <span>Close and Go Back</span>
-                                </a>
-                                <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-no-change.html?welcome=1" id="modal_continue_modify" class="btn btn-primary btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
-                                    <span>Go to Modify</span><span class="material-icons-outlined btn-icon-right">launch</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div id="main-canvas-wrapper">
                 <div id="main-canvas-body" class="bg-light-color">
                     <div class="container main-container-canvas">
@@ -781,7 +757,45 @@
                     </footer>
                 </div>
             </div>
-            <div id="all_modals"></div>
+            <div id="all_modals">
+                <div class="modal fade" id="modifyOverlay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modifyOverlayLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Modify Reservation</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Modifying your reservation will allow you to reselect reservation details. Rates and prices may vary, and you may exit at any time.</p>
+                                    <p>You will be taken to the reservation booking path to continue your modifications.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row w-100 g-3">
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
+                                            <a href="#" id="modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
+                                                <span>Close and Go Back</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-no-change.html?welcome=1"
+                                                id="modal_continue_modify"
+                                                class="btn btn-primary btn-with-icon"
+                                                tabindex="-1"
+                                                role="button"
+                                                aria-disabled="false"
+                                            >
+                                                <span>Go to Modify</span><span class="material-icons-outlined btn-icon-right">launch</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
