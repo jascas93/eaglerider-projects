@@ -236,11 +236,16 @@ div#quote_info {
 div#left_inline_price_quote {
     display: none;
 }
-.content-label-details-note {
-    color: #898989;
+p.content-label-details-note {
+    color: #5d5d5d;
     font-size: 0.75rem;
     font-weight: 300;
     margin-bottom: 0.5rem;
+}
+.row.inner-content-separator {
+    margin-top: 1.5rem;
+    border-top: 2px solid #efefef;
+    padding-top: 1.5rem;
 }
 /* Rensponsives */
 .visible-for-lgd {
