@@ -197,6 +197,7 @@ p.content-label-mark {
     text-transform: uppercase;
     color: #81909A;
     letter-spacing: 0.35px;
+    margin-bottom: 0;
 }
 p.content-label-details {
     margin-bottom: 0;
