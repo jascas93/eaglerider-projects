@@ -17,6 +17,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
     </head>
     <body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="" style="cursor: default; -webkit-font-smoothing: antialiased;" data-gr-ext-disabled="forever">
+        <div id="page_loading">
+            <div class="pl-blocks">
+                <div class="pl-block pl-orange"></div>
+                <div class="pl-block pl-blue"></div>
+            </div>
+        </div>
         <main>
             <header class="sticky-top">
                 <div class="py-1 bg-dark">
@@ -1290,18 +1296,15 @@
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!--
         <script type="text/javascript">
-            function checkbox_changed(e) {
-                e.checked ? document.getElementById("add_vip_zero").classList.remove("input-focus-on-load") : document.getElementById("add_vip_zero").classList.add("input-focus-on-load"),
-                    e.checked ? document.getElementById("continue_to_review_btn_top").setAttribute("href", "http://google.com") : document.getElementById("continue_to_review").setAttribute("href", "#"),
-                    e.checked ? (document.getElementById("balance_value").innerHTML = "$35") : (document.getElementById("balance_value").innerHTML = "$0"),
-                    e.checked ? (document.getElementById("balance_value_top").innerHTML = "$35") : (document.getElementById("balance_value_top").innerHTML = "$0"),
-                    e.checked ? (document.getElementById("balance_value_bottom").innerHTML = "$35") : (document.getElementById("balance_value_bottom").innerHTML = "$0"),
-                    e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none"),
-                    e.checked ? (document.getElementById("total_value").innerHTML = "$243.97") : (document.getElementById("total_value").innerHTML = "$208.97");
+            $(window).on("load", function () {
+                setTimeout(removeLoader, 800); //wait x ms
+            });
+            function removeLoader() {
+                $("#page_loading").fadeOut(400, function () {
+                    $("#page_loading").hide();
+                });
             }
         </script>
-    -->
     </body>
 </html>
