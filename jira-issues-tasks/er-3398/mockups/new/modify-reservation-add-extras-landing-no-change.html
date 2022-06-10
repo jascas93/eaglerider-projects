@@ -1281,7 +1281,7 @@
             $(document).ready(function () {
                 if (window.location.href.indexOf("?upsell=1") > 0) {
                     $("#add_vip_zero").ready(function() {
-                        $(this).click();
+                        $(this).trigger("click");
                     });
                 }
             });
