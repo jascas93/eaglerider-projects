@@ -236,6 +236,13 @@ div#quote_info {
 div#left_inline_price_quote {
     display: none;
 }
+.content-label-details-note {
+    color: #898989;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+/* Rensponsives */
 .visible-for-lgd {
     display: none;
 }
