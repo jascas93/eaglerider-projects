@@ -247,6 +247,22 @@ p.content-label-details-note {
     border-top: 2px solid #efefef;
     padding-top: 1.5rem;
 }
+a.bike-listing-card-link {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: transparent;
+    color: transparent;
+    text-decoration: none;
+}
+a.bike-listing-card-link:hover {
+    border: 1px solid #5d5d5d;
+    border-radius: 0.5rem;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;
