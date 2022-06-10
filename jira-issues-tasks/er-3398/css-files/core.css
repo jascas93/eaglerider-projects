@@ -233,6 +233,9 @@ div#quote_info {
 .right-side-quote {
     display: none;
 }
+div#left_inline_price_quote {
+    display: none;
+}
 .visible-for-lgd {
     display: none;
 }
@@ -256,6 +259,9 @@ div#quote_info {
     }
     div#steps-full-top {
         display: block;
+    }
+    div#left_inline_price_quote {
+        display: block !important;
     }
 }
 @media (min-width: 768px) {
