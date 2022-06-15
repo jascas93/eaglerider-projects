@@ -1,229 +1,28 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
-        <title>Pick-up Step 1 — Not Checked In</title>
-        <!-- Bootstrap core CSS -->
+        <title>ER-3332: Pickup Step 1—Not Checked In</title>
         <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-        <!-- Favicons -->
         <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
-        <!-- Custom styles for this template -->
         <link href="https://getbootstrap.com/docs/5.1/examples/headers/headers.css" rel="stylesheet" />
-        <link href="https://jascas93.github.io/jascas-css-files-1/first.css" rel="stylesheet" />
-        <link href="https://jascas93.github.io/jascas-css-files-1/membership_express--override.css" rel="stylesheet" />
+        <link href="https://jascas93.github.io/jascas-css-files-1/rental_management.css" rel="stylesheet" />
+        <link href="https://jascas93.github.io/jascas-css-files-1/primary_components.css" rel="stylesheet" />
+        <link href="https://jascas93.github.io/jascas-css-files-1/custom_utilities.css" rel="stylesheet" />
+        <link href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3332/css-files/core.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
     </head>
-
-    <body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever" class="">
+    <body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever">
         <main>
-            <style scoped="">
-                .progress-tracker {
-                    display: flex;
-                    padding: 0;
-                    list-style: none;
-                }
-                .progress-step {
-                    flex: 1 1 0%;
-                    margin: 0;
-                    padding: 0;
-                    min-width: 24px;
-                }
-                .progress-step:last-child {
-                    flex-grow: 0;
-                }
-                .progress-step:last-child .progress-marker::after {
-                    display: none;
-                }
-                .progress-link {
-                    display: block;
-                    position: relative;
-                }
-                .progress-marker {
-                    display: block;
-                    position: relative;
-                }
-                .progress-marker::before {
-                    content: attr(data-text);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    z-index: 20;
-                    width: 32px;
-                    height: 32px;
-                    padding-bottom: 0px;
-                    border-radius: 50%;
-                    transition: background-color, border-color;
-                    transition-duration: 0.3s;
-                }
-                .progress-marker::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    z-index: -10;
-                    top: 14px;
-                    right: -12px;
-                    width: 100%;
-                    height: 4px;
-                    transition: background-color 0.3s, background-position 0.3s;
-                }
-                .progress-text {
-                    display: block;
-                    padding: 8px 0;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                .progress-title {
-                    margin-top: 0;
-                }
-                .progress-step .progress-marker {
-                    color: #fff;
-                }
-                .progress-step .progress-marker::before {
-                    background-color: #aeaeae;
-                }
-                .progress-step .progress-marker::after {
-                    background-color: #dadada;
-                    z-index: 1;
-                }
-                .progress-step .progress-text {
-                    color: #797979;
-                }
-                .is-active .progress-text {
-                    color: #fe7b10;
-                    font-weight: 600;
-                }
-                .progress-step.is-active .progress-marker::before {
-                    background-color: #fe7b14;
-                }
-                .progress-step.is-complete .progress-marker::before,
-                .progress-step.is-progress .progress-marker::before {
-                    background-color: #019d9d;
-                    content: url(https://jascas93.github.io/web-assets/done_white_18dp.svg);
-                }
-                .progress-step.is-complete .progress-marker::after,
-                .progress-step.is-progress .progress-marker::after {
-                    background-color: #b2e0dc;
-                    z-index: 1;
-                }
-                @media (max-width: 575px) {
-                    .progress-tracker-wrapper {
-                        overflow-x: auto;
-                        scroll-snap-type: x proximity;
-                    }
-                    .progress-tracker-wrapper .progress-step {
-                        min-width: 50%;
-                        scroll-snap-align: start;
-                    }
-                }
-                .progress-tracker--vertical {
-                    flex-direction: column;
-                }
-                .progress-tracker--vertical .progress-step {
-                    display: flex;
-                    flex: 1 1 auto;
-                }
-                .progress-tracker--vertical.progress-tracker--right .progress-step {
-                    flex-direction: row-reverse;
-                }
-                .progress-tracker--vertical .progress-marker::after {
-                    right: auto;
-                    top: 12px;
-                    left: 14px;
-                    width: 4px;
-                    height: 100%;
-                }
-                .progress-tracker--vertical .progress-text {
-                    padding: 4px 12px 24px 12px;
-                }
-                @keyframes scale-up {
-                    from {
-                        opacity: 1;
-                        transform: translate(-50%, -50%) scale(0);
-                    }
-                    to {
-                        opacity: 0;
-                        transform: translate(-50%, -50%) scale(1);
-                    }
-                }
-                ul.progress-tracker--vertical .progress-step > .progress-marker {
-                    display: flex;
-                    width: fit-content;
-                }
-                @media (min-width: 576px) {
-                    .page-steps-lg {
-                        display: block !important;
-                    }
-                    .page-steps-sm {
-                        display: none !important;
-                    }
-                }
-                @media (max-width: 767px) {
-                    #page_title_text {
-                        text-align: left !important;
-                    }
-                }
-                @media (max-width: 576px) {
-                    table#t01 {
-                        border: 0;
-                    }
-                    table#t01 thead {
-                        border: none;
-                        clip: rect(0 0 0 0);
-                        height: 1px;
-                        margin: -1px;
-                        overflow: hidden;
-                        padding: 0;
-                        position: absolute;
-                        width: 1px;
-                    }
-                    table#t01 tr {
-                        border-bottom: 3px solid #ddd;
-                        display: grid;
-                    }
-                    table#t01 td {
-                        border-bottom: 1px solid #ddd;
-                        display: block;
-                        font-size: 0.9em;
-                        text-align: right;
-                    }
-                    table#t01 td::before {
-                        content: attr(data-label);
-                        float: left;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        margin-right: 10px;
-                    }
-                    table#t01 td:last-child {
-                        border-bottom: 0;
-                    }
-                    table#t01 tbody tr:nth-child(even) {
-                        background-color: #fffaf6;
-                    }
-                    p.table-cell-with-icons {
-                        justify-content: flex-end;
-                    }
-                }
-            </style>
-
-            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
-                <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
-                    <div class="toast-header" style="background-color: rgba(25, 135, 84, 0.85); color: #fff;">
-                        <strong class="me-auto">Check-In Email Sent!</strong>
-                        <small>Now</small>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body" style="background-color: #ffecdd;">We've sent a check-in link to jcastillo@eaglerider.com.</div>
-                </div>
-            </div>
+            <style scoped></style>
             <header>
-                <div class="px-3 py-2 bg-dark text-white visible-for-large" style="background-color: #303030 !important; display: none;">
+                <div class="px-3 py-2 bg-dark hidden-for-md">
                     <div class="container">
-                        <div class="d-flex flex-wrap align-items-center" style="justify-content: space-between;">
+                        <div class="d-flex flex-wrap align-items-center justify-content-between">
                             <div style="width: 75px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.86 298.66">
                                     <title>ER_LOGO_2019_color_no_est</title>
@@ -339,20 +138,17 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div style="width: auto;">
-                                <div style="background: #fff; color: #303030; border-radius: 20px; padding: 0.5rem 0.75rem; display: flex; align-items: center; width: auto;">
-                                    <span class="material-icons">
-                                        account_circle
-                                    </span>
-                                    <span>Jason C.</span>
-                                </div>
+                            <div>
+                                <button class="btn-avatar-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#avatarMenu" aria-controls="avatarMenu">
+                                    <span>Jason</span> <span class="material-icons btn-icon-right">menu_open</span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fourth navbar example" style="background-color: #f26b00 !important;">
-                <div class="container" style="">
+            <nav class="navbar navbar-expand-md primary-navbar" aria-label="">
+                <div class="container">
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -363,63 +159,55 @@
                         aria-label="Toggle navigation"
                         style="border-color: #efefef;"
                     >
-                        <span class="material-icons" style="vertical-align: middle; font-size: 1.5rem; color: #efefef;">
-                            menu
-                        </span>
+                        <span class="material-icons" style="vertical-align: middle; font-size: 1.5rem; color: #efefef;">menu</span>
                     </button>
-                    <div class="hidden-for-large" style="width: auto; display: flex; align-items: center; margin-right: auto; margin-left: 1rem;">
-                        <p style="margin-bottom: 0; font-size: 1.1875rem; font-family: 'Roboto Slab', serif; font-weight: 500; text-transform: uppercase; color: #fff;">EagleRider</p>
+                    <div class="visible-for-md align-items-center" style="display: none; margin-left: 1rem;">
+                        <p class="mb-0 fw-500 text-white" style="font-size: 1.1875rem; font-family: 'Roboto Slab', serif; text-transform: uppercase;">EagleRider</p>
                     </div>
-                    <div class="hidden-for-large" style="width: auto; margin-left: auto; max-width: 110px;">
-                        <div style="background: #fff; color: #303030; border-radius: 20px; padding: 0.5rem 0.75rem; display: flex; align-items: center; width: auto; line-height: initial;">
-                            <span class="material-icons" style="margin-right: 0.25rem;">
-                                account_circle
-                            </span>
-                            <span style="">Jason</span>
+                    <div class="visible-for-md" style="display: none; margin-left: auto; max-width: 110px;">
+                        <div>
+                            <button class="btn-avatar-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#avatarMenu" aria-controls="avatarMenu">
+                                <span>Jason</span> <span class="material-icons btn-icon-right">menu_open</span>
+                            </button>
                         </div>
                     </div>
-                    <div class="navbar-collapse collapse" id="navbarsExample04" style="">
+                    <div class="navbar-collapse collapse" id="navbarsExample04">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Reservations</a>
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Rentals</a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Create a Reservation</a></li>
+                                    <li><a class="dropdown-item" href="#">Find a Reservation</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Customers</a>
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Tours</a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Find a Vehicle</a></li>
+                                    <li><a class="dropdown-item" href="#">Inventory</a></li>
+                                    <li><a class="dropdown-item" href="#">Vehicle Movements</a></li>
+                                    <li><a class="dropdown-item" href="#">Vehicle Services</a></li>
+                                    <li><a class="dropdown-item" href="#">Vehicle Service Parts</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Fleet</a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Companies</a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Configuration Wizard</a></li>
-                            <li class="nav-item"><a class="nav-link disabled" style="display: none;">Disabled</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Deals</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Locations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Membership</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Online Check-In</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Gift Cards</a></li>
+                            <li class="nav-item"><a class="nav-link text-truncate" style="max-width: 166px;" href="#">EagleShare</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="avatarMenu" aria-labelledby="avatarMenu">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Hi, Jason!</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">...</div>
+            </div>
             <div id="main-canvas-wrapper">
                 <div id="main-canvas-body">
                     <div id="canvas-body-header" style="background-color: #efefef;">
@@ -427,26 +215,18 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row mx-0 py-3">
-                                        <div class="col-12 col-md-6 px-0">
-                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-transform: uppercase;">Vehicle Reservation Pick-Up</h3>
-                                        </div>
-
-                                        <div class="col-12 col-md-6 px-0">
-                                            <h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-align: right;">RLAX010000107771</h3>
-                                        </div>
+                                        <div class="col-12 col-md-6 px-0"><h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-transform: uppercase;">Vehicle Reservation Pick-Up</h3></div>
+                                        <div class="col-12 col-md-6 px-0"><h3 id="page_title_text" style="margin-bottom: 0; font-weight: 600; text-align: right;">RLAX010000107771</h3></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12" style="display: none;">
                                     <div class="page_title_hdr" style="display: flex; flex-flow: column; align-items: flex-start; justify-content: space-between; padding: 0 0 1rem 0; width: auto;">
-                                        <div style="width: auto;">
-                                            <h6 id="page_title_text" style="margin-bottom: 0; font-weight: 600; letter-spacing: 0.25px;"></h6>
-                                        </div>
+                                        <div style="width: auto;"><h6 id="page_title_text" style="margin-bottom: 0; font-weight: 600; letter-spacing: 0.25px;"></h6></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="container main-container-canvas">
                         <div class="row">
                             <div class="col-12">
@@ -455,36 +235,23 @@
                                         <ul class="progress-tracker progress-tracker--text" style="margin-bottom: 0;">
                                             <li class="progress-step is-active" aria-current="step">
                                                 <div class="progress-marker" data-text="1"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Check-In</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Check-In</p></div>
                                             </li>
-
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="2"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Add Upsells</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Add Upsells</p></div>
                                             </li>
-
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="3"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Vehicle Condition</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Vehicle Condition</p></div>
                                             </li>
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="4"></div>
-                                                <div class="progress-text" style="">
-                                                    <p style="margin-bottom: 0;">Rental Contract</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Rental Contract</p></div>
                                             </li>
-
                                             <li class="progress-step" style="flex: initial;">
                                                 <div class="progress-marker" data-text="5"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Completed</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Completed</p></div>
                                             </li>
                                         </ul>
                                     </div>
@@ -492,36 +259,23 @@
                                         <ul class="progress-tracker progress-tracker--vertical" style="margin-bottom: 0;">
                                             <li class="progress-step is-active" aria-current="step">
                                                 <div class="progress-marker" data-text="1"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Check-In</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Check-In</p></div>
                                             </li>
-
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="2"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Add Upsells</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Add Upsells</p></div>
                                             </li>
-
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="3"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Vehicle Condition</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Vehicle Condition</p></div>
                                             </li>
                                             <li class="progress-step">
                                                 <div class="progress-marker" data-text="4"></div>
-                                                <div class="progress-text" style="">
-                                                    <p style="margin-bottom: 0;">Rental Contract</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Rental Contract</p></div>
                                             </li>
-
                                             <li class="progress-step" style="flex: initial;">
                                                 <div class="progress-marker" data-text="5"></div>
-                                                <div class="progress-text">
-                                                    <p style="margin-bottom: 0;">Completed</p>
-                                                </div>
+                                                <div class="progress-text"><p style="margin-bottom: 0;">Completed</p></div>
                                             </li>
                                         </ul>
                                     </div>
@@ -529,49 +283,34 @@
                                 <div class="row mx-0 py-3 my-3 justify-content-between gap-2" style="background: #f9fbfc; border-radius: 5px; display: none;">
                                     <div class="col-auto">
                                         <div class="d-flex align-items-center gap-1 pb-2" style="color: #019d9d; font-weight: 500; border-bottom: 2px solid;">
-                                            <span class="material-icons" style="font-size: 2rem;">
-                                                looks_one
-                                            </span>
-                                            <span>Check In</span>
+                                            <span class="material-icons" style="font-size: 2rem;">looks_one</span> <span>Check In</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">
-                                                looks_two
-                                            </span>
-                                            <span>Edit &amp; Add Upsells</span>
+                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_two</span> <span>Edit &amp; Add Upsells</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_3 </span>
-                                            <span>Vehicle Condition</span>
+                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_3</span> <span>Vehicle Condition</span>
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_4 </span>
-                                            <span>Rental Contract</span>
-                                        </div>
+                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;"><span class="material-icons-outlined" style="font-size: 2rem;">looks_4</span> <span>Rental Contract</span></div>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_5 </span>
-                                            <span>Completed</span>
-                                        </div>
+                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;"><span class="material-icons-outlined" style="font-size: 2rem;">looks_5</span> <span>Completed</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-lg-12">
-                                <p style="margin-bottom: 0; font-size: 1.25rem;">Online Check-In Status</p>
-                            </div>
+                            <div class="col-lg-12"><p style="margin-bottom: 0; font-size: 1.25rem;">Online Check-In Status</p></div>
                             <div class="col-lg-12">
                                 <div class="table-wrapper">
                                     <table class="table table-striped" id="t01" style="font-size: 0.9375rem; border: 1px solid #dadada; margin: 1rem 0;">
-                                        <thead style="">
+                                        <thead>
                                             <tr>
                                                 <th scope="col">Checked In</th>
                                                 <th scope="col">Checked In At</th>
@@ -582,35 +321,29 @@
                                         <tbody style="border-top: initial;">
                                             <tr>
                                                 <td data-label="Checked In">
-                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span>No
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #198754; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle</span>Yes
                                                     </p>
                                                 </td>
-                                                <td data-label="Checked In At">-</td>
+                                                <td data-label="Checked In At">Dec 1, 2021 11:30 AM PST</td>
                                                 <td data-label="Completed Orientation">
-                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline </span>No
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #198754; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle</span>Yes
                                                     </p>
                                                 </td>
-                                                <td data-label="Viewed Orientation At">-</td>
+                                                <td data-label="Viewed Orientation At">Dec 1, 2021 11:42 AM PST</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mt-5">
                             <div class="col-lg-12">
-                                <div style="background-color: #ffecdd; padding: 1rem; border-radius: 5px; border: 1px solid #ffac71;">
-                                    <p style="margin-bottom: 0; font-size: 1.25rem; font-weight: 600; color: #f26b00;">Save Time Below</p>
-                                    <p style="margin-bottom: 0.25rem; color: #3a3a3a; font-weight: 500;">Send a link to your renter to complete the Online Check-In.</p>
-                                    <p style="margin-bottom: 0.5rem; color: #3a3a3a; font-size: 0.875rem; font-weight: 300;">
-                                        Your renter will receive an email (check spam/junk folder) with a link to complete their online check-in. Upon the renter's completion, you can refresh this page and any incomplete information will be
-                                        updated.
-                                    </p>
-                                    <button type="button" class="btn btn-link px-0" id="liveToastBtn" onclick="pageRedirect();" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem;">
-                                        Send a Link Now
+                                <div class="save_time_checkin" style="background-color: #ffecdd; padding: 0.25rem 1rem; border-radius: 5px; border: 1px solid #ffac71; display: flex; align-items: center; justify-content: space-between;">
+                                    <p style="margin-bottom: 0; color: #3a3a3a; font-weight: 500;">Send a link to your renter to complete their Online Check-In.</p>
+                                    <button type="button" class="btn btn-link px-0" id="liveToastBtn" onclick="pageRedirect()" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; height: auto;">
+                                        Send Email Link
                                     </button>
                                     <a
                                         href="#"
@@ -646,11 +379,13 @@
                                         <div class="col-auto">
                                             <a
                                                 href="#"
-                                                id="modify_button"
+                                                id="verify_now_button"
                                                 class="btn btn-primary btn-lg btn-with-icon"
                                                 tabindex="-1"
                                                 role="button"
                                                 aria-disabled="false"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#showVerifyRenterLicense"
                                                 style="
                                                     display: flex;
                                                     align-items: center;
@@ -664,51 +399,29 @@
                                                     margin-left: auto;
                                                 "
                                             >
-                                                <span class="material-icons btn-icon">policy</span><span style="">Verify Now</span>
+                                                <span class="material-icons btn-icon">policy</span><span>Verify Now</span>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled="" readonly="" style="" />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="" value="Jason" disabled readonly />
                                                 <label for="floatingSelectGrid">First Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="" disabled="" readonly="" />
-                                                <label for="floatingInput">Middle Name</label>
-                                            </div>
+                                            <div class="form-floating mb-3"><input class="form-control" id="floatingInputGrid" placeholder="Middle Name" disabled readonly /><label for="floatingInput">Middle Name</label></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="Castillo"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="" value="Castillo" disabled readonly />
                                                 <label for="floatingSelectGrid">Last Name<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="11/21/1980" disabled readonly />
                                                 <label for="floatingInput">Date of Birth<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
@@ -716,47 +429,20 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="I1234568" disabled readonly />
                                                 <label for="floatingInput">Driver License Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="03/05/2026" disabled readonly />
                                                 <label for="floatingInput">Expiration Date<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select is-invalid"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-
-                                                >
-                                                    <option selected="">Not Selected</option>
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
+                                                    <option selected>Yes</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -764,20 +450,10 @@
                                                 <label for="floatingSelectGrid">Motorcycle Endorsement<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
-
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select is-invalid"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-
-                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-
-                                                >
-                                                    <option selected="">Not Selected</option>
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
+                                                    <option selected>United States</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -787,17 +463,8 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select is-invalid"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-
-                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-
-                                                >
-                                                    <option selected="">Not Selected</option>
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
+                                                    <option selected>California</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -819,45 +486,20 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="email"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="jcastillo@eaglerider.com"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                />
+                                                <input type="email" class="form-control" id="floatingInputGrid" placeholder="" value="jcastillo@eaglerider.com" disabled readonly />
                                                 <label for="floatingSelectGrid">Email<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="phone"
-                                                    class="form-control"
-                                                    id="floatingInputGrid"
-                                                    placeholder=""
-                                                    value="310-536-6777"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style=""
-                                                />
+                                                <input type="phone" class="form-control" id="floatingInputGrid" placeholder="" value="310-536-6777" disabled readonly />
                                                 <label for="floatingSelectGrid">Mobile Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="background-color: #dadada;"
-                                                >
-                                                    <option selected="">United States</option>
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
+                                                    <option selected>United States</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -867,53 +509,23 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545; /* border: 2px solid #dc3545; */"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="11860 S La Cienega Blvd" disabled readonly />
                                                 <label for="floatingInput">Street Address<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Address 2" value="" disabled="" readonly="" />
-                                                <label for="floatingInput">Address 2</label>
-                                            </div>
+                                            <div class="form-floating mb-3"><input class="form-control" id="floatingInputGrid" placeholder="Address 2" disabled readonly /><label for="floatingInput">Address 2</label></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545; /* border: 2px solid #dc3545; */"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="Hawthorne" disabled readonly />
                                                 <label for="floatingInput">City<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select
-                                                    class="form-select is-invalid"
-                                                    id="floatingSelectGrid"
-                                                    aria-label="Pick-up Location"
-                                                    disabled=""
-                                                    readonly=""
-
-                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
-
-                                                >
-                                                    <option selected="">Not Selected</option>
+                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
+                                                    <option selected>California</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -923,16 +535,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input
-                                                    type="text"
-                                                    class="form-control is-invalid"
-                                                    id="floatingInputGrid"
-                                                    placeholder="Middle Name"
-                                                    value=""
-                                                    disabled=""
-                                                    readonly=""
-                                                    style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545; /* border: 2px solid #dc3545; */"
-                                                />
+                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="90250" disabled readonly />
                                                 <label for="floatingInput">Zip / Postal Code<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
@@ -959,7 +562,7 @@
                                                     margin-left: auto;
                                                 "
                                             >
-                                                <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
+                                                <span class="material-icons-outlined btn-icon">edit</span><span>Edit</span>
                                             </a>
                                         </div>
                                     </div>
@@ -975,9 +578,7 @@
                                 <div class="row mx-0 py-2" style="border: 1px solid #dadada;">
                                     <div class="col-sm-12 col-md-4 py-1">
                                         <div class="form-check form-check-inline">
-                                            <span class="material-icons form-check-input" style="font-size: 20px; border: 0; margin-top: 2px; color: #fe7b10; margin-left: -26px;">
-                                                radio_button_checked
-                                            </span>
+                                            <span class="material-icons form-check-input" style="font-size: 20px; border: 0; margin-top: 2px; color: #fe7b10; margin-left: -26px;">radio_button_checked</span>
                                             <label class="form-check-label" for="riders1" style="font-weight: 500;">No, I will be riding alone</label>
                                         </div>
                                     </div>
@@ -1008,30 +609,24 @@
                                 <div style="border: 1px solid #dadada;">
                                     <div class="d-flex p-3">
                                         <div class="form-check form-check-inline">
-                                            <span class="material-icons form-check-input" style="font-size: 20px; border: 0; margin-top: 2px; color: #fe7b10; margin-left: -1.5rem;">
-                                                radio_button_checked
-                                            </span>
+                                            <span class="material-icons form-check-input" style="font-size: 20px; border: 0; margin-top: 2px; color: #fe7b10; margin-left: -1.5rem;">radio_button_checked</span>
                                             <label class="form-check-label" for="emails1" style="font-weight: 500;">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="emails2" value="option2" />
-                                            <label class="form-check-label" for="emails2" style="color: #aeaeae;">No</label>
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="emails2" value="option2" /><label class="form-check-label" for="emails2" style="color: #aeaeae;">No</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-5">
-                            <div class="col-12">
-                                <p style="margin-bottom: 0; font-size: 1.25rem;">Memo</p>
-                            </div>
+                            <div class="col-12"><p style="margin-bottom: 0; font-size: 1.25rem;">Memo</p></div>
                             <div class="col-12">
                                 <div style="border: 1px solid #dadada;">
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-12">
                                             <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea>
-                                                <label for="floatingTextarea2"></label>
+                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea><label for="floatingTextarea2"></label>
                                             </div>
                                         </div>
                                     </div>
@@ -1057,7 +652,7 @@
                                                     margin-left: auto;
                                                 "
                                             >
-                                                <span class="material-icons-outlined btn-icon">edit</span><span style="">Edit</span>
+                                                <span class="material-icons-outlined btn-icon">edit</span><span>Edit</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1074,9 +669,8 @@
                                     role="button"
                                     aria-disabled="false"
                                     style="display: flex; align-items: center; padding: 0.875rem 1.75rem; background-color: fe7b10; border-radius: 8px; color: #fff; border: 1px solid; height: auto; width: fit-content; margin-left: auto;"
-
                                 >
-                                    <span style="">Save &amp; Continue</span><span class="material-icons-outlined" style="margin-left: 0.25rem;">navigate_next</span>
+                                    <span>Save &amp; Continue</span><span class="material-icons-outlined" style="margin-left: 0.25rem;">navigate_next</span>
                                 </a>
                             </div>
                         </div>
@@ -1085,120 +679,49 @@
                 <div id="main-canvas-footer"></div>
             </div>
             <div id="footer" style="background: #303030;">
-                <div class="container" style="">
-                    <footer class="py-5">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Rentals</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">BMW Motorcycle Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Harley Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Honda Motorcycle Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">KTM Rentals</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Yamaha Rentals</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Tours</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Guided Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Self Drive Motorcycle Tours</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Popular Motorcycle Trips</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Locations</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Los Angeles</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Las Vegas</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Denver</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Orlando</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Chicago</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 mb-3">
-                                <h5 style="color: #fff;">Information</h5>
-                                <ul class="nav flex-column">
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Site Map</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">EagleRider Reviews</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About EagleRider</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Careers</a></li>
-                                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Insurance</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-3">
-                                <form>
-                                    <h5 style="color: #fff;">Subscribe to our newsletter</h5>
-                                    <p style="color: #fff;">Monthly digest of whats new and exciting from us.</p>
-                                    <div class="d-flex w-100 gap-2">
-                                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                                        <input
-                                            id="newsletter1"
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="Email address"
-                                        />
-                                        <button
-                                            class="btn btn-primary"
-                                            type="button"
-                                            style="background-color: #fe7b10; border-color: #fe7b10;"
-                                        >
-                                            Subscribe
-                                        </button>
+                <div class="container">
+                    <footer class="py-4">
+                        <div class="d-flex"><p class="text-white mb-0">Copyright © 2022 EagleRider.</p></div>
+                        <div class="accordion mt-3" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Related Page Links</button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="list-group">
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/assign_a_bike_first.html"
+                                                class="list-group-item list-group-item-action active"
+                                                aria-current="true"
+                                            >
+                                                Assign a Bike First
+                                            </a>
+                                            <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/bike_assigned.html" class="list-group-item list-group-item-action">
+                                                Bike Assigned
+                                            </a>
+                                            <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/new_vehicle_condition.html" class="list-group-item list-group-item-action">
+                                                New Vehicle Condition
+                                            </a>
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/new_vehicle_condition_images_added.html"
+                                                class="list-group-item list-group-item-action"
+                                            >
+                                                New Vehicle Condition with Images Added
+                                            </a>
+                                            <a href="https://jascas93.github.io/eaglerider-projects/adding_vehicle_condition_before_pickup/vehicle_reservations/condition_report_added.html" class="list-group-item list-group-item-action">
+                                                Condition Report Added
+                                            </a>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-between py-4 border-top">
-                            <p style="color: #fff;">Copyright © 2021 EagleRider.</p>
-                            <ul class="list-unstyled d-flex">
-                                <li class="ms-3">
-                                    <a class="link-dark" href="#">
-                                        <svg class="bi" width="24" height="24">
-                                            <use xlink:href="#twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="ms-3">
-                                    <a class="link-dark" href="#">
-                                        <svg class="bi" width="24" height="24">
-                                            <use xlink:href="#instagram"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="ms-3">
-                                    <a class="link-dark" href="#">
-                                        <svg class="bi" width="24" height="24">
-                                            <use xlink:href="#facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </footer>
                 </div>
             </div>
+            <div id="all_modals"></div>
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            var toastTrigger = document.getElementById("liveToastBtn");
-            var toastLiveExample = document.getElementById("liveToast");
-            if (toastTrigger) {
-                toastTrigger.addEventListener("click", function () {
-                    var toast = new bootstrap.Toast(toastLiveExample);
-
-                    toast.show();
-                });
-            }
-        </script>
-
-        <script type="text/javascript">
-            function pageRedirect() {
-                setTimeout(function () {
-                    window.location.href = "https://jascas93.github.io/eaglerider-projects/rental-management/vehicle_reservations/membership_express_pickup_checked_in_not_verified_step_1.html";
-                }, 6000);
-            }
-        </script>
     </body>
 </html>
