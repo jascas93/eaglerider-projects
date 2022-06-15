@@ -1,0 +1,190 @@
+.progress-tracker {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+.progress-step {
+    flex: 1 1 0%;
+    margin: 0;
+    padding: 0;
+    min-width: 24px;
+}
+.progress-step:last-child {
+    flex-grow: 0;
+}
+.progress-step:last-child .progress-marker::after {
+    display: none;
+}
+.progress-link {
+    display: block;
+    position: relative;
+}
+.progress-marker {
+    display: block;
+    position: relative;
+}
+.progress-marker::before {
+    content: attr(data-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    width: 32px;
+    height: 32px;
+    padding-bottom: 0px;
+    border-radius: 50%;
+    transition: background-color, border-color;
+    transition-duration: 0.3s;
+}
+.progress-marker::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -10;
+    top: 14px;
+    right: -12px;
+    width: 100%;
+    height: 4px;
+    transition: background-color 0.3s, background-position 0.3s;
+}
+.progress-text {
+    display: block;
+    padding: 8px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.progress-title {
+    margin-top: 0;
+}
+.progress-step .progress-marker {
+    color: #fff;
+}
+.progress-step .progress-marker::before {
+    background-color: #aeaeae;
+}
+.progress-step .progress-marker::after {
+    background-color: #dadada;
+    z-index: 1;
+}
+.progress-step .progress-text {
+    color: #797979;
+}
+.is-active .progress-text {
+    color: #fe7b10;
+    font-weight: 600;
+}
+.progress-step.is-active .progress-marker::before {
+    background-color: #fe7b14;
+}
+.progress-step.is-complete .progress-marker::before,
+.progress-step.is-progress .progress-marker::before {
+    background-color: #019d9d;
+    content: url(https://jascas93.github.io/web-assets/done_white_18dp.svg);
+}
+.progress-step.is-complete .progress-marker::after,
+.progress-step.is-progress .progress-marker::after {
+    background-color: #b2e0dc;
+    z-index: 1;
+}
+@media (max-width: 575px) {
+    .progress-tracker-wrapper {
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+    }
+    .progress-tracker-wrapper .progress-step {
+        min-width: 50%;
+        scroll-snap-align: start;
+    }
+}
+.progress-tracker--vertical {
+    flex-direction: column;
+}
+.progress-tracker--vertical .progress-step {
+    display: flex;
+    flex: 1 1 auto;
+}
+.progress-tracker--vertical.progress-tracker--right .progress-step {
+    flex-direction: row-reverse;
+}
+.progress-tracker--vertical .progress-marker::after {
+    right: auto;
+    top: 12px;
+    left: 14px;
+    width: 4px;
+    height: 100%;
+}
+.progress-tracker--vertical .progress-text {
+    padding: 4px 12px 24px 12px;
+}
+@keyframes scale-up {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+ul.progress-tracker--vertical .progress-step > .progress-marker {
+    display: flex;
+    width: fit-content;
+}
+@media (min-width: 576px) {
+    .page-steps-lg {
+        display: block !important;
+    }
+    .page-steps-sm {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    #page_title_text {
+        text-align: left !important;
+    }
+}
+@media (max-width: 576px) {
+    .save_time_checkin {
+        flex-flow: wrap;
+    }
+    table#t01 {
+        border: 0;
+    }
+    table#t01 thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table#t01 tr {
+        border-bottom: 3px solid #ddd;
+        display: grid;
+    }
+    table#t01 td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.9em;
+        text-align: right;
+    }
+    table#t01 td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+    table#t01 td:last-child {
+        border-bottom: 0;
+    }
+    table#t01 tbody tr:nth-child(even) {
+        background-color: #fffaf6;
+    }
+    p.table-cell-with-icons {
+        justify-content: flex-end;
+    }
+}
