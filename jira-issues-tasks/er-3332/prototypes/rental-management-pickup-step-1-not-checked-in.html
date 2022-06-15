@@ -299,14 +299,10 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_two</span> <span>Edit &amp; Add Upsells</span>
-                                        </div>
+                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;"><span class="material-icons-outlined" style="font-size: 2rem;">looks_two</span> <span>Edit &amp; Add Upsells</span></div>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;">
-                                            <span class="material-icons-outlined" style="font-size: 2rem;">looks_3</span> <span>Vehicle Condition</span>
-                                        </div>
+                                        <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;"><span class="material-icons-outlined" style="font-size: 2rem;">looks_3</span> <span>Vehicle Condition</span></div>
                                     </div>
                                     <div class="col-auto">
                                         <div class="d-flex align-items-center gap-1" style="color: #dadada; font-weight: 500;"><span class="material-icons-outlined" style="font-size: 2rem;">looks_4</span> <span>Rental Contract</span></div>
@@ -333,17 +329,17 @@
                                         <tbody style="border-top: initial;">
                                             <tr>
                                                 <td data-label="Checked In">
-                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #198754; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle</span>Yes
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline</span>No
                                                     </p>
                                                 </td>
-                                                <td data-label="Checked In At">Dec 1, 2021 11:30 AM PST</td>
+                                                <td data-label="Checked In At">-</td>
                                                 <td data-label="Completed Orientation">
-                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #198754; font-weight: 500;">
-                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">check_circle</span>Yes
+                                                    <p class="table-cell-with-icons" style="margin-bottom: 0; display: flex; align-items: center; color: #dc3545; font-weight: 500;">
+                                                        <span class="material-icons-outlined" style="font-size: 1rem; margin-right: 0.25rem;">error_outline</span>No
                                                     </p>
                                                 </td>
-                                                <td data-label="Viewed Orientation At">Dec 1, 2021 11:42 AM PST</td>
+                                                <td data-label="Viewed Orientation At">-</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -352,20 +348,14 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-lg-12">
-                                <div class="save_time_checkin" style="background-color: #ffecdd; padding: 0.25rem 1rem; border-radius: 5px; border: 1px solid #ffac71; display: flex; align-items: center; justify-content: space-between;">
-                                    <p style="margin-bottom: 0; color: #3a3a3a; font-weight: 500;">Send a link to your renter to complete their Online Check-In.</p>
-                                    <button type="button" class="btn btn-link px-0" id="liveToastBtn" onclick="pageRedirect()" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; height: auto;">
-                                        Send Email Link
-                                    </button>
-                                    <a
-                                        href="#"
-                                        id="verify_button"
-                                        role="button"
-                                        aria-disabled="false"
-                                        data-bs-toggle="modal"
-                                        data-bs-target=""
-                                        style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; display: none;"
-                                    >
+                                <div style="background-color: #ffecdd; padding: 1rem; border-radius: 5px; border: 1px solid #ffac71;">
+                                    <p style="margin-bottom: 0; font-size: 1.25rem; font-weight: 600; color: #f26b00;">Save Time Below</p>
+                                    <p style="margin-bottom: 0.25rem; color: #3a3a3a; font-weight: 500;">Send a link to your renter to complete the Online Check-In.</p>
+                                    <p style="margin-bottom: 0.5rem; color: #3a3a3a; font-size: 0.875rem; font-weight: 300;">
+                                        Your renter will receive an email (check spam/junk folder) with a link to complete their online check-in. Upon the renter's completion, you can refresh this page and any incomplete information will be updated.
+                                    </p>
+                                    <button type="button" class="btn btn-link px-0" id="liveToastBtn" onclick="pageRedirect()" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem;">Send a Link Now</button>
+                                    <a href="#" id="verify_button" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="" style="color: #fe7b10; font-weight: 600; text-transform: uppercase; font-size: 0.875rem; display: none;">
                                         Send a Link Now
                                     </a>
                                 </div>
@@ -391,25 +381,12 @@
                                         <div class="col-auto">
                                             <a
                                                 href="#"
-                                                id="verify_now_button"
+                                                id="modify_button"
                                                 class="btn btn-primary btn-lg btn-with-icon"
                                                 tabindex="-1"
                                                 role="button"
                                                 aria-disabled="false"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#showVerifyRenterLicense"
-                                                style="
-                                                    display: flex;
-                                                    align-items: center;
-                                                    padding: 0.875rem 1.75rem;
-                                                    background-color: #fe7b10;
-                                                    border-radius: 8px;
-                                                    color: #fff;
-                                                    border: 1px solid;
-                                                    height: auto;
-                                                    width: fit-content;
-                                                    margin-left: auto;
-                                                "
+                                                style="display: flex; align-items: center; padding: 0.875rem 1.75rem; background-color: #fe7b10; border-radius: 8px; color: #fff; border: 1px solid; height: auto; width: fit-content; margin-left: auto;"
                                             >
                                                 <span class="material-icons btn-icon">policy</span><span>Verify Now</span>
                                             </a>
@@ -433,7 +410,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="11/21/1980" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">Date of Birth<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
@@ -441,20 +418,27 @@
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="I1234568" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">Driver License Number<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="03/05/2026" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">Expiration Date<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
-                                                    <option selected>Yes</option>
+                                                <select
+                                                    class="form-select is-invalid"
+                                                    id="floatingSelectGrid"
+                                                    aria-label="Pick-up Location"
+                                                    disabled
+                                                    readonly
+                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
+                                                >
+                                                    <option selected>Not Selected</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -464,8 +448,15 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
-                                                    <option selected>United States</option>
+                                                <select
+                                                    class="form-select is-invalid"
+                                                    id="floatingSelectGrid"
+                                                    aria-label="Pick-up Location"
+                                                    disabled
+                                                    readonly
+                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
+                                                >
+                                                    <option selected>Not Selected</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -475,8 +466,15 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
-                                                    <option selected>California</option>
+                                                <select
+                                                    class="form-select is-invalid"
+                                                    id="floatingSelectGrid"
+                                                    aria-label="Pick-up Location"
+                                                    disabled
+                                                    readonly
+                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
+                                                >
+                                                    <option selected>Not Selected</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -521,7 +519,7 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="11860 S La Cienega Blvd" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">Street Address<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
@@ -530,14 +528,21 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="Hawthorne" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">City<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" disabled readonly style="background-color: #dadada;">
-                                                    <option selected>California</option>
+                                                <select
+                                                    class="form-select is-invalid"
+                                                    id="floatingSelectGrid"
+                                                    aria-label="Pick-up Location"
+                                                    disabled
+                                                    readonly
+                                                    style="background-color: #dadada; border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;"
+                                                >
+                                                    <option selected>Not Selected</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
                                                     <option value="3">Three</option>
@@ -547,7 +552,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="floatingInputGrid" placeholder="Middle Name" value="90250" disabled readonly />
+                                                <input class="form-control is-invalid" id="floatingInputGrid" placeholder="Middle Name" disabled readonly style="border: 1px solid #dc3545; border-bottom: 2px solid #dc3545;" />
                                                 <label for="floatingInput">Zip / Postal Code<span style="color: #dc3545; margin-left: 0.125rem;">*</span></label>
                                             </div>
                                         </div>
@@ -602,8 +607,7 @@
                                     </div>
                                     <div class="col-sm-12 col-md-4 py-1">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="ridersRadioOptions" id="riders3" value="option3" />
-                                            <label class="form-check-label" for="riders3" style="color: #aeaeae;">Yes, there is another driver</label>
+                                            <input class="form-check-input" type="radio" name="ridersRadioOptions" id="riders3" value="option3" /><label class="form-check-label" for="riders3" style="color: #aeaeae;">Yes, there is another driver</label>
                                         </div>
                                     </div>
                                 </div>
@@ -637,9 +641,7 @@
                                 <div style="border: 1px solid #dadada;">
                                     <div class="row mx-0 py-3">
                                         <div class="col-md-12">
-                                            <div class="form-floating mb-3">
-                                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea><label for="floatingTextarea2"></label>
-                                            </div>
+                                            <div class="form-floating mb-3"><textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px;"></textarea><label for="floatingTextarea2"></label></div>
                                         </div>
                                     </div>
                                     <div class="row mx-0 pb-3">
