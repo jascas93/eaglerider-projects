@@ -323,7 +323,7 @@
                                             </p>
                                         </div>
                                         <div class="col-12 col-lg-auto d-flex align-items-center justify-content-start">
-                                            <a href="#" id="liveToastBtn" class="btn btn-primary-link btn-with-icon" tabindex="-1" role="button" aria-disabled="false" onclick="pageRedirect()">
+                                            <a href="#" id="liveToastBtn" class="btn btn-primary-link btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#sendLinkOverlay">
                                                 <span class="btn-link-text">Send A Link</span><span class="material-icons btn-icon-right" style="font-size: 15px !important;">send</span>
                                             </a>
                                         </div>
@@ -738,6 +738,43 @@
                 </div>
             </div>
             <div id="all_modals">
+                <div class="modal fade show" id="sendLinkOverlay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sendLinkOverlayLabel" aria-modal="true" role="dialog" style="display: block;">
+                    <div class="modal-dialog">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Modify Reservation</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Modifying your reservation will allow you to reselect reservation details. Rates and prices may vary, and you may exit at any time.</p>
+                                    <p>You will be taken to the reservation booking path to continue your modifications.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row w-100 g-3">
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
+                                            <a href="#" id="modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
+                                                <span>Close and Go Back</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
+                                            <a
+                                                href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-no-change.html?welcome=1"
+                                                id="modal_continue_modify"
+                                                class="btn btn-primary btn-with-icon"
+                                                tabindex="-1"
+                                                role="button"
+                                                aria-disabled="false"
+                                            >
+                                                <span>Go to Modify</span><span class="material-icons-outlined btn-icon-right">launch</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
                     <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
                         <div class="toast-header" style="background-color: rgba(25, 135, 84, 0.85); color: #fff;">
