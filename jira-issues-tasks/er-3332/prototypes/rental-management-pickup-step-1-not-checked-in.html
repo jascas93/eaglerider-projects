@@ -783,23 +783,16 @@
                     </div>
                 </div>
                 <div class="position-fixed start-0 p-3" style="z-index: 999; top: 25%;">
-                    <div id="emailSentToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
+                    <div id="sentToastMsg" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
                         <div class="toast-header" style="background-color: #019D9D; color: #fff;">
-                            <strong class="me-auto">Check-In Email Sent!</strong>
+                            <strong class="me-auto">Check-In Link Sent!</strong>
                             <small>Now</small>
                             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
-                        <div class="toast-body" style="background-color: #edf9f9; font-weight: 500;">We've sent a check-in link to jsmith@example.com</div>
-                    </div>
-                </div>
-                <div class="position-fixed start-0 p-3" style="z-index: 999; top: 33%;">
-                    <div id="smsSentToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
-                        <div class="toast-header" style="background-color: #019D9D; color: #fff;">
-                            <strong class="me-auto">Check-In Text Message Sent!</strong>
-                            <small>Now</small>
-                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        <div class="toast-body" style="background-color: #edf9f9; font-weight: 500;">
+                            <p class="mb-2">We've sent an email to jsmith@example.com</p>
+                            <p class="mb-0">We've sent a text message to +1 (310) 536-6667</p>
                         </div>
-                        <div class="toast-body" style="background-color: #edf9f9; font-weight: 500;">We've sent a check-in link to +1 (310) 536-6777</div>
                     </div>
                 </div>
             </div>
@@ -807,7 +800,7 @@
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
             var toastTrigger = document.getElementById("send_check_in_link_btn");
-            var toastLiveExample = document.getElementById("emailSentToast");
+            var toastLiveExample = document.getElementById("sentToastMsg");
             if (toastTrigger) {
                 toastTrigger.addEventListener("click", function () {
                     var toast = new bootstrap.Toast(toastLiveExample);
