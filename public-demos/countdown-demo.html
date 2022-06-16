@@ -85,7 +85,7 @@
                 hour = minute * 60,
                 day = hour * 24;
 
-            const expiration = new Date(2022, 6, 18, 0, 0, 0, 0);
+            const expiration = new Date("June 17 2022 12:30");
 
             const countDown = new Date(expiration).getTime(),
 
@@ -93,7 +93,7 @@
 
             x = setInterval(function () {
                 distance = countDown - now;
-                
+
                 (document.getElementById("days").innerText = Math.floor(distance / day)),
                 (document.getElementById("hours").innerText = Math.floor((distance % day) / hour)),
                 (document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)),
