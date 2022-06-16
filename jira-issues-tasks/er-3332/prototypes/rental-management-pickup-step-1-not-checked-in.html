@@ -763,9 +763,9 @@
                                     <div class="mt-3">
                                         <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via text message (SMS)</p></div>
                                         <div class="form-check" style="margin-bottom: 0;">
-                                            <input class="form-check-input" type="checkbox" value="" id="send_sms" checked="" />
+                                            <input class="form-check-input" type="checkbox" value="" id="send_sms" checked="" onclick="sms_checkbox_changed(this);" />
                                             <form class="form-floating">
-                                                <input type="phone" class="form-control" id="sms_input" placeholder="+1 888 888 8888" value="+1 (310) 536-6777" onclick="sms_checkbox_changed(this);"/>
+                                                <input type="phone" class="form-control" id="sms_input" placeholder="+1 888 888 8888" value="+1 (310) 536-6777" />
                                                 <label for="email_input">Mobile Number</label>
                                             </form>
                                         </div>
