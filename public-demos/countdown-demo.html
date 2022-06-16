@@ -85,30 +85,25 @@
                 hour = minute * 60,
                 day = hour * 24;
 
-            const expiration = new Date(2022, 5, 17, 21, 0);
+            let expiration = new Date(2022, 5, 17, 21, 0);
 
             const countDown = new Date(expiration).getTime(),
+                x = setInterval(function () {
+                    const now = new Date().getTime(),
+                        distance = countDown - now;
 
-            const now = new Date().getTime(),
+                    (document.getElementById("days").innerText = Math.floor(distance / day)),
+                        (document.getElementById("hours").innerText = Math.floor((distance % day) / hour)),
+                        (document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)),
+                        (document.getElementById("seconds").innerText = Math.floor((distance % minute) / second));
 
-            x = setInterval(function () {
-                distance = countDown - now;
-
-                (document.getElementById("days").innerText = Math.floor(distance / day)),
-                (document.getElementById("hours").innerText = Math.floor((distance % day) / hour)),
-                (document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)),
-                (document.getElementById("seconds").innerText = Math.floor((distance % minute) / second));
-
-                //do something later when date is reached
-                if (distance < 0) {
-                    document.getElementById("headline").innerText = "Flash Sale Has Ended";
-                    // document.getElementById("countdown").style.display = "none";
-                    // document.getElementById("content").style.display = "block";
-                    clearInterval(x);
-                }
-                //seconds
-            }, 0);
+                    if (distance < 0) {
+                        document.getElementById("headline").innerText = "Flash Sale Has Ended";
+                        document.getElementById("countdown").style.display = "none";
+                        document.getElementById("content").style.display = "block";
+                        clearInterval(x);
+                    }
+                }, 0);
         })();
-        //# sourceURL=pen.js
     </script>
 </html>
