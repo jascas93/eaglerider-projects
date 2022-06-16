@@ -85,8 +85,6 @@
                 hour = minute * 60,
                 day = hour * 24;
 
-            //I'm adding this section so I don't have to keep updating this pen every year :-)
-            //remove this if you don't need it
             let today = new Date(),
                 dd = String(today.getDate()).padStart(2, "0"),
                 mm = String(today.getMonth() + 1).padStart(2, "0"),
@@ -94,14 +92,16 @@
                 nextYear = yyyy,
                 dayMonth = "06/17/",
                 birthday = dayMonth + yyyy;
+                expiration = new Date(2022, 6, 17, 8, 30, 0, 0);
 
             today = mm + "/" + dd + "/" + yyyy;
+            // today.setHours( today.getHours() + 2 );
             if (today > birthday) {
                 birthday = dayMonth + nextYear;
             }
             //end
 
-            const countDown = new Date(birthday).getTime(),
+            const countDown = new Date(expiration).getTime(),
                 x = setInterval(function () {
                     const now = new Date().getTime(),
                         distance = countDown - now;
