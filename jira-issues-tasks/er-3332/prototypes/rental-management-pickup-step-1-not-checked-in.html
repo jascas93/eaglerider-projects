@@ -782,7 +782,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-fixed start-0 p-3" style="z-index: 999; top: 22%;">
+                <div class="position-fixed start-0 p-3" style="z-index: 999; top: 25%;">
                     <div id="emailSentToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
                         <div class="toast-header" style="background-color: #019D9D; color: #fff;">
                             <strong class="me-auto">Check-In Email Sent!</strong>
@@ -807,14 +807,11 @@
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
             var toastTrigger = document.getElementById("send_check_in_link_btn");
-            var toastLiveExample1 = document.getElementById("emailSentToast");
-            var toastLiveExample2 = document.getElementById("smsSentToast");
-            if (toastTrigger1) {
+            var toastLiveExample = document.getElementById("emailSentToast");
+            if (toastTrigger) {
                 toastTrigger.addEventListener("click", function () {
-                    var toast1 = new bootstrap.Toast(toastLiveExample1);
-                    var toast2 = new bootstrap.Toast(toastLiveExample2);
-                    toast1.show();
-                    toast2.show();
+                    var toast = new bootstrap.Toast(toastLiveExample);
+                    toast.show();
                 });
             }
         </script>
