@@ -774,7 +774,7 @@
                                 <div class="modal-footer">
                                     <div class="row w-100">
                                         <div class="col-12 px-0">
-                                            <a href="#" id="send_check_in_links" class="btn btn-primary btn-with-icon w-100" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal"> <span>Send</span><span class="material-icons-outlined btn-icon-right">send</span> </a>
+                                            <a href="#" id="send_check_in_link_btn" class="btn btn-primary btn-with-icon w-100" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal"> <span>Send</span><span class="material-icons-outlined btn-icon-right">send</span> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -782,26 +782,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
-                    <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
+                <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 11;">
+                    <div id="emailSentToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" style="">
                         <div class="toast-header" style="background-color: rgba(25, 135, 84, 0.85); color: #fff;">
                             <strong class="me-auto">Check-In Email Sent!</strong>
                             <small>Now</small>
                             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
-                        <div class="toast-body" style="background-color: #ffecdd;">We've sent a check-in link to jcastillo@eaglerider.com.</div>
+                        <div class="toast-body" style="background-color: #ffecdd;">We've sent a check-in link to jsmith@example.com.</div>
                     </div>
                 </div>
             </div>
         </main>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
-            var toastTrigger = document.getElementById("liveToastBtn");
-            var toastLiveExample = document.getElementById("liveToast");
+            var toastTrigger = document.getElementById("send_check_in_link_btn");
+            var toastLiveExample = document.getElementById("emailSentToast");
             if (toastTrigger) {
                 toastTrigger.addEventListener("click", function () {
                     var toast = new bootstrap.Toast(toastLiveExample);
-
                     toast.show();
                 });
             }
