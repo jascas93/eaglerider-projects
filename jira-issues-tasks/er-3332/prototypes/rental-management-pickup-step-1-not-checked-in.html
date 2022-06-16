@@ -743,31 +743,38 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
-                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Modify Reservation</h5>
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Send Online Check In Link</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Modifying your reservation will allow you to reselect reservation details. Rates and prices may vary, and you may exit at any time.</p>
-                                    <p>You will be taken to the reservation booking path to continue your modifications.</p>
+                                    <div>
+                                        <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via email</p></div>
+                                        <div class="form-check" style="margin-bottom: 0;">
+                                            <input class="form-check-input" type="checkbox" value="" id="send_email" checked="" />
+                                            <form class="form-floating">
+                                                <input type="email" class="form-control" id="email_input" placeholder="name@example.com" value="jsmith@example.com" />
+                                                <label for="email_input">Email</label>
+                                            </form>
+                                        </div>
+                                        <div style="margin-top: -0.75rem; padding-left: 1.5rem;">
+                                            <p style="margin-bottom: 0; font-size: 0.75rem; color: #797979; font-weight: 300; font-style: italic; letter-spacing: 0.35px; line-height: 1.4;">Email message may arrive in the customer's junk folder.</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via text message (SMS)</p></div>
+                                        <div class="form-check" style="margin-bottom: 0;">
+                                            <input class="form-check-input" type="checkbox" value="" id="send_sms" checked="" />
+                                            <form class="form-floating">
+                                                <input type="phone" class="form-control" id="sms_input" placeholder="+1 888 888 8888" value="+1 (310) 536-6777" />
+                                                <label for="email_input">Mobile Number</label>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <div class="row w-100 g-3">
-                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
-                                            <a href="#" id="modal_close_back" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
-                                                <span>Close and Go Back</span>
-                                            </a>
-                                        </div>
-                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
-                                            <a
-                                                href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-no-change.html?welcome=1"
-                                                id="modal_continue_modify"
-                                                class="btn btn-primary btn-with-icon"
-                                                tabindex="-1"
-                                                role="button"
-                                                aria-disabled="false"
-                                            >
-                                                <span>Go to Modify</span><span class="material-icons-outlined btn-icon-right">launch</span>
-                                            </a>
+                                    <div class="row w-100">
+                                        <div class="col-12 px-0">
+                                            <a href="#" id="send_check_in_links" class="btn btn-primary btn-with-icon w-100" tabindex="-1" role="button" aria-disabled="false"> <span>Send</span><span class="material-icons-outlined btn-icon-right">send</span> </a>
                                         </div>
                                     </div>
                                 </div>
