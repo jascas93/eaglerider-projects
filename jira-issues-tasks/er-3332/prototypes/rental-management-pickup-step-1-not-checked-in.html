@@ -816,5 +816,12 @@
                 e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
             }
         </script>
+        <script>
+            if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
+                document.getElementById("send_check_in_link_btn").classList.add("disabled-btn");
+            } else {
+                document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn");
+            }
+        </script>
     </body>
 </html>
