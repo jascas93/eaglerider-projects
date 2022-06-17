@@ -826,7 +826,12 @@
                 //&& document.getElementById("email_sent_msg").classList.add("d-none")
             }
             function sms_checkbox_changed(e) {
-                e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
+                if e.checked {
+                    document.getElementById("sms_input").removeAttribute("disabled")
+                } else {
+                    document.getElementById("sms_input").setAttribute("disabled","")
+                }
+                //e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
             }
         </script>
         <script>
