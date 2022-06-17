@@ -750,9 +750,9 @@
                                     <div>
                                         <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via email</p></div>
                                         <div class="form-check" style="margin-bottom: 0;">
-                                            <input class="form-check-input" type="checkbox" value="" id="send_email" checked="" />
+                                            <input class="form-check-input" type="checkbox" value="" id="send_email" checked="" onclick="email_checkbox_changed(this);" />
                                             <form class="form-floating">
-                                                <input type="email" class="form-control" id="email_input" placeholder="name@example.com" value="jsmith@example.com" onclick="email_checkbox_changed(this);" />
+                                                <input type="email" class="form-control" id="email_input" placeholder="name@example.com" value="jsmith@example.com" />
                                                 <label for="email_input">Email</label>
                                             </form>
                                         </div>
@@ -809,8 +809,8 @@
             }
         </script>
         <script type="text/javascript">
-            function email_checkbox_changed(e) {
-                e.checked ? document.getElementById("email_input").removeAttribute("disabled") : document.getElementById("email_input").setAttribute("disabled","");
+            function email_checkbox_changed(f) {
+                f.checked ? document.getElementById("email_input").removeAttribute("disabled") : document.getElementById("email_input").setAttribute("disabled","");
             }
             function sms_checkbox_changed(e) {
                 e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
