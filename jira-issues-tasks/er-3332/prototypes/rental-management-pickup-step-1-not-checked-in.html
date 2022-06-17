@@ -849,7 +849,7 @@
         $(document).on("change", ".send-link-checkbox", function () {
             var checkCount = $(".send-link-checkbox:checked").length;
             var totalCheckbox = $(".send-link-checkbox").length;
-            totalCheckbox == checkCount ? $("#send_check_in_link_btn").addClass("disabled-btn") : $("#send_check_in_link_btn").removeClass("disabled-btn");
+            totalCheckbox != checkCount ? $("#send_check_in_link_btn").removeClass("disabled-btn") : $("#send_check_in_link_btn").addClass("disabled-btn");
         });
     </script>
     </body>
