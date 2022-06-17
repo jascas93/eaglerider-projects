@@ -823,6 +823,15 @@
                 e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
             }
         </script>
+        <script>
+            jQuery(document).on("click", ".send-link-checkbox", function () {
+                var checkCount = true;
+                jQuery(".send-link-checkbox").each(function (i, e) {
+                    if ($(this).is(":checked") == false) checkCount = false;
+                });
+                jQuery("#send_check_in_link_btn").prop("disabled", !checkCount);
+            });
+        </script>
     <!--
         <script>
             if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
@@ -884,8 +893,5 @@
             }
         </script>
     -->
-    <script>
-
-    </script>
     </body>
 </html>
