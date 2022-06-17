@@ -824,14 +824,15 @@
             }
         </script>
         <script>
-            jQuery(document).on("click", ".send-link-checkbox", function () {
-                var checkCount = true;
-                jQuery(".send-link-checkbox").each(function (i, e) {
-                    if ($(this).is(":checked") == false) checkCount = false;
-                });
-                jQuery("#send_check_in_link_btn").prop("disabled", !checkCount);
-            });
+            if ($("#send_email").is(":checked") && $("#send_sms").is(":checked")) {
+                alert("Your Success Message");
+                return true;
+            } else {
+                alert("Your Fail Message");
+                return false;
+            }
         </script>
+
     <!--
         <script>
             if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
