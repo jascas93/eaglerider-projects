@@ -864,25 +864,28 @@
                 }
             });
         </script>
+        <script>
+            var linksChecked = false;
+            $(".send-link-checkbox").each(function() {
+                if(this).is(':checked')) {
+                    linksChecked = true;
+                }
+                else {
+                    linksChecked = false;
+                }
+            });
+            if (!linksChecked) {
+                // User didn't check any checkboxes
+                document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
+                document.getElementById("select_one_error").classList.remove("d-none");
+            } else {
+                document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
+                document.getElementById("select_one_error").classList.add("d-none");
+            }
+        </script>
     -->
     <script>
-        var linksChecked = false;
-        $(".send-link-checkbox").each(function() {
-            if(this).is(':checked')) {
-                linksChecked = true;
-            }
-            else {
-                linksChecked = false;
-            }
-        });
-        if (!linksChecked) {
-            // User didn't check any checkboxes
-            document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
-            document.getElementById("select_one_error").classList.remove("d-none");
-        } else {
-            document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
-            document.getElementById("select_one_error").classList.add("d-none");
-        }
+        
     </script>
     </body>
 </html>
