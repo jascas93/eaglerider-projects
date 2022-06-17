@@ -824,10 +824,11 @@
             }
         </script>
         <script>
-            $(document).on("change", ".send-link-checkbox:checked", function () {
-                var checkCount = $(".send-link-checkbox").length;
-                var totalCheckbox = $(".send-link-checkbox:checked").length;
-                totalCheckbox != checkCount ? $("#send_check_in_link_btn").removeClass("disabled-btn") : $("#send_check_in_link_btn").addClass("disabled-btn");
+            $(document).on("change", ".send-link-checkbox", function () {
+                var emailCheck = $("#send_email.send-link-checkbox:checked").length;
+                var smsCheck = $("#send_sms.send-link-checkbox:checked").length;
+                var totalCheckbox = $(".send-link-checkbox").length;
+                totalCheckbox == emailCheck == smsCheck ? $("#send_check_in_link_btn").addClass("disabled-btn") : $("#send_check_in_link_btn").removeClass("disabled-btn");
             });
         </script>
 
