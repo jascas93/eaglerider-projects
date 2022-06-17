@@ -827,15 +827,13 @@
             $(".send-link-checkbox").on("click", function () {
                 if ($(".send-link-checkbox:checked").length >= 1) {
                     $("#send_check_in_link_btn").removeClass("disabled-btn"),
-                    document.getElementById("sselect_one_error").classList.remove("d-none");
+                    document.getElementById("select_one_error").classList.remove("d-none");
                 } else {
                     $("#send_check_in_link_btn").addClass("disabled-btn"),
-                    document.getElementById("sselect_one_error").classList.add("d-none");
+                    document.getElementById("select_one_error").classList.add("d-none");
                 }
             });
         </script>
-
-
     <!--
         <script>
             if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
@@ -870,10 +868,10 @@
                 if (!checkCount) {
                     // User didn't check any checkboxes
                     document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
-                    document.getElementById("sselect_one_error").classList.remove("d-none");
+                    document.getElementById("select_one_error").classList.remove("d-none");
                 } else {
                     document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
-                    document.getElementById("sselect_one_error").classList.add("d-none");
+                    document.getElementById("select_one_error").classList.add("d-none");
                 }
             });
         </script>
