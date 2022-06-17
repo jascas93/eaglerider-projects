@@ -826,9 +826,11 @@
         <script>
             $(".send-link-checkbox").on("click", function () {
                 if ($(".send-link-checkbox:checked").length >= 1) {
-                    $("#send_check_in_link_btn").removeClass("disabled-btn");
+                    $("#send_check_in_link_btn").removeClass("disabled-btn"),
+                    document.getElementById("sselect_one_error").classList.remove("d-none");
                 } else {
-                    $("#send_check_in_link_btn").addClass("disabled-btn");
+                    $("#send_check_in_link_btn").addClass("disabled-btn"),
+                    document.getElementById("sselect_one_error").classList.add("d-none");
                 }
             });
         </script>
