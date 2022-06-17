@@ -828,7 +828,7 @@
                 var emailCheck = $("#send_email.send-link-checkbox:checked").length;
                 var smsCheck = $("#send_sms.send-link-checkbox:checked").length;
                 var totalCheckbox = $(".send-link-checkbox").length;
-                totalCheckbox == emailCheck == smsCheck ? $("#send_check_in_link_btn").addClass("disabled-btn") : $("#send_check_in_link_btn").removeClass("disabled-btn");
+                totalCheckbox == emailCheck && totalCheckbox == smsCheck ? $("#send_check_in_link_btn").addClass("disabled-btn") : $("#send_check_in_link_btn").removeClass("disabled-btn");
             });
         </script>
 
