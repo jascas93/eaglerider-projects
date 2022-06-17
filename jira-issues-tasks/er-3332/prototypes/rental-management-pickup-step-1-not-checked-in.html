@@ -851,19 +851,35 @@
                 totalCheckbox != checkCount ? $("#send_check_in_link_btn").removeClass("disabled-btn") : $("#send_check_in_link_btn").addClass("disabled-btn");
             });
         </script>
+        <script>
+            $(document).ready(function () {
+                var checkCount = $("input[name='link_check']:checked").length;
+                if (!checkCount) {
+                    // User didn't check any checkboxes
+                    document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
+                    document.getElementById("sselect_one_error").classList.remove("d-none");
+                } else {
+                    document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
+                    document.getElementById("sselect_one_error").classList.add("d-none");
+                }
+            });
+        </script>
     -->
     <script>
-        $(document).ready(function () {
-            var checkCount = $("input[name='link_check']:checked").length;
-            if (!checkCount) {
-                // User didn't check any checkboxes
-                document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
-                document.getElementById("sselect_one_error").classList.remove("d-none");
-            } else {
-                document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
-                document.getElementById("sselect_one_error").classList.add("d-none");
-            }
-        });
+        var linksChecked = false;
+        $(".send-link-checkbox").each(function() {
+            if(this).is(':checked')) {
+                linksChecked = true;
+              }
+            });
+        if (!linksChecked) {
+            // User didn't check any checkboxes
+            document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
+            document.getElementById("sselect_one_error").classList.remove("d-none");
+        } else {
+            document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
+            document.getElementById("sselect_one_error").classList.add("d-none");
+        }
     </script>
     </body>
 </html>
