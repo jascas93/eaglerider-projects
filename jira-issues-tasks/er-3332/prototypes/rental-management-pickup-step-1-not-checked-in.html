@@ -870,8 +870,11 @@
         $(".send-link-checkbox").each(function() {
             if(this).is(':checked')) {
                 linksChecked = true;
-              }
-            });
+            }
+            else {
+                linksChecked = false;
+            }
+        });
         if (!linksChecked) {
             // User didn't check any checkboxes
             document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
