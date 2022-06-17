@@ -833,11 +833,22 @@
                 document.getElementById("sselect_one_error").classList.add("d-none");
             }
         </script>
+        <script>
+            $(document).ready(function () {
+                $(document).on("change", ".send-link-checkbox", function () {
+                    if ($(this).is(":checked") && $(this).siblings(".send-link-checkbox").is(":checked")) {
+                        $("#send_check_in_link_btn").removeClass("disabled-btn");
+                    } else {
+                        $("#send_check_in_link_btn").addClass("disabled-btn");
+                    }
+                });
+            });
+        </script>
     -->
     <script>
         $(document).ready(function () {
             $(document).on("change", ".send-link-checkbox", function () {
-                if ($(this).is(":checked") && $(this).siblings(".send-link-checkbox").is(":checked")) {
+                if ($(this).attr("checked") {
                     $("#send_check_in_link_btn").removeClass("disabled-btn");
                 } else {
                     $("#send_check_in_link_btn").addClass("disabled-btn");
