@@ -848,7 +848,7 @@
     <script>
         $(document).ready(function () {
             $(document).on("change", ".send-link-checkbox", function () {
-                if ($(this).attr("checked") {
+                if ($(this).attr("checked") && $(this).siblings(".send-link-checkbox").attr("checked")) {
                     $("#send_check_in_link_btn").removeClass("disabled-btn");
                 } else {
                     $("#send_check_in_link_btn").addClass("disabled-btn");
