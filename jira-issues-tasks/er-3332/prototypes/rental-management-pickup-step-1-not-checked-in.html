@@ -750,7 +750,7 @@
                                     <div>
                                         <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via email</p></div>
                                         <div class="form-check" style="margin-bottom: 0;">
-                                            <input class="form-check-input" type="checkbox" value="" id="send_email" checked="" onclick="email_checkbox_changed(this);" />
+                                            <input class="form-check-input send-link-checkbox" type="checkbox" value="" id="send_email" checked="" onclick="email_checkbox_changed(this);" />
                                             <form class="form-floating">
                                                 <input type="email" class="form-control" id="email_input" placeholder="name@example.com" value="jsmith@example.com" />
                                                 <label for="email_input">Email</label>
@@ -763,7 +763,7 @@
                                     <div class="mt-3">
                                         <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via text message (SMS)</p></div>
                                         <div class="form-check" style="margin-bottom: 0;">
-                                            <input class="form-check-input" type="checkbox" value="" id="send_sms" checked="" onclick="sms_checkbox_changed(this);" />
+                                            <input class="form-check-input send-link-checkbox" type="checkbox" value="" id="send_sms" checked="" onclick="sms_checkbox_changed(this);" />
                                             <form class="form-floating">
                                                 <input type="phone" class="form-control" id="sms_input" placeholder="+1 888 888 8888" value="+1 (310) 536-6777" />
                                                 <label for="email_input">Mobile Number</label>
@@ -803,6 +803,7 @@
                 </div>
             </div>
         </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script type="text/javascript">
             var toastTrigger = document.getElementById("send_check_in_link_btn");
@@ -822,6 +823,7 @@
                 e.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
             }
         </script>
+    <!--
         <script>
             if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
                 document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
@@ -831,5 +833,17 @@
                 document.getElementById("sselect_one_error").classList.add("d-none");
             }
         </script>
+    -->
+    <script>
+        $(document).ready(function () {
+            $(document).on("change", ".send-link-checkbox", function () {
+                if ($(this).is(":checked") && $(this).siblings(".send-link-checkbox").is(":checked")) {
+                    $("#send_check_in_link_btn").addClass("disabled-btn");
+                } else {
+                    $("#send_check_in_link_btn").removeClass("disabled-btn");
+                }
+            });
+        });
+    </script>
     </body>
 </html>
