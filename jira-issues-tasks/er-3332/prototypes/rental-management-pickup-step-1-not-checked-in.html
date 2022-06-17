@@ -774,6 +774,12 @@
                                 <div class="modal-footer">
                                     <div class="row w-100">
                                         <div class="col-12 px-0">
+                                            <p id="select_one_error" class="mb-2 text-danger d-none" style="font-size: 0.8rem; font-weight: 500; letter-spacing: 0.35px; display: flex; align-items: center; justify-content: center;">
+                                                <span class="material-icons" style="font-size: 18px; margin-right: 0.25rem;">
+                                                    error_outline
+                                                </span>
+                                                At least one option must be selected above
+                                            </p>
                                             <a href="#" id="send_check_in_link_btn" class="btn btn-primary btn-with-icon w-100" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal"> <span>Send</span><span class="material-icons-outlined btn-icon-right">send</span> </a>
                                         </div>
                                     </div>
@@ -818,9 +824,11 @@
         </script>
         <script>
             if (document.querySelectorAll('input[type="checkbox"]:checked').length === document.querySelectorAll('input[type="checkbox"]').length) {
-                document.getElementById("send_check_in_link_btn").classList.add("disabled-btn");
+                document.getElementById("send_check_in_link_btn").classList.add("disabled-btn"),
+                document.getElementById("sselect_one_error").classList.remove("d-none");
             } else {
-                document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn");
+                document.getElementById("send_check_in_link_btn").classList.remove("disabled-btn"),
+                document.getElementById("sselect_one_error").classList.add("d-none");
             }
         </script>
     </body>
