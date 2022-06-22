@@ -99,6 +99,8 @@
     display: inline-block;
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
     border-radius: 8px;
+    border: 1px solid #dc3545;
+    border-bottom: 2px solid #dc3545;
 }
 .imgUp {
     aspect-ratio: 3 / 2;
