@@ -2416,7 +2416,7 @@
                                                 <label for="email_input">Mobile Number</label>
                                             </form>
                                             <form class="form-floating">
-                                                <input id="phone" type="tel" class="form-control" />
+                                                <input id="phone" type="tel" class="form-control" disabled />
                                                 <span id="valid-msg" class="hide">Valid</span>
                                                 <span id="error-msg" class="hide">Invalid number</span>
                                             </form>
@@ -2591,13 +2591,13 @@
             telInput.on("keyup change", reset);
         </script>
         <script>
-            var digitPeriodRegExp = new RegExp("\\d");
-            var input = document.getElementById("phone");
+            var digitPeriodRegExp = new RegExp("\\d|\\.");
+            var input2 = document.getElementById("phone");
 
-            input.addEventListener(
-                "phone",
+            input2.addEventListener(
+                "input",
                 function (event) {
-                    var splitValue = input.value.split("");
+                    var splitValue = input2.value.split("");
                     var charactersToFilter = 0;
                     var filteredSplitValue = splitValue.map(function (character) {
                         if (!digitPeriodRegExp.test(character)) {
@@ -2612,22 +2612,22 @@
                         return;
                     }
 
-                    input.value = filteredSplitValue.join("");
+                    input2.value = filteredSplitValue.join("");
 
                     /*
                      * We need to keep track of the caret position, which is the `selectionStart`
                      * property, otherwise if our caret is in the middle of the value, pressing an
                      * invalid character would send our caret to the end of the value.
                      */
-                    var charactersBeforeSelectionStart = filteredSplitValue.slice(0, input.selectionStart);
+                    var charactersBeforeSelectionStart = filteredSplitValue.slice(0, input2.selectionStart);
                     var filteredCharactersBeforeSelectionStart = charactersBeforeSelectionStart.filter(function (character) {
                         return !character;
                     });
                     var totalFilteredCharactersBeforeSelectionStart = filteredCharactersBeforeSelectionStart.length;
-                    var newSelectionStart = input.selectionStart - totalFilteredCharactersBeforeSelectionStart;
+                    var newSelectionStart = input2.selectionStart - totalFilteredCharactersBeforeSelectionStart;
 
-                    input.selectionStart = newSelectionStart;
-                    input.selectionEnd = input.selectionStart;
+                    input2.selectionStart = newSelectionStart;
+                    input2.selectionEnd = input2.selectionStart;
                 },
                 false
             );
