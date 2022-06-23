@@ -2417,7 +2417,17 @@
                                             </form>
                                             <form class="form-floating">
                                                 <input id="phone" type="tel" class="form-control" disabled />
-                                                <span id="valid-msg" class="hide">Valid</span>
+                                                <span class="" id="valid-msg" style="font-size: 0.875rem; color: rgb(6, 172, 63); text-transform: uppercase; letter-spacing: 0.35px; font-weight: 400;">
+                                                    <span class="material-icons" style="font-size: 20px; vertical-align: middle; margin-left: 0.125rem;">
+                                                        check_circle_outline
+                                                    </span>
+                                                </span>
+                                                <span class="hide" id="error-msg" style="font-size: 0.875rem; color: rgb(255, 56, 92); text-transform: uppercase; letter-spacing: 0.35px; font-weight: 400;">
+                                                    <span class="material-icons" style="font-size: 20px; vertical-align: middle; margin-left: 0.125rem;">
+                                                        dangerous
+                                                    </span>
+                                                    Invalid number
+                                                </span>
                                                 <span id="error-msg" class="hide">Invalid number</span>
                                             </form>
                                         </div>
