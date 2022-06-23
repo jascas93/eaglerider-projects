@@ -2416,7 +2416,7 @@
                                                 <label for="email_input">Mobile Number</label>
                                             </form>
                                             <form class="form-floating">
-                                                <input id="phone" type="tel" class="form-control" id="sms_input" />
+                                                <input id="phone" type="tel" class="form-control" />
                                                 <span id="valid-msg" class="hide">Valid</span>
                                                 <span id="error-msg" class="hide">Invalid number</span>
                                             </form>
@@ -2476,7 +2476,7 @@
                 f.checked ? document.getElementById("email_input").removeAttribute("disabled") : document.getElementById("email_input").setAttribute("disabled","");
             }
             function sms_input(f) {
-                f.checked ? document.getElementById("sms_input").removeAttribute("disabled") : document.getElementById("sms_input").setAttribute("disabled","");
+                f.checked ? document.getElementById("phone").removeAttribute("disabled") : document.getElementById("phone").setAttribute("disabled","");
             }
             function email_msg(f) {
                 f.checked ? document.getElementById("email_sent_msg").classList.remove("d-none") : document.getElementById("email_sent_msg").classList.add("d-none");
