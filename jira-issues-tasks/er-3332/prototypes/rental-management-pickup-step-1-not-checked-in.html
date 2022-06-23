@@ -2590,5 +2590,47 @@
             // on keyup / change flag: reset
             telInput.on("keyup change", reset);
         </script>
+        <script>
+            var digitPeriodRegExp = new RegExp("\\d");
+            var input = document.getElementById("phone");
+
+            input.addEventListener(
+                "phone",
+                function (event) {
+                    var splitValue = input.value.split("");
+                    var charactersToFilter = 0;
+                    var filteredSplitValue = splitValue.map(function (character) {
+                        if (!digitPeriodRegExp.test(character)) {
+                            charactersToFilter++;
+                            return "";
+                        }
+
+                        return character;
+                    });
+
+                    if (!charactersToFilter) {
+                        return;
+                    }
+
+                    input.value = filteredSplitValue.join("");
+
+                    /*
+                     * We need to keep track of the caret position, which is the `selectionStart`
+                     * property, otherwise if our caret is in the middle of the value, pressing an
+                     * invalid character would send our caret to the end of the value.
+                     */
+                    var charactersBeforeSelectionStart = filteredSplitValue.slice(0, input.selectionStart);
+                    var filteredCharactersBeforeSelectionStart = charactersBeforeSelectionStart.filter(function (character) {
+                        return !character;
+                    });
+                    var totalFilteredCharactersBeforeSelectionStart = filteredCharactersBeforeSelectionStart.length;
+                    var newSelectionStart = input.selectionStart - totalFilteredCharactersBeforeSelectionStart;
+
+                    input.selectionStart = newSelectionStart;
+                    input.selectionEnd = input.selectionStart;
+                },
+                false
+            );
+        </script>
     </body>
 </html>
