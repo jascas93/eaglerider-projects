@@ -2642,5 +2642,12 @@
                 false
             );
         </script>
+        <script>
+            $(document).ready(function () {
+                if (window.location.href.indexOf("?phone_demo=1") > 0) {
+                    $("#sendLinkOverlay").modal("show");
+                }
+            });
+        </script>
     </body>
 </html>
