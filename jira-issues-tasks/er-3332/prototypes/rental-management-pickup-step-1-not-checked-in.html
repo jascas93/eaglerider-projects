@@ -2410,7 +2410,7 @@
                                     <div class="mt-3">
                                         <div><p style="margin-bottom: 0.5rem; font-size: 0.9375rem; color: #5d5d5d; font-weight: 300;">Send via text message (SMS)</p></div>
                                         <div class="form-check" style="margin-bottom: 0;">
-                                            <input class="form-check-input send-link-checkbox" type="checkbox" value="" id="send_sms" checked onclick="sms_input(this), sms_msg(this);" />
+                                            <input class="form-check-input send-link-checkbox" type="checkbox" value="" id="send_sms" onclick="sms_input(this), sms_msg(this);" />
                                             <form class="form-floating d-none">
                                                 <input type="phone" class="form-control" id="OLD_sms_input" placeholder="+1 888 888 8888" value="+1 (310) 536-6777" />
                                                 <label for="email_input">Mobile Number</label>
@@ -2420,6 +2420,9 @@
                                                 <span id="valid-msg" class="hide">Valid</span>
                                                 <span id="error-msg" class="hide">Invalid number</span>
                                             </form>
+                                        </div>
+                                        <div style="margin-top: -0.75rem; padding-left: 1.5rem;">
+                                            <p style="margin-bottom: 0; font-size: 0.75rem; color: #797979; font-weight: 300; font-style: italic; letter-spacing: 0.35px; line-height: 1.4;">Enter only numbers—no spaces, symbols, or dashes.</p>
                                         </div>
                                     </div>
                                 </div>
