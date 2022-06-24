@@ -2652,11 +2652,10 @@
         <script type="text/javascript">
             const ua = navigator.userAgent;
             var isMobile = /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)|tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua);
-            var element = document.getElementById("text");
             if (isMobile) {
-                document.getElementById("upload_front_img").classList.remove("d-none")
+                console.log("mobile");
             } else {
-                document.getElementById("upload_front_img").classList.add("d-none")
+                console.log("not mobile");
             }
         </script>
     </body>
