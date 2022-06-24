@@ -90,7 +90,7 @@
 /**** Image Uploader */
 .imagePreview {
     width: 100%;
-    height: 100%;
+    height: -webkit-fill-available;
     background: url(https://raw.githubusercontent.com/jascas93/eaglerider-projects/62475306642d2503f54f817356da2ba63451d904/jira-issues-tasks/er-3332/assets/noun-drivers-license-1237145_front.svg);
     background-color: #fff;
     background-size: 80% auto;
