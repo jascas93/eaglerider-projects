@@ -16,6 +16,71 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen" />
+        <script>
+            // Minified version of isMobile included in the HTML since it's small
+            (function () {
+                var a = {};
+                var f = /iPhone/i,
+                    h = /iPod/i,
+                    i = /iPad/i,
+                    r = /\biOS-universal(?:.+)Mac\b/i,
+                    g = /\bAndroid(?:.+)Mobile\b/i,
+                    j = /Android/i,
+                    c = /(?:SD4930UR|\bSilk(?:.+)Mobile\b)/i,
+                    d = /Silk/i,
+                    b = /Windows Phone/i,
+                    k = /\bWindows(?:.+)ARM\b/i,
+                    m = /BlackBerry/i,
+                    n = /BB10/i,
+                    o = /Opera Mini/i,
+                    p = /\b(CriOS|Chrome)(?:.+)Mobile/i,
+                    q = /Mobile(?:.+)Firefox\b/i;
+                function s(l) {
+                    return function ($) {
+                        return $.test(l);
+                    };
+                }
+                function e(l) {
+                    var $ = (l = l || ("undefined" != typeof navigator ? navigator.userAgent : "")).split("[FBAN");
+                    void 0 !== $[1] && (l = $[0]), void 0 !== ($ = l.split("Twitter"))[1] && (l = $[0]);
+                    var a = s(l),
+                        e = {
+                            apple: { phone: a(f) && !a(b), ipod: a(h), tablet: !a(f) && a(i) && !a(b), universal: a(r), device: (a(f) || a(h) || a(i)) && !a(b) },
+                            amazon: { phone: a(c), tablet: !a(c) && a(d), device: a(c) || a(d) },
+                            android: { phone: (!a(b) && a(c)) || (!a(b) && a(g)), tablet: !a(b) && !a(c) && !a(g) && (a(d) || a(j)), device: (!a(b) && (a(c) || a(d) || a(g) || a(j))) || a(/\bokhttp\b/i) },
+                            windows: { phone: a(b), tablet: a(k), device: a(b) || a(k) },
+                            other: { blackberry: a(m), blackberry10: a(n), opera: a(o), firefox: a(q), chrome: a(p), device: a(m) || a(n) || a(o) || a(q) || a(p) },
+                            any: !1,
+                            phone: !1,
+                            tablet: !1,
+                        };
+                    return (
+                        (e.any = e.apple.universal || e.apple.device || e.android.device || e.windows.device || e.other.device),
+                        (e.phone = e.apple.phone || e.android.phone || e.windows.phone),
+                        (e.tablet = e.apple.tablet || e.android.tablet || e.windows.tablet),
+                        e
+                    );
+                }
+                a = e();
+                if (typeof exports === "object" && typeof module !== "undefined") {
+                    module.exports = a;
+                } else if (typeof define === "function" && define.amd) {
+                    define(function () {
+                        return a;
+                    });
+                } else {
+                    this["isMobile"] = a;
+                }
+            })();
+
+            // My own arbitrary use of isMobile, as an example
+            (function () {
+                // I only want to redirect iPhones, Android phones
+                if (!isMobile.any) {
+                    document.getElementById("upload_front_img").classList.add("d-none")
+                }
+            })();
+        </script>
     </head>
     <body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="" style="cursor: default;" data-gr-ext-disabled="forever">
         <main>
@@ -2474,7 +2539,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
-        <script src="https://faisalman.github.io/ua-parser-js/js/ua-parser.js"></script>
         <script type="text/javascript">
             var toastTrigger = document.getElementById("send_check_in_link_btn");
             var toastLiveExample = document.getElementById("sentToastMsg");
@@ -2649,63 +2713,6 @@
                     $("#sendLinkOverlay").modal("show");
                 }
             });
-        </script>
-        <script>
-            var parser = new UAParser();
-            console.log(parser.getResult());
-            /*
-                /// This will print an object structured like this:
-                {
-                    ua: "",
-                    browser: {
-                        name: "",
-                        version: "",
-                        major: "" //@deprecated
-                    },
-                    engine: {
-                        name: "",
-                        version: ""
-                    },
-                    os: {
-                        name: "",
-                        version: ""
-                    },
-                    device: {
-                        model: "",
-                        type: "",
-                        vendor: ""
-                    },
-                    cpu: {
-                        architecture: ""
-                    }
-                }
-            */
-            // Default result depends on current window.navigator.userAgent value
-
-            // Now let's try a custom user-agent string as an example
-            var uastring1 = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2";
-            parser.setUA(uastring1);
-            var result = parser.getResult();
-            // You can also use UAParser constructor directly without having to create an instance:
-            // var result = UAParser(uastring1);
-
-            console.log(result.browser); // {name: "Chromium", version: "15.0.874.106"}
-            console.log(result.device); // {model: undefined, type: undefined, vendor: undefined}
-            console.log(result.os); // {name: "Ubuntu", version: "11.10"}
-            console.log(result.os.version); // "11.10"
-            console.log(result.engine.name); // "WebKit"
-            console.log(result.cpu.architecture); // "amd64"
-
-            // Do some other tests
-            var uastring2 = "Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)";
-            console.log(parser.setUA(uastring2).getBrowser().name); // "Konqueror"
-            console.log(parser.getOS()); // {name: "OpenBSD", version: undefined}
-            console.log(parser.getEngine()); // {name: "KHTML", version: "4.1.4"}
-
-            var uastring3 = "Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11";
-            console.log(parser.setUA(uastring3).getDevice().model); // "PlayBook"
-            console.log(parser.getOS()); // {name: "RIM Tablet OS", version: "1.0.0"}
-            console.log(parser.getBrowser().name); // "Safari"
         </script>
     </body>
 </html>
