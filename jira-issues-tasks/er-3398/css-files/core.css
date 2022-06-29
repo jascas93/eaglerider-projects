@@ -264,6 +264,14 @@ a.bike-listing-card-link:hover {
     border: 1px solid #5d5d5d;
     border-radius: 0.5rem;
 }
+.widget-input-wrapper {
+    border: 1px solid;
+    border-color: #dadada;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    cursor: not-allowed;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;
