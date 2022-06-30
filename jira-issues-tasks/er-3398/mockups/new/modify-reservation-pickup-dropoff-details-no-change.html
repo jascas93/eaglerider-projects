@@ -706,7 +706,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row mx-0 mt-3" id="availability_msg">
+                                            <div id="availability_msg" class="row mx-0 mt-3 d-none">
                                                 <div class="col px-0 ps-md-0 pe-md-1 mb-1 mb-md-0">
                                                     <div style="display: flex; align-items: flex-start; background: #ffecdd; background: #ffdb58; color: #d95700; color: #5d5d5d; padding: 0.75rem 1rem; margin-bottom: 0; /* display: none; */">
                                                         <span class="material-icons-outlined" style="margin-right: 0.25rem;">info </span>
@@ -1139,6 +1139,7 @@
                 setTimeout(function() {
                     if (window.location.href.indexOf("?reset=1") > 0) {
                         $("#widget_reset_btn").addClass('d-none');
+                        $("#availability_msg").addClass('d-none');
                         $("#pickup_date_time_fieldbox").removeClass('widget-input-changed');
                         $("#pickup_date_input").html('11/01/2022');
                         $("#dropoff_date_time_fieldbox").removeClass('widget-input-changed');
@@ -1148,6 +1149,7 @@
                 setTimeout(function() {
                     if (window.location.href.indexOf("?extend=1") > 0) {
                         $("#widget_reset_btn").removeClass('d-none');
+                        $("#availability_msg").removeClass('d-none');
                         $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
                         $("#dropoff_date_input").html('11/03/2022');
                     }
@@ -1155,6 +1157,7 @@
                 setTimeout(function() {
                     if (window.location.href.indexOf("?shift=1") > 0) {
                         $("#widget_reset_btn").removeClass('d-none');
+                        $("#availability_msg").removeClass('d-none');
                         $("#pickup_date_time_fieldbox").addClass('widget-input-changed');
                         $("#pickup_date_input").html('11/15/2022');
                         $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
