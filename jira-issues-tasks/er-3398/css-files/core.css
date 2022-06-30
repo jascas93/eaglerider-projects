@@ -16,6 +16,10 @@ div#steps-slim-top {
 tr#vip_zero_td {
     background-color: #FFF7F1;
 }
+div#footer {
+    background: #303030;
+    height: 120px;
+}
 input.form-check-input {
     cursor: pointer;
 }
