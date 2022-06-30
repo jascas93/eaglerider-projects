@@ -313,6 +313,11 @@ div#widget_loading {
     font-style: italic;
     text-decoration: line-through;
 }
+.current-reservation-data {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #5d5d5d;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;
