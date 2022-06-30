@@ -292,7 +292,6 @@ a.bike-listing-card-link:hover {
     gap: 0.25rem;
 }
 div#widget_loading {
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
