@@ -654,7 +654,7 @@
                                                 <div class="row g-0">
                                                     <div class="col">
                                                         <div class="model-per-day-price">
-                                                            <span class="text-danger" style="font-weight: 600; line-height: initial;">$179.20</span>
+                                                            <span id="selected_current_price" class="text-danger" style="font-weight: 600; line-height: initial;">$179.20</span>
 
                                                             <span style="font-size: 0.8rem; color: #797979; text-decoration: line-through; margin-left: 0.25rem; line-height: initial;">$224</span>
                                                         </div>
@@ -665,7 +665,7 @@
                                                     <div class="col-auto" style="border-left: 1px solid; border-color: #dadada;"></div>
                                                     <div class="col">
                                                         <div class="model-per-day-price">
-                                                            <span class="rental-length-price-total">$179.20</span>
+                                                            <span id="selected_full_price" class="rental-length-price-total">$179.20</span>
 
                                                             <span class="old-rental-length-price-total">$224</span>
                                                         </div>
@@ -677,7 +677,7 @@
                                                 <div class="row g-0">
                                                     <div class="col">
                                                         <div class="model-card-savings">
-                                                            <p class="mb-0 text-center" style="line-height: initial;">Membership Savings of $44.80 (-20% Off)</p>
+                                                            <p id="selected_club_savings" class="mb-0 text-center" style="line-height: initial;">Membership Savings of $44.80 (-20% Off)</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1611,6 +1611,14 @@
                         $("#pick_drop_btn_link_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?shifted=1");
                         $("#pick_drop_btn_link_3").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?shifted=1");
                         $("#pick_drop_btn_link_4").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?shifted=1");
+                        $("bike-listing-card current-bike-selection").addClass('listing-unavailable');
+                        $("bike-card-header current-bike-selection").addClass('listing-unavailable');
+                        $("bike-card-img-wrapper current-bike-selection").addClass('listing-unavailable');
+                        $("bike-card-footer club current-bike-selection").addClass('listing-unavailable');
+                        $("club-ribbon").addClass('listing-unavailable');
+                        $("#selected_current_price").addClass('d-none');
+                        $("#selected_full_price").addClass('d-none');
+                        $("#selected_club_savings").addClass('d-none');
                     }
                 },10);
             });
