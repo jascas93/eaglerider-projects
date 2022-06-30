@@ -1101,6 +1101,14 @@
                         $("#dropoff_date_input").html('11/03/2022');
                     }
                 },10);
+                setTimeout(function() {
+                    if (window.location.href.indexOf("?shift=1") > 0) {
+                        $("#pickup_date_time_fieldbox").addClass('widget-input-changed');
+                        $("#pickup_date_input").html('11/15/2022');
+                        $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
+                        $("#dropoff_date_input").html('11/16/2022');
+                    }
+                },10);
             });
         </script>
     </body>
