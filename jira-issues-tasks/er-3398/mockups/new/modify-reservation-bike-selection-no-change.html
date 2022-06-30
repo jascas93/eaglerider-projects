@@ -523,7 +523,7 @@
                                     <div style="padding: 1rem; background: #484848; border-top-left-radius: 8px; border-top-right-radius: 8px;">
                                         <p style="margin-bottom: 0; font-size: 1.25rem; font-weight: 500; color: #f9f9f9;">Your Reservation</p>
                                         <p style="margin-bottom: 0; font-weight: 500; font-size: 0.9375rem; color: #f9f9f9;">WBERLAX010000108063</p>
-                                        <p style="margin-bottom: 0; font-weight: 400; color: #dadada; font-size: 0.875rem;">1 Rental Days</p>
+                                        <p id="rental_days_textfield" style="margin-bottom: 0; font-weight: 400; color: #dadada; font-size: 0.875rem;">1 Rental Day</p>
                                     </div>
                                     <div style="padding: 0.5rem 1rem; position: relative; margin-top: 0.25rem;">
                                         <div>
@@ -532,7 +532,10 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Current Selected Bike Model</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p style="margin-right: 0; margin-bottom: 0; font-weight: 400; color: #5d5d5d; font-size: 0.875rem;">
+                                            <p id="old_model_textfield" class="d-none" style="margin-bottom: 0; font-weight: 400; color: #5d5d5d; font-size: 0.875rem;">
+                                                Harley-Davidson® Street Glide® Touring Edition
+                                            </p>
+                                            <p id="current_model_textfield" style="margin-bottom: 0; font-weight: 400; color: #5d5d5d; font-size: 0.875rem;">
                                                 Harley-Davidson® Street Glide® Touring Edition
                                                 <a href="https://www.eaglerider.com/losangeles/street-glide-touring-edition" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
@@ -547,14 +550,14 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Pickup</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/01/2022 12:00 PM</p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_pickup_date_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/01/2022 12:00 PM</p>
+                                            <p id="current_pickup_location_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
                                                 </a>
                                             </p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_pickup_address_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
@@ -568,14 +571,14 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Dropoff</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/02/2022 12:00 PM</p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_dropoff_date_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/02/2022 12:00 PM</p>
+                                            <p id="current_dropoff_location_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
                                                 </a>
                                             </p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_dropoff_address_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
