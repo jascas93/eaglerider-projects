@@ -19,9 +19,11 @@
             $(window).on("load", function () {
                 if (window.location.href.indexOf("?reset=1") > 0) {
                     $("#page_loading").addClass("d-none");
-                } else if (window.location.href.indexOf("?extend=1") > 0) {
+                }
+                else if (window.location.href.indexOf("?extend=1") > 0) {
                     $("#page_loading").addClass("d-none");
-                } else if (window.location.href.indexOf("?shift=1") > 0) {
+                }
+                else if (window.location.href.indexOf("?shift=1") > 0) {
                     $("#page_loading").addClass("d-none");
                 }
             });
@@ -1133,17 +1135,17 @@
         <script>
             $(window).on("load", function () {
                 if (window.location.href.indexOf("?reset=1") > 0) {
-                    //$("#page_loading").addClass('d-none');
+                    $("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
                     setTimeout(widgetLoader, 100);
                 }
                 else if (window.location.href.indexOf("?extend=1") > 0) {
-                    //$("#page_loading").addClass('d-none');
+                    $("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
                     setTimeout(widgetLoader, 100);
                 }
                 else if (window.location.href.indexOf("?shift=1") > 0) {
-                    //$("#page_loading").addClass('d-none');
+                    $("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
                     setTimeout(widgetLoader, 100);
                 }
