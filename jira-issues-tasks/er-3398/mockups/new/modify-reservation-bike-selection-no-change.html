@@ -550,14 +550,14 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Pickup</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p id="current_pickup_date_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/01/2022 12:00 PM</p>
-                                            <p id="current_pickup_location_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_pickup_date_textfield" class="current-reservation-data">11/01/2022 12:00 PM</p>
+                                            <p id="current_pickup_location_textfield" class="current-reservation-data">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
                                                 </a>
                                             </p>
-                                            <p id="current_pickup_address_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_pickup_address_textfield" class="current-reservation-data">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
@@ -571,14 +571,15 @@
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Dropoff</p>
                                         </div>
                                         <div style="padding-left: 1rem;">
-                                            <p id="current_dropoff_date_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/02/2022 12:00 PM</p>
-                                            <p id="current_dropoff_location_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="old_dropoff_date_textfield" class="old-reservation-data d-none">11/02/2022 12:00 PM</p>
+                                            <p id="current_dropoff_date_textfield" class="current-reservation-data">11/02/2022 12:00 PM</p>
+                                            <p id="current_dropoff_location_textfield" class="current-reservation-data">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
                                                 </a>
                                             </p>
-                                            <p id="current_dropoff_address_textfield" style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_dropoff_address_textfield" class="current-reservation-data">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                     <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
@@ -1589,6 +1590,14 @@
                     else {
                         $("#select_trike_btn").removeClass('btn-primary-focus');
                         $("#add_extras_btn_top").addClass('btn-primary-focus');
+                    }
+                },10);
+                setTimeout(function() {
+                    if (window.location.href.indexOf("?extended=1") > 0) {
+                        $("#old_dropoff_date_textfield").removeClass('d-none');
+                        $("#old_dropoff_date_textfield").html('11/03/2022');
+                        $("#balance_value_top").html('$209');
+                        $("#balance_value_bottom").html('$209');
                     }
                 },10);
             });
