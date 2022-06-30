@@ -15,6 +15,17 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <script>
+            $(window).on("load", function () {
+                if (window.location.href.indexOf("?reset=1") > 0) {
+                    $("#page_loading").addClass("d-none");
+                } else if (window.location.href.indexOf("?extend=1") > 0) {
+                    $("#page_loading").addClass("d-none");
+                } else if (window.location.href.indexOf("?shift=1") > 0) {
+                    $("#page_loading").addClass("d-none");
+                }
+            });
+        </script>
     </head>
     <body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="" style="cursor: default; -webkit-font-smoothing: antialiased;" data-gr-ext-disabled="forever">
         <div id="page_loading">
@@ -1122,19 +1133,19 @@
         <script>
             $(window).on("load", function () {
                 if (window.location.href.indexOf("?reset=1") > 0) {
-                    $("#page_loading").addClass('d-none');
+                    //$("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
-                    setTimeout(widgetLoader, 100); //wait x ms
+                    setTimeout(widgetLoader, 100);
                 }
                 else if (window.location.href.indexOf("?extend=1") > 0) {
-                    $("#page_loading").addClass('d-none');
+                    //$("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
-                    setTimeout(widgetLoader, 100); //wait x ms
+                    setTimeout(widgetLoader, 100);
                 }
                 else if (window.location.href.indexOf("?shift=1") > 0) {
-                    $("#page_loading").addClass('d-none');
+                    //$("#page_loading").addClass('d-none');
                     $("#widget_loading").removeClass('d-none');
-                    setTimeout(widgetLoader, 100); //wait x ms
+                    setTimeout(widgetLoader, 100);
                 }
                 else {
                     setTimeout(removeLoader, 800); //wait x ms
