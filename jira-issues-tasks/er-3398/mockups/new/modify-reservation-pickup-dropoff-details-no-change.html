@@ -1147,7 +1147,7 @@
                     }
                 },10);
                 setTimeout(function() {
-                    if (window.location.href.indexOf("?extend=1") > 0) {
+                    if (window.location.href.indexOf("?extended=1") > 0) {
                         $("#widget_reset_div").removeClass('d-none');
                         $("#availability_msg").removeClass('d-none');
                         $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
@@ -1156,13 +1156,14 @@
                     }
                 },10);
                 setTimeout(function() {
-                    if (window.location.href.indexOf("?shift=1") > 0) {
+                    if (window.location.href.indexOf("?shifted=1") > 0) {
                         $("#widget_reset_div").removeClass('d-none');
                         $("#availability_msg").removeClass('d-none');
                         $("#pickup_date_time_fieldbox").addClass('widget-input-changed');
                         $("#pickup_date_input").html('11/15/2022');
                         $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
                         $("#dropoff_date_input").html('11/16/2022');
+                        $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-bike-selection-no-change.html?shifted=1");
                     }
                 },10);
             });
