@@ -3,6 +3,10 @@ div#main-canvas-footer {
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
     padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
 }
+div#footer {
+    background: #303030;
+    height: 120px;
+}
 body.modal-open div#main-canvas-wrapper {
     filter: blur(3px);
 }
@@ -15,10 +19,6 @@ div#steps-slim-top {
 }
 tr#vip_zero_td {
     background-color: #FFF7F1;
-}
-div#footer {
-    background: #303030;
-    height: 120px;
 }
 input.form-check-input {
     cursor: pointer;
