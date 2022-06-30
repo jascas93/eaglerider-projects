@@ -292,16 +292,27 @@ a.bike-listing-card-link:hover {
     gap: 0.25rem;
 }
 .selected-bike-card-header {
+    margin: -1rem -1rem 1rem -1rem;
+    background-color: #484848;
+    padding: 0.5rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+div#current_selection_available {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -1rem -1rem 1rem -1rem;
-    background-color: #484848;
     color: #fafafa;
     font-size: 0.875rem;
     text-transform: uppercase;
-    padding: 0.5rem;
-    border-radius: 0.3rem 0.3rem 0 0;
+    font-weight: 500;
+}
+div#current_selection_unavailable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    font-size: 0.875rem;
+    text-transform: uppercase;
     font-weight: 500;
 }
 div#widget_loading {
