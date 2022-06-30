@@ -305,6 +305,14 @@ div#widget_loading {
     border-radius: 0.4rem;
     z-index: 1;
 }
+.old-reservation-data {
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #797979;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-decoration: line-through;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;
