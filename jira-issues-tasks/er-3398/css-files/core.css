@@ -277,10 +277,13 @@ a.bike-listing-card-link:hover {
 .bike-availability-note {
     display: flex;
     align-items: flex-start;
-    background-color: #ffdb58;
-    color: #5d5d5d;
+    background-color: rgba(255,219,88,0.125);
+    border: 2px solid;
+    border-color: #ffdb58;
+    color: #a4830c;
     padding: 0.75rem 1rem;
     margin-bottom: 0;
+    border-radius: 0 1.5rem 0 1.5rem;
 }
 /* Rensponsives */
 .visible-for-lgd {
