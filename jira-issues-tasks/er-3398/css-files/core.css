@@ -313,6 +313,15 @@ a.bike-listing-card-link:hover {
 .club-ribbon.listing-unavailable {
     background-color: #aeaeae;
 }
+#selected_current_price.listing-unavailable {
+    color: #797979 !important;
+}
+#selected_full_price.listing-unavailable {
+    color: #797979 !important;
+}
+#selected_club_savings.listing-unavailable {
+    color: #797979 !important;
+}
 div#current_selection_available {
     display: flex;
     align-items: center;
