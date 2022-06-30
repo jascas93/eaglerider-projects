@@ -717,7 +717,7 @@
                                                 <div id="widget_reset_btn" class="col-12 col-md-6 px-0 pe-md-0 ps-md-1 mb-1 mb-md-0 d-none">
                                                     <div>
                                                         <a
-                                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html"
+                                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?reset=1"
                                                             id="change_details"
                                                             class="btn btn-secondary-outlined w-100 btn-with-icon"
                                                             tabindex="-1"
@@ -744,6 +744,9 @@
                                             </div>
                                             <div>
                                                 <ul>
+                                                    <li>
+                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html" class="btn btn-primary-link py-0"><span class="btn-link-text">Original</span></a>
+                                                    </li>
                                                     <li>
                                                         <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?extend=1" class="btn btn-primary-link py-0"><span class="btn-link-text">Extend Dropoff Date</span></a>
                                                     </li>
@@ -1099,11 +1102,14 @@
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script>
             $(window).on("load", function () {
-                if (window.location.href.indexOf("?extend=1") > 0) {
-                    setTimeout(removeLoader, 200); //wait x ms
+                if (window.location.href.indexOf("?reset=1") > 0) {
+                    setTimeout(removeLoader, 100); //wait x ms
+                }
+                else if (window.location.href.indexOf("?extend=1") > 0) {
+                    setTimeout(removeLoader, 100); //wait x ms
                 }
                 else if (window.location.href.indexOf("?shift=1") > 0) {
-                    setTimeout(removeLoader, 200); //wait x ms
+                    setTimeout(removeLoader, 100); //wait x ms
                 }
                 else {
                     setTimeout(removeLoader, 800); //wait x ms
@@ -1117,6 +1123,15 @@
         </script>
         <script>
             $(document).ready(function () {
+                setTimeout(function() {
+                    if (window.location.href.indexOf("?reset=1") > 0) {
+                        $("#widget_reset_btn").addClass('d-none');
+                        $("#pickup_date_time_fieldbox").removeClass('widget-input-changed');
+                        $("#pickup_date_input").html('11/01/2022');
+                        $("#dropoff_date_time_fieldbox").removeClass('widget-input-changed');
+                        $("#dropoff_date_input").html('11/02/2022');
+                    }
+                },10);
                 setTimeout(function() {
                     if (window.location.href.indexOf("?extend=1") > 0) {
                         $("#widget_reset_btn").removeClass('d-none');
