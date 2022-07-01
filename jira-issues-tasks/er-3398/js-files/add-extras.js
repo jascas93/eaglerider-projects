@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 
 function checkbox_changed(e) {
-    if (e.checked) {
+    if (e.checked && window.location.href.indexOf("?model.changed=trike") < 1) {
         document.getElementById("add_vip_zero").classList.remove("input-focus-on-load");
         document.getElementById("continue_to_review_btn_top").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
         document.getElementById("continue_to_review_btn_bottom").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
