@@ -29,6 +29,7 @@ $(document).ready(function () {
             $("#pick_drop_btn_link_4").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?extended=1");
         }
         else if (window.location.href.indexOf("?shifted=1") > 0) {
+            $("#bike_selection_unavailable_msg").removeClass("d-none");
             $("#select_trike_btn").addClass("is-active");
             $("#add_extras_btn_top").removeClass("is-active");
             $("#add_extras_btn_top").addClass("disabled-btn cursor-not-allowed");
