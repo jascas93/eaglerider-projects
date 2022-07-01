@@ -1314,28 +1314,6 @@
         </main>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            $(window).on("load", function () {
-                setTimeout(removeLoader, 800); //wait x ms
-            });
-            function removeLoader() {
-                $("#page_loading").fadeOut(400, function () {
-                    $("#page_loading").hide();
-                });
-            }
-        </script>
-        <script>
-            $(document).ready(function () {
-                if (window.location.href.indexOf("?welcome=1") > 0) {
-                    $("#modify_welcome").modal("show");
-                }
-            });
-        </script>
-        <script>
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-              return new bootstrap.Tooltip(tooltipTriggerEl)
-            })
-        </script>
+        <script src="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/js-files/review-and-update.js"></script>
     </body>
 </html>
