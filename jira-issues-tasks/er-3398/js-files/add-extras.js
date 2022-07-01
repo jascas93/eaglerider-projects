@@ -40,10 +40,15 @@ function checkbox_changed(e) {
         document.getElementById("ccurrent_model_url").setAttribute("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
         document.getElementById("tm_item").innerHTML = "1 Day @ $335 /Day";
         document.getElementById("tm_price").innerHTML = "$335";
+        document.getElementById("tm_line_item").classList.add("line-item-updated");
         document.getElementById("discount_price").innerHTML = "-$67";
+        document.getElementById("discount_line_item").classList.add("line-item-updated");
         document.getElementById("surcharge_price").innerHTML = "$17.42";
+        document.getElementById("surcharge_line_item").classList.add("line-item-updated");
         document.getElementById("tax_price").innerHTML = "$27.12";
+        document.getElementById("tax_line_item").classList.add("line-item-updated");
         document.getElementById("total_value").innerHTML = "$312.54";
+        document.getElementById("total_line_item").classList.add("line-item-updated");
         document.getElementById("paid_value").innerHTML = "($208.97)";
         document.getElementById("balance_value").innerHTML = "$103.57";
         document.getElementById("balance_value_top").innerHTML = "$103.57";
