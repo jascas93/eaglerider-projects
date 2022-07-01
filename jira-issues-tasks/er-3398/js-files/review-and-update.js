@@ -20,6 +20,8 @@ $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("?welcome=1") > 0) {
             $("#steps_normal_row").addClass("d-none");
+            $("#steps-full-top").addClass("d-none");
+            $("#steps-slim-top").addClass("d-none");
             $("#page_titles_row").addClass("pt-5");
             $("#main_page_title").html("Modify Your Reservation");
             $("#cta_btn_row").addClass("d-none");
