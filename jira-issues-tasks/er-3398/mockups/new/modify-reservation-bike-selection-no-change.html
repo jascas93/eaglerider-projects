@@ -1579,6 +1579,13 @@
                         $("#select_trike_btn").addClass('is-active');
                         $("#add_extras_btn_top").removeClass('is-active');
                     }
+                    else if (window.location.href.indexOf("?shifted=1") > 0) {
+                        $("#select_trike_btn").addClass('is-active');
+                        $("#add_extras_btn_top").removeClass('is-active');
+                        $("#add_extras_btn_top").addClass('disabled-btn');
+                        $("#add_extras_btn_bottom").addClass('disabled-btn');
+                        $("#footer_continue").addClass('disabled-btn');
+                    }
                     else {
                         $("#select_trike_btn").removeClass('btn-primary-focus');
                         $("#add_extras_btn_top").addClass('btn-primary-focus');
