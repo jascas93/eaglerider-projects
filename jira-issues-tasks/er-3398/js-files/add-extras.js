@@ -16,30 +16,30 @@ $(document).ready(function () {
         }
         else if (window.location.href.indexOf("?model_upgrade=1") > 0) {
             $("current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
-            $("current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
-            $("old_model_textfield").removeClass("d-none");
-            $("current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
-            $("ccurrent_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
-            $("tm_item").html("1 Day @ $335 /Day");
-            $("tm_price").html("$335");
-            $("tm_line_item").addClass("line-item-updated");
-            $("discount_price").html("-$67");
-            $("discount_line_item").addClass("line-item-updated");
-            $("surcharge_price").html("$17.42");
-            $("surcharge_line_item").addClass("line-item-updated");
-            $("tax_price").html("$27.12");
-            $("tax_line_item").addClass("line-item-updated");
-            $("vip_zero_line_item").removeClass("d-none");
-            $("vip_zero_line_item").addClass("line-item-updated");
-            $("total_value").html("$347.54");
-            $("total_line_item").addClass("line-item-updated");
-            $("paid_value").html("($208.97)");
-            $("balance_value").html("$138.57");
-            $("balance_value_top").html("$138.57");
-            $("balance_value_bottom").html("$138.57");
-            $("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
-            $("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
-            $("footer_continue").addClass("btn--shockwave", "is-active");
+            //$("current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
+            //$("old_model_textfield").removeClass("d-none");
+            //$("current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
+            //$("ccurrent_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
+            //$("tm_item").html("1 Day @ $335 /Day");
+            //$("tm_price").html("$335");
+            //$("tm_line_item").addClass("line-item-updated");
+            //$("discount_price").html("-$67");
+            //$("discount_line_item").addClass("line-item-updated");
+            //$("surcharge_price").html("$17.42");
+            //$("surcharge_line_item").addClass("line-item-updated");
+            //$("tax_price").html("$27.12");
+            //$("tax_line_item").addClass("line-item-updated");
+            //$("vip_zero_line_item").removeClass("d-none");
+            //$("vip_zero_line_item").addClass("line-item-updated");
+            //$("total_value").html("$347.54");
+            //$("total_line_item").addClass("line-item-updated");
+            //$("paid_value").html("($208.97)");
+            //$("balance_value").html("$138.57");
+            //$("balance_value_top").html("$138.57");
+            //$("balance_value_bottom").html("$138.57");
+            //$("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
+            //$("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
+            //$("footer_continue").addClass("btn--shockwave", "is-active");
         }
         else {
             $("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
