@@ -21,6 +21,9 @@ div#steps-slim-top {
 tr#vip_zero_td {
     background-color: #FFF7F1;
 }
+.line-item-updated {
+    background-color: #FFF7F1;
+}
 input.form-check-input {
     cursor: pointer;
 }
