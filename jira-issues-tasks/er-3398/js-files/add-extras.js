@@ -36,7 +36,7 @@ $(document).ready(function () {
 });
 
 function checkbox_changed(e) {
-    if (e.checked && window.location.href.indexOf("?model.changed=trike") < 1) {
+    if (e.checked == true && window.location.href.indexOf("?model.changed=trike") < 1) {
         document.getElementById("add_vip_zero").classList.remove("input-focus-on-load");
         document.getElementById("continue_to_review_btn_top").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
         document.getElementById("continue_to_review_btn_bottom").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
@@ -51,7 +51,7 @@ function checkbox_changed(e) {
         document.getElementById("continue_to_review_btn_bottom").classList.add("btn--shockwave", "is-active");
         document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active");
     }
-    else if (e.checked && window.location.href.indexOf("?model.changed=trike") > 0) {
+    else if (e.checked == true && window.location.href.indexOf("?model.changed=trike") > 0) {
         document.getElementById("add_vip_zero").classList.remove("input-focus-on-load");
         document.getElementById("continue_to_review_btn_top").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
         document.getElementById("continue_to_review_btn_bottom").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
