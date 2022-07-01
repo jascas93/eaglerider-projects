@@ -41,7 +41,7 @@ $(document).ready(function () {
             $("#footer_continue").addClass("disabled-btn cursor-not-allowed");
             $("#footer_continue").attr("href", "#");
             $("#current_model_textfield").addClass("text-danger fw-500");
-            $("#min_error_note").removeClass("d-none");
+            $("#mini_error_note").removeClass("d-none");
             $("#old_pickup_date_textfield").removeClass("d-none");
             $("#current_pickup_date_textfield").html("11/15/2022 12:00 PM");
             $("#old_dropoff_date_textfield").removeClass("d-none");
