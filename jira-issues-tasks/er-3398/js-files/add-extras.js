@@ -40,6 +40,20 @@ function checkbox_changed(e) {
         document.getElementById("continue_to_review_btn_bottom").classList.add("btn--shockwave", "is-active");
         document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active");
     }
+    else if (e.checked && window.location.href.indexOf("?model.changed=trike") > 0) {
+        document.getElementById("add_vip_zero").classList.remove("input-focus-on-load");
+        document.getElementById("continue_to_review_btn_top").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
+        document.getElementById("continue_to_review_btn_bottom").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
+        document.getElementById("footer_continue").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
+        (document.getElementById("balance_value").innerHTML = "$138.57");
+        (document.getElementById("balance_value_top").innerHTML = "$138.57");
+        (document.getElementById("balance_value_bottom").innerHTML = "$138.57");
+        (document.getElementById("total_value").innerHTML = "$243.97");
+        document.getElementById("vip_zero_td").classList.remove("d-none");
+        document.getElementById("continue_to_review_btn_top").classList.add("btn--shockwave", "is-active");
+        document.getElementById("continue_to_review_btn_bottom").classList.add("btn--shockwave", "is-active");
+        document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active");
+    }
     else {
         document.getElementById("add_vip_zero").classList.add("input-focus-on-load");
         document.getElementById("continue_to_review_btn_top").setAttribute("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-no-change.html");
