@@ -20,6 +20,16 @@ $(document).ready(function () {
             $("#old_model_textfield").removeClass("d-none");
             $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
             $("#current_model_url").attr("href", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
+            $("#tm_item").html("1 Day @ $335 /Day");
+            $("#tm_price").html("$335");
+            $("#discount_price").html("-$67");
+            $("#surcharge_price").html("$17.42");
+            $("#tax_price").html("$27.12");
+            $("#total_value").html("$312.54");
+            $("#paid_value").html("($208.97)");
+            $("#balance_value").html("$103.57");
+            $("#balance_value_top").html("$103.57");
+            $("#balance_value_bottom").html("$103.57");
 
         }
     },10);
