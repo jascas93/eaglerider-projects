@@ -343,7 +343,8 @@ a.bike-listing-card-link:hover {
 }
 .bike-availability-note.warning {
     background-color: rgba(255,219,88,0.125);
-    border-color: #ffdb58;
+    /* border-color: #ffdb58; */
+    border-color: rgba(239, 172, 31,1);
     color: #a4830c;
 }
 .bike-availability-note.danger {
