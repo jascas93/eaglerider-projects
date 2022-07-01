@@ -227,7 +227,7 @@ div#current_bike_selection_footer.listing-unavailable {
     background-color: #efefef;
     opacity: 66%;
 }
-.club-ribbon.listing-unavailable {
+div#current_bike_selection_footer.club-ribbon.listing-unavailable {
     background-color: #aeaeae;
 }
 #selected_current_price.listing-unavailable {
