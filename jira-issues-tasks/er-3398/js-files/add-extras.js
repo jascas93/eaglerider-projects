@@ -33,8 +33,10 @@ $(document).ready(function () {
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
         }
-        else if ($("#add_vip_zero").on("click")) {
-            $("#vip_zero_line_item").removeClass("d-none");
+        else if ($("#add_vip_zero").on("click",function checkbox_changed(e))) {
+            //$("#vip_zero_line_item").removeClass("d-none");
+            e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none");
+
         }
         else {
             $("#continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
