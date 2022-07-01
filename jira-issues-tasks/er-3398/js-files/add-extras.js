@@ -23,15 +23,10 @@ $(document).ready(function () {
             $("#ccurrent_model_url").atrr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#tm_item").html("1 Day @ $335 /Day");
             $("#tm_price").html("$335");
-            $("#tm_line_item").addClass("line-item-updated");
             $("#discount_price").html("-$67");
-            $("#discount_line_item").addClass("line-item-updated");
             $("#surcharge_price").html("$17.42");
-            $("#surcharge_line_item").addClass("line-item-updated");
             $("#tax_price").html("$27.12");
-            $("#tax_line_item").addClass("line-item-updated");
             $("#total_value").html("$312.54");
-            $("#total_line_item").addClass("line-item-updated");
             $("#paid_value").html("($208.97)");
             $("#balance_value").html("$103.57");
             $("#balance_value_top").html("$103.57");
