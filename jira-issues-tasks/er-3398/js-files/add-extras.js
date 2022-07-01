@@ -8,6 +8,7 @@ function removeLoader() {
     });
 }
 
+/*
 //Different Page Variations
 $(document).ready(function () {
     setTimeout(function() {
@@ -40,6 +41,25 @@ $(document).ready(function () {
             //$("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
             //$("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
             //$("footer_continue").addClass("btn--shockwave", "is-active");
+        }
+        else {
+            $("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
+            $("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
+            $("footer_continue").addClass("btn--shockwave", "is-active");
+        }
+    },10);
+});
+*/
+
+// Different Variations of the Page
+$(document).ready(function () {
+    setTimeout(function() {
+        if (window.location.href.indexOf("?upsell=1") > 0) {
+            $("#add_vip_zero").trigger("click");
+        }
+        else if (window.location.href.indexOf("?model_upgrade=1") > 0) {
+            $("current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
+
         }
         else {
             $("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
