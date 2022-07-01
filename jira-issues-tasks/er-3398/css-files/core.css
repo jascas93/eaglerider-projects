@@ -200,7 +200,6 @@ div#current_selection_unavailable {
 }
 div#current_bike_selection_header {
     background-color: #FFECDD;
-    border-radius: 0.3rem 0.3rem 0 0;
 }
 div#current_bike_selection_img {
     border-top: 1px solid #f26b00;
@@ -214,6 +213,7 @@ div#current_bike_selection_wrapper.listing-unavailable {
 }
 div#current_bike_selection_status.listing-unavailable {
     background-color: #A2A9AE;
+    border-radius: 0.2rem 0.2rem 0 0;
 }
 div#current_bike_selection_header.listing-unavailable {
     background-color: #efefef;
