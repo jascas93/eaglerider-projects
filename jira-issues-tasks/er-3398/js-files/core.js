@@ -31,6 +31,8 @@ $(document).ready(function () {
         else if (window.location.href.indexOf("?shifted=1") > 0) {
             $("#bike_selection_unavailable_msg").removeClass("d-none");
             $("#select_trike_btn").addClass("is-active");
+            $("#select_trike_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-add-extras-model-upgrade-trike.html?shifted=1");
+            $(".bike-listing-card-link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-add-extras-model-upgrade-trike.html?shifted=1");
             $("#add_extras_btn_top").removeClass("is-active");
             $("#add_extras_btn_top").addClass("disabled-btn cursor-not-allowed");
             $("#add_extras_btn_top").attr("href", "#");
