@@ -352,6 +352,13 @@ a.bike-listing-card-link:hover {
     border-color: rgb(185 15 46);
     color: rgb(185 15 46);
 }
+.bike-availability-note.danger.mini {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    align-items: center;
+    width: fit-content;
+}
 div#widget_loading {
     display: flex;
     justify-content: center;
