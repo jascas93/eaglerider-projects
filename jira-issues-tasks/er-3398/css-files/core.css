@@ -292,7 +292,6 @@ a.bike-listing-card-link:hover {
     gap: 0.25rem;
 }
 .selected-bike-card-header {
-    margin: -1rem -1rem 1rem -1rem;
     background-color: #484848;
     padding: 0.5rem;
     border-radius: 0.3rem 0.3rem 0 0;
