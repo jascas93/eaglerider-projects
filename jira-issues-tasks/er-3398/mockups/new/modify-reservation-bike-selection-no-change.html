@@ -1579,13 +1579,6 @@
                         $("#select_trike_btn").addClass('is-active');
                         $("#add_extras_btn_top").removeClass('is-active');
                     }
-                    else if (window.location.href.indexOf("?shifted=1") > 0) {
-                        $("#select_trike_btn").addClass('is-active');
-                        $("#add_extras_btn_top").removeClass('is-active');
-                        $("#add_extras_btn_top").addClass('disabled-btn');
-                        $("#add_extras_btn_bottom").addClass('disabled-btn');
-                        $("#footer_continue").addClass('disabled-btn');
-                    }
                     else {
                         $("#select_trike_btn").removeClass('btn-primary-focus');
                         $("#add_extras_btn_top").addClass('btn-primary-focus');
@@ -1606,6 +1599,11 @@
                 },10);
                 setTimeout(function() {
                     if (window.location.href.indexOf("?shifted=1") > 0) {
+                        $("#select_trike_btn").addClass('is-active');
+                        $("#add_extras_btn_top").removeClass('is-active');
+                        $("#add_extras_btn_top").addClass('disabled-btn cursor-not-allowed');
+                        $("#add_extras_btn_bottom").addClass('disabled-btn');
+                        $("#footer_continue").addClass('disabled-btn');
                         $("#old_pickup_date_textfield").removeClass('d-none');
                         $("#current_pickup_date_textfield").html('11/15/2022 12:00 PM');
                         $("#old_dropoff_date_textfield").removeClass('d-none');
