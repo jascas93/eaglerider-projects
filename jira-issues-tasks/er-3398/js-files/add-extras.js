@@ -34,10 +34,10 @@ function checkbox_changed(e) {
         document.getElementById("footer_continue").classList.add("btn--shockwave", "is-active");
     } else if (!e.checked && window.location.href.indexOf("?model.changed=trike") > 0) {
         document.getElementById("current_bike_model_img").setAttribute("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
-        //document.getElementById("current_bike_model_name").innerHTML = "Harley-Davidson® Tri Glide® Ultra");
+        document.getElementById("current_bike_model_name").innerHTML = "Harley-Davidson® Tri Glide® Ultra";
         document.getElementById("old_model_textfield").classList.remove("d-none");
         document.getElementById("current_model_textfield").innerHTML = "Harley-Davidson® Tri Glide® Ultra";
-        //(document.getElementById("current_model_url").setAttribute("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
+        document.getElementById("ccurrent_model_url").setAttribute("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
         document.getElementById("tm_item").innerHTML = "1 Day @ $335 /Day";
         document.getElementById("tm_price").innerHTML = "$335";
         document.getElementById("discount_price").innerHTML = "-$67";
