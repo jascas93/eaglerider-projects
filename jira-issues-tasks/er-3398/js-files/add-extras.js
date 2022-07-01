@@ -32,6 +32,9 @@ $(document).ready(function () {
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
         }
+        else if ($("add_vip_zero").is(":checked")) {
+            $("#vip_zero_line_item").removeClass("d-none");
+        }
         else {
             $("#continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
             $("#continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
