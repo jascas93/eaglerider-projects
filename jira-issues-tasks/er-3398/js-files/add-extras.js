@@ -11,7 +11,7 @@ function removeLoader() {
 
 //Different Page Variations
 $(document).ready(function () {
-    //const checkbox = document.getElementById("add_vip_zero");
+    const $checkBox = $("#add_vip_zero");
     setTimeout(function() {
         if (window.location.href.indexOf("?upsell=1") > 0) {
             $("#add_vip_zero").trigger("click");
@@ -33,7 +33,7 @@ $(document).ready(function () {
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
         }
-        else if ($("#add_vip_zero").is(":checked")) {
+        else if ($("#add_vip_zero").on("click")) {
             $("#vip_zero_line_item").removeClass("d-none");
         }
         else {
