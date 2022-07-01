@@ -14,6 +14,7 @@ $(document).ready(function () {
         $("#modify_welcome").modal("show");
     }
 });
+
 // Different Variations of the Page
 $(document).ready(function () {
     setTimeout(function() {
