@@ -32,8 +32,11 @@ $(document).ready(function () {
             $("#select_trike_btn").addClass('is-active');
             $("#add_extras_btn_top").removeClass('is-active');
             $("#add_extras_btn_top").addClass('disabled-btn cursor-not-allowed');
-            $("#add_extras_btn_bottom").addClass('disabled-btn');
-            $("#footer_continue").addClass('disabled-btn');
+            $("#add_extras_btn_top").attr("href", "#");
+            $("#add_extras_btn_bottom").addClass('disabled-btn cursor-not-allowed');
+            $("#add_extras_btn_bottom").attr("href", "#");
+            $("#footer_continue").addClass('disabled-btn cursor-not-allowed');
+            $("#footer_continue").attr("href", "#");
             $("#old_pickup_date_textfield").removeClass('d-none');
             $("#current_pickup_date_textfield").html('11/15/2022 12:00 PM');
             $("#old_dropoff_date_textfield").removeClass('d-none');
