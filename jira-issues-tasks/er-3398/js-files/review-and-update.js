@@ -18,7 +18,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("?welcome=1") > 0) {
-            $("#steps_normal_row").removeClass("d-none");
+            $("#steps_normal_row").addClass("d-none");
             $("#page_titles_row").addClass("mt-4");
         }
     },10);
