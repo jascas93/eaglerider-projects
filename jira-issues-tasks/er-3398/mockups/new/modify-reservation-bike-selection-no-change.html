@@ -615,8 +615,8 @@
                                 <!-- START BIKE LISTINGS -->
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 g-2">
                                     <div class="col bike-listing-container">
-                                        <div id="current_bike_selection_wrapper" class="bike-listing-card current-bike-selection">
-                                            <div id="current_bike_selection_status" class="selected-bike-card-header">
+                                        <div id="current_bike_selection_wrapper" class="bike-listing-card">
+                                            <div id="current_bike_selection_status">
                                                 <div id="current_selection_available">
                                                     <span class="material-icons-outlined btn-icon-left" style="font-size: 16px !important; margin-right: 0.25rem;">done</span>
                                                     <p style="margin-bottom: 0; line-height: initial;">Current Selection</p>
@@ -626,7 +626,7 @@
                                                     <p style="margin-bottom: 0; line-height: initial;">Unavailable</p>
                                                 </div>
                                             </div>
-                                            <div id="current_bike_selection_header" class="bike-card-header current-bike-selection">
+                                            <div id="current_bike_selection_header" class="bike-card-header">
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div>
                                                         <p class="bike-card-model-name">Harley-Davidson® Street Glide® Touring Edition</p>
@@ -639,7 +639,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div id="current_bike_selection_img" class="bike-card-img-wrapper current-bike-selection">
+                                            <div id="current_bike_selection_img" class="bike-card-img-wrapper">
                                                 <img
                                                     src="https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-street-glide-touring-edition-1.jpeg"
                                                     class="bike-card-img"
@@ -647,7 +647,7 @@
                                                 />
                                                 <span class="bike-model-value-deal d-none">Value Deal</span>
                                             </div>
-                                            <div id="current_bike_selection_footer" class="bike-card-footer club current-bike-selection">
+                                            <div id="current_bike_selection_footer" class="bike-card-footer club">
                                                 <div class="club-ribbon">
                                                     <span>Club</span>
                                                 </div>
@@ -1612,9 +1612,9 @@
                         $("#pick_drop_btn_link_3").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?shifted=1");
                         $("#pick_drop_btn_link_4").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html?shifted=1");
                         $("#current_bike_selection").addClass('listing-unavailable');
-                        $(".bike-card-header .current-bike-selection").addClass('listing-unavailable');
-                        $(".bike-card-img-wrapper .current-bike-selection").addClass('listing-unavailable');
-                        $(".bike-card-footer club .current-bike-selection").addClass('listing-unavailable');
+                        $("#current_bike_selection_header").addClass('listing-unavailable');
+                        $("#current_bike_selection_img").addClass('listing-unavailable');
+                        $("#current_bike_selection_footer").addClass('listing-unavailable');
                         $(".club-ribbon").addClass('listing-unavailable');
                         $("#selected_current_price").addClass('listing-unavailable');
                         $("#selected_full_price").addClass('listing-unavailable');
