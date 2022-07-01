@@ -41,6 +41,11 @@ $(document).ready(function () {
             $("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
             $("footer_continue").addClass("btn--shockwave", "is-active");
         }
+        else {
+            $("continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
+            $("continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
+            $("footer_continue").addClass("btn--shockwave", "is-active");
+        }
     },10);
 });
 
