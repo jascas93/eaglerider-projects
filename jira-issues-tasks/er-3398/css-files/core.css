@@ -291,23 +291,28 @@ a.bike-listing-card-link:hover {
     border-radius: 0 1.5rem 0 1.5rem;
     gap: 0.25rem;
 }
+#div.current-bike-selection.listing-unavailable {
+    border-color: #aeaeae;
+}
 .selected-bike-card-header {
     background-color: #484848;
     padding: 0.5rem;
     border-radius: 0.3rem 0.3rem 0 0;
 }
 .bike-listing-card.current-bike-selection.listing-unavailable {
-    opacity: 50%;
-    border-color: #aeaeae;
+
 }
 .bike-card-header.current-bike-selection.listing-unavailable {
     background-color: #efefef;
+    opacity: 50%;
 }
 .bike-card-img-wrapper.current-bike-selection.listing-unavailable {
     border-color: #aeaeae;
+    opacity: 33%;
 }
 .bike-card-footer.club.current-bike-selection.listing-unavailable {
     background-color: #efefef;
+    opacity: 66%;
 }
 .club-ribbon.listing-unavailable {
     background-color: #aeaeae;
