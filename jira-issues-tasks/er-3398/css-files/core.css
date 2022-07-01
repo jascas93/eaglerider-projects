@@ -291,7 +291,7 @@ a.bike-listing-card-link:hover {
     border-radius: 0 1.5rem 0 1.5rem;
     gap: 0.25rem;
 }
-#div.current-bike-selection.listing-unavailable {
+#div.current_bike_selection.listing-unavailable {
     border-color: #aeaeae;
 }
 .selected-bike-card-header {
