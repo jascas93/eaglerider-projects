@@ -14,7 +14,7 @@ $(document).ready(function () {
     const $checkBox = $("#add_vip_zero");
     setTimeout(function() {
         if ($('#add_vip_zero:checked')) {
-            console.log("checked");
+            console.log("VIP zero checked");
         }
         else if (window.location.href.indexOf("?upsell=1") > 0) {
             $("#add_vip_zero").trigger("click");
