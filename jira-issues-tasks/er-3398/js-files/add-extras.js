@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (window.location.href.indexOf("?upsell=1") > 0) {
             $("#add_vip_zero").trigger("click");
         }
-        else if (window.location.href.indexOf("?model_upgrade=1") > 0) {
+        else if ((window.location.href.indexOf("?model_upgrade=1") > 0)  & !function checkbox_changed(e)){
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#old_model_textfield").removeClass("d-none");
@@ -33,11 +33,11 @@ $(document).ready(function () {
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
         }
-        else if ($("#add_vip_zero").on("click",function checkbox_changed(e)) {
-            //$("#vip_zero_line_item").removeClass("d-none");
-            e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none");
+        /*else if (function checkbox_changed(e) === true) {
+            $("#vip_zero_line_item").removeClass("d-none");
+            //e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none");
 
-        }
+        }*/
         else {
             $("#continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
             $("#continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
