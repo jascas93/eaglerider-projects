@@ -13,7 +13,7 @@ function removeLoader() {
 $(document).ready(function () {
     const $checkBox = $("#add_vip_zero");
     setTimeout(function() {
-        if ($checkBox.is(':checked')) {
+        if ($checkBox.prop( "checked" )) {
             console.log("VIP zero checked");
         }
         else {
