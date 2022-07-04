@@ -1,6 +1,9 @@
 // Page Loader
 $(window).on("load", function () {
     setTimeout(removeLoader, 800); //wait x ms
+    if (window.location.href.indexOf("?upsell=1") > 0) {
+            $("#add_vip_zero").trigger("click");
+        }
 });
 function removeLoader() {
     $("#page_loading").fadeOut(400, function () {
