@@ -12,12 +12,10 @@ function removeLoader() {
 // Different Page Variations
 $(document).ready(function () {
     const $checkBox = $("#add_vip_zero");
-    setTimeout(function() {
-        if ($checkBox.prop( "checked" )) {
-            console.log("VIP zero checked");
-        }
-        else {
-            console.log("NOT checked");
-        }
-    },10);
+    if ($checkBox.is(":checked")) {
+        console.log("VIP zero checked");
+    }
+    else {
+        console.log("NOT checked");
+    }
 });
