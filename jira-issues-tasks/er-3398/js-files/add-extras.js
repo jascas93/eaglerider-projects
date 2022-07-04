@@ -13,7 +13,7 @@ function removeLoader() {
 $(document).ready(function () {
     const $checkBox = $("#add_vip_zero");
     setTimeout(function() {
-        if ($("#add_vip_zero").checked) {
+        if ($('#add_vip_zero:checked')) {
             console.log("checked");
         }
         else if (window.location.href.indexOf("?upsell=1") > 0) {
