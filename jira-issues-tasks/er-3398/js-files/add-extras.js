@@ -10,12 +10,14 @@ function removeLoader() {
 
 
 // Different Page Variations
-$(document).ready(function () {
-    const $checkBox = $("#add_vip_zero");
-    if ($checkBox.is(":checked")) {
-        console.log("VIP zero checked");
+function addVIPZero() {
+    // Get the checkbox
+    var checkBox = document.getElementById("add_vip_zero");
+
+    // If the checkbox is checked, display the output text
+    if (checkBox.checked == true) {
+        console.log("checked");
+    } else {
+        console.log("not checked");
     }
-    else {
-        console.log("NOT checked");
-    }
-});
+}
