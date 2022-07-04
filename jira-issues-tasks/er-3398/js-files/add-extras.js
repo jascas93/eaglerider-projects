@@ -33,7 +33,7 @@ $(document).ready(function () {
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
         }
-        else if ($("#add_vip_zero").on("click",function checkbox_changed(e))) {
+        else if ($("#add_vip_zero").on("click",function checkbox_changed(e)) {
             //$("#vip_zero_line_item").removeClass("d-none");
             e.checked ? document.getElementById("vip_zero_td").classList.remove("d-none") : document.getElementById("vip_zero_td").classList.add("d-none");
 
