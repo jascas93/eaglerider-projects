@@ -13,10 +13,8 @@ function removeLoader() {
 
 // Different Page Variations
 function addVIPZero() {
-    // Get the checkbox
     var checkBox = document.getElementById("add_vip_zero");
 
-    // If the checkbox is checked, display the output text
     if (checkBox.checked == true && window.location.href.indexOf("?upsell=1") > 0) {
         //$("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-street-glide-touring-edition-1.jpeg");
         //$("#current_bike_model_name").html("Harley-Davidson® Street Glide® Touring Edition");
