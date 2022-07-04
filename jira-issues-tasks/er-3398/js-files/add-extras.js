@@ -33,9 +33,9 @@ function addVIPZero() {
         $("#balance_value_bottom").html("$35");
         $("#vip_zero_line_item").removeClass("d-none");
         $("#vip_zero_line_item").addClass("line-item-updated");
-        $("#continue_to_review_btn_top").addClass("btn--shockwave", "is-active");
-        $("#continue_to_review_btn_bottom").addClass("btn--shockwave", "is-active");
-        $("#footer_continue").addClass("btn--shockwave", "is-active");
+        $("#continue_to_review_btn_top").addClass(".btn--shockwave", ".is-active");
+        $("#continue_to_review_btn_bottom").addClass(".btn--shockwave", ".is-active");
+        $("#footer_continue").addClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
         $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
         $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
