@@ -15,11 +15,10 @@ function addVIPZero() {
     var checkBox = document.getElementById("add_vip_zero");
 
     // If the checkbox is checked, display the output text
-    if (checkBox.checked == true) {
-        if (window.location.href.indexOf("?upsell=1") > 0) {
-            $("#add_vip_zero").trigger("click");
-        }
-    } else {
+    if (checkBox.checked == true && window.location.href.indexOf("?upsell=1") > 0) {
+        onsole.log("upsell checked");
+    }
+    else {
         console.log("not checked");
     }
 }
