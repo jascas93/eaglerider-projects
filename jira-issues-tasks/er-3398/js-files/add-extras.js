@@ -16,7 +16,9 @@ function addVIPZero() {
 
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true) {
-        console.log("checked");
+        if (window.location.href.indexOf("?upsell=1") > 0) {
+            $("#add_vip_zero").trigger("click");
+        }
     } else {
         console.log("not checked");
     }
