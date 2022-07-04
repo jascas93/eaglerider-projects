@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (window.location.href.indexOf("?upsell=1") > 0) {
             $("#add_vip_zero").trigger("click");
         }
-        else if ((window.location.href.indexOf("?model_upgrade=1") > 0)  & !function checkbox_changed(e)){
+        else if ((window.location.href.indexOf("?model_upgrade=1") > 0)  && !function checkbox_changed(e)){
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#old_model_textfield").removeClass("d-none");
