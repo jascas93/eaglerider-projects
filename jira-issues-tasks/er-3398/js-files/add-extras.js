@@ -13,7 +13,10 @@ function removeLoader() {
 $(document).ready(function () {
     const $checkBox = $("#add_vip_zero");
     setTimeout(function() {
-        if (window.location.href.indexOf("?upsell=1") > 0) {
+        if ($("#add_vip_zero").checked) {
+            console.log("checked");
+        }
+        else if (window.location.href.indexOf("?upsell=1") > 0) {
             $("#add_vip_zero").trigger("click");
         }
         else if (window.location.href.indexOf("?model_upgrade=1") > 0){
