@@ -1,10 +1,10 @@
 // Page Loader
 $(window).on("load", function () {
     setTimeout(removeLoader, 800); //wait x ms
-    if (window.location.href.indexOf("?upsell=1") > 0) {
+    if (window.location.href.indexOf("upsell=1") > 0) {
         $("#add_vip_zero").trigger("click");
     }
-    else if (window.location.href.indexOf("?model_upgrade=1") > 0) {
+    else if (window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
         $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
         $("#old_model_textfield").removeClass("d-none");
@@ -40,7 +40,7 @@ function removeLoader() {
 function addVIPZero() {
     var checkBox = document.getElementById("add_vip_zero");
 
-    if (checkBox.checked == true && window.location.href.indexOf("?upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
+    if (checkBox.checked == true && window.location.href.indexOf("upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
         //$("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-street-glide-touring-edition-1.jpeg");
         //$("#current_bike_model_name").html("Harley-Davidson® Street Glide® Touring Edition");
         //$("#old_model_textfield").removeClass("d-none");
