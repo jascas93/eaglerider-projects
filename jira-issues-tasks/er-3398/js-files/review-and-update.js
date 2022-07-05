@@ -28,6 +28,12 @@ $(document).ready(function () {
             $("#balance_value_bottom").html("$35");
             $("#vip_zero_line_item").removeClass("d-none");
             $("#vip_zero_line_item").addClass("line-item-updated");
+            $("#payment_info_reservation_total").html("$243.97");
+            $("#payment_info_store_credit_row").removeClass("d-none");
+            $("#payment_info_remaining_balance").html("$35");
+            $("#payment_info_payment_methods").removeClass("d-none");
+            $("#no_payment_due_text").addClass("d-none")
+            $("#cta_btn_row").removeClass("d-none")
         }
     },10);
 });
