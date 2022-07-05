@@ -45,10 +45,15 @@ $(document).ready(function () {
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#old_bike_model_name").removeClass("d-none");
             $("#tm_item_1").html("1 Day @ $335 /Day");
+            $("#tm_item_2").html("1 Day @ $335 /Day");
             $("#tm_price_1").html("$335");
+            $("#tm_price_2").html("$335");
             $("#discount_price_1").html("-$67");
+            $("#discount_price_2").html("-$67");
             $("#surcharge_price_1").html("$17.42");
+            $("#surcharge_price_2").html("$17.42");
             $("#tax_price_1").html("$27.12");
+            $("#tax_price_2").html("$27.12");
             $("#total_value_1").html("$312.54");
             $("#paid_value_1").html("($208.97)");
             $("#balance_value_1").html("$103.57");
