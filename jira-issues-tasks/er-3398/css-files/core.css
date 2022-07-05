@@ -38,7 +38,7 @@ div#steps_small {
 .steps-normal-icon {
     background-color: #f26b00;
     border-radius: 50%;
-    width: 1.875rem;
+    min-width: 1.875rem;
     height: 1.875rem;
     display: flex;
     align-items: center;
