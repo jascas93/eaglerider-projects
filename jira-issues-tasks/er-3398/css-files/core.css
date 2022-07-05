@@ -478,10 +478,10 @@ tr#payment_info_total_paid_row {
 tr#payment_info_store_credit_row {
     background-color: #f9f9f9;
 }
-div#payment_info_membership_credit_row {
+tr#payment_info_membership_credit_row {
     background-color: #ffecdd;
 }
-div#payment_info_remaining_balance_row {
+tr#payment_info_remaining_balance_row {
     background-color: #484848;
     color: #fafafa;
     border-top: 0.5rem solid #fafafa;
