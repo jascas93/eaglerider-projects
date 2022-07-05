@@ -47,6 +47,9 @@ div#steps_small {
 .steps-normal-col.done {
     border-color: #f26b00;
 }
+.steps-normal-col.active {
+    border-color: #f26b00;
+}
 .steps-normal-content {
     display: flex;
     align-items: center;
@@ -55,6 +58,9 @@ div#steps_small {
     justify-content: center;
 }
 .steps-normal-content.done {
+    color: #f26b00;
+}
+.steps-normal-content.active {
     color: #f26b00;
 }
 .steps-normal-icon {
@@ -69,7 +75,6 @@ div#steps_small {
 }
 .steps-normal-icon.done {
     background-color: #f26b00;
-    border-color: #f26b00;
 }
 .steps-normal-icon.active {
     background-color: transparent;
