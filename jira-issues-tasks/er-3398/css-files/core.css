@@ -57,7 +57,7 @@ div#steps_normal {
     line-height: initial;
     font-size: 0.9375rem;
 }
-.steps-edit-icon {
+.steps-normal-content>span.material-icons {
     display: inline-flex;
     font-size: 18px;
     margin-left: 0.25rem;
