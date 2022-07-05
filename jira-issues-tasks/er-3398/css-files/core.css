@@ -11,6 +11,22 @@ div#footer {
 body.modal-open div#main-canvas-wrapper {
     filter: blur(3px);
 }
+div#steps_normal {
+    margin-bottom: 2rem;
+}
+.steps_normal_col {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 8px solid;
+    border-color: #f26b00;
+}
+.steps_normal_content {
+    display: flex;
+    align-items: center;
+    color: #f26b00;
+    font-weight: 600;
+    justify-content: center;
+}
 div#steps-full-top {
     display: none;
 }
