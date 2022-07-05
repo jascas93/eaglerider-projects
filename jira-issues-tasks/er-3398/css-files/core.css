@@ -74,6 +74,26 @@ div#steps_small {
     border-radius: 50%;
     padding: 2px;
 }
+p#main_page_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: initial;
+    margin-bottom: 0;
+    letter-spacing: 0.35px;
+}
+p#main_page_res_num_large {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: initial;
+    margin-bottom: 0;
+    text-align: right;
+}
+p#main_page_res_num_small {
+    font-weight: 400;
+    color: #484848;
+    margin-bottom: 0;
+    display: none;
+}
 .line-item-updated {
     background-color: #FFF7F1;
 }
