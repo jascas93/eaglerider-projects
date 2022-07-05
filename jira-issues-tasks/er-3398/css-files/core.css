@@ -87,11 +87,13 @@ p#main_page_res_num_large {
     line-height: initial;
     margin-bottom: 0;
     text-align: right;
+    letter-spacing: 0.35px;
 }
 p#main_page_res_num_small {
     font-weight: 400;
     color: #484848;
     margin-bottom: 0;
+    letter-spacing: 0.35px;
     display: none;
 }
 .line-item-updated {
