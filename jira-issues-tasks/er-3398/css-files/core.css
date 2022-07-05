@@ -464,7 +464,7 @@ div#widget_loading {
     .hidden-below-lgd {
         display: none !important;
     }
-    div#steps-full-top {
+    div#steps_wide {
         display: block;
     }
     div#left_inline_price_quote {
