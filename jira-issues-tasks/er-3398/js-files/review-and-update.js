@@ -14,9 +14,9 @@ $(document).ready(function () {
         if (window.location.href.indexOf("?welcome=1") > 0) {
             $("#modify_welcome").modal("show");
             $("#steps_normal_row").addClass("d-none");
-            $("#steps-full-top").addClass("d-none");
-            $("#steps-slim-top").addClass("d-none");
-            $("#steps-slim-top").removeClass("visible-for-smd");
+            $("#steps_wide").addClass("d-none");
+            $("#steps_small").addClass("d-none");
+            $("#steps_small").removeClass("visible-for-smd");
             $("#page_titles_row").addClass("pt-4");
             $("#main_page_title").html("Modify Your Reservation");
         }
