@@ -459,13 +459,13 @@ div#widget_loading {
     .visible-for-lgd {
         display: block !important;
     }
+    .hidden-for-lgd {
+        display: none !important;
+    }
 }
 @media (max-width: 991px) {
     .hidden-below-lgd {
         display: none !important;
-    }
-    div#steps_wide {
-        display: block;
     }
     div#left_inline_price_quote {
         display: block !important;
