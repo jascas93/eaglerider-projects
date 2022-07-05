@@ -25,9 +25,9 @@ $(window).on("load", function () {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else if (window.location.href.indexOf("upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#add_vip_zero").trigger("click");
@@ -54,9 +54,24 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").addClass("btn--shockwave is-active");
         $("#continue_to_review_btn_bottom").addClass("btn--shockwave is-active");
         $("#footer_continue").addClass("btn--shockwave is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update-added-vip-zero.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
+    }
+    else if (checkBox.checked == true && window.location.href.indexOf("upsell=1") < 1 && window.location.href.indexOf("model_upgrade=1") < 1) {
+        $("#total_value").html("$243.97");
+        $("#paid_value").html("($208.97)");
+        $("#balance_value").html("$35");
+        $("#balance_value_top").html("$35");
+        $("#balance_value_bottom").html("$35");
+        $("#vip_zero_line_item").removeClass("d-none");
+        $("#vip_zero_line_item").addClass("line-item-updated");
+        $("#continue_to_review_btn_top").addClass("btn--shockwave is-active");
+        $("#continue_to_review_btn_bottom").addClass("btn--shockwave is-active");
+        $("#footer_continue").addClass("btn--shockwave is-active");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update?upsell_added=1.html");
     }
     else if (checkBox.checked == false && window.location.href.indexOf("upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
         $("#total_value").html("$208.97");
@@ -69,9 +84,9 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else if (checkBox.checked == true && window.location.href.indexOf("upsell=1") < 1 && window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -94,9 +109,9 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else if (checkBox.checked == false && window.location.href.indexOf("upsell=1") < 1 && window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -119,9 +134,9 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else if (checkBox.checked == true && window.location.href.indexOf("upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -144,9 +159,9 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else if (checkBox.checked == false && window.location.href.indexOf("upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") > 0) {
         $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -169,9 +184,9 @@ function addVIPZero() {
         $("#continue_to_review_btn_top").removeClass(".btn--shockwave", ".is-active");
         $("#continue_to_review_btn_bottom").removeClass(".btn--shockwave", ".is-active");
         $("#footer_continue").removeClass(".btn--shockwave", ".is-active");
-        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
-        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
+        $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html");
     }
     else {
         console.log("not checked");
