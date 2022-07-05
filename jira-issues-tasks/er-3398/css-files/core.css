@@ -16,7 +16,6 @@ div#steps_normal {
 }
 div#steps_wide {
     margin-bottom: 2rem;
-    display: none;
 }
 div#steps_small {
     background-color: #fff;
