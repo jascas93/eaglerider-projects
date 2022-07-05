@@ -11,6 +11,19 @@ div#footer {
 body.modal-open div#main-canvas-wrapper {
     filter: blur(3px);
 }
+.balance_and_exit_wrapper {
+    margin-right: auto;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+span#balance_value_top {
+    line-height: initial;
+    font-size: 1.125rem;
+    font-weight: 900;
+    text-align: left;
+}
 div#steps_normal {
     margin-bottom: 2rem;
 }
