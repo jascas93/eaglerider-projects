@@ -37,6 +37,17 @@ div#steps_normal {
     justify-content: center;
     margin-right: 0.875rem;
 }
+.steps-normal-icon.active {
+    border-radius: 50%;
+    border: 0.1875rem solid;
+    border-color: #f26b00;
+    width: 1.875rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.875rem;
+}
 .steps-normal-icon>span.done {
     color: #fff;
     font-size: 20px;
