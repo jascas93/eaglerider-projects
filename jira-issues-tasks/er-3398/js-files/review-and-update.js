@@ -62,6 +62,7 @@ $(document).ready(function () {
             $("#balance_value_2").html("$103.57");
             $("#payment_info_reservation_total").html("$312.54");
             $("#payment_info_store_credit_row").removeClass("d-none");
+            $("#payment_info_membership_credit_row").removeClass("d-none");
             $("#payment_info_remaining_balance").html("$103.57");
             $("#payment_info_payment_methods").removeClass("d-none");
             $("#no_payment_due_text").addClass("d-none")
