@@ -442,6 +442,15 @@ div#widget_loading {
     font-size: 0.8rem;
     color: #5d5d5d;
 }
+div#old_bike_model_name {
+    margin-right: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #797979;
+    font-size: 0.875rem;
+    font-style: italic;
+    text-decoration: line-through;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;

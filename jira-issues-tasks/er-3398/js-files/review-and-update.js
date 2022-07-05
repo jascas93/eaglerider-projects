@@ -40,5 +40,29 @@ $(document).ready(function () {
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
         }
+        else if (window.location.href.indexOf("added_upsell=1") < 1 && window.location.href.indexOf("model_upgrade=1") > 0) {
+            $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
+            $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
+            $("#old_bike_model_name").removeClass("d-none");
+            $("#tm_item_1").html("1 Day @ $335 /Day");
+            $("#tm_price_1").html("$335");
+            $("#discount_price_1").html("-$67");
+            $("#surcharge_price_1").html("$17.42");
+            $("#tax_price_1").html("$27.12");
+            $("#total_value_1").html("$312.54");
+            $("#paid_value_1").html("($208.97)");
+            $("#balance_value_1").html("$103.57");
+            $("#total_value_2").html("$103.57");
+            $("#paid_value_2").html("($208.97)");
+            $("#balance_value_2").html("$103.57");
+            $("#payment_info_reservation_total").html("$312.54");
+            $("#payment_info_store_credit_row").removeClass("d-none");
+            $("#payment_info_remaining_balance").html("$103.57");
+            $("#payment_info_payment_methods").removeClass("d-none");
+            $("#no_payment_due_text").addClass("d-none")
+            $("#cta_btn_row").removeClass("d-none")
+            $("#balance_value_top").html("$103.57");
+            $("#balance_value_bottom").html("$103.57");
+        }
     },10);
 });
