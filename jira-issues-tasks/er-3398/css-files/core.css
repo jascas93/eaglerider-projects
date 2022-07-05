@@ -109,6 +109,17 @@ p#steps_small_title {
     border-radius: 50%;
     padding: 2px;
 }
+.steps-small-mini-divider {
+    width: 100%;
+    border-bottom: 2px solid;
+    border-color: #aeaeae;
+}
+.steps-small-mini-divider.done {
+    border-color: #f26b00;
+}
+.steps-small-mini-divider.active {
+    border-color: #f26b00;
+}
 p#main_page_title {
     font-size: 1.5rem;
     font-weight: 700;
