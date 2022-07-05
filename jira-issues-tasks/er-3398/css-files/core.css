@@ -14,6 +14,15 @@ body.modal-open div#main-canvas-wrapper {
 div#steps_normal {
     margin-bottom: 2rem;
 }
+div#steps_wide {
+    margin-bottom: 2rem;
+    display: none;
+}
+div#steps_small {
+    background-color: #fff;
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+    margin-bottom: 2rem;
+}
 .steps-normal-col {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -65,13 +74,6 @@ div#steps_normal {
     border: 1px solid;
     border-radius: 50%;
     padding: 2px;
-}
-div#steps-full-top {
-    display: none;
-}
-div#steps-slim-top {
-    background-color: #fff;
-    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
 }
 .line-item-updated {
     background-color: #FFF7F1;
