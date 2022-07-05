@@ -18,6 +18,9 @@ body.modal-open div#main-canvas-wrapper {
     align-items: center;
     gap: 1rem;
 }
+div#balance_top_wrapper {
+    color: #F9F9F9;
+}
 span#balance_value_top {
     line-height: initial;
     font-size: 1.125rem;
