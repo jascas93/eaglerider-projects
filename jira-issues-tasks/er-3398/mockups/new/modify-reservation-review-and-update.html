@@ -1176,7 +1176,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <table class="table mt-3 mb-3" style="font-size: 0.9375rem; border: 1px solid; border-color: #e6e6e6; background-color: #f9f9f9;">
+                                                        <table class="table mt-3 mb-3" style="font-size: 0.9375rem; border: 1px solid #dadada; border-color: #f0f0f0;">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">Item</th>
@@ -1184,21 +1184,21 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody style="border-top: initial;">
-                                                                <tr>
-                                                                    <td>1 Day @ $224 /Day</td>
-                                                                    <td>$224</td>
+                                                                <tr id="tm_line_item">
+                                                                    <td id="tm_item">1 Day @ $224 /Day</td>
+                                                                    <td id="tm_price">$224</td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr id="discount_line_item">
                                                                     <td class="text-danger">Membership Discount</td>
-                                                                    <td class="text-danger">-$49.80</td>
+                                                                    <td id="discount_price" class="text-danger">-$49.80</td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr id="miles_line_item">
                                                                     <td>Unlimited Miles</td>
                                                                     <td>Free</td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr id="surcharge_line_item">
                                                                     <td>Environmental Surcharge</td>
-                                                                    <td>$11.65</td>
+                                                                    <td id="surcharge_price">$11.65</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>DOT Helmet for Rider and Passenger (or Country approved Helmet)</td>
@@ -1208,28 +1208,28 @@
                                                                     <td>Cable Locks and Disc Locks</td>
                                                                     <td>Free</td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr id="tax_line_item">
                                                                     <td>Total Taxes &amp; Fees**</td>
-                                                                    <td>$18.12</td>
+                                                                    <td id="tax_price">$18.12</td>
                                                                 </tr>
-                                                                <tr id="vip_zero_td" class="d-none">
-                                                                    <td>
+                                                                <tr id="vip_zero_line_item" class="d-none">
+                                                                    <td id="vip_zero_item">
                                                                         VIP ZERO Plus Theft &amp; Damage Waiver<br />
                                                                         1 Day @ $35 / Day
                                                                     </td>
-                                                                    <td>$35</td>
+                                                                    <td id="vip_zero_price">$35</td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot style="font-weight: 600; background: #efefef;">
-                                                                <tr>
+                                                                <tr id="total_line_item">
                                                                     <td>Total (USD)</td>
                                                                     <td id="total_value">$208.97</td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr id="paid_line_item">
                                                                     <td>Total Paid</td>
                                                                     <td id="paid_value">($208.97)</td>
                                                                 </tr>
-                                                                <tr style="background: #3a3a3a; color: #fff;">
+                                                                <tr id="balance_line_item" style="background: #3a3a3a; color: #fff;">
                                                                     <td>Balance</td>
                                                                     <td id="balance_value">$0</td>
                                                                 </tr>
