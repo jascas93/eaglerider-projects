@@ -27,6 +27,16 @@ div#steps_normal {
     font-weight: 600;
     justify-content: center;
 }
+.steps_normal_icon {
+    background-color: #f26b00;
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.875rem;
+}
 div#steps-full-top {
     display: none;
 }
