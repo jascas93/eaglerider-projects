@@ -64,6 +64,7 @@ div#steps_small {
     color: #f26b00;
 }
 .steps-normal-icon {
+    border: 0.1875rem solid;
     border-color: #aeaeae;
     border-radius: 50%;
     min-width: 1.875rem;
@@ -74,9 +75,11 @@ div#steps_small {
     margin-right: 0.875rem;
 }
 .steps-normal-icon.done {
+    border: 0;
     background-color: #f26b00;
 }
 .steps-normal-icon.active {
+    border-color: #f26b00;
     background-color: transparent;
 }
 .steps-normal-icon>span.material-icons.done {
