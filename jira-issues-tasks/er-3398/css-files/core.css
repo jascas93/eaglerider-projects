@@ -74,6 +74,7 @@ p#steps_small_title {
     color: #f26b00;
 }
 .steps-normal-icon {
+    color: #797979;
     border: 0.1875rem solid;
     border-color: #aeaeae;
     border-radius: 50%;
@@ -87,6 +88,7 @@ p#steps_small_title {
 .steps-normal-icon.done {
     border: 0;
     background-color: #f26b00;
+    color: #f26b00;
 }
 .steps-normal-icon.active {
     border-color: #f26b00;
