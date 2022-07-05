@@ -14,20 +14,20 @@ body.modal-open div#main-canvas-wrapper {
 div#steps_normal {
     margin-bottom: 2rem;
 }
-.steps_normal_col {
+.steps-normal-col {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 8px solid;
     border-color: #f26b00;
 }
-.steps_normal_content {
+.steps-normal-content {
     display: flex;
     align-items: center;
     color: #f26b00;
     font-weight: 600;
     justify-content: center;
 }
-.steps_normal_icon {
+.steps-normal-icon {
     background-color: #f26b00;
     border-radius: 50%;
     width: 1.875rem;
@@ -37,16 +37,16 @@ div#steps_normal {
     justify-content: center;
     margin-right: 0.875rem;
 }
-.steps_normal_icon>span.done {
+.steps-normal-icon>span.done {
     color: #fff;
     font-size: 20px;
 }
-.steps_normal_content>p {
+.steps-normal-content>p {
     margin-bottom: 0;
     line-height: initial;
     font-size: 0.9375rem;
 }
-.steps-edit_icon {
+.steps-edit-icon {
     display: inline-flex;
     font-size: 18px;
     margin-left: 0.25rem;
