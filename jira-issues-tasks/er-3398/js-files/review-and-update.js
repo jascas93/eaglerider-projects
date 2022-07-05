@@ -17,17 +17,11 @@ function removeLoader() {
     });
 }
 
-// Show Welcome Modal
-$(document).ready(function () {
-    if (window.location.href.indexOf("?welcome=1") > 0) {
-        $("#modify_welcome").modal("show");
-    }
-});
-
 // Different Variations of the Page
 $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("?welcome=1") > 0) {
+            $("#modify_welcome").modal("show");
             $("#steps_normal_row").addClass("d-none");
             $("#steps-full-top").addClass("d-none");
             $("#steps-slim-top").addClass("d-none");
