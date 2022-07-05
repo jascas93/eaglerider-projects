@@ -42,17 +42,23 @@ div#steps_small {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 8px solid;
+    border-color: #dadada;
+}
+.steps-normal-col.done {
     border-color: #f26b00;
 }
 .steps-normal-content {
     display: flex;
     align-items: center;
-    color: #f26b00;
+    color: #898989;
     font-weight: 600;
     justify-content: center;
 }
+.steps-normal-content.done {
+    color: #f26b00;
+}
 .steps-normal-icon {
-    background-color: #f26b00;
+    border-color: #aeaeae;
     border-radius: 50%;
     min-width: 1.875rem;
     height: 1.875rem;
@@ -61,17 +67,12 @@ div#steps_small {
     justify-content: center;
     margin-right: 0.875rem;
 }
+.steps-normal-icon.done {
+    background-color: #f26b00;
+    border-color: #f26b00;
+}
 .steps-normal-icon.active {
     background-color: transparent;
-    border-radius: 50%;
-    border: 0.1875rem solid;
-    border-color: #f26b00;
-    width: 1.875rem;
-    height: 1.875rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.875rem;
 }
 .steps-normal-icon>span.material-icons.done {
     color: #fff;
