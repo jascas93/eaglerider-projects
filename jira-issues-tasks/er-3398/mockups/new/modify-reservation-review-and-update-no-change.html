@@ -3,7 +3,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
-        <title>ER-3398: Modify Reservation–Review &amp; Update No Change</title>
+        <title>ER-3398: Modify Reservation–Review &amp; Update</title>
         <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
         <link href="https://getbootstrap.com/docs/5.1/examples/headers/headers.css" rel="stylesheet" />
@@ -457,7 +457,7 @@
                         <div id="page_titles_row" class="row">
                             <div class="col">
                                 <div class="row">
-                                    <div class="col-12 col-md-6"><p id="main_page_title" style="font-size: 1.5rem; font-weight: 700; line-height: initial; margin-bottom: 0;">Your Reservation</p></div>
+                                    <div class="col-12 col-md-6"><p id="main_page_title" style="font-size: 1.5rem; font-weight: 700; line-height: initial; margin-bottom: 0;">Review Modifications</p></div>
                                     <div class="col-12 col-md-6">
                                         <p style="font-size: 1.5rem; font-weight: 700; line-height: initial; margin-bottom: 0; text-align: right;" class="hidden-below-mdd">WBERLAX010000108063</p>
 
@@ -490,7 +490,7 @@
                                                     <div class="row g-2" id="bike_model_info">
                                                         <div class="col-sm-9 col-md-6 col-lg-4">
                                                             <div>
-                                                                <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/546/images/size550/hd-street-glide-touring-edition-1.jpg?1612999393" style="width: 100%;" />
+                                                                <img id="current_bike_model_img" src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/546/images/size550/hd-street-glide-touring-edition-1.jpg?1612999393" style="width: 100%;" />
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-8">
@@ -513,7 +513,7 @@
                                                                             </a>
                                                                         </div>
                                                                         <div>
-                                                                            <p style="font-weight: 900; font-size: 1.25rem; line-height: initial; margin-bottom: 0;">Harley-Davidson® Street Glide® Touring Edition</p>
+                                                                            <p id="current_bike_model_name" style="font-weight: 900; font-size: 1.25rem; line-height: initial; margin-bottom: 0;">Harley-Davidson® Street Glide® Touring Edition</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -526,7 +526,7 @@
                                                             <div style="background: #FCFCFC; padding: 0.75rem; border-radius: 0.5rem;">
                                                                 <div class="content-label-mark">
                                                                     <p class="content-label-mark">Motorcycle Pickup</p>
-                                                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html" id="change_model_btn" class="btn btn-primary-link btn-with-icon py-0 ms-3" tabindex="-1" role="button" aria-disabled="false">
+                                                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html" id="change_pickup_btn" class="btn btn-primary-link btn-with-icon py-0 ms-3" tabindex="-1" role="button" aria-disabled="false">
                                                                         <span class="material-icons btn-icon-left" style="font-size: 16px !important; margin-right: 0.125rem !important;">edit</span>
 
                                                                         <span class="btn-link-text">Change</span>
@@ -542,11 +542,11 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col ps-0">
-                                                                                <p class="content-label-details">
+                                                                                <p id="pickup_location_name" class="content-label-details">
                                                                                     EagleRider Los Angeles
                                                                                 </p>
 
-                                                                                <p class="content-label-details" style="">
+                                                                                <p id="pickup_location_address" class="content-label-details" style="">
                                                                                     11860 S La Cienega Blvd, Hawthorne, California 90250, United States
                                                                                     <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                                                         <span class="material-icons" style="font-size: 20px; vertical-align: middle; margin-left: 0.15rem; color: #fe7b10;">directions</span>
@@ -565,7 +565,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col ps-0">
-                                                                                        <p class="content-label-details">Tue, Nov 1, 2022</p>
+                                                                                        <p id="pickup_date_text" class="content-label-details">Tue, Nov 1, 2022</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row">
@@ -575,7 +575,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col ps-0">
-                                                                                        <p class="content-label-details">12:00 PM PDT</p>
+                                                                                        <p id="pickup_time_text" class="content-label-details">12:00 PM PDT</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -588,7 +588,7 @@
                                                             <div style="background: #FCFCFC; padding: 0.75rem; border-radius: 0.5rem;">
                                                                 <div class="content-label-mark">
                                                                     <p class="content-label-mark">Motorcycle Dropoff</p>
-                                                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html" id="change_model_btn" class="btn btn-primary-link btn-with-icon py-0 ms-3" tabindex="-1" role="button" aria-disabled="false">
+                                                                    <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-pickup-dropoff-details-no-change.html" id="change_dropoff_btn" class="btn btn-primary-link btn-with-icon py-0 ms-3" tabindex="-1" role="button" aria-disabled="false">
                                                                         <span class="material-icons btn-icon-left" style="font-size: 16px !important; margin-right: 0.125rem !important;">edit</span>
 
                                                                         <span class="btn-link-text">Change</span>
@@ -604,10 +604,10 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col ps-0">
-                                                                                <p class="content-label-details">
+                                                                                <p id="dropoff_location_name" class="content-label-details">
                                                                                     EagleRider Los Angeles
                                                                                 </p>
-                                                                                <p class="content-label-details" style="">
+                                                                                <p id="dropoff_location_address" class="content-label-details" style="">
                                                                                     11860 S La Cienega Blvd, Hawthorne, California 90250, United States
                                                                                     <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
                                                                                         <span class="material-icons" style="font-size: 20px; vertical-align: middle; margin-left: 0.15rem; color: #fe7b10;">directions</span>
@@ -626,7 +626,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col ps-0">
-                                                                                        <p class="content-label-details">Tue, Nov 2, 2022</p>
+                                                                                        <p id="dropoff_date_text" class="content-label-details">Wed, Nov 2, 2022</p>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="row">
@@ -636,7 +636,7 @@
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="col ps-0">
-                                                                                        <p class="content-label-details">12:00 PM PDT</p>
+                                                                                        <p id="dropoff_time_text" class="content-label-details">12:00 PM PDT</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -670,21 +670,21 @@
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody style="border-top: initial;">
-                                                                        <tr>
-                                                                            <td>1 Day @ $224 /Day</td>
-                                                                            <td>$224</td>
+                                                                        <tr id="tm_line_item">
+                                                                            <td id="tm_item">1 Day @ $224 /Day</td>
+                                                                            <td id="tm_price">$224</td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <tr id="discount_line_item">
                                                                             <td class="text-danger">Membership Discount</td>
-                                                                            <td class="text-danger">-$49.80</td>
+                                                                            <td id="discount_price" class="text-danger">-$49.80</td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <tr id="miles_line_item">
                                                                             <td>Unlimited Miles</td>
                                                                             <td>Free</td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <tr id="surcharge_line_item">
                                                                             <td>Environmental Surcharge</td>
-                                                                            <td>$11.65</td>
+                                                                            <td id="surcharge_price">$11.65</td>
                                                                         </tr>
                                                                         <tr>
                                                                             <td>DOT Helmet for Rider and Passenger (or Country approved Helmet)</td>
@@ -694,28 +694,28 @@
                                                                             <td>Cable Locks and Disc Locks</td>
                                                                             <td>Free</td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <tr id="tax_line_item">
                                                                             <td>Total Taxes &amp; Fees**</td>
-                                                                            <td>$18.12</td>
+                                                                            <td id="tax_price">$18.12</td>
                                                                         </tr>
-                                                                        <tr id="vip_zero_td" class="d-none">
-                                                                            <td>
+                                                                        <tr id="vip_zero_line_item" class="d-none">
+                                                                            <td id="vip_zero_item">
                                                                                 VIP ZERO Plus Theft &amp; Damage Waiver<br />
                                                                                 1 Day @ $35 / Day
                                                                             </td>
-                                                                            <td>$35</td>
+                                                                            <td id="vip_zero_price">$35</td>
                                                                         </tr>
                                                                     </tbody>
                                                                     <tfoot style="font-weight: 600; background: #efefef;">
-                                                                        <tr>
+                                                                        <tr id="total_line_item">
                                                                             <td>Total (USD)</td>
                                                                             <td id="total_value">$208.97</td>
                                                                         </tr>
-                                                                        <tr>
+                                                                        <tr id="paid_line_item">
                                                                             <td>Total Paid</td>
                                                                             <td id="paid_value">($208.97)</td>
                                                                         </tr>
-                                                                        <tr style="background: #3a3a3a; color: #fff;">
+                                                                        <tr  id="balance_line_item" style="background: #3a3a3a; color: #fff;">
                                                                             <td>Balance</td>
                                                                             <td id="balance_value">$0</td>
                                                                         </tr>
@@ -901,15 +901,15 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>Reservation Total</td>
-                                                                <td class="text-end" style="font-weight: 500;">$208.97</td>
+                                                                <td id="payment_total_amount" class="text-end" style="font-weight: 500;">$208.97</td>
                                                             </tr>
                                                             <tr style="background-color: #d9efee;">
                                                                 <td>Total Paid</td>
-                                                                <td class="text-end" style="font-weight: 500;">-$208.97</td>
+                                                                <td id="payment_total_paid" class="text-end" style="font-weight: 500;">-$208.97</td>
                                                             </tr>
                                                             <tr style="background-color: #484848; color: #fafafa; border-top: 0.5rem solid #fafafa;">
                                                                 <td style="font-weight: 900;" class="py-3">Remaining Balance</td>
-                                                                <td class="text-end py-3 align-middle" style="font-size: 1.125rem; font-weight: 900;">$0</td>
+                                                                <td id="payment_remaining_balance" class="text-end py-3 align-middle" style="font-size: 1.125rem; font-weight: 900;">$0</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
