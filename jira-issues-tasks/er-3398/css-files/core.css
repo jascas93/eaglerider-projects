@@ -91,6 +91,7 @@ p#steps_small_title {
 .steps-normal-icon.active {
     border-color: #f26b00;
     background-color: transparent;
+    color: #f26b00;
 }
 .steps-normal-icon>span.material-icons.done {
     color: #fff;
