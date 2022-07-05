@@ -38,6 +38,16 @@ div#steps_small {
     box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
     margin-bottom: 2rem;
 }
+p#steps_small_title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: initial;
+    margin-bottom: 0;
+}
+.steps-small-mini-wrapper {
+    max-width: 160px;
+    width: 100%;
+}
 .steps-normal-col {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
