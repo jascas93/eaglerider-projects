@@ -1,6 +1,15 @@
 // Page Loading Screen
 $(window).on("load", function () {
     setTimeout(removeLoader, 800); //wait x ms
+    if (window.location.href.indexOf("added_upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
+        $("#total_value").html("$243.97");
+        $("#paid_value").html("($208.97)");
+        $("#balance_value").html("$35");
+        $("#balance_value_top").html("$35");
+        $("#balance_value_bottom").html("$35");
+        $("#vip_zero_line_item").removeClass("d-none");
+        $("#vip_zero_line_item").addClass("line-item-updated");
+    }
 });
 function removeLoader() {
     $("#page_loading").fadeOut(400, function () {
