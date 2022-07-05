@@ -20,7 +20,7 @@ $(document).ready(function () {
             $("#page_titles_row").addClass("pt-4");
             $("#main_page_title").html("Modify Your Reservation");
         }
-        else if (window.location.href.indexOf("added_upsell=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgrade=1") < 1) {
             $("#total_value_1").html("$243.97");
             $("#paid_value_1").html("($208.97)");
             $("#balance_value_1").html("$35");
@@ -40,7 +40,7 @@ $(document).ready(function () {
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
         }
-        else if (window.location.href.indexOf("added_upsell=1") < 1 && window.location.href.indexOf("model_upgrade=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgrade=1") > 0) {
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#old_bike_model_name").removeClass("d-none");
