@@ -146,7 +146,7 @@
                                 </a>
                             </div>
                             <div class="balance_and_exit_wrapper">
-                                <div class="d-flex flex-column hidden-below-mdd">
+                                <div id="balance_top_wrapper" class="d-flex flex-column hidden-below-mdd">
                                     <span class="lh-initial fw-500">Balance (USD)</span>
                                     <span id="balance_value_top">$0</span>
                                 </div>
@@ -193,14 +193,9 @@
                                         <span class="material-icons" style="font-size: 22px;">expand_more</span>
                                     </div>
                                 </div>
-                                <button
-                                    class="btn-avatar-menu"
-                                    type="button"
-                                    data-bs-toggle="offcanvas"
-                                    data-bs-target="#avatarMenu"
-                                    aria-controls="avatarMenu"
-                                >
-                                    <span>Jason</span> <span class="material-icons btn-icon-right" style="margin-left: 0.25rem;">menu_open</span>
+                                <button class="btn-avatar-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#avatarMenu" aria-controls="avatarMenu">
+                                    <span>Jason</span>
+                                    <span class="material-icons btn-icon-right">menu_open</span>
                                     <span class="avatar-notifications">1</span>
                                 </button>
                             </div>
@@ -208,7 +203,7 @@
                     </div>
                 </div>
             </header>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="avatarMenu" aria-labelledby="avatarMenu">
+            <div id="avatarMenu" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="avatarMenu">
                 <div class="offcanvas-header">
                     <h5 id="offcanvasRightLabel">Hi, Jason!</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
