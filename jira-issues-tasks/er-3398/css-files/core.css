@@ -472,6 +472,24 @@ p#old_bike_model_name {
     font-style: italic;
     text-decoration: line-through;
 }
+tr#payment_info_total_paid_row {
+    background-color: #d9efee;;
+}
+tr#payment_info_store_credit_row {
+    background-color: #f9f9f9;
+}
+div#payment_info_membership_credit_row {
+    background-color: #ffecdd;
+}
+div#payment_info_remaining_balance_row {
+    background-color: #484848;
+    color: #fafafa;
+    border-top: 0.5rem solid #fafafa;
+}
+td#payment_info_remaining_balance {
+    font-size: 1.125rem;
+    font-weight: 900;
+}
 /* Rensponsives */
 .visible-for-lgd {
     display: none;
