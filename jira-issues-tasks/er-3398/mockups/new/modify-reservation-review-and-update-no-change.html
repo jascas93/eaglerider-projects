@@ -882,14 +882,12 @@
                                 </div>
                                 <div id="payment_info" class="mt-5">
                                     <div class="container-label">
-                                        <span class="material-icons">
-                                            looks_two
-                                        </span>
+                                        <span class="material-icons">looks_two</span>
                                         <p>Payment Information</p>
                                     </div>
                                     <div class="row mx-0" style="background-color: #fff; box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px; border-radius: 8px;">
                                         <div class="col py-4 px-4">
-                                            <div class="row g-3">
+                                            <div class="row g-4">
                                                 <div class="col-12">
                                                     <table class="table mb-0">
                                                         <thead>
@@ -901,25 +899,242 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td>Reservation Total</td>
-                                                                <td id="payment_total_amount" class="text-end" style="font-weight: 500;">$208.97</td>
+                                                                <td id="payment_info_reservation_total" class="text-end" style="font-weight: 500;">$312.54</td>
                                                             </tr>
                                                             <tr style="background-color: #d9efee;">
                                                                 <td>Total Paid</td>
-                                                                <td id="payment_total_paid" class="text-end" style="font-weight: 500;">-$208.97</td>
+                                                                <td id="payment_info_total_paid" class="text-end" style="font-weight: 500;">-$208.97</td>
+                                                            </tr>
+                                                            <tr id="payment_info_store_credit_row" style="background-color: #f9f9f9;">
+                                                                <td>
+                                                                    <div style="padding: 1rem 0.75rem;">
+                                                                        <div class="content-label-mark"><p class="content-label-mark" style="color: #484848;">Add Store Credit/Gift Card</p></div>
+                                                                        <a aria-disabled="false" role="button" tabindex="-1" class="btn btn-primary-outlined btn-with-icon btn-not-allowed mt-2" id="add_store_credit_btn" href="#">
+                                                                            <span class="material-icons-outlined btn-icon-left" style="margin-right: 0;">add</span><span class="material-icons-outlined btn-icon-left hidden-below-xsd">card_giftcard</span>
+                                                                            <span class="hidden-below-mdd">Apply a Store Credit or Gift Card</span> <span style="display: none;" class="visible-below-mdd">Store Credit or Gift Card</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end align-middle" style="font-weight: 500;"></td>
+                                                            </tr>
+                                                            <tr id="payment_info_membership_credit_row" style="background-color: #ffecdd;">
+                                                                <td>
+                                                                    <div style="padding: 1rem 0.75rem;">
+                                                                        <div class="content-label-mark d-block d-xl-flex">
+                                                                            <p class="content-label-mark" style="color: #484848; margin-right: 0.25rem;">Apply Membership Credits</p>
+                                                                            <span style="font-size: 0.75rem; font-weight: 500;">( Membership Credit Value = $53.60 /each )</span>
+                                                                        </div>
+                                                                        <div class="row mt-2">
+                                                                            <div class="col-auto">
+                                                                                <div
+                                                                                    style="
+                                                                                        font-size: 0.8rem;
+                                                                                        font-weight: 400;
+                                                                                        text-transform: uppercase;
+                                                                                        background-color: #f9f9f9;
+                                                                                        border: 1px solid;
+                                                                                        border-color: #e6e6e6;
+                                                                                        border-radius: 8px;
+                                                                                        padding: 0.5rem 1rem;
+                                                                                        color: #484848;
+                                                                                    "
+                                                                                >
+                                                                                    <p style="margin-bottom: 0.75rem;">
+                                                                                        Available credits in your account
+                                                                                        <span style="background-color: #dadada; font-weight: 900; padding: 2px 8px; border-radius: 0.25rem; line-height: initial; margin-left: 0.5rem; font-size: 0.8rem;">4</span>
+                                                                                    </p>
+                                                                                    <p style="margin-bottom: 0;">
+                                                                                        Max allowed for this reservation
+                                                                                        <span style="background-color: #b2e0dc; font-weight: 900; padding: 2px 8px; border-radius: 0.25rem; line-height: initial; margin-left: 0.5rem; font-size: 0.8rem;">1</span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12 col-md-auto col-lg-12 col-xl-auto mt-3 mt-md-0 mt-lg-3 mt-xl-0">
+                                                                                <div style="height: 100%; display: flex; align-items: center; justify-content: flex-start;">
+                                                                                    <div style="display: flex;">
+                                                                                        <div style="display: flex; background-color: #f26b00; border: 1px solid; border-color: #f26b00; border-radius: 0.5rem 0 0 0.5rem;">
+                                                                                            <div style="padding: 0.5rem 0.5rem; display: flex; align-items: center; justify-content: center;">
+                                                                                                <span class="material-icons" style="color: #fafafa;">
+                                                                                                    remove_circle_outline
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div style="display: flex; background-color: #fff; border: 1px solid; border-color: #f26b00; align-items: center; justify-content: center;">
+                                                                                            <div style="padding: 0.5rem 1.5rem;"><p style="margin-bottom: 0; font-weight: 900;">0</p></div>
+                                                                                        </div>
+                                                                                        <div style="display: flex; background-color: #f26b00; border: 1px solid; border-color: #f26b00; border-radius: 0 0.5rem 0.5rem 0;">
+                                                                                            <div style="padding: 0.5rem 0.5rem; display: flex; align-items: center; justify-content: center;"><span class="material-icons" style="color: #fafafa;">add_circle </span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-end align-middle" style="font-weight: 500;">-$0</td>
                                                             </tr>
                                                             <tr style="background-color: #484848; color: #fafafa; border-top: 0.5rem solid #fafafa;">
                                                                 <td style="font-weight: 900;" class="py-3">Remaining Balance</td>
-                                                                <td id="payment_remaining_balance" class="text-end py-3 align-middle" style="font-size: 1.125rem; font-weight: 900;">$0</td>
+                                                                <td id="payment_info_remaining_balance" class="text-end py-3 align-middle" style="font-size: 1.125rem; font-weight: 900;">$103.57</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                                <div class="col-12">
-                                                    <div style="display: flex; align-items: center; gap: 0.25rem;">
-                                                        <span class="material-icons" style="color: #019d9d;">
-                                                            task_alt
-                                                        </span>
-                                                        <p style="margin-bottom: 0; font-weight: 500;">No payment is due.</p>
+                                                <div id="payment_info_payment_methods" class="col-12 col-md-7">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="content-label-mark"><p class="content-label-mark">Payment Method</p></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-floating mt-2">
+                                                                <select class="form-select" id="floatingSelectGrid" aria-label="Pick-up Location" readonly="">
+                                                                    <option selected="">Credit Card</option>
+                                                                    <option value="1">PayPal</option>
+                                                                    <option value="2">Apple Pay</option>
+                                                                    <option value="3">Google Pay</option>
+                                                                </select>
+                                                                <label for="floatingSelectGrid">Paying with</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col">
+                                                            <div class="row g-2">
+                                                                <div style="display: flex; align-items: center;">
+                                                                    <div style="display: flex; align-items: center; border: 4px solid #ff9547; width: 100%; padding: 0.5rem 0.75rem; background: #303030; border-radius: 8px;">
+                                                                        <div id="visa_icon">
+                                                                            <svg
+                                                                                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                                                                xmlns:cc="http://creativecommons.org/ns#"
+                                                                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                                                                xmlns:svg="http://www.w3.org/2000/svg"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                                                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                                                                width="750"
+                                                                                height="471"
+                                                                                viewBox="0 0 750 471"
+                                                                                version="1.1"
+                                                                                id="svg14"
+                                                                                sodipodi:docname="visa.svg"
+                                                                                inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+                                                                                style="width: 2rem; height: 2rem; vertical-align: middle;"
+                                                                            >
+                                                                                <metadata id="metadata18">
+                                                                                    <rdf:rdf>
+                                                                                        <cc:work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type></cc:work>
+                                                                                    </rdf:rdf>
+                                                                                </metadata>
+                                                                                <sodipodi:namedview
+                                                                                    pagecolor="#ffffff"
+                                                                                    bordercolor="#666666"
+                                                                                    borderopacity="1"
+                                                                                    objecttolerance="10"
+                                                                                    gridtolerance="10"
+                                                                                    guidetolerance="10"
+                                                                                    inkscape:pageopacity="0"
+                                                                                    inkscape:pageshadow="2"
+                                                                                    inkscape:window-width="1515"
+                                                                                    inkscape:window-height="928"
+                                                                                    id="namedview16"
+                                                                                    showgrid="false"
+                                                                                    inkscape:zoom="0.384"
+                                                                                    inkscape:cx="83.333333"
+                                                                                    inkscape:cy="235.5"
+                                                                                    inkscape:window-x="2301"
+                                                                                    inkscape:window-y="293"
+                                                                                    inkscape:window-maximized="0"
+                                                                                    inkscape:current-layer="Page-1"
+                                                                                ></sodipodi:namedview>
+                                                                                <desc id="desc2">Created with Sketch.</desc>
+                                                                                <defs id="defs4"></defs>
+                                                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                                    <g id="visa" fill-rule="nonzero">
+                                                                                        <rect id="Rectangle-1" fill="#0E4595" x="0" y="0" width="750" height="471" rx="40"></rect>
+                                                                                        <polygon id="Shape" fill="#FFFFFF" points="278.1975 334.2275 311.5585 138.4655 364.9175 138.4655 331.5335 334.2275"></polygon>
+                                                                                        <path
+                                                                                            d="M524.3075,142.6875 C513.7355,138.7215 497.1715,134.4655 476.4845,134.4655 C423.7605,134.4655 386.6205,161.0165 386.3045,199.0695 C386.0075,227.1985 412.8185,242.8905 433.0585,252.2545 C453.8275,261.8495 460.8105,267.9695 460.7115,276.5375 C460.5795,289.6595 444.1255,295.6545 428.7885,295.6545 C407.4315,295.6545 396.0855,292.6875 378.5625,285.3785 L371.6865,282.2665 L364.1975,326.0905 C376.6605,331.5545 399.7065,336.2895 423.6355,336.5345 C479.7245,336.5345 516.1365,310.2875 516.5505,269.6525 C516.7515,247.3835 502.5355,230.4355 471.7515,216.4645 C453.1005,207.4085 441.6785,201.3655 441.7995,192.1955 C441.7995,184.0585 451.4675,175.3575 472.3565,175.3575 C489.8055,175.0865 502.4445,178.8915 512.2925,182.8575 L517.0745,185.1165 L524.3075,142.6875"
+                                                                                            id="path13"
+                                                                                            fill="#FFFFFF"
+                                                                                        ></path>
+                                                                                        <path
+                                                                                            d="M661.6145,138.4655 L620.3835,138.4655 C607.6105,138.4655 598.0525,141.9515 592.4425,154.6995 L513.1975,334.1025 L569.2285,334.1025 C569.2285,334.1025 578.3905,309.9805 580.4625,304.6845 C586.5855,304.6845 641.0165,304.7685 648.7985,304.7685 C650.3945,311.6215 655.2905,334.1025 655.2905,334.1025 L704.8025,334.1025 L661.6145,138.4655 Z M596.1975,264.8725 C600.6105,253.5935 617.4565,210.1495 617.4565,210.1495 C617.1415,210.6705 621.8365,198.8155 624.5315,191.4655 L628.1385,208.3435 C628.1385,208.3435 638.3555,255.0725 640.4905,264.8715 L596.1975,264.8715 L596.1975,264.8725 Z"
+                                                                                            id="Path"
+                                                                                            fill="#FFFFFF"
+                                                                                        ></path>
+                                                                                        <path
+                                                                                            d="M 45.878906 138.46484 L 45.197266 142.53906 C 66.288263 147.64458 85.126465 155.03257 101.61914 164.22461 L 148.96484 333.91602 L 205.41992 333.84961 L 289.42383 138.46484 L 232.90234 138.46484 L 180.66211 271.96094 L 175.0957 244.83203 C 174.83824 244.00408 174.55942 243.17304 174.27344 242.3418 L 156.10742 154.99219 C 152.87742 142.59619 143.50892 138.89684 131.91992 138.46484 L 45.878906 138.46484 z "
+                                                                                            id="path16"
+                                                                                            style="fill: #fff; fill-opacity: 1;"
+                                                                                        ></path>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span style="line-height: initial; font-size: 0.9375rem; font-weight: 600; color: #fff; margin-left: 0.5rem;">Visa ****1111</span>
+                                                                        <span style="line-height: initial; font-size: 0.9375rem; font-weight: 600; color: #fff; margin-left: auto;">4/2024</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="display: flex; align-items: center;">
+                                                                    <div style="display: flex; align-items: center; border: 1px solid #dadada; width: 100%; padding: 0.5rem 0.75rem; background: #fafafa; border-radius: 8px;">
+                                                                        <div id="visa_icon">
+                                                                            <svg
+                                                                                xmlns:cc="http://creativecommons.org/ns#"
+                                                                                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                                                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                                                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                                                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                                                                xmlns:svg="http://www.w3.org/2000/svg"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                version="1.1"
+                                                                                id="svg3409"
+                                                                                inkscape:version="0.91 r13725"
+                                                                                sodipodi:docname="MasterCard 2016.svg"
+                                                                                x="0px"
+                                                                                y="0px"
+                                                                                width="999.2px"
+                                                                                height="776px"
+                                                                                viewBox="0 0 999.2 776"
+                                                                                enable-background="new 0 0 999.2 776"
+                                                                                xml:space="preserve"
+                                                                                style="width: 2rem; height: 2rem; vertical-align: middle;"
+                                                                            >
+                                                                                <path
+                                                                                    id="XMLID_1775_"
+                                                                                    inkscape:connector-curvature="0"
+                                                                                    d="M181.1,774.3v-51.5c0-19.7-12-32.6-32.6-32.6  c-10.3,0-21.5,3.4-29.2,14.6c-6-9.4-14.6-14.6-27.5-14.6c-8.6,0-17.2,2.6-24,12v-10.3h-18v82.4h18v-45.5c0-14.6,7.7-21.5,19.7-21.5  s18,7.7,18,21.5v45.5h18v-45.5c0-14.6,8.6-21.5,19.7-21.5c12,0,18,7.7,18,21.5v45.5H181.1z M448.1,691.9h-29.2V667h-18v24.9h-16.3  v16.3h16.3v37.8c0,18.9,7.7,30,28.3,30c7.7,0,16.3-2.6,22.3-6l-5.2-15.5c-5.2,3.4-11.2,4.3-15.5,4.3c-8.6,0-12-5.2-12-13.7v-36.9  h29.2V691.9z M600.9,690.1c-10.3,0-17.2,5.2-21.5,12v-10.3h-18v82.4h18v-46.4c0-13.7,6-21.5,17.2-21.5c3.4,0,7.7,0.9,11.2,1.7  l5.2-17.2C609.4,690.1,604.3,690.1,600.9,690.1L600.9,690.1z M370,698.7c-8.6-6-20.6-8.6-33.5-8.6c-20.6,0-34.3,10.3-34.3,26.6  c0,13.7,10.3,21.5,28.3,24l8.6,0.9c9.4,1.7,14.6,4.3,14.6,8.6c0,6-6.9,10.3-18.9,10.3c-12,0-21.5-4.3-27.5-8.6l-8.6,13.7  c9.4,6.9,22.3,10.3,35.2,10.3c24,0,37.8-11.2,37.8-26.6c0-14.6-11.2-22.3-28.3-24.9l-8.6-0.9c-7.7-0.9-13.7-2.6-13.7-7.7  c0-6,6-9.4,15.5-9.4c10.3,0,20.6,4.3,25.8,6.9L370,698.7L370,698.7z M848.9,690.1c-10.3,0-17.2,5.2-21.5,12v-10.3h-18v82.4h18v-46.4  c0-13.7,6-21.5,17.2-21.5c3.4,0,7.7,0.9,11.2,1.7L861,691C857.5,690.1,852.4,690.1,848.9,690.1L848.9,690.1z M618.9,733.1  c0,24.9,17.2,42.9,43.8,42.9c12,0,20.6-2.6,29.2-9.4l-8.6-14.6c-6.9,5.2-13.7,7.7-21.5,7.7c-14.6,0-24.9-10.3-24.9-26.6  c0-15.5,10.3-25.8,24.9-26.6c7.7,0,14.6,2.6,21.5,7.7l8.6-14.6c-8.6-6.9-17.2-9.4-29.2-9.4C636.1,690.1,618.9,708.2,618.9,733.1  L618.9,733.1L618.9,733.1z M785.4,733.1v-41.2h-18v10.3c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9c0,24.9,18,42.9,41.2,42.9  c12,0,20.6-4.3,25.8-12v10.3h18V733.1L785.4,733.1z M719.3,733.1c0-14.6,9.4-26.6,24.9-26.6c14.6,0,24.9,11.2,24.9,26.6  c0,14.6-10.3,26.6-24.9,26.6C728.8,758.8,719.3,747.6,719.3,733.1L719.3,733.1z M503.9,690.1c-24,0-41.2,17.2-41.2,42.9  c0,25.8,17.2,42.9,42.1,42.9c12,0,24-3.4,33.5-11.2l-8.6-12.9c-6.9,5.2-15.5,8.6-24,8.6c-11.2,0-22.3-5.2-24.9-19.7h60.9  c0-2.6,0-4.3,0-6.9C542.5,707.3,527,690.1,503.9,690.1L503.9,690.1L503.9,690.1z M503.9,705.6c11.2,0,18.9,6.9,20.6,19.7h-42.9  C483.3,714.2,491,705.6,503.9,705.6L503.9,705.6z M951.1,733.1v-73.8h-18v42.9c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9  c0,24.9,18,42.9,41.2,42.9c12,0,20.6-4.3,25.8-12v10.3h18V733.1L951.1,733.1z M885,733.1c0-14.6,9.4-26.6,24.9-26.6  c14.6,0,24.9,11.2,24.9,26.6c0,14.6-10.3,26.6-24.9,26.6C894.4,758.8,885,747.6,885,733.1L885,733.1z M282.4,733.1v-41.2h-18v10.3  c-6-7.7-14.6-12-25.8-12c-23.2,0-41.2,18-41.2,42.9c0,24.9,18,42.9,41.2,42.9c12,0,20.6-4.3,25.8-12v10.3h18V733.1L282.4,733.1z   M215.5,733.1c0-14.6,9.4-26.6,24.9-26.6c14.6,0,24.9,11.2,24.9,26.6c0,14.6-10.3,26.6-24.9,26.6  C224.9,758.8,215.5,747.6,215.5,733.1z"
+                                                                                ></path>
+                                                                                <g>
+                                                                                    <rect id="rect19" x="364" y="66.1" fill="#FF5A00" width="270.4" height="485.8"></rect>
+                                                                                    <path
+                                                                                        id="XMLID_330_"
+                                                                                        inkscape:connector-curvature="0"
+                                                                                        fill="#EB001B"
+                                                                                        d="M382,309c0-98.7,46.4-186.3,117.6-242.9   C447.2,24.9,381.1,0,309,0C138.2,0,0,138.2,0,309s138.2,309,309,309c72.1,0,138.2-24.9,190.6-66.1C428.3,496.1,382,407.7,382,309z"
+                                                                                    ></path>
+                                                                                    <path
+                                                                                        id="path22"
+                                                                                        inkscape:connector-curvature="0"
+                                                                                        fill="#F79E1B"
+                                                                                        d="M999.2,309c0,170.8-138.2,309-309,309   c-72.1,0-138.2-24.9-190.6-66.1c72.1-56.7,117.6-144.2,117.6-242.9S570.8,122.7,499.6,66.1C551.9,24.9,618,0,690.1,0   C861,0,999.2,139.1,999.2,309z"
+                                                                                    ></path>
+                                                                                </g>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span style="line-height: initial; font-size: 0.9375rem; font-weight: 400; color: #3a3a3a; margin-left: 0.5rem;">MasterCard ****3375</span>
+                                                                        <span style="line-height: initial; font-size: 0.9375rem; font-weight: 400; color: #3a3a3a; margin-left: auto;">2/2025</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <a href="#" id="change_renter_btn" class="btn btn-primary-link btn-with-icon btn-not-allowed" tabindex="-1" role="button" aria-disabled="false" style="font-size: 0.9375rem;">
+                                                                    <span class="material-icons btn-icon-left">add_card</span> <span class="btn-link-text">Add A New Card</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
