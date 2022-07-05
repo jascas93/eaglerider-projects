@@ -25,7 +25,6 @@ $(document).ready(function () {
             $("#steps-slim-top").removeClass("visible-for-smd");
             $("#page_titles_row").addClass("pt-4");
             $("#main_page_title").html("Modify Your Reservation");
-            $("#cta_btn_row").addClass("d-none");
         }
     },10);
 });
