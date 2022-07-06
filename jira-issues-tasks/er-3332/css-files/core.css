@@ -1,3 +1,6 @@
+div#main-canvas-body {
+    background-color: #FFFFFF;
+}
 .progress-tracker {
     display: flex;
     padding: 0;
