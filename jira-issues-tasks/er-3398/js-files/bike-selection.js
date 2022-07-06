@@ -14,6 +14,8 @@ $(document).ready(function () {
         if (window.location.href.indexOf("change_model=1") > 0) {
             $("#select_model_upgrade_btn").addClass("btn--shockwave is-active");
             $("#add_extras_btn_top").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
+            $("#footer_continue").removeClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("?extended=1") > 0) {
             $("#select_trike_btn").addClass("is-active");
