@@ -17,6 +17,22 @@ $(document).ready(function () {
             $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
             $("#footer_continue").removeClass("btn--shockwave is-active");
         }
+        else if (window.location.href.indexOf("model_upgraded=1") > 0) {
+            $("#model_chosen_bike_card").removeClass("d-none");
+            $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
+            $("#cbs_model_class").html("3-Wheel");
+            $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
+            $("#cbs_model_price_per_day").html("$268");
+            $("#cbs_model_price_per_day_old").html("$335");
+            $("#cbs_model_price_full").html("$268");
+            $("#cbs_model_price_full_old").html("$335");
+            $("#cbs_model_x_days").html("1 day");
+            $("#cbs_model_club_savings").html("Membership Savings of $67 (-20% Off)");
+            $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_top").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
+            $("#footer_continue").removeClass("btn--shockwave is-active");
+        }
         else if (window.location.href.indexOf("?extended=1") > 0) {
             $("#select_trike_btn").addClass("is-active");
             $("#add_extras_btn_top").removeClass("is-active");
