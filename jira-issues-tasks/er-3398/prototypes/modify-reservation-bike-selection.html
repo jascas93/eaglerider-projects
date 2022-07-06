@@ -3,7 +3,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
-        <title>ER-3398: Modify Reservation–Bike Selection No Change</title>
+        <title>ER-3398: Modify Reservation–Bike Selection</title>
         <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
         <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
         <link href="https://getbootstrap.com/docs/5.1/examples/headers/headers.css" rel="stylesheet" />
@@ -148,7 +148,10 @@
                             <div class="balance_and_exit_wrapper">
                                 <div id="balance_top_wrapper" class="d-flex flex-column hidden-below-mdd">
                                     <span class="lh-initial fw-500">Balance (USD)</span>
-                                    <span id="balance_value_top">$0</span>
+                                    <div class="d-flex align-items-center">
+                                        <span id="balance_plus" class="material-icons d-none">add_circle</span>
+                                        <span id="balance_value_top">$0</span>
+                                    </div>
                                 </div>
                                 <div>
                                     <a href="#" id="exit_btn" class="btn btn-primary-outlined-slim btn-with-icon" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#exit_modify">
@@ -224,7 +227,7 @@
                             </a>
                         </div>
                         <div class="col steps-normal-col active">
-                            <a id="steps_wide_link_bike" href="#" class="btn btn-primary-link py-0">
+                            <a id="steps_wide_link_bike" href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html" class="btn btn-primary-link py-0">
                                 <div class="steps-normal-content active">
                                     <div class="steps-normal-icon active">
                                         <span>2</span>
@@ -298,7 +301,7 @@
                                 </a>
                             </div>
                             <div class="col steps-normal-col active">
-                                <a id="steps_normal_link_bike" href="#" class="btn btn-primary-link py-0">
+                                <a id="steps_normal_link_bike" href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html" class="btn btn-primary-link py-0">
                                     <div class="steps-normal-content active">
                                         <div class="steps-normal-icon active">
                                             <span>2</span>
@@ -1092,10 +1095,13 @@
                     <div class="container-lg">
                         <div class="row">
                             <div class="col">
-                                <div style="display: flex; align-items: center;" class="py-2 py-sm-3 justify-content-start">
-                                    <div style="display: flex; flex-flow: column; color: #fafafa;">
-                                        <span style="line-height: initial; font-weight: 500;">Balance (USD)</span>
-                                        <span id="balance_value_bottom" style="line-height: initial; font-size: 1.125rem; font-weight: 900;" class="text-start">$0</span>
+                                <div class="d-flex align-items-center py-2 py-sm-3 justify-content-start">
+                                    <div id="balance_bottom_wrapper" class="d-flex flex-column">
+                                        <span class="lh-initial fw-500">Balance (USD)</span>
+                                        <div class="d-flex align-items-center">
+                                            <span id="balance_plus" class="material-icons d-none">add_circle</span>
+                                            <span id="balance_value_bottom">$0</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
