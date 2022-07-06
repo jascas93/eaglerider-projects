@@ -322,6 +322,9 @@ input.form-check-input:disabled {
     align-items: center;
     justify-content: center;
 }
+img#model_upgrade_bike_card_img {
+    transition: 0.5s all ease-in-out;
+}
 div#current_bike_selection_wrapper {
     border: 3px solid;
     border-color: #f26b00;
