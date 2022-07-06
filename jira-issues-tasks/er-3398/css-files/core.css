@@ -195,7 +195,7 @@ input.form-check-input:disabled {
     text-align: left;
 }
 .btn-not-allowed.disallowed {
-    opacity: 70%;
+    opacity: 50%;
 }
 .btn-primary.btn-not-allowed.disallowed:hover, .btn-primary.btn-not-allowed.disallowed:focus, .btn-primary.btn-not-allowed.disallowed:active {
     background-color: #fe7b10;
