@@ -100,6 +100,7 @@ $(document).ready(function () {
     $(document).mousemove(function(){
          if($("#model_upgrade_card_link:hover").length != 0){
             $("#model_upgrade_bike_card_img").attr("style", "transform: scale(1.05);");
+            $("#select_model_upgrade_btn").trigger("hover");
         } else{
             $("#model_upgrade_bike_card_img").attr("style", "");
         }
