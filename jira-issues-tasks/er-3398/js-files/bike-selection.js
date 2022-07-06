@@ -17,6 +17,17 @@ $(document).ready(function () {
             $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
             $("#footer_continue").removeClass("btn--shockwave is-active");
         }
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1) {
+            $("#balance_value").html("$35");
+            $("#balance_value_top").html("$35");
+            $("#balance_value_bottom").html("$35");
+            //$("#balance_plus_top").removeClass("d-none");
+            //$("#balance_plus_bottom").removeClass("d-none");
+            $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
+            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
+            $("#footer_continue").addClass("btn--shockwave is-active");
+        }
         else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#model_chosen_bike_card").removeClass("d-none");
             $("#model_upgrade_bike_card").addClass("d-none");
