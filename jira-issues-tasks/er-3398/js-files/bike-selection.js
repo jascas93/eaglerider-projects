@@ -38,9 +38,9 @@ $(document).ready(function () {
             $("#cbs_model_x_days").html("1 day");
             $("#cbs_model_club_savings").html("Membership Savings of $67 (-20% Off)");
             $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_top").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
-            $("#footer_continue").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
+            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
+            $("#footer_continue").addClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("?extended=1") > 0) {
             $("#select_trike_btn").addClass("is-active");
