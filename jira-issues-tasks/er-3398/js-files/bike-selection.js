@@ -62,8 +62,8 @@ $(document).ready(function () {
             $("#balance_value_bottom").html("$138.57");
             //$("#balance_plus_top").removeClass("d-none");
             //$("#balance_plus_bottom").removeClass("d-none");
-            $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
-            $("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
+            $("#current_model_textfield").html('Harley-Davidson® Tri Glide® Ultra <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank"><span class="material-icons" style="font-size:15px;vertical-align:text-bottom;margin-left:.15rem;color:#fe7b10">launch</span></a>');
+            //$("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#cbs_model_class").html("3-Wheel");
             $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
