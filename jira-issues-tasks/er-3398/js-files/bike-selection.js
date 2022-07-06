@@ -20,6 +20,9 @@ $(document).ready(function () {
         else if (window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#model_chosen_bike_card").removeClass("d-none");
             $("#model_upgrade_bike_card").addClass("d-none");
+            $("#old_model_textfield").removeClass("d-none");
+            $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
+            $("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#cbs_model_class").html("3-Wheel");
             $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
