@@ -97,4 +97,11 @@ $(document).ready(function () {
             console.log("no change");
         }
     },10);
+    $(document).mousemove(function(){
+         if($("#model_upgrade_card_link:hover").length != 0){
+            console.log("hover");
+        } else{
+            console.log("no hover");
+        }
+    });
 });
