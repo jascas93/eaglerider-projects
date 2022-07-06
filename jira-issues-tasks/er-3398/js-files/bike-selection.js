@@ -17,13 +17,38 @@ $(document).ready(function () {
             $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
             $("#footer_continue").removeClass("btn--shockwave is-active");
         }
-        else if (window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#model_chosen_bike_card").removeClass("d-none");
             $("#model_upgrade_bike_card").addClass("d-none");
             $("#old_model_textfield").removeClass("d-none");
             $("#balance_value").html("$103.57");
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
+            //$("#balance_plus_top").removeClass("d-none");
+            //$("#balance_plus_bottom").removeClass("d-none");
+            $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
+            $("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
+            $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
+            $("#cbs_model_class").html("3-Wheel");
+            $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
+            $("#cbs_model_price_per_day").html("$268");
+            $("#cbs_model_price_per_day_old").html("$335");
+            $("#cbs_model_price_full").html("$268");
+            $("#cbs_model_price_full_old").html("$335");
+            $("#cbs_model_x_days").html("1 day");
+            $("#cbs_model_club_savings").html("Membership Savings of $67 (-20% Off)");
+            $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
+            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
+            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
+            $("#footer_continue").addClass("btn--shockwave is-active");
+        }
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
+            $("#model_chosen_bike_card").removeClass("d-none");
+            $("#model_upgrade_bike_card").addClass("d-none");
+            $("#old_model_textfield").removeClass("d-none");
+            $("#balance_value").html("$138.57");
+            $("#balance_value_top").html("$138.57");
+            $("#balance_value_bottom").html("$138.57");
             //$("#balance_plus_top").removeClass("d-none");
             //$("#balance_plus_bottom").removeClass("d-none");
             $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
