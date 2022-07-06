@@ -27,6 +27,12 @@ span#balance_value_top {
     font-weight: 900;
     text-align: left;
 }
+span#balance_value_bottom {
+    line-height: initial;
+    font-size: 1.125rem;
+    font-weight: 900;
+    text-align: left;
+}
 span#balance_plus {
     font-size: 18px;
     color: #f26b00;
