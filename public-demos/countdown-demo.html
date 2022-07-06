@@ -85,11 +85,10 @@
                 hour = minute * 60,
                 day = hour * 24;
 
+            let expiration = new Date(2022, 6, 8, 23, 59);
+
             if (window.location.href.indexOf("?deal_id=944") > 0) {
-                let expiration = new Date(2022, 6, 7, 12, 00);
-            }
-            else {
-                let expiration = new Date(2022, 6, 8, 23, 59);
+                expiration = new Date(2022, 6, 7, 12, 00);
             }
 
             const countDown = new Date(expiration).getTime(),
