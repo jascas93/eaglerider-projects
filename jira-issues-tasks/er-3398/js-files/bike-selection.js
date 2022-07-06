@@ -24,8 +24,8 @@ $(document).ready(function () {
             $("#balance_value").html("$103.57");
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
-            $("#balance_plus_top").removeClass("d-none");
-            $("#balance_plus_bottom").removeClass("d-none");
+            //$("#balance_plus_top").removeClass("d-none");
+            //$("#balance_plus_bottom").removeClass("d-none");
             $("#current_model_textfield").html("Harley-Davidson® Tri Glide® Ultra");
             $("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
