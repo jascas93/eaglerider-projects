@@ -36,7 +36,7 @@ span#balance_value_bottom {
     font-weight: 900;
     text-align: left;
 }
-span#balance_plus {
+span#balance_plus_* {
     font-size: 18px;
     color: #f26b00;
     margin-right: 0.125rem;
