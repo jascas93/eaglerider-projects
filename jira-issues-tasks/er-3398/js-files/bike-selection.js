@@ -92,8 +92,9 @@ $(document).ready(function () {
             $("#selected_club_savings").addClass("listing-unavailable");
         }
         else {
-            $("#select_trike_btn").removeClass("btn-primary-focus");
-            $("#add_extras_btn_top").addClass("btn-primary-focus");
+            //$("#select_trike_btn").removeClass("btn-primary-focus");
+            //$("#add_extras_btn_top").addClass("btn-primary-focus");
+            console.log("no change");
         }
     },10);
 });
