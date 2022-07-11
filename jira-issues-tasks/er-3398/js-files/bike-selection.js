@@ -12,7 +12,7 @@ function removeLoader() {
 $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("change_model=1") > 0) {
-            $("#select_model_upgrade_btn").addClass("btn--shockwave is-active");
+            $("#model_upgrade_card_link").addClass("btn--shockwave is-active");
             $("#next_btn_top").removeClass("btn--shockwave is-active");
             $("#next_btn_bottom").removeClass("btn--shockwave is-active");
             $("#next_btn_footer").removeClass("btn--shockwave is-active");
