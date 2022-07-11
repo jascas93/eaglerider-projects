@@ -21,12 +21,29 @@ $(document).ready(function () {
             $("#balance_value").html("$35");
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
-            //$("#balance_plus_top").removeClass("d-none");
-            //$("#balance_plus_bottom").removeClass("d-none");
             $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
             $("#add_extras_btn_top").addClass("btn--shockwave is-active");
             $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
             $("#footer_continue").addClass("btn--shockwave is-active");
+
+            $("#steps_wide_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff-details.html?upsell_added=1");
+            $("#steps_wide_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1#");
+            $("#steps_wide_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1");
+            $("#steps_wide_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?upsell_added=1");
+
+            $("#steps_normal_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff-details.html?upsell_added=1");
+            $("#steps_normal_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1#");
+            $("#steps_normal_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1");
+            $("#steps_normal_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?upsell_added=1");
+
+            $("#continue_to_review_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?upsell_added=1");
+            $("#continue_to_review_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?upsell_added=1");
+            $("#footer_continue").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?upsell_added=1");
+
+            $("#back_bike_selection").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1");
+            $("#go_back").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1");
+
+            $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff-details.html?upsell_added=1");
         }
         else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#model_chosen_bike_card").removeClass("d-none");
@@ -35,10 +52,7 @@ $(document).ready(function () {
             $("#balance_value").html("$103.57");
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
-            //$("#balance_plus_top").removeClass("d-none");
-            //$("#balance_plus_bottom").removeClass("d-none");
             $("#current_model_textfield").html('Harley-Davidson® Tri Glide® Ultra <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank"><span class="material-icons" style="font-size:15px;vertical-align:text-bottom;margin-left:.15rem;color:#fe7b10">launch</span></a>');
-            //$("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#cbs_model_class").html("3-Wheel");
             $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -60,10 +74,7 @@ $(document).ready(function () {
             $("#balance_value").html("$138.57");
             $("#balance_value_top").html("$138.57");
             $("#balance_value_bottom").html("$138.57");
-            //$("#balance_plus_top").removeClass("d-none");
-            //$("#balance_plus_bottom").removeClass("d-none");
             $("#current_model_textfield").html('Harley-Davidson® Tri Glide® Ultra <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank"><span class="material-icons" style="font-size:15px;vertical-align:text-bottom;margin-left:.15rem;color:#fe7b10">launch</span></a>');
-            //$("#current_model_url").attr("src", "https://www.eaglerider.com/losangeles/tri-glide-ultra");
             $("#cbs_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#cbs_model_class").html("3-Wheel");
             $("#cbs_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
@@ -128,8 +139,6 @@ $(document).ready(function () {
             $("#selected_club_savings").addClass("listing-unavailable");
         }
         else {
-            //$("#select_trike_btn").removeClass("btn-primary-focus");
-            //$("#add_extras_btn_top").addClass("btn-primary-focus");
             console.log("no change");
         }
     },10);
