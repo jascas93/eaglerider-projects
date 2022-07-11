@@ -35,7 +35,7 @@ $(document).ready(function () {
             $("#availability_msg").removeClass('d-none');
             $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
             $("#dropoff_date_input").html('11/03/2022');
-            $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection-no-change.html?extended=1");
+            $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
         }
     },10);
     setTimeout(function() {
@@ -46,7 +46,7 @@ $(document).ready(function () {
             $("#pickup_date_input").html('11/15/2022');
             $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
             $("#dropoff_date_input").html('11/16/2022');
-            $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection-no-change.html?shifted=1");
+            $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1");
         }
     },10);
 });
