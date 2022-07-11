@@ -13,18 +13,18 @@ $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("change_model=1") > 0) {
             $("#select_model_upgrade_btn").addClass("btn--shockwave is-active");
-            $("#add_extras_btn_top").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_bottom").removeClass("btn--shockwave is-active");
-            $("#footer_continue").removeClass("btn--shockwave is-active");
+            $("#next_btn_top").removeClass("btn--shockwave is-active");
+            $("#next_btn_bottom").removeClass("btn--shockwave is-active");
+            $("#next_btn_footer").removeClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1) {
             $("#balance_value").html("$35");
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
             $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
-            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
-            $("#footer_continue").addClass("btn--shockwave is-active");
+            $("#next_btn_top").addClass("btn--shockwave is-active");
+            $("#next_btn_bottom").addClass("btn--shockwave is-active");
+            $("#next_btn_footer").addClass("btn--shockwave is-active");
 
             $("#steps_wide_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff-details.html?upsell_added=1");
             $("#steps_wide_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1#");
@@ -64,9 +64,9 @@ $(document).ready(function () {
             $("#cbs_model_x_days").html("1 day");
             $("#cbs_model_club_savings").html("Membership Savings of $67 (-20% Off)");
             $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
-            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
-            $("#footer_continue").addClass("btn--shockwave is-active");
+            $("#next_btn_top").addClass("btn--shockwave is-active");
+            $("#next_btn_bottom").addClass("btn--shockwave is-active");
+            $("#next_btn_footer").addClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#model_chosen_bike_card").removeClass("d-none");
@@ -86,13 +86,13 @@ $(document).ready(function () {
             $("#cbs_model_x_days").html("1 day");
             $("#cbs_model_club_savings").html("Membership Savings of $67 (-20% Off)");
             $("#select_model_upgrade_btn").removeClass("btn--shockwave is-active");
-            $("#add_extras_btn_top").addClass("btn--shockwave is-active");
-            $("#add_extras_btn_bottom").addClass("btn--shockwave is-active");
-            $("#footer_continue").addClass("btn--shockwave is-active");
+            $("#next_btn_top").addClass("btn--shockwave is-active");
+            $("#next_btn_bottom").addClass("btn--shockwave is-active");
+            $("#next_btn_footer").addClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("?extended=1") > 0) {
             $("#select_trike_btn").addClass("is-active");
-            $("#add_extras_btn_top").removeClass("is-active");
+            $("#next_btn_top").removeClass("is-active");
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("11/03/2022 12:00 PM");
             $("#balance_value_top").html("$209");
@@ -108,13 +108,13 @@ $(document).ready(function () {
             $("#select_trike_btn").addClass("is-active");
             $("#select_trike_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-add-extras-model-upgrade-trike.html?shifted=1");
             $(".bike-listing-card-link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/mockups/new/modify-reservation-add-extras-model-upgrade-trike.html?shifted=1");
-            $("#add_extras_btn_top").removeClass("is-active");
-            $("#add_extras_btn_top").addClass("disabled-btn cursor-not-allowed");
-            $("#add_extras_btn_top").attr("href", "#");
-            $("#add_extras_btn_bottom").addClass("disabled-btn cursor-not-allowed");
-            $("#add_extras_btn_bottom").attr("href", "#");
-            $("#footer_continue").addClass("disabled-btn cursor-not-allowed");
-            $("#footer_continue").attr("href", "#");
+            $("#next_btn_top").removeClass("is-active");
+            $("#next_btn_top").addClass("disabled-btn cursor-not-allowed");
+            $("#next_btn_top").attr("href", "#");
+            $("#next_btn_bottom").addClass("disabled-btn cursor-not-allowed");
+            $("#next_btn_bottom").attr("href", "#");
+            $("#next_btn_footer").addClass("disabled-btn cursor-not-allowed");
+            $("#next_btn_footer").attr("href", "#");
             $("#current_model_textfield").addClass("text-danger fw-500");
             $("#mini_error_note").removeClass("d-none");
             $("#old_pickup_date_textfield").removeClass("d-none");
