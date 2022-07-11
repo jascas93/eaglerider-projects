@@ -26,11 +26,11 @@ $(document).ready(function () {
             $("#balance_value_1").html("$35");
             $("#vip_zero_line_item_1").removeClass("d-none");
             $("#vip_zero_line_item_1").addClass("line-item-updated");
+            $("#vip_zero_line_item_2").removeClass("d-none");
+            $("#vip_zero_line_item_2").addClass("line-item-updated");
             $("#total_value_2").html("$243.97");
             $("#paid_value_2").html("($208.97)");
             $("#balance_value_2").html("$35");
-            $("#vip_zero_line_item_2").removeClass("d-none");
-            $("#vip_zero_line_item_2").addClass("line-item-updated");
             $("#payment_info_reservation_total").html("$243.97");
             $("#payment_info_store_credit_row").removeClass("d-none");
             $("#payment_info_remaining_balance").html("$35");
@@ -106,6 +106,10 @@ $(document).ready(function () {
             $("#surcharge_price_2").html("$17.42");
             $("#tax_price_1").html("$27.12");
             $("#tax_price_2").html("$27.12");
+            $("#vip_zero_line_item_1").removeClass("d-none");
+            $("#vip_zero_line_item_1").addClass("line-item-updated");
+            $("#vip_zero_line_item_2").removeClass("d-none");
+            $("#vip_zero_line_item_2").addClass("line-item-updated");
             $("#total_value_1").html("$356.54");
             $("#paid_value_1").html("($208.97)");
             $("#balance_value_1").html("$138.57");
