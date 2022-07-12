@@ -31,12 +31,14 @@ $(document).ready(function () {
             $("#total_value_2").html("$243.97");
             $("#paid_value_2").html("($208.97)");
             $("#balance_value_2").html("$35");
+
             $("#payment_info_reservation_total").html("$243.97");
             $("#payment_info_store_credit_row").removeClass("d-none");
             $("#payment_info_remaining_balance").html("$35");
             $("#payment_info_payment_methods").removeClass("d-none");
             $("#no_payment_due_text").addClass("d-none");
             $("#cta_btn_row").removeClass("d-none");
+
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
 
@@ -157,8 +159,16 @@ $(document).ready(function () {
             $("#total_value").html("$417.97");
             $("#paid_value").html("($208.97)");
             $("#balance_value").html("$209");
+
             $("#balance_value_top").html("$209");
             $("#balance_value_bottom").html("$209");
+
+            $("#payment_info_reservation_total").html("$417.97");
+            $("#payment_info_store_credit_row").removeClass("d-none");
+            $("#payment_info_remaining_balance").html("$209");
+            $("#payment_info_payment_methods").removeClass("d-none");
+            $("#no_payment_due_text").addClass("d-none");
+            $("#cta_btn_row").removeClass("d-none");
 
             $("#steps_wide_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1");
             $("#steps_wide_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
@@ -169,13 +179,6 @@ $(document).ready(function () {
             $("#steps_normal_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
             $("#steps_normal_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?extended=1#");
             $("#steps_normal_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?extended=1");
-
-            $("#next_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?extended=1");
-            $("#next_btn_bottom").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?extended=1");
-            $("#next_btn_footer").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?extended=1");
-            $("#next_btn_top").addClass("btn--shockwave is-active");
-            $("#next_btn_bottom").addClass("btn--shockwave is-active");
-            $("#next_btn_footer").addClass("btn--shockwave is-active");
 
             $("#go_back_btn_1").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
             $("#go_back_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
