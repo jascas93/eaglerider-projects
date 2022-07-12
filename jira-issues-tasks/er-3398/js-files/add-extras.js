@@ -101,6 +101,9 @@ $(window).on("load", function () {
         $("#add_vip_zero").trigger("click");
     }
     else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
+        $("#add_vip_zero").removeClass("input-focus-on-load btn--shockwave is-active")
+        $("#add_vip_zero").attr("disabled", "")
+
         $("#old_dropoff_date_textfield").removeClass("d-none");
         $("#current_dropoff_date_textfield").html("11/03/2022 12:00 PM");
         $("#rental_days_textfield").html("2 Rental Days");
@@ -442,6 +445,9 @@ function addVIPZero() {
         $("#change_model_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html");
     }
     else if (checkBox.checked == false && window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
+        $("#add_vip_zero").removeClass("input-focus-on-load btn--shockwave is-active")
+        $("#add_vip_zero").attr("disabled", "")
+        
         $("#old_dropoff_date_textfield").removeClass("d-none");
         $("#current_dropoff_date_textfield").html("11/03/2022 12:00 PM");
         $("#rental_days_textfield").html("2 Rental Days");
