@@ -20,7 +20,7 @@ $(document).ready(function () {
             $("#page_titles_row").addClass("pt-4");
             $("#main_page_title").html("Modify Your Reservation");
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#total_value_1").html("$243.97");
             $("#paid_value_1").html("($208.97)");
             $("#balance_value_1").html("$35");
@@ -56,7 +56,7 @@ $(document).ready(function () {
             $("#add_extras_btn_1").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1");
             $("#add_extras_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
             $("#old_bike_model_name").removeClass("d-none");
@@ -100,14 +100,10 @@ $(document).ready(function () {
             $("#add_extras_btn_1").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?model_upgraded=1");
             $("#add_extras_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?model_upgraded=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#old_bike_model_name").removeClass("d-none");
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
-            $("#old_pickup_date_textfield").removeClass("d-none");
-            $("#current_pickup_date_textfield").html("11/15/2022 12:00 PM");
-            $("#old_dropoff_date_textfield").removeClass("d-none");
-            $("#current_dropoff_date_textfield").html("11/16/2022 12:00 PM");
 
             $("#tm_item_1").html("1 Day @ $335 /Day");
             $("#tm_item_2").html("1 Day @ $335 /Day");
@@ -153,7 +149,7 @@ $(document).ready(function () {
             $("#add_extras_btn_1").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1&model_upgraded=1");
             $("#add_extras_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1&model_upgraded=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0 && window.location.href.indexOf("shifted=1") < 1) {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("Thu, Nov 3, 2022");
             $("#change_pickup_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1");
@@ -205,7 +201,7 @@ $(document).ready(function () {
             $("#add_extras_btn_1").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?extended=1");
             $("#add_extras_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?extended=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("shifted=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") > 0) {
             $("#old_bike_model_name").removeClass("d-none");
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
