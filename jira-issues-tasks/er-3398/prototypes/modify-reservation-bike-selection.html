@@ -337,13 +337,13 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <!-- Reservation Details -->
-                                <div id="new_res_details" class="your-reservation mb-4 mb-lg-0" style="background: #f9f9f9; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;">
-                                    <div style="padding: 1rem; background: #484848; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                                        <p style="margin-bottom: 0; font-size: 1.25rem; font-weight: 500; color: #f9f9f9;">Your Reservation</p>
-                                        <p style="margin-bottom: 0; font-weight: 500; font-size: 0.9375rem; color: #f9f9f9;">WBERLAX010000108063</p>
-                                        <p id="rental_days_textfield" style="margin-bottom: 0; font-weight: 400; color: #dadada; font-size: 0.875rem;">1 Rental Day</p>
+                                <div id="your_reservation_details" class="your-reservation mb-4 mb-lg-0">
+                                    <div class="details-header">
+                                        <p id="your_reservation_textfield" class="mb-0 fw-500">Your Reservation</p>
+                                        <p id="reservation_number_textfield" class="mb-0 fw-500">WBERLAX010000108063</p>
+                                        <p id="rental_days_textfield" class="mb-0">1 Rental Day</p>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem; position: relative; margin-top: 0.25rem;">
+                                    <div class="details-blocks">
                                         <div>
                                             <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
                                             <span style="background: #797979; width: 0.125rem; height: auto; position: absolute; top: 1.375rem; bottom: -0.9375rem; left: 1.25rem; display: none;"></span>
@@ -367,7 +367,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem; position: relative; margin-top: 0.25rem;">
+                                    <div class="details-blocks">
                                         <div>
                                             <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
                                             <span style="background: #797979; width: 0.125rem; height: auto; position: absolute; top: 1.375rem; bottom: -0.9375rem; left: 1.25rem;"></span>
@@ -390,7 +390,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem 0.5rem 1rem; position: relative;">
+                                    <div class="details-blocks">
                                         <div>
                                             <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
                                             <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Dropoff</p>
@@ -412,12 +412,20 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem 0.75rem 1rem; position: relative;">
-                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html" id="change_details" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
+                                    <div class="details-blocks">
+                                        <a
+                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html"
+                                            id="change_details"
+                                            class="btn btn-primary-outlined w-100 btn-with-icon"
+                                            tabindex="-1"
+                                            role="button"
+                                            aria-disabled="false"
+                                        >
                                             <span class="material-icons-outlined btn-icon-left">edit</span><span class="text-truncate">Change Details</span>
                                         </a>
                                     </div>
                                 </div>
+                                <!-- End -->
                             </div>
                             <div class="col-lg-9">
                                 <div class="row mb-3">
