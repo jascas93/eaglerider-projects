@@ -164,7 +164,7 @@ p#main_page_res_num_small {
     letter-spacing: 0.35px;
     display: none;
 }
-div#new_res_details {
+div#your_reservation_details {
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
