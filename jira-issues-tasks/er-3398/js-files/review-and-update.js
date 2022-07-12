@@ -151,6 +151,8 @@ $(document).ready(function () {
         else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("Thu, Nov 3, 2022");
+            $("#change_pickup_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1");
+            $("#change_dropoff_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1");
 
             $("#tm_item_1").html("2 Day @ $224 /Day");
             $("#tm_item_2").html("2 Day @ $224 /Day");
