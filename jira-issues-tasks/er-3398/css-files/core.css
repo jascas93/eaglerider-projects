@@ -611,6 +611,14 @@ p#old_bike_model_name {
     font-style: italic;
     text-decoration: line-through;
 }
+.old-reservation-info-data {
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #797979;
+    font-size: 0.875rem;
+    font-style: italic;
+    text-decoration: line-through;
+}
 tr#payment_info_total_paid_row {
     background-color: #d9efee;;
 }
