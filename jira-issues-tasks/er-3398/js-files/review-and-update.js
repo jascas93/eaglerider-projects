@@ -152,8 +152,8 @@ $(document).ready(function () {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("Thu, Nov 3, 2022");
 
-            $("#tm_line_item_1").html("2 Day @ $224 /Day");
-            $("#tm_line_item_2").html("2 Day @ $224 /Day");
+            $("#tm_item_1").html("2 Day @ $224 /Day");
+            $("#tm_item_2").html("2 Day @ $224 /Day");
             $("#tm_price_1").html("$448");
             $("#tm_price_2").html("$448");
             $("#discount_price_1").html("-$89.60");
