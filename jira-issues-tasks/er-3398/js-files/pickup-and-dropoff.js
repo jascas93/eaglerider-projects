@@ -28,7 +28,7 @@ $(document).ready(function () {
             $("#dropoff_date_time_fieldbox").removeClass('widget-input-changed');
             $("#dropoff_date_input").html('11/02/2022');
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#balance_value").html("$35");
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
@@ -62,7 +62,7 @@ $(document).ready(function () {
             $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
             $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shift_now=1#go_to_widget");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#balance_value").html("$103.57");
             $("#balance_value_top").html("$103.57");
             $("#balance_value_bottom").html("$103.57");
@@ -100,7 +100,7 @@ $(document).ready(function () {
             $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shift_now=1#go_to_widget");
 
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#balance_value").html("$138.57");
             $("#balance_value_top").html("$138.57");
             $("#balance_value_bottom").html("$138.57");
@@ -144,7 +144,7 @@ $(document).ready(function () {
             $("#dropoff_date_input").html('11/03/2022');
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0 && window.location.href.indexOf("shifted=1") < 1) {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("11/03/2022 12:00 PM");
             $("#rental_days_textfield").html("2 Rental Days");
@@ -182,6 +182,43 @@ $(document).ready(function () {
             $("#shift_scenario_link").attr("data-bs-toggle", "modal");
             $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
             $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shif_now=1#go_to_widget");
+        }
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
+            $("#balance_value").html("$103.57");
+            $("#balance_value_top").html("$103.57");
+            $("#balance_value_bottom").html("$103.57");
+
+            $("#old_model_textfield").removeClass("d-none");
+            $("#current_model_textfield").html('Harley-Davidson® Tri Glide® Ultra <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank"><span class="material-icons url-new-tab">launch</span></a>');
+
+            $("#steps_wide_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1&model_upgraded=1#");
+            $("#steps_wide_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1&model_upgraded=1");
+            $("#steps_wide_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?shifted=1&model_upgraded=1");
+            $("#steps_wide_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?shifted=1&model_upgraded=1");
+
+            $("#steps_normal_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1&model_upgraded=1#");
+            $("#steps_normal_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1&model_upgraded=1");
+            $("#steps_normal_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?shifted=1&model_upgraded=1");
+            $("#steps_normal_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?shifted=1&model_upgraded=1");
+
+            $("#next_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1&model_upgraded=1");
+            $("#next_btn_footer").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1&model_upgraded=1");
+
+            $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1&model_upgraded=1#");
+            $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1&model_upgraded=1");
+
+            $("#original_scenario_link").attr("href", "#");
+            $("#original_scenario_link").attr("data-bs-toggle", "modal");
+            $("#original_scenario_link").attr("data-bs-target", "#original_notify");
+            $("#continue_with_original").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html");
+            $("#extend_scenario_link").attr("href", "#");
+            $("#extend_scenario_link").attr("data-bs-toggle", "modal");
+            $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_extend").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extend_now=1#go_to_widget");
+            $("#shift_scenario_link").attr("href", "#");
+            $("#shift_scenario_link").attr("data-bs-toggle", "modal");
+            $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
+            $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shift_now=1#go_to_widget");
         }
         else if (window.location.href.indexOf("?shift_now=1") > 0) {
             $("#widget_reset_div").removeClass('d-none');
