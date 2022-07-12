@@ -101,9 +101,14 @@ $(document).ready(function () {
             $("#add_extras_btn_2").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?model_upgraded=1");
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
+            $("#old_bike_model_name").removeClass("d-none");
             $("#current_bike_model_img").attr("src", "https://raw.githubusercontent.com/jascas93/eaglerider-projects/main/jira-issues-tasks/er-3398/assets/hd-tri-glide-for-rent.jpeg");
             $("#current_bike_model_name").html("Harley-Davidson® Tri Glide® Ultra");
-            $("#old_bike_model_name").removeClass("d-none");
+            $("#old_pickup_date_textfield").removeClass("d-none");
+            $("#current_pickup_date_textfield").html("11/15/2022 12:00 PM");
+            $("#old_dropoff_date_textfield").removeClass("d-none");
+            $("#current_dropoff_date_textfield").html("11/16/2022 12:00 PM");
+
             $("#tm_item_1").html("1 Day @ $335 /Day");
             $("#tm_item_2").html("1 Day @ $335 /Day");
             $("#tm_price_1").html("$335");
