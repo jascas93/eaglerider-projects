@@ -2,10 +2,10 @@ $(window).on("load", function () {
     if (window.location.href.indexOf("?reset=1") > 0) {
         setTimeout(removeLoader, 100);
     }
-    else if (window.location.href.indexOf("?extended=1") > 0) {
+    else if (window.location.href.indexOf("?extend_now=1") > 0) {
         setTimeout(removeLoader, 100);
     }
-    else if (window.location.href.indexOf("?shifted=1") > 0) {
+    else if (window.location.href.indexOf("?shift_now=1") > 0) {
         setTimeout(removeLoader, 100);
     }
     else {
