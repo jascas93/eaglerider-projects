@@ -195,9 +195,9 @@ $(document).ready(function () {
             $("#steps_normal_link_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1");
             $("#steps_normal_link_bike").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1#");
             $("#steps_normal_link_extras").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1#");
-            $("#steps_wide_link_extras").addClass("cursor-not-allowed");
+            $("#steps_normal_link_extras").addClass("cursor-not-allowed");
             $("#steps_normal_link_review").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-review-and-update.html?shifted=1#");
-            $("#steps_wide_link_review").addClass("cursor-not-allowed");
+            $("#steps_normal_link_review").addClass("cursor-not-allowed");
 
             $("#next_btn_top").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?shifted=1#");
             $("#next_btn_top").removeClass("is-active");
