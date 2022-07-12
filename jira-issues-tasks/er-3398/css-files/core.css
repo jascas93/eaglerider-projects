@@ -198,6 +198,15 @@ div#rental_days_textfield {
     top: 0.8125rem;
     left: 1rem;
 }
+.details-vline {
+    background: #797979;
+    width: 0.125rem;
+    height: auto;
+    position: absolute;
+    top: 1.375rem;
+    bottom: -0.9375rem;
+    left: 1.25rem;
+}
 .details-block-title {
     margin-bottom: 0.25rem;
     font-weight: 600;
@@ -205,6 +214,12 @@ div#rental_days_textfield {
     color: #5d5d5d;
     padding-left: 1rem;
     font-size: 0.875rem;
+}
+.url-new-tab {
+    font-size: 15px;
+    vertical-align: text-bottom;
+    margin-left: 0.15rem;
+    color: #fe7b10;
 }
 .info-content-wrapper {
     background-color: #fff;
