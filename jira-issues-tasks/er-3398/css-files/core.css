@@ -169,13 +169,13 @@ div#your_reservation_details {
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
 }
-div#your_reservation_textfield {
+p#your_reservation_textfield {
     font-size: 1.25rem;
 }
-div#reservation_number_textfield {
+p#reservation_number_textfield {
     font-size: 0.9375rem;
 }
-div#rental_days_textfield {
+p#rental_days_textfield {
     font-size: 0.875rem;
 }
 .details-header {
