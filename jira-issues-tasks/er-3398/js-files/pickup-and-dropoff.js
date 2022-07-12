@@ -49,6 +49,10 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1");
 
+            $("#original_scenario_link").attr("href", "#");
+            $("#original_scenario_link").attr("data-bs-toggle", "modal");
+            $("#original_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_original").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html");
             $("#extend_scenario_link").attr("href", "#");
             $("#extend_scenario_link").attr("data-bs-toggle", "modal");
             $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
@@ -82,6 +86,10 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?model_upgraded=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?model_upgraded=1");
 
+            $("#original_scenario_link").attr("href", "#");
+            $("#original_scenario_link").attr("data-bs-toggle", "modal");
+            $("#original_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_original").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html");
             $("#extend_scenario_link").attr("href", "#");
             $("#extend_scenario_link").attr("data-bs-toggle", "modal");
             $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
@@ -116,6 +124,10 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1&model_upgraded=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1&model_upgraded=1");
 
+            $("#original_scenario_link").attr("href", "#");
+            $("#original_scenario_link").attr("data-bs-toggle", "modal");
+            $("#original_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_original").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html");
             $("#extend_scenario_link").attr("href", "#");
             $("#extend_scenario_link").attr("data-bs-toggle", "modal");
             $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
