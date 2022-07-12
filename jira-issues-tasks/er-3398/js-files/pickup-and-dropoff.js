@@ -73,6 +73,9 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?model_upgraded=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?model_upgraded=1");
 
+            $("#extend_scenario_link").attr("href", "#");
+            $("#extend_scenario_link").attr("data-bs-toggle", "modal");
+            $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
             $("#continue_with_scenario").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
 
         }
