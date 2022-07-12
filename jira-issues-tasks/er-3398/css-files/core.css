@@ -216,7 +216,7 @@ p#rental_days_textfield {
     font-size: 0.875rem;
 }
 .url-new-tab {
-    font-size: 15px;
+    font-size: 15px !important;
     vertical-align: text-bottom;
     margin-left: 0.15rem;
     color: #fe7b10;
