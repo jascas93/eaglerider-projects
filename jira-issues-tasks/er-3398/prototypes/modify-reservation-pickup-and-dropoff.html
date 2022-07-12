@@ -576,7 +576,9 @@
                                                         <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html" class="btn btn-primary-link py-0"><span class="btn-link-text">Original</span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget" class="btn btn-primary-link py-0"><span class="btn-link-text">Extend Dropoff Date</span></a>
+                                                        <a id="extend_scenario_link" href="#" class="btn btn-primary-link py-0" data-bs-toggle="modal" data-bs-target="#extend_notify">
+                                                            <span class="btn-link-text">Extend Dropoff Date</span>
+                                                        </a>
                                                     </li>
                                                     <li>
                                                         <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget" class="btn btn-primary-link py-0"><span class="btn-link-text">Shift Rental Pickup</span></a>
@@ -800,95 +802,6 @@
                 </div>
             </div>
             <div id="all_modals">
-                <div id="modify_welcome" class="modal fade" tabindex="-1" aria-labelledby="modify_welcomeLabel" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content" style="border-radius: 0.875rem;">
-                            <div class="modal-body" style="padding: 0;">
-                                <div
-                                    style="
-                                        background-image: url(https://photos.smugmug.com/Partners/Yamaha-PCH-Ride-2019/i-Qvbkn6X/0/56740787/XL/20190714-eaglerider-yamaha-redspade-pch-ride-30776-XL.jpg);
-                                        height: 300px;
-                                        background-position: 50% 100%;
-                                        background-size: cover;
-                                        background-repeat: no-repeat;
-                                        border-radius: 0.875rem;
-                                        transform: rotateY(180deg);
-                                        position: relative;
-                                        z-index: 0;
-                                    "
-                                ></div>
-                                <div
-                                    style="
-                                        border-radius: 1.875rem 1.875rem 0.875rem 0.875rem;
-                                        margin-top: -3rem;
-                                        z-index: 9999;
-                                        background-color: #fff;
-                                        position: relative;
-                                        padding: 1.5rem 2rem;
-                                        box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
-                                    "
-                                >
-                                    <div>
-                                        <p style="margin-bottom: 0; text-align: center; font-size: 1rem; font-weight: 300;">Welcome to</p>
-                                        <p style="margin-bottom: 0; text-align: center; font-size: 1.5rem; font-weight: 600;">Modify Your Reservation</p>
-                                    </div>
-                                    <div class="my-3">
-                                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                                            <div style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center;">
-                                                <span class="material-icons" style="color: #fff; font-size: 20px;">done</span>
-                                            </div>
-                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #f26b00;"></span>
-                                            <div style="background-color: #f26b00; border-radius: 50%; width: 1.875rem; min-width: 1.875rem; height: 1.875rem; display: flex; align-items: center; justify-content: center;">
-                                                <span class="material-icons" style="color: #fff; font-size: 20px;">done</span>
-                                            </div>
-                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #f26b00;"></span>
-                                            <div
-                                                style="
-                                                    border-radius: 50%;
-                                                    border: 0.1875rem solid;
-                                                    border-color: #f26b00;
-                                                    color: #f26b00;
-                                                    width: 1.875rem;
-                                                    min-width: 1.875rem;
-                                                    height: 1.875rem;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                "
-                                            >
-                                                <span style="font-weight: 900;">3</span>
-                                            </div>
-                                            <span style="width: 100%; border-bottom: 2px solid; border-color: #aeaeae;"></span>
-                                            <div
-                                                style="
-                                                    border-radius: 50%;
-                                                    border: 0.1875rem solid;
-                                                    border-color: #aeaeae;
-                                                    color: #898989;
-                                                    width: 1.875rem;
-                                                    min-width: 1.875rem;
-                                                    height: 1.875rem;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                "
-                                            >
-                                                <span>4</span>
-                                            </div>
-                                        </div>
-                                        <div style="margin-top: 0.25rem; display: flex; align-items: center; justify-content: space-between;">
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #f26b00;">Pickup &amp; Dropoff</p>
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #f26b00;">Bike Selection</p>
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 900; font-size: 0.875rem; color: #f26b00;">Add Extras</p>
-                                            <p style="margin-bottom: 0; text-align: center; font-weight: 400; font-size: 0.875rem; color: #797979;">Review &amp; Update</p>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; align-items: center; justify-content: center;"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Let's Go!</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div id="exit_modify" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exit_modifyLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-dialog">
@@ -915,6 +828,43 @@
                                                 aria-disabled="false"
                                             >
                                                 <span>Continue to Exit</span><span class="material-icons-outlined btn-icon-right">launch</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="extend_notify" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exit_modifyLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Clearing Options</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>For the purposes of this prototype <b>only</b>, any upsell or model change will be removed and the scenario chosen will be applied instead.</p>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <div class="row w-100 g-3">
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
+                                            <a href="#" id="close_back_2" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
+                                                <span>Close and Go Back</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
+                                            <a
+                                                href="#"
+                                                id="continue_with_scenario"
+                                                class="btn btn-primary btn-with-icon"
+                                                tabindex="-1"
+                                                role="button"
+                                                aria-disabled="false"
+                                            >
+                                                <span>Ok, Continue</span>
+                                                <span class="material-icons-outlined btn-icon-right">start</span>
                                             </a>
                                         </div>
                                     </div>
