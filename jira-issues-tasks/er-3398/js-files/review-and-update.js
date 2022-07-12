@@ -151,20 +151,30 @@ $(document).ready(function () {
         else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("Thu, Nov 3, 2022");
-            $("#tm_item").html("2 Day @ $224 /Day");
-            $("#tm_price").html("$448");
-            $("#discount_price").html("-$89.60");
-            $("#surcharge_price").html("$23.30");
-            $("#tax_price").html("$36.27");
-            $("#total_value").html("$417.97");
-            $("#paid_value").html("($208.97)");
-            $("#balance_value").html("$209");
+
+            $("#tm_line_item_1").html("2 Day @ $224 /Day");
+            $("#tm_line_item_2").html("2 Day @ $224 /Day");
+            $("#tm_price_1").html("$448");
+            $("#tm_price_2").html("$448");
+            $("#discount_price_1").html("-$89.60");
+            $("#discount_price_2").html("-$89.60");
+            $("#surcharge_price_1").html("$23.30");
+            $("#surcharge_price_2").html("$23.30");
+            $("#tax_price_1").html("$36.27");
+            $("#tax_price_2").html("$36.27");
+            $("#total_value_1").html("$417.97");
+            $("#total_value_2").html("$417.97");
+            $("#paid_value_1").html("($208.97)");
+            $("#paid_value_2").html("($208.97)");
+            $("#balance_value_1").html("$209");
+            $("#balance_value_2").html("$209");
 
             $("#balance_value_top").html("$209");
             $("#balance_value_bottom").html("$209");
 
             $("#payment_info_reservation_total").html("$417.97");
             $("#payment_info_store_credit_row").removeClass("d-none");
+            $("#payment_info_membership_credit_row").removeClass("d-none");
             $("#payment_info_remaining_balance").html("$209");
             $("#payment_info_payment_methods").removeClass("d-none");
             $("#no_payment_due_text").addClass("d-none");
