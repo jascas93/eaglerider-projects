@@ -75,7 +75,6 @@ $(document).ready(function () {
 
             $("#continue_with_scenario").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
 
-
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#balance_value").html("$138.57");
