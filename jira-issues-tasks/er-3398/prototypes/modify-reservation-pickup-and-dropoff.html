@@ -336,76 +336,96 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-3">
-                                <div id="new_res_details" class="your-reservation mb-4 mb-lg-0" style="background: #f9f9f9; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;">
-                                    <div style="padding: 1rem; background: #484848; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-                                        <p style="margin-bottom: 0; font-size: 1.25rem; font-weight: 500; color: #f9f9f9;">Your Reservation</p>
-                                        <p style="margin-bottom: 0; font-weight: 500; font-size: 0.9375rem; color: #f9f9f9;">WBERLAX010000108063</p>
-                                        <p style="margin-bottom: 0; font-weight: 400; color: #dadada; font-size: 0.875rem;">1 Rental Days</p>
+                                <!-- Reservation Details -->
+                                <div id="your_reservation_details" class="your-reservation mb-4 mb-lg-0">
+                                    <div class="details-header">
+                                        <p id="your_reservation_textfield" class="mb-0 fw-500">Your Reservation</p>
+                                        <p id="reservation_number_textfield" class="mb-0 fw-500">WBERLAX010000108063</p>
+                                        <p id="rental_days_textfield" class="mb-0">1 Rental Day</p>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem; position: relative; margin-top: 0.25rem;">
+                                    <div class="details-blocks">
                                         <div>
-                                            <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
-                                            <span style="background: #797979; width: 0.125rem; height: auto; position: absolute; top: 1.375rem; bottom: -0.9375rem; left: 1.25rem; display: none;"></span>
-                                            <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Current Selected Bike Model</p>
+                                            <span class="details-dot"></span>
+                                            <p class="details-block-title">Current Selected Bike Model</p>
                                         </div>
-                                        <div style="padding-left: 1rem;">
-                                            <p style="margin-right: 0; margin-bottom: 0; font-weight: 400; color: #5d5d5d; font-size: 0.875rem;">
+                                        <div class="ps-3">
+                                            <p id="old_model_textfield" class="old-reservation-data d-none">
+                                                Harley-Davidson® Street Glide® Touring Edition
+                                            </p>
+                                            <p id="current_model_textfield" class="current-reservation-data">
                                                 Harley-Davidson® Street Glide® Touring Edition
                                                 <a href="https://www.eaglerider.com/losangeles/street-glide-touring-edition" target="_blank">
-                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                    <span class="material-icons url-new-tab">launch</span>
                                                 </a>
                                             </p>
+                                            <div id="mini_error_note" class="bike-availability-note danger mini d-none d-lg-none mt-1" style="">
+                                                <span class="material-icons-outlined">error_outline</span>
+                                                <div>
+                                                    <p style="margin-bottom: 0; font-size: 0.875rem; font-weight: 400;">See error messages below</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem; position: relative; margin-top: 0.25rem;">
+                                    <div class="details-blocks">
                                         <div>
-                                            <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
-                                            <span style="background: #797979; width: 0.125rem; height: auto; position: absolute; top: 1.375rem; bottom: -0.9375rem; left: 1.25rem;"></span>
-                                            <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Pickup</p>
+                                            <span class="details-dot"></span>
+                                            <span class="details-vline"></span>
+                                            <p class="details-block-title">Motorcycle Pickup</p>
                                         </div>
-                                        <div style="padding-left: 1rem;">
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/01/2022 12:00 PM</p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                        <div class="ps-3">
+                                            <p id="old_pickup_date_textfield" class="old-reservation-data d-none">11/01/2022 12:00 PM</p>
+                                            <p id="current_pickup_date_textfield" class="current-reservation-data">11/01/2022 12:00 PM</p>
+                                            <p id="current_pickup_location_textfield" class="current-reservation-data">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
-                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                    <span class="material-icons url-new-tab">launch</span>
                                                 </a>
                                             </p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_pickup_address_textfield" class="current-reservation-data">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
-                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                    <span class="material-icons url-new-tab">launch</span>
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem 0.5rem 1rem; position: relative;">
+                                    <div class="details-blocks">
                                         <div>
-                                            <span style="background: #797979; position: absolute; width: 0.625rem; height: 0.625rem; border-radius: 50%; top: 0.8125rem; left: 1rem;"></span>
-                                            <p style="margin-bottom: 0.25rem; font-weight: 600; text-transform: uppercase; color: #5d5d5d; padding-left: 1rem; font-size: 0.875rem;">Motorcycle Dropoff</p>
+                                            <span class="details-dot"></span>
+                                            <p class="details-block-title">Motorcycle Dropoff</p>
                                         </div>
-                                        <div style="padding-left: 1rem;">
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">11/02/2022 12:00 PM</p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                        <div class="ps-3">
+                                            <p id="old_dropoff_date_textfield" class="old-reservation-data d-none">11/02/2022 12:00 PM</p>
+                                            <p id="current_dropoff_date_textfield" class="current-reservation-data">11/02/2022 12:00 PM</p>
+                                            <p id="current_dropoff_location_textfield" class="current-reservation-data">
                                                 Los Angeles
                                                 <a href="https://www.eaglerider.com/losangeles" target="_blank">
-                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                    <span class="material-icons url-new-tab">launch</span>
                                                 </a>
                                             </p>
-                                            <p style="margin-bottom: 0; font-size: 0.8rem; color: #5d5d5d;">
+                                            <p id="current_dropoff_address_textfield" class="current-reservation-data">
                                                 11860 S La Cienega Blvd, Hawthorne, CA 90250, United States
                                                 <a href="http://www.eaglerider.com/redirects/google_maps?q=11860+S+La+Cienega+Blvd%2C+Hawthorne%2C+CA+90250%2C+United+States" target="_blank">
-                                                    <span class="material-icons" style="font-size: 15px; vertical-align: text-bottom; margin-left: 0.15rem; color: #fe7b10;">launch</span>
+                                                    <span class="material-icons url-new-tab">launch</span>
                                                 </a>
                                             </p>
                                         </div>
                                     </div>
-                                    <div style="padding: 0.5rem 1rem 0.75rem 1rem; position: relative;">
-                                        <a href="#" id="change_details" class="btn btn-primary-outlined w-100 btn-with-icon" tabindex="-1" role="button" aria-disabled="false">
-                                            <span class="material-icons-outlined btn-icon-left">edit</span><span class="text-truncate">Change Details</span>
+                                    <div class="details-blocks">
+                                        <a
+                                            href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html"
+                                            id="change_details"
+                                            class="btn btn-primary-outlined w-100 btn-with-icon"
+                                            tabindex="-1"
+                                            role="button"
+                                            aria-disabled="false"
+                                        >
+                                            <span class="material-icons-outlined btn-icon-left">edit</span>
+                                            <span class="text-truncate">Change Details</span>
                                         </a>
                                     </div>
                                 </div>
+                                <!-- End -->
                             </div>
                             <div class="col-lg-9">
                                 <div class="row mb-3">
