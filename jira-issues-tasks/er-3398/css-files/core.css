@@ -189,6 +189,23 @@ div#rental_days_textfield {
     padding: 0.5rem 1rem;
     position: relative;
 }
+.details-dot {
+    background: #797979;
+    position: absolute;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    top: 0.8125rem;
+    left: 1rem;
+}
+.details-block-title {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #5d5d5d;
+    padding-left: 1rem;
+    font-size: 0.875rem;
+}
 .info-content-wrapper {
     background-color: #fff;
     box-shadow: rgb(0 0 0 / 5%) 0 6px 24px 0, rgb(0 0 0 / 8%) 0 0 0 1px;
