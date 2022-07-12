@@ -50,7 +50,7 @@ $(window).on("load", function () {
     }
     else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("shifted=1") > 0) {
         $("#add_vip_zero").removeClass("input-focus-on-load btn--shockwave is-active")
-        $("#add_vip_zero").attr("disabled")
+        $("#add_vip_zero").attr("disabled", "")
 
         $("#old_model_textfield").removeClass("d-none");
         $("#current_model_textfield").html('Harley-Davidson® Tri Glide® Ultra <a href="https://www.eaglerider.com/losangeles/tri-glide-ultra" target="_blank"><span class="material-icons" style="font-size:15px;vertical-align:text-bottom;margin-left:.15rem;color:#fe7b10">launch</span></a>');
