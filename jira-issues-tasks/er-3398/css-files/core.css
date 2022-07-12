@@ -178,6 +178,9 @@ p#reservation_number_textfield {
 p#rental_days_textfield {
     font-size: 0.875rem;
 }
+p#current_model_textfield {
+    font-size: 0.875rem !important;
+}
 .details-header {
     padding: 1rem;
     background: #484848;
