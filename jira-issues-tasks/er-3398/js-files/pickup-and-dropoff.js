@@ -144,7 +144,7 @@ $(document).ready(function () {
             $("#dropoff_date_input").html('11/03/2022');
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?extended=1");
         }
-        else if (window.location.href.indexOf("extend_now=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0) {
             $("#old_dropoff_date_textfield").removeClass("d-none");
             $("#current_dropoff_date_textfield").html("11/03/2022 12:00 PM");
             $("#rental_days_textfield").html("2 Rental Days");
