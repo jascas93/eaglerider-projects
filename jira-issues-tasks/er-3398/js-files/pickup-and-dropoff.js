@@ -48,6 +48,15 @@ $(document).ready(function () {
 
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1");
+
+            $("#extend_scenario_link").attr("href", "#");
+            $("#extend_scenario_link").attr("data-bs-toggle", "modal");
+            $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_extend").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
+            $("#shift_scenario_link").attr("href", "#");
+            $("#shift_scenario_link").attr("data-bs-toggle", "modal");
+            $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
+            $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget");
         }
         else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
             $("#balance_value").html("$103.57");
@@ -76,7 +85,11 @@ $(document).ready(function () {
             $("#extend_scenario_link").attr("href", "#");
             $("#extend_scenario_link").attr("data-bs-toggle", "modal");
             $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
-            $("#continue_with_scenario").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
+            $("#continue_with_extend").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
+            $("#shift_scenario_link").attr("href", "#");
+            $("#shift_scenario_link").attr("data-bs-toggle", "modal");
+            $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
+            $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget");
 
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
@@ -102,6 +115,15 @@ $(document).ready(function () {
 
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1&model_upgraded=1#");
             $("#search_availability_btn").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?upsell_added=1&model_upgraded=1");
+
+            $("#extend_scenario_link").attr("href", "#");
+            $("#extend_scenario_link").attr("data-bs-toggle", "modal");
+            $("#extend_scenario_link").attr("data-bs-target", "#extend_notify");
+            $("#continue_with_extend").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget");
+            $("#shift_scenario_link").attr("href", "#");
+            $("#shift_scenario_link").attr("data-bs-toggle", "modal");
+            $("#shift_scenario_link").attr("data-bs-target", "#shift_notify");
+            $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget");
         }
         else if (window.location.href.indexOf("?extended=1") > 0) {
             $("#widget_reset_div").removeClass('d-none');

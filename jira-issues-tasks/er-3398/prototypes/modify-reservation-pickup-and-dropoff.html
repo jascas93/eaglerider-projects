@@ -573,7 +573,9 @@
                                             <div>
                                                 <ul>
                                                     <li>
-                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html" class="btn btn-primary-link py-0"><span class="btn-link-text">Original</span></a>
+                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html" class="btn btn-primary-link py-0">
+                                                            <span class="btn-link-text">Original</span>
+                                                        </a>
                                                     </li>
                                                     <li>
                                                         <a id="extend_scenario_link" href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1#go_to_widget" class="btn btn-primary-link py-0">
@@ -581,7 +583,9 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget" class="btn btn-primary-link py-0"><span class="btn-link-text">Shift Rental Pickup</span></a>
+                                                        <a id="shift_scenario_link" href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shifted=1#go_to_widget" class="btn btn-primary-link py-0">
+                                                            <span class="btn-link-text">Shift Rental Pickup</span>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -857,7 +861,44 @@
                                         <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
                                             <a
                                                 href="#"
-                                                id="continue_with_scenario"
+                                                id="continue_with_extend"
+                                                class="btn btn-primary btn-with-icon"
+                                                tabindex="-1"
+                                                role="button"
+                                                aria-disabled="false"
+                                            >
+                                                <span>Ok, Continue</span>
+                                                <span class="material-icons-outlined btn-icon-right">start</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="shift_notify" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exit_modifyLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border-bottom: 4px solid #fe7b10; background: #f9f9f9;">
+                                    <h5 class="modal-title" id="staticBackdropLabel" style="text-transform: uppercase; font-weight: 900;">Clear Options</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff;"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>For the purposes of this <b><u>prototype only</u></b>, any upsell or model change will be removed and the scenario chosen will be applied instead.</p>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <div class="row w-100 g-3">
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-start order-last order-sm-first">
+                                            <a href="#" id="close_back_3" class="btn btn-secondary-outlined btn-h-52" tabindex="-1" role="button" aria-disabled="false" data-bs-dismiss="modal">
+                                                <span>Close and Go Back</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 col-sm-6 px-0 d-flex justify-content-center justify-content-sm-end">
+                                            <a
+                                                href="#"
+                                                id="continue_with_shift"
                                                 class="btn btn-primary btn-with-icon"
                                                 tabindex="-1"
                                                 role="button"
