@@ -17,7 +17,7 @@ $(document).ready(function () {
             $("#next_btn_bottom").removeClass("btn--shockwave is-active");
             $("#next_btn_footer").removeClass("btn--shockwave is-active");
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#balance_value").html("$35");
             $("#balance_value_top").html("$35");
             $("#balance_value_bottom").html("$35");
@@ -46,7 +46,7 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1");
             $("#model_upgrade_card_link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1&model_upgraded=1");
         }
-        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#model_chosen_bike_card").removeClass("d-none");
             $("#model_upgrade_bike_card").addClass("d-none");
             $("#old_model_textfield").removeClass("d-none");
@@ -88,7 +88,7 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?model_upgraded=1");
             $("#model_chosen_card_link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html");
         }
-        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#model_chosen_bike_card").removeClass("d-none");
             $("#model_upgrade_bike_card").addClass("d-none");
             $("#old_model_textfield").removeClass("d-none");
@@ -130,7 +130,7 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?upsell_added=1&model_upgraded=1");
             $("#model_chosen_card_link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?upsell_added=1");
         }
-        else if (window.location.href.indexOf("?extended=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") > 0 && window.location.href.indexOf("shifted=1") < 1) {
             $("#select_trike_btn").addClass("is-active");
             $("#next_btn_top").removeClass("is-active");
             $("#old_dropoff_date_textfield").removeClass("d-none");
@@ -159,7 +159,7 @@ $(document).ready(function () {
             $("#change_details").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?extended=1");
             $("#model_upgrade_card_link").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-add-extras.html?extended=1&model_upgraded=1");
         }
-        else if (window.location.href.indexOf("?shifted=1") > 0) {
+        else if (window.location.href.indexOf("upsell_added=1") < 1 && window.location.href.indexOf("model_upgraded=1") > 0 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") > 0) {
             $("#current_model_textfield").addClass("text-danger fw-500");
             $("#mini_error_note").removeClass("d-none");
             $("#old_pickup_date_textfield").removeClass("d-none");
