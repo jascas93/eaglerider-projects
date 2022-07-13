@@ -1,0 +1,50 @@
+<div style="position: absolute; top: 50px; left: -12px; width: 19vw; border: 1px solid;">
+    <div style="text-align: center;">Nov 2022</div>
+    <div class="row mx-0" style="font-size: 0.8rem; color: #898989; font-weight: 600;">
+        <div class="col px-0 text-center">
+            <span>SU</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>MO</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>TU</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>WE</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>TH</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>FR</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>SA</span>
+        </div>
+    </div>
+
+    <div class="row mx-0" style="font-size: 0.875rem;">
+        <div class="col px-0 text-center">
+            <span></span>
+        </div>
+        <div class="col px-0 text-center">
+            <span></span>
+        </div>
+        <div class="col px-0 text-center" style="/* background-color: #fe7b10; */ /* border-radius: 4px; */">
+            <span style="background-color: #fe7b10; padding: 2px 4px; border-radius: 4px; color: #fff;">1</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>2</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>3</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>4</span>
+        </div>
+        <div class="col px-0 text-center">
+            <span>5</span>
+        </div>
+    </div>
+</div>
