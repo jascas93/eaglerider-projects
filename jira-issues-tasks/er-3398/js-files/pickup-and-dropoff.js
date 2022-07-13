@@ -21,7 +21,7 @@ function removeLoader() {
 $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("?reset=1") > 0) {
-            $("#widget_reset_div").addClass('d-none');
+            $("#widget_reset_div").addClass('invisible');
             $("#availability_msg").addClass('d-none');
             $("#pickup_date_time_fieldbox").removeClass('widget-input-changed');
             $("#pickup_date_input").html('11/01/2022');
@@ -138,7 +138,7 @@ $(document).ready(function () {
             $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shift_now=1#go_to_widget");
         }
         else if (window.location.href.indexOf("?extend_now=1") > 0) {
-            $("#widget_reset_div").removeClass('d-none');
+            $("#widget_reset_div").removeClass('invisible');
             $("#availability_msg").removeClass('d-none');
             $("#dropoff_date_time_fieldbox").addClass('widget-input-changed');
             $("#dropoff_date_input").html('11/03/2022');
@@ -227,7 +227,7 @@ $(document).ready(function () {
             $("#continue_with_shift").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?shift_now=1#go_to_widget");
         }
         else if (window.location.href.indexOf("?shift_now=1") > 0) {
-            $("#widget_reset_div").removeClass('d-none');
+            $("#widget_reset_div").removeClass('invisible');
             $("#availability_msg").removeClass('d-none');
             $("#pickup_date_time_fieldbox").addClass('widget-input-changed');
             $("#pickup_date_input").html('11/15/2022');
