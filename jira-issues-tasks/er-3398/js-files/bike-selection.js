@@ -16,7 +16,7 @@ $(document).ready(function () {
             $("#next_btn_bottom").removeClass("btn--shockwave is-active");
             $("#next_btn_footer").removeClass("btn--shockwave is-active");
 
-            $("#model_upgrade_card_link").addClass("btn--shockwave is-active");
+            $("#select_model_upgrade_btn").addClass("btn--shockwave is-active");
         }
         else if (window.location.href.indexOf("upsell_added=1") > 0 && window.location.href.indexOf("model_upgraded=1") < 1 && window.location.href.indexOf("extended=1") < 1 && window.location.href.indexOf("shifted=1") < 1) {
             $("#balance_value_top").html("$35");
