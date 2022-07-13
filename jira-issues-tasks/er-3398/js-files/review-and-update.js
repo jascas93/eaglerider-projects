@@ -13,7 +13,7 @@ $(document).ready(function () {
     setTimeout(function() {
         if (window.location.href.indexOf("?welcome=1") > 0) {
             $("#modify_welcome").modal("show");
-            $("#steps_normal_row").addClass("d-none");
+            $("#steps_normal").addClass("d-none");
             $("#steps_wide").addClass("d-none");
             $("#steps_small").addClass("d-none");
             $("#steps_small").removeClass("visible-for-smd");
