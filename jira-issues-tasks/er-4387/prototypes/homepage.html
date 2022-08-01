@@ -219,7 +219,122 @@
                     <div class="container main-container-canvas">
                         <div class="row">
                             <div class="col">
-                                <div></div>
+                                <div
+                                    class="px-2 py-3 px-sm-4 py-sm-4"
+                                    style="border: 2px solid; border-color: #5d5d5d; background-color: #ffffff; border-radius: 0.5rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; position: relative;"
+                                >
+                                    <div class="row mx-0">
+                                        <div class="col-12 col-md-6 px-0 ps-md-0 pe-md-1 mb-1 mb-md-0">
+                                            <div class="d-flex align-items-center widget-input-wrapper cursor-not-allowed gap-2">
+                                                <div>
+                                                    <span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">
+                                                        place
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px;">Pickup Location</span>
+                                                    <p class="mb-0" style="line-height: initial;">Los Angeles, California</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 px-0 ps-md-1 pe-md-0 mt-1 mt-md-0">
+                                            <div class="d-flex align-items-center widget-input-wrapper cursor-not-allowed gap-2">
+                                                <div>
+                                                    <span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">
+                                                        place
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px;">Dropoff Location</span>
+                                                    <p class="mb-0" style="line-height: initial;">Los Angeles, California</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mx-0 mt-2">
+                                        <div class="col-12 col-md-6 px-0 ps-md-0 pe-md-1 mb-1 mb-md-0">
+                                            <div id="pickup_date_time_fieldbox" class="row mx-0 widget-input-wrapper cursor-not-allowed">
+                                                <div class="col-6 col-xl-7 px-0 d-flex align-items-center gap-2">
+                                                    <div><span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">calendar_month </span></div>
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px; font-weight: 400;">Pickup Date</span>
+                                                        <p id="pickup_date_input" class="mb-0" style="line-height: initial;">11/01/2022</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-5 d-flex align-items-center gap-2" style="border-left: 1px solid #dadada;">
+                                                    <div><span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">schedule </span></div>
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px; font-weight: 400;">Pickup Time</span>
+                                                        <p class="mb-0" style="line-height: initial;">12:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 px-0 pe-md-0 ps-md-1 mt-1 mt-md-0">
+                                            <div id="dropoff_date_time_fieldbox" class="row mx-0 widget-input-wrapper cursor-not-allowed">
+                                                <div class="col-6 col-xl-7 px-0 d-flex align-items-center gap-2">
+                                                    <div><span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">calendar_month </span></div>
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px; font-weight: 400;">Dropoff Date</span>
+                                                        <p id="dropoff_date_input" class="mb-0" style="line-height: initial;">11/02/2022</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-5 d-flex align-items-center gap-2" style="border-left: 1px solid #dadada;">
+                                                    <div><span class="material-icons" style="color: #f26b00; font-size: 1.75rem;">schedule </span></div>
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <span style="line-height: initial; font-size: 0.8rem; color: #a2a9ae; letter-spacing: 0.35px; font-weight: 400;">Dropoff Time</span>
+                                                        <p class="mb-0" style="line-height: initial;">12:00 PM</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="availability_msg" class="row mx-0 mt-3 d-none">
+                                        <div class="col px-0 ps-md-0 pe-md-1 mb-1 mb-md-0">
+                                            <div class="bike-availability-note warning">
+                                                <span class="material-icons-outlined">info </span>
+                                                <div>
+                                                    <p style="margin-bottom: 0.25rem; font-size: 1rem; font-weight: 600; line-height: initial;">
+                                                        Your selected bike and extras <i style="text-decoration: underline;">may become</i> unavailable and <i style="text-decoration: underline;">may</i> require new selections on your next steps
+                                                    </p>
+                                                    <p style="margin-bottom: 0; font-size: 0.875rem; font-weight: 400;">Rates and prices may vary.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mx-0 mt-3">
+                                        <div id="widget_reset_div" class="col-12 col-md-6 px-0 ps-md-0 pe-md-1 mb-1 mb-md-0 invisible">
+                                            <div>
+                                                <a
+                                                    href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-pickup-and-dropoff.html?reset=1#go_to_widget"
+                                                    id="widget_reset_btn"
+                                                    class="btn btn-secondary-outlined w-100 btn-with-icon"
+                                                    tabindex="-1"
+                                                    role="button"
+                                                    aria-disabled="false"
+                                                >
+                                                    <span class="material-icons-outlined btn-icon-left">restart_alt</span><span class="text-truncate">Reset</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="search_availability_div" class="col-12 col-md-6 px-0 pe-md-0 ps-md-1 mb-1 mb-md-0">
+                                            <div>
+                                                <a
+                                                    href="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-3398/prototypes/modify-reservation-bike-selection.html?model_upgraded=1"
+                                                    id="search_availability_btn"
+                                                    class="btn btn-primary w-100 btn-with-icon"
+                                                    tabindex="-1"
+                                                    role="button"
+                                                    aria-disabled="false"
+                                                >
+                                                    <span class="material-icons-outlined btn-icon-left">travel_explore</span><span class="text-truncate">Search Availability</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
