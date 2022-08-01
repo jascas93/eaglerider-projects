@@ -1,3 +1,11 @@
+.main-widget-wrapper {
+    border: 2px solid;
+    border-color: #5d5d5d;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    position: relative;
+}
 .widget-input-wrapper {
     border: 1px solid;
     border-color: #dadada;
