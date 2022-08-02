@@ -28,5 +28,6 @@ div#promotion {
 .promotion-text {
     color: #fcfcfc;
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.35px;
+    font-family: 'Poppins';
 }
