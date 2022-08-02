@@ -32,3 +32,9 @@ div#promotion {
     font-family: 'Poppins';
     text-align: center;
 }
+
+@media (max-width: 767px) {
+    div#promotion {
+        background-color: #019D9D !important;
+    }
+}
