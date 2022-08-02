@@ -54,6 +54,7 @@ div#promotion {
 p#widget_promo_text {
     color: #fcfcfc;
     font-size: 0.9375rem;
+    letter-spacing: 0.35px;
 }
 @media (max-width: 767px) {
     div#promotion {
