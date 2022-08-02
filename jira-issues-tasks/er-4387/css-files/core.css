@@ -22,3 +22,6 @@ div#widget_hero {
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
+div#promotion {
+    padding: 0.25rem 0;
+}
