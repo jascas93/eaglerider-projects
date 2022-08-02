@@ -12,7 +12,7 @@
 }
 .widget-input-wrapper {
     border: 1px solid;
-    border-color: #dadada;
+    border-color: rgb(192, 202, 213);
     border-radius: 0.25rem;
     padding: 0.75rem;
 }
