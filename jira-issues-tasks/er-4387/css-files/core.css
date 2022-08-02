@@ -8,7 +8,7 @@
     box-shadow: rgb(0 0 0 / 16%) 0px 2px 8px 0px, rgb(0 0 0 / 16%) 0px 10px 8px -5px, rgb(0 0 0 / 16%) 0px 12px 32px -2px;
     position: relative;
     max-width: 800px;
-    border-bottom: 4px solid #f26b00;
+    border-bottom: 2px solid #f26b00;
 }
 .widget-input-wrapper {
     border: 1px solid;
@@ -49,6 +49,7 @@ div#promotion {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative;
 }
 @media (max-width: 767px) {
     div#promotion {
