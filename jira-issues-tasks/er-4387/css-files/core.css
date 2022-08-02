@@ -46,6 +46,9 @@ div#promotion {
     padding: 1.5rem 0.75rem 0.75rem 0.75rem;
     color: #fcfcfc;
     margin-top: -1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 @media (max-width: 767px) {
     div#promotion {
