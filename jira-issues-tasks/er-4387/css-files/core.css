@@ -20,6 +20,13 @@ div#widget_hero {
     background-size: cover;
     background-position: 50% 60%;
     background-repeat: no-repeat;
+    position: relative;
+}
+div#img-dark {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33,33,33,0.125);
 }
 div#promotion {
     padding: 0.25rem 0;
