@@ -45,12 +45,15 @@ div#promotion {
     max-width: 800px;
     border-radius: 0 0 1rem 1rem;
     padding: 1.5rem 1.5rem 0.75rem 1.5rem;
-    color: #fcfcfc;
     margin-top: -1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     position: relative;
+}
+p#widget_promo_text {
+    color: #fcfcfc;
+    font-size: 0.9375rem;
 }
 @media (max-width: 767px) {
     div#promotion {
