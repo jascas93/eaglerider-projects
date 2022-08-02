@@ -9,6 +9,7 @@
     position: relative;
     max-width: 800px;
     border-bottom: 2px solid #f26b00;
+    z-index: 1;
 }
 .widget-input-wrapper {
     border: 1px solid;
