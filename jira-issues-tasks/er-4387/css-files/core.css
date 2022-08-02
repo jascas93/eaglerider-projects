@@ -31,6 +31,7 @@ div#img-dark {
     background-color: rgba(33,33,33,0.125);
 }
 div#promotion {
+    background-color: #242424;
     padding: 0.25rem 0;
 }
 .promotion-text {
@@ -58,6 +59,9 @@ p#widget_promo_text {
 }
 @media (max-width: 767px) {
     div#promotion {
-        background-color: #019D9D !important;
+        background-color: #ffd54f !important;
+    }
+    .promotion-text {
+        color: #3a3a3a;
     }
 }
