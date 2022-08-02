@@ -25,3 +25,8 @@ div#widget_hero {
 div#promotion {
     padding: 0.25rem 0;
 }
+.promotion-text {
+    color: #fcfcfc;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
