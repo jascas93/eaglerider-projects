@@ -41,7 +41,7 @@ div#promotion {
     text-align: center;
 }
 .widget-promo-wrapper {
-    background-color: #242424;
+    background-color: rgba(36,36,36,0.85);
     max-width: 800px;
     border-radius: 0 0 1rem 1rem;
     padding: 1.5rem 1.5rem 0.75rem 1.5rem;
