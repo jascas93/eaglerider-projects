@@ -15,6 +15,27 @@ div#promotion {
     font-family: 'Poppins';
     text-align: center;
 }
+.hero-img {
+    background-image: url('https://photos.smugmug.com/Partners/Support-Shots/i-fK8DrH9/0/fff9c054/O/Eagle%201%20Joshua%20Tree.jpg');
+    height: 465px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+span#eaglerider {
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #404040;
+    font-family: 'Arvo', serif;
+}
+span#rewards {
+    font-family: 'Ms Madi', cursive;
+    font-size: 56px;
+    color: #e66000;
+}
 @media (max-width: 767px) {
     div#promotion {
         background-color: #ffd54f !important;
