@@ -1,50 +1,19 @@
-.widget-container-canvas {
+.hero-container-canvas {
     min-height: 35rem;
-}
-.main-widget-wrapper {
-    background-color: rgba(254,254,254,1);
-    border-radius: 1rem;
-    box-shadow: rgb(0 0 0 / 16%) 0px 2px 8px 0px, rgb(0 0 0 / 16%) 0px 10px 8px -5px, rgb(0 0 0 / 16%) 0px 12px 32px -2px;
-    position: relative;
-    max-width: 800px;
-    border-bottom: 2px solid #f26b00;
-    z-index: 1;
-}
-.widget-input-wrapper {
-    border: 1px solid;
-    border-color: rgb(192, 202, 213);
-    border-radius: 0.25rem;
-    padding: 0.75rem;
 }
 div#hero_wrapper {
     background-color: #FFECDD;
 }
 div#promotion {
-    background-color: #242424;
+    background-color: rgb(255,213,79);
     padding: 0.25rem 0;
 }
 .promotion-text {
-    color: #fcfcfc;
+    color: #303030;
     font-size: 1rem;
     letter-spacing: 0.35px;
     font-family: 'Poppins';
     text-align: center;
-}
-.widget-promo-wrapper {
-    background-color: rgba(36,36,36,0.85);
-    max-width: 800px;
-    border-radius: 0 0 1rem 1rem;
-    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
-    margin-top: -1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-}
-p#widget_promo_text {
-    color: #fcfcfc;
-    font-size: 0.9375rem;
-    letter-spacing: 0.35px;
 }
 @media (max-width: 767px) {
     div#promotion {
