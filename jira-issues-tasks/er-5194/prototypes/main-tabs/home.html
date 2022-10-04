@@ -1,0 +1,1261 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <title>EagleRider App Demo</title>
+        <!-- Bootstrap core CSS -->
+
+        <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
+        <!-- Custom styles for this template -->
+        <link href="https://getbootstrap.com/docs/5.1/examples/headers/headers.css" rel="stylesheet" />
+        <link href="https://jascas93.github.io/jascas-css-files-1/first.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    </head>
+
+    <body data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="" style="cursor: default; background: #f9f9f9;" data-gr-ext-disabled="forever" class="">
+        <div id="loading">
+            <div class="blocks">
+                <div class="block orange"></div>
+                <div class="block blue"></div>
+            </div>
+        </div>
+        <style scoped="">
+            #loading {
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                background-color: #fe7b10;
+                z-index: 999999;
+            }
+
+            #loading-image {
+                z-index: 100;
+            }
+            .blocks {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+            }
+
+            .block {
+                --sz: 8vmin;
+                --tX: 0;
+                --animation: 700ms cubic-bezier(0.3, 0.5, 0.4, 0.9) infinite alternate-reverse;
+                --hm: 4.5vmin;
+                height: var(--sz);
+                width: var(--sz);
+                background-image: var(--bg);
+                border-radius: 50%;
+                transform: translateX(var(--tX));
+                mix-blend-mode: lighten;
+            }
+
+            .orange {
+                --bg: linear-gradient(-50deg, #fbab7e 0%, #f7ce68 100%);
+                margin-right: var(--hm);
+                animation: attract-orange var(--animation);
+            }
+
+            .blue {
+                --bg: linear-gradient(50deg, #00bfd5 0%, #c5f5ff 100%);
+                margin-left: var(--hm);
+                animation: attract-blue var(--animation);
+            }
+
+            @keyframes attract-orange {
+                to {
+                    transform: translateX(calc(var(--sz) + calc(var(--hm) / 4)));
+                }
+            }
+
+            @keyframes attract-blue {
+                to {
+                    transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 4)));
+                }
+            }
+            .hdr-light {
+                background-color: #fff !important;
+                padding: 0.5rem 1rem;
+            }
+            .btn.btn-account-dark {
+                color: #3a3a3a;
+                padding: 0.5rem;
+                height: fit-content;
+                border-radius: 8px;
+            }
+            nav#nav-tab-bar {
+                border-top: 1px solid #dadada;
+                box-shadow: rgb(0 0 0 / 6%) 0px 2px 4px 0px inset;
+                padding: 0;
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            .navbar-app-colors .navbar-nav .nav-link {
+                color: #5d5d5d !important;
+            }
+            .navbar-app-colors .navbar-nav .nav-link.active {
+                color: #fe7b10 !important;
+                font-weight: 600 !important;
+            }
+            div#sticky_widget {
+                box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+                border-top: 1px solid #efefef;
+            }
+            .filters-container {
+                padding: 0.5rem;
+                background-color: #fff;
+            }
+            .btn-rental-filter {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #3a3a3a;
+                border: 1px solid #3a3a3a;
+                padding: 0.25rem 0.5rem;
+                height: auto;
+                line-height: initial;
+                letter-spacing: 0.35px;
+            }
+            .btn-map-float-wrapper {
+                position: fixed;
+                z-index: 9999;
+                bottom: calc(55px + 2vh);
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            .btn-primary.btn-map-float {
+                border-radius: 50rem;
+                display: flex;
+                align-items: center;
+                background-color: #303030;
+                border-color: #303030;
+                color: #fe7b10;
+                box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            }
+            .rental-listings {
+                padding-top: var(--bs-gutter-x, 0.75rem);
+                padding-bottom: calc(5rem + env(safe-area-inset-bottom, 5rem));
+                background-color: #f9f9f9;
+            }
+            .col.bike-listing-container {
+                display: flex;
+            }
+            .listing-prices {
+                padding-right: 0;
+                min-width: 100px;
+            }
+            .daily-list-rate {
+                font-size: 1.125rem;
+                font-weight: 600;
+                background: #303030;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem;
+            }
+            .make-title {
+                font-size: 0.8125rem;
+                color: #5d5d5d;
+                margin-bottom: 0;
+            }
+            .model-title {
+                font-size: 1rem;
+                margin-bottom: 0;
+                font-weight: 500;
+            }
+            .place-name {
+                margin-bottom: 0;
+                font-size: 0.875rem;
+                color: #3a3a3a;
+            }
+            .owner-name {
+                margin-bottom: 0;
+                font-size: 0.875rem;
+                color: #3a3a3a;
+            }
+            .bike-listing-card-footer {
+                background-color: #f9f9f9;
+                border-bottom-left-radius: 8px !important;
+                border-bottom-right-radius: 8px !important;
+            }
+            a.rentals-widget-collapsed {
+                color: initial;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                background: #fff;
+                padding: 0 1rem;
+                height: 50px;
+                width: 100%;
+                border-bottom: 2px solid #fe7b10;
+                box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+            }
+            img.fleet-bike {
+                width: fit-content;
+                max-height: 190px !important;
+                object-fit: cover;
+                object-position: center;
+                margin: 0 auto;
+                border-radius: 8px;
+            }
+            .cards-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+            .card img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .bike-listing-card {
+                border: none;
+                border-radius: 8px;
+                box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+                border-top: 1px solid #dadada;
+            }
+            @media (min-width: 768px) {
+                .card img {
+                    height: 11em;
+                }
+            }
+        </style>
+
+        <main>
+            <header>
+                <div class="hdr-light" style="">
+                    <div class="">
+                        <div class="d-flex flex-wrap align-items-center" style="justify-content: space-between;">
+                            <div style="width: 45%; max-width: 200px;">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 822.13 161.62">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #fff;
+                                            }
+                                            .cls-2 {
+                                                fill: #f37021;
+                                            }
+                                            .cls-3 {
+                                                fill: #0a0203;
+                                            }
+                                            .cls-4 {
+                                                fill: #3a3a3a;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>er_icon_white_text</title>
+                                    <path
+                                        class="cls-1"
+                                        d="M128.54,223.28l-6.46-2.44a85.75,85.75,0,0,1-29-19.71,98.16,98.16,0,0,1-17.24-24.52c-7.77.94-14.84,1.9-21.33,3.24l-12.32,2.54L42.07,86.8l13.49,4.41s2.2,0.71,5.92,1.78c0.25-3.18.51-5.07,0.55-5.39L63,81.07l65.58-19.41,65.58,19.41L195,87.6c0,0.12.29,2.05,0.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0L215,86.8l-0.15,95.59-12.32-2.54c-6.48-1.33-13.55-2.3-21.31-3.24A98.16,98.16,0,0,1,164,201.13a85.75,85.75,0,0,1-29,19.71l-0.14.06ZM88.32,152.49l1.86,5.23c0.36,1,.66,1.83,1,2.6a78.22,78.22,0,0,0,16.72,26.49,65.34,65.34,0,0,0,20.69,14.46,65.34,65.34,0,0,0,20.69-14.46,78.22,78.22,0,0,0,16.72-26.49c0.29-.76.59-1.58,0.92-2.51l2-5.66,5.72,1.85c1.81,0.54,13.33,2.47,19.73,3.54l0.07-43.12-8.22,2-3.05.73-8,2,0.26-8.22c0.18-5.72,0-10.53-.16-14l-46.61-13.8-0.11,0-0.11,0L81.83,96.91c-0.2,3.63-.32,8.36-0.21,13.3l0.18,8.33-8-2.21c-0.62-.15-3.64-0.74-6.08-1.21l-5.08-1,0.07,43.37c7.41-1.29,17.3-3,20.19-3.73Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-1"
+                                        d="M82.58,167.13l-22.28-3L59,114.54l61.61-24.13,69.79,35.76,12.06,22,1.29,22.4-28.87-5.17-20.68,31.45s-31.45,9.91-34.47,6.89S82.58,167.13,82.58,167.13Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <polygon
+                                        class="cls-2"
+                                        points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                    ></polygon>
+                                    <path
+                                        class="cls-3"
+                                        d="M203.43,97.1c-3.59,1.18-8.68,2.61-13.62,3.89a120,120,0,0,0-.89-12.51l-0.37-2.59L132.68,69.35l-4.14-1.23-4.14,1.23L68.54,85.89l-0.37,2.59A120.07,120.07,0,0,0,67.27,101c-8.33-2.17-13.58-3.88-13.64-3.9l-5.35-1.75,0.12,79.44,4.89-1c8.15-1.68,17.33-2.8,26.29-3.85a92.1,92.1,0,0,0,18,26.88A79.26,79.26,0,0,0,124.4,215.1l4.14,1.56,4.14-1.56a79.26,79.26,0,0,0,26.84-18.29,92.09,92.09,0,0,0,18-26.88c9,1.05,18.12,2.17,26.27,3.85l4.89,1,0.12-79.44Zm-147,9.38c2.68,0.78,17.58,3.49,19,3.88A175.08,175.08,0,0,1,76,92.19l52.58-15.56h0l52.58,15.56a155.22,155.22,0,0,1,.49,18.94c1.2-.3,16.28-3.86,19-4.65l-0.07,43.76a116.93,116.93,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.61-.69S172.58,124.17,163,117.23c-11.13-8.07-16.32-15.74-33.13-17.29-1.33-.12-2.68-0.18-4-0.17a53,53,0,0,0-37.69,16A52.66,52.66,0,0,0,74,119.5c-5.8,2.34-9.68,6-10.56,10.3-1.71,8.34,3.42,20.59,4.56,22.07,1-1.63,4.14-7.79,18.69-6.7,23.25,1.74,22.61,12.42,19.64,14.49-9.69,6.74-13.18,7.35-18.86,7.88-0.75-1.65-1.45-3.32-2.1-5-0.35-.91-0.68-1.82-1-2.73-4.22,1-21.43,4-27.8,5.07ZM172.7,159.9c-8.49-2-15.25-3.89-15.25-3.89,0.63,1,5.49,10.53,10.8,14.45L168,171c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c0.67-2.49,3.45-13.57,3.45-13.57s-24.67,6.3-30.88,6.45c1-.53,26.14-6.32,22.22-22.74-3.29-13.78-18.25-17.22-18.25-17.22s9.49,6.75,11.8,13.33c-1.68-3.29-26.49-12.53-40.43-3.39-0.09.06-2.29-9.54-.61-13.21,1-2.15,2.36-3.88,6.15-5.39A53.69,53.69,0,0,1,91,121s1.59-1.26,4-3.41a43.66,43.66,0,0,1,29.19-11.57,55.21,55.21,0,0,1,7,.57c13.56,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67,0.81-13.67,0.81s20.73,16.8,36,23.33v7.29C194.15,163.76,175.33,160.75,172.7,159.9Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-3" d="M105.81,123.69c2.74,0.38,12.7-7,12.7-7l-19.43,3.59S98.55,122.67,105.81,123.69Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M270,122.25h3.89V96.34H270v-12h47.56v15.93H304.49v-4h-11.3V104H303V114.1h-9.83v8.15h11.3v-4h13.06v15.93H270v-12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M327.3,122.25H331l9.39-25.91h-4v-12h35.89v12h-4l9.54,25.91h3.67v12H355.41V123.28h4.33L357.83,117H345.06l-2.13,6.24H347v10.93H327.3v-12Zm28.62-11.45L351.74,97h-0.15L347,110.8h8.88Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M421.44,107.57h22.31v3.74c0,15.63-10.93,23.71-25.1,23.71-25.1,0-29.5-17.1-29.5-25.76,0-15,11.08-25.91,26.35-25.91,5.8,0,11.08,1.61,14.46,4.48V84.38h12v17.39H430c-2.42-4.48-5.5-6.46-10.05-6.46-7.34,0-9.1,5.07-9.1,14.6s2.71,13.43,9,13.43c4.26,0,6.75-2.28,6.75-6.31h-5.14v-9.47Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-4" d="M454.81,122.25h4.48V96.34h-4.48v-12h28.47v12h-4.7v25.91h11.74v-8h12v20H454.81v-12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M511.53,122.25h3.89V96.34h-3.89v-12h47.56v15.93H546v-4h-11.3V104h9.83V114.1h-9.83v8.15H546v-4h13.06v15.93H511.53v-12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M571.25,122.25h4V96.34h-4v-12h27.67c14.09,0,19.38,1.17,23.56,5.36a13.24,13.24,0,0,1,3.81,9.54,12.56,12.56,0,0,1-7.26,11.6l6.9,11.37h3.6v12h-18l-10.86-20.33h-6.09v8.37h3.75v12H571.25v-12ZM600,104.78c4,0,6.09-1.76,6.09-4.7s-2.05-4.77-5.94-4.77h-5.58v9.47H600Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-4" d="M638,122.25h4.63V96.34H638v-12h28.55v12h-4.62v25.91h4.62v12H638v-12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M676.68,122.25h3.89v-26h-3.89V84.38h23.85c9,0,14.68.59,20.33,3.45,8.44,4.26,12.63,13.14,12.63,21.72s-4.26,17.54-11.23,21.06-12.7,3.6-21.73,3.6H676.68v-12Zm26.05,0c7,0,9.84-4.33,9.84-12.92,0-9.47-2.86-13-9.84-13h-2.86v25.91h2.86Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-4" d="M746.09,122.25H750V96.34h-3.89v-12h47.56v15.93H780.58v-4h-11.3V104h9.84V114.1h-9.84v8.15h11.3v-4h13.06v15.93H746.09v-12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M805.81,122.25h4V96.34h-4v-12h27.67c14.09,0,19.38,1.17,23.56,5.36a13.24,13.24,0,0,1,3.81,9.54,12.56,12.56,0,0,1-7.26,11.6l6.9,11.37h3.6v12h-18l-10.86-20.33h-6.09v8.37h3.75v12H805.81v-12Zm28.77-17.47c4,0,6.09-1.76,6.09-4.7s-2.05-4.77-5.94-4.77h-5.58v9.47h5.43Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M271.56,158.9h18.53c5.15,0,9.15,1.45,11.81,4.11a12.72,12.72,0,0,1,3.47,9.26v0.12c0,6.54-3.53,10.65-8.69,12.57l9.9,14.48H296.17l-8.69-13h-7v13h-8.92V158.9Zm18,19.69c4.34,0,6.83-2.31,6.83-5.73v-0.12c0-3.82-2.66-5.79-7-5.79h-8.86v11.64h9Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-4" d="M316.3,158.9h30.57v7.93H325.16v8.22h19.11V183H325.16v8.51h22v7.93H316.3V158.9Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M358,158.9h8.22l19,25v-25H394v40.53H386.4l-19.63-25.77v25.77H358V158.9Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M416,167.12H403.7V158.9h33.59v8.22H424.95v32.31H416V167.12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M455.68,158.61h8.22l17.37,40.82H472l-3.71-9.09H451.11l-3.71,9.09h-9.09Zm9.38,23.86-5.39-13.15-5.39,13.15h10.77Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path class="cls-4" d="M490.4,158.9h8.92v32.43h20.21v8.11H490.4V158.9Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M526.34,193.52l5.27-6.31c3.65,3,7.47,4.92,12.1,4.92,3.65,0,5.85-1.45,5.85-3.82V188.2c0-2.26-1.39-3.42-8.16-5.15C533.23,181,528,178.7,528,170.65v-0.12c0-7.35,5.91-12.22,14.18-12.22a23.47,23.47,0,0,1,15.06,5.15l-4.63,6.72c-3.59-2.49-7.12-4-10.54-4s-5.21,1.56-5.21,3.53v0.12c0,2.66,1.74,3.53,8.75,5.33,8.22,2.14,12.85,5.1,12.85,12.16v0.12c0,8-6.14,12.56-14.88,12.56A25.8,25.8,0,0,1,526.34,193.52Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M611.89,195.49A18.27,18.27,0,0,1,600,200c-7.76,0-13.61-4.52-13.61-11.7V188.2c0-5.15,2.78-8.8,7.87-11.12a13.53,13.53,0,0,1-2.84-8.11v-0.12c0-5.56,4.46-10.66,12.28-10.66,6.89,0,11.41,4.52,11.41,10.19v0.12c0,5.44-3.47,8.63-8.51,10.6l5.39,5.39c1.33-2.09,2.66-4.46,3.94-6.95l6.54,3.59a74.25,74.25,0,0,1-5.33,8.57l6,6-6.54,4.57Zm-5-5.1-7.76-7.87c-2.66,1.39-3.77,3.36-3.77,5.33V188c0,2.84,2.38,4.75,5.68,4.75A9.59,9.59,0,0,0,606.91,190.4ZM607.38,169v-0.12a3.57,3.57,0,0,0-3.83-3.76,3.82,3.82,0,0,0-3.94,4.11v0.12c0,1.8.7,3.13,2.38,5C605.52,173.08,607.38,171.58,607.38,169Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path class="cls-4" d="M662.18,167.12H649.85V158.9h33.58v8.22H671.1v32.31h-8.92V167.12Z" transform="translate(-42.07 -61.66)"></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M689.61,179.28v-0.12c0-11.52,9.09-21,21.6-21s21.48,9.32,21.48,20.85v0.12c0,11.52-9.09,21-21.6,21S689.61,190.8,689.61,179.28Zm33.76,0v-0.12c0-6.95-5.1-12.74-12.28-12.74S698.94,172.1,698.94,179v0.12c0,6.95,5.1,12.74,12.28,12.74S723.37,186.23,723.37,179.28Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M742.86,182.06V158.9h8.92v22.93c0,6.6,3.3,10,8.75,10s8.74-3.3,8.74-9.73V158.9h8.92v22.87c0,12.28-6.89,18.3-17.78,18.3S742.86,194,742.86,182.06Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M790.16,158.9h18.53c5.15,0,9.15,1.45,11.81,4.11a12.71,12.71,0,0,1,3.47,9.26v0.12c0,6.54-3.53,10.65-8.69,12.57l9.9,14.48H814.76l-8.69-13h-7v13h-8.92V158.9Zm17.95,19.69c4.34,0,6.83-2.31,6.83-5.73v-0.12c0-3.82-2.66-5.79-7-5.79h-8.86v11.64h9Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                    <path
+                                        class="cls-4"
+                                        d="M832.12,193.52l5.27-6.31c3.65,3,7.47,4.92,12.1,4.92,3.65,0,5.85-1.45,5.85-3.82V188.2c0-2.26-1.39-3.42-8.16-5.15-8.16-2.08-13.43-4.34-13.43-12.39v-0.12c0-7.35,5.91-12.22,14.19-12.22A23.45,23.45,0,0,1,863,163.47l-4.63,6.72c-3.59-2.49-7.12-4-10.54-4s-5.21,1.56-5.21,3.53v0.12c0,2.66,1.74,3.53,8.74,5.33,8.22,2.14,12.86,5.1,12.86,12.16v0.12c0,8-6.14,12.56-14.88,12.56A25.79,25.79,0,0,1,832.12,193.52Z"
+                                        transform="translate(-42.07 -61.66)"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div style="width: auto;">
+                                <div class="" style="">
+                                    <a href="#" id="submit_button" class="btn btn-with-icon btn-account-dark" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#showAuthForm">
+                                        <span class="material-icons btn-icon" style="font-size: 1.75rem; margin-right: 0.25rem;">account_circle</span>Log In
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav class="navbar fixed-bottom navbar-expand navbar-app-colors navbar-light bg-white" aria-label="Fourth navbar example" style="" id="nav-tab-bar">
+                <div class="container" style="">
+                    <div class="navbar-collapse collapse" id="navbarsExample04" style="">
+                        <ul class="navbar-nav flex-fill">
+                            <li class="nav-item flex-fill">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="https://jascas93.github.io/professional-eaglerider-projects-membership-express/eaglerider_ios_app-rentals.html"
+                                    style="display: flex; flex-flow: column; align-items: center;"
+                                >
+                                    <span class="material-icons" style="font-size: 1.75rem; line-height: 24px;">two_wheeler</span>
+                                    <span style="font-size: 0.75rem; line-height: initial;">Rentals</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="https://jascas93.github.io/professional-eaglerider-projects-membership-express/eaglerider_ios_app-tours.html" style="display: flex; flex-flow: column; align-items: center;">
+                                    <span class="material-icons-outlined" style="font-size: 1.75rem; line-height: 24px;">explore</span>
+                                    <span style="font-size: 0.75rem; line-height: initial;">Tours</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#" style="display: flex; flex-flow: column; align-items: center;">
+                                    <span style="font-size: 1.75rem; line-height: 24px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="469" height="288" viewBox="0 0 469 288" style="width: 32px; height: 24px;">
+                                            <image
+                                                id="Layer_0_copy"
+                                                data-name="Layer 0 copy"
+                                                width="469"
+                                                height="288"
+                                                xlink:href="data:img/png;base64,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"
+                                            ></image>
+                                        </svg>
+                                    </span>
+                                    <span style="font-size: 0.75rem; line-height: initial;">Membership</span>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#" style="display: flex; flex-flow: column; align-items: center;">
+                                    <span class="material-icons-outlined" style="font-size: 1.75rem; line-height: 24px;">fact_check</span>
+                                    <span style="font-size: 0.75rem; line-height: initial;">Check In</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#" style="display: flex; flex-flow: column; align-items: center;">
+                                    <span class="material-icons-outlined" style="font-size: 1.75rem; line-height: 24px;">read_more </span>
+                                    <span style="font-size: 0.75rem; line-height: initial;">More</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="main-canvas-wrapper" style="margin-bottom: 55px;">
+                <div class="modal fade" id="showAuthForm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="showAuthForm1" style="" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-fullscreen" style="">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background: #f9f9f9; border-bottom: 0px;">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: #fff; margin: -0.5rem auto -0.5rem -0.5rem;"></button>
+                            </div>
+                            <div class="modal-body" style="background: #f9f9f9; padding: 1.5rem;">
+                                <form _lpchecked="1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <label for="exampleDataList" class="form-label">Where are you riding?</label>
+                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="City, airport, or pick-up location" />
+                                            <datalist id="datalistOptions">
+                                                <option value="Current Location"> </option>
+                                                <option value="Los Angeles"> </option>
+                                                <option value="Las Vegas"> </option>
+                                                <option value="Seattle"> </option>
+                                                <option value="Orlando"> </option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer gap-2">
+                                <a href="#" id="search_button" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="" style="width: 100%;">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-canvas-body" style="padding-bottom: 0; background: #f9f9f9;">
+                    <div class="">
+                        <div class="row g-0">
+                            <div class="col">
+                                <div style="padding: 0.5rem 1rem; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; background: #3a3a3a; color: #fff;">
+                                    <p style="margin-bottom: 0; font-size: 0.875rem; text-transform: uppercase; font-weight: 500; line-height: initial;">Motorcycle Rentals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sticky_widget" class="sticky-top">
+                        <div class="row g-0 widget-container">
+                            <div class="col">
+                                <div>
+                                    <a href="#" style="" id="rentalsWidgetCollapsed" class="rentals-widget-collapsed" tabindex="-1" role="button" aria-disabled="false" data-bs-toggle="modal" data-bs-target="#showRentalWidget">
+                                        <span class="material-icons" style="color: #fe7b10; margin-right: 0.25rem;">place</span>
+                                        <p style="margin: 0; font-weight: 300; color: #5d5d5d;">Where are you riding?</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 rentals-filters">
+                            <div class="col">
+                                <div class="d-flex gap-2 justify-content-start filters-container">
+                                    <button type="button" class="btn btn-rental-filter btn-with-icon">
+                                        <span class="material-icons-outlined btn-icon" style="font-size: 16px;">
+                                            tune
+                                        </span>
+                                        <span>Filters Applied</span>
+                                        <span class="material-icons" style="font-size: 6px; margin: 0 0.25rem;">
+                                            lens
+                                        </span>
+                                        <span>0</span>
+                                    </button>
+                                    <button type="button" class="btn btn-rental-filter btn-with-icon">
+                                        <span class="material-icons-outlined btn-icon" style="font-size: 16px;">sort</span>
+                                        <span>Sort By</span>
+                                        <span class="material-icons" style="font-size: 6px; margin: 0 0.25rem;">
+                                            lens
+                                        </span>
+                                        <span>All</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container rental-listings" style="">
+                        <div class="btn-map-float-wrapper">
+                            <button type="button" class="btn btn-primary btn-map-float">
+                                <span class="material-icons" style="margin-right: 0.25rem;">
+                                    map
+                                </span>
+                                <span style="line-height: initial;">View Map</span>
+                            </button>
+                        </div>
+                        <div class="">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img
+                                            src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2021/2021-street-glide/2021-street-glide-e81/360/2021-street-glide-e81-motorcycle-01.jpg?impolicy=myresize&amp;rw=1200"
+                                            class="card-img-top fleet-bike"
+                                            alt="..."
+                                        />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Harley-Davidson</p>
+                                                    <p class="model-title">Street Glide®</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$169<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Hawthorne, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979;">(Los Angeles Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Los Angeles</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img
+                                            src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2021/2021-ultra-limited/2021-ultra-limited-165s/360/2021-ultra-limited-165s-motorcycle-01.jpg?impolicy=myresize&amp;rw=1200"
+                                            class="card-img-top fleet-bike"
+                                            alt="..."
+                                        />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Harley-Davidson</p>
+                                                    <p class="model-title">Electra Glide®</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$199<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Hawthorne, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979;">(Los Angeles Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Los Angeles</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/571/images/size550/yamaha-mt-07-for-rent.jpg?1612481019" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Yamaha</p>
+                                                    <p class="model-title">MT-07</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$99<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Hawthorne, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: initial;">(Los Angeles Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Los Angeles</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/371/images/size550/Triumph_Street_Scrambler_For_Rent.jpg?1581611561" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Triumph</p>
+                                                    <p class="model-title">Scrambler</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$109<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Hawthorne, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: initial;">(Los Angeles Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Los Angeles</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/314/images/size550/open-uri20191226-13-1e36ikn?1577383000" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">BMW</p>
+                                                    <p class="model-title">R nineT Urban G/S</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$139<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Hawthorne, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: initial;">(Los Angeles Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Los Angeles</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img
+                                            src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2021/2021-road-glide-limited/2021-road-glide-limited-f28/360/2021-road-glide-limited-f28-motorcycle-01.jpg?impolicy=myresize&amp;rw=1200"
+                                            class="card-img-top fleet-bike"
+                                            alt="..."
+                                        />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Harley-Davidson</p>
+                                                    <p class="model-title">Road Glide® Limited</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$199<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Denver, Colorado</p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Denver</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img
+                                            src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2021/2021-road-king/2021-road-king-f30/360/2021-road-king-f30-motorcycle-01.jpg?impolicy=myresize&amp;rw=1200"
+                                            class="card-img-top fleet-bike"
+                                            alt="..."
+                                        />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Harley-Davidson</p>
+                                                    <p class="model-title">Road King®</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$159<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Burien, Washington<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Seattle</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/144/images/size550/yamaha-bolt-for-rent.jpg?1612481453" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Yamaha</p>
+                                                    <p class="model-title">Bolt</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$89<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Burien, Washington<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Seattle</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img
+                                            src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/bikes/motorcycle/2021/2021-heritage-classic-107/2021-heritage-classic-107-f18/360/2021-heritage-classic-107-f18-motorcycle-01.jpg?impolicy=myresize&amp;rw=1200"
+                                            class="card-img-top fleet-bike"
+                                            alt="..."
+                                        />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Harley-Davidson</p>
+                                                    <p class="model-title">Heritage Softail® Classic</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$159<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Miami, Florida<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: none;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Miami</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/611/images/size550/yamaha-xsr900-for-rent.jpg?1631313873" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Yamaha</p>
+                                                    <p class="model-title">XSR900</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$109<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">Las Vegas, Nevada<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: none;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider Las Vegas</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/436/images/size550/open-uri20191226-9499-gjc8gg?1577384448" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Triumph</p>
+                                                    <p class="model-title">Bonneville T120</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$139<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">San Francisco, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: none;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider San Francisco</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col bike-listing-container">
+                                    <div class="card h-100 bike-listing-card">
+                                        <img src="https://d56b293rhv8dp.cloudfront.net/vehicle_models/450/images/size550/yamaha-yzf-r3-for-rent.jpg?1612481235" class="card-img-top fleet-bike" alt="..." />
+                                        <div class="card-body" style="">
+                                            <div class="row g-0 gap-2">
+                                                <div class="col">
+                                                    <p class="make-title">Yamaha</p>
+                                                    <p class="model-title">YZF-R3</p>
+                                                </div>
+                                                <div class="col-4 col-md-3 listing-prices">
+                                                    <div class="daily-list-rate">
+                                                        <span class="" style="">$89<sub> /day</sub></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer bike-listing-card-footer" style="">
+                                            <div class="row g-0">
+                                                <div class="col">
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">
+                                                            place
+                                                        </span>
+                                                        <p class="place-name">San Francisco, California<span style="font-size: 0.75rem; font-weight: 300; margin-left: 0.25rem; color: #797979; display: none;">(Seattle Area)</span></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-start my-1">
+                                                        <span class="material-icons-outlined" style="font-size: 20px; margin-right: 0.25rem;">person </span>
+                                                        <p class="owner-name">EagleRider San Francisco</p>
+                                                        <span>
+                                                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172.93 161.62" style="width: 20px; margin-left: 0.25rem;">
+                                                                <title>er_icon_solo</title>
+                                                                <path
+                                                                    d="M86.36,161.12l-6.47-2.43a85.73,85.73,0,0,1-29-19.72,98,98,0,0,1-17.24-24.51c-7.77.94-14.84,1.9-21.33,3.24L0,120.23-.11,24.64l13.48,4.41s2.2.72,5.93,1.78c.24-3.18.5-5.07.55-5.39l.93-6.52L86.36-.49l65.57,19.41.94,6.52c0,.13.29,2.06.55,5.4,2.28-.65,4.3-1.26,5.9-1.79h0l13.49-4.41-.15,95.6-12.32-2.54c-6.49-1.34-13.55-2.3-21.32-3.24A98,98,0,0,1,121.78,139a85.73,85.73,0,0,1-29,19.72l-.14.05ZM46.13,90.33,48,95.56c.35,1,.66,1.83,1,2.6a78.11,78.11,0,0,0,16.72,26.5,65.28,65.28,0,0,0,20.69,14.46,65.5,65.5,0,0,0,20.69-14.46,78.23,78.23,0,0,0,16.71-26.5c.29-.76.6-1.58.93-2.5l2-5.66,5.72,1.85c1.81.53,13.33,2.46,19.73,3.54l.06-43.12-8.22,2L141,55l-8,2,.26-8.21c.18-5.72,0-10.53-.16-14L86.47,21l-.11,0-.11,0L39.65,34.76c-.19,3.63-.32,8.36-.21,13.3l.18,8.33-8-2.21C31,54,28,53.44,25.56,53l-5.09-1,.07,43.37c7.41-1.3,17.3-3,20.19-3.73Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <path
+                                                                    d="M40.39,105l-22.27-3-1.3-49.54L78.43,28.26,148.23,64l12.06,22,1.29,22.4-28.86-5.17L112,134.67s-31.45,9.91-34.47,6.9S40.39,105,40.39,105Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #fff;"
+                                                                ></path>
+                                                                <polygon
+                                                                    points="11.12 108.67 39.13 103.29 43.44 109.53 61.53 105.87 68.42 98.12 62.39 84.98 39.34 81.31 25.56 86.05 23.4 69.47 29.65 60.42 42.79 58.05 51.41 53.31 72.3 41.46 88.03 40.39 102.89 44.48 113.66 54.39 133.91 67.1 144.46 72.7 130.89 75.93 146.62 87.35 162.99 95.96 163.2 39.09 144.03 44.48 142.95 28.32 86.52 10.66 31.16 26.82 28.57 43.4 9.19 38.88 11.12 108.67"
+                                                                    style="fill: #f26f21;"
+                                                                ></polygon>
+                                                                <path
+                                                                    d="M161.25,34.94c-3.6,1.18-8.68,2.61-13.62,3.89a119,119,0,0,0-.9-12.51l-.37-2.59L90.5,7.19,86.36,6,82.22,7.19,26.35,23.73,26,26.32a121,121,0,0,0-.89,12.52c-8.34-2.17-13.58-3.88-13.64-3.9L6.09,33.19l.13,79.45,4.89-1c8.15-1.68,17.32-2.8,26.29-3.85a92,92,0,0,0,18,26.88,79.16,79.16,0,0,0,26.84,18.28l4.14,1.56,4.14-1.56a79.36,79.36,0,0,0,26.84-18.28,92.17,92.17,0,0,0,18-26.88c9,1,18.12,2.17,26.27,3.85l4.89,1,.12-79.45Zm-147,9.38c2.69.78,17.59,3.49,19,3.87A177.44,177.44,0,0,1,33.77,30L86.36,14.47h0L138.94,30a156.61,156.61,0,0,1,.5,18.93c1.19-.3,16.27-3.86,19-4.65l-.07,43.76a117.18,117.18,0,0,1-20.67-11.87c2.37-.67,8.56-1.91,12-3.37l1.6-.69S130.4,62,120.82,55.07C109.69,47,104.5,39.33,87.69,37.78c-1.33-.12-2.68-.18-4-.17A53,53,0,0,0,46,53.58a52.39,52.39,0,0,0-14.2,3.77c-5.8,2.33-9.68,6-10.56,10.3C19.52,76,24.65,88.24,25.79,89.72c1-1.63,4.14-7.79,18.69-6.7C67.73,84.75,67.09,95.44,64.12,97.5c-9.69,6.74-13.18,7.35-18.86,7.88-.75-1.65-1.45-3.31-2.1-5-.35-.91-.68-1.82-1-2.73-4.23,1-21.43,4-27.8,5.08ZM130.52,97.74c-8.49-1.95-15.25-3.89-15.25-3.89.62,1,5.48,10.53,10.8,14.45l-.28.53c-9-.82-29.12-3.85-29.12-3.85s-13.32,11.44-17.09,13.17c.67-2.49,3.45-13.58,3.45-13.58s-24.67,6.3-30.88,6.45c1-.53,26.14-6.31,22.22-22.73C71.09,74.51,56.12,71.07,56.12,71.07s9.49,6.75,11.8,13.33C66.24,81.11,41.44,71.87,27.49,81c-.09.06-2.29-9.54-.6-13.21,1-2.16,2.35-3.88,6.14-5.4a53.71,53.71,0,0,1,15.78-3.51s1.6-1.26,4-3.41A43.65,43.65,0,0,1,82,43.91a55.33,55.33,0,0,1,7,.57c13.55,1.74,15.78,7.06,25.11,14.05,7.61,5.7,21.59,12.61,22,12.75-3.21.75-13.67.81-13.67.81s20.72,16.81,36,23.33v7.3C152,101.6,133.15,98.59,130.52,97.74Z"
+                                                                    transform="translate(0.11 0.49)"
+                                                                    style="fill: #0b0204;"
+                                                                ></path>
+                                                                <path d="M63.63,61.53c2.74.39,12.7-7,12.7-7L56.9,58.13S56.37,60.52,63.63,61.53Z" transform="translate(0.11 0.49)" style="fill: #0b0204;"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(window).on("load", function () {
+                setTimeout(removeLoader, 1500); //wait x ms
+            });
+            function removeLoader() {
+                $("#loading").fadeOut(500, function () {
+                    $("#loading").hide();
+                });
+            }
+        </script>
+    </body>
+</html>
