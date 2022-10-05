@@ -10,3 +10,24 @@ div#main-canvas-wrapper {
     margin-bottom: 55px;
     height: 100%
 }
+.logo-header {
+    background-color: #fff !important;
+    padding: 0.5rem 1rem;
+}
+.logo-wrapper {
+    width: 45%;
+    max-width: 200px;
+}
+.btn.btn-account-dark {
+    color: #3a3a3a;
+    padding: 0.5rem;
+    height: fit-content;
+    border-radius: 8px;
+}
+.navbar-app-colors .navbar-nav .nav-link {
+    color: #5d5d5d !important;
+}
+.navbar-app-colors .navbar-nav .nav-link.active {
+    color: #fe7b10 !important;
+    font-weight: 600 !important;
+}
