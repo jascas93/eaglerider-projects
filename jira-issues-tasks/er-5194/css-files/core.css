@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    padding: 10px 16px;
+    /* padding: 10px 16px; */
     border-radius: 5rem;
 }
 .quick-link.active {
