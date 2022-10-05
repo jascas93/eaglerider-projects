@@ -76,6 +76,13 @@
     padding: 1rem;
     border-radius: 1.5rem 1.5rem 0 0;
 }
+.expiration-data-wrapper {
+    padding: 1rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    border: 1px solid;
+    border-color: #efefef;
+    border-top: 0;
+}
 .plan-name {
     font-size: 1rem;
     text-transform: uppercase;
@@ -86,6 +93,10 @@
     padding: 8px 24px;
     border-radius: 2rem;
     font-weight: 500;
+}
+.club_plan {
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .cards-wrapper {
     display: flex;
