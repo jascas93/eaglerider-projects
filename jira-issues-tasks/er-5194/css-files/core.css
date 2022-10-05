@@ -24,7 +24,8 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 2px solid #f0f0f0;
+    border: 1px solid;
+    border-color: #dadada;
     position: relative;
 }
 .sub-greeting-message {
