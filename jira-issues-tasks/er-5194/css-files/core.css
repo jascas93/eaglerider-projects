@@ -41,6 +41,9 @@
     letter-spacing: 0.75px;
     color: #797979;
 }
+.stats-value {
+    font-size: 0.875rem;
+}
 .stats-divider {
     border-right: 1px solid;
     border-color: #dadada;
