@@ -6,6 +6,9 @@
     width: 45%;
     max-width: 200px;
 }
+div#main-canvas-wrapper {
+    margin-bottom: 55px;
+}
 .btn.btn-account-dark {
     color: #3a3a3a;
     padding: 0.5rem;
