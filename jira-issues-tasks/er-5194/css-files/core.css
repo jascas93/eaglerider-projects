@@ -1,6 +1,7 @@
 .home-header {
     padding: 1rem 0;
     background-color: #FBFBFB;
+    border-radius: 1.5rem;
 }
 .greeting-message {
     display: flex;
