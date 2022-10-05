@@ -33,6 +33,10 @@
     letter-spacing: 0.35px;
     margin-bottom: 0;
 }
+.stats-divider {
+    border-right: 1px solid;
+    border-color: #dadada;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
