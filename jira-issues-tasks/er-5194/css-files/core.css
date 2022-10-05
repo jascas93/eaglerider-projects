@@ -26,6 +26,12 @@
     border: 2px solid #f0f0f0;
     position: relative;
 }
+.sub-greeting-message {
+    font-size: 0.8rem;
+    color: #797979;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
