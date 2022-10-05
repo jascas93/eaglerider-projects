@@ -13,6 +13,7 @@ div#main-canvas-wrapper {
 .logo-header {
     background-color: #fff !important;
     padding: 0.5rem 1rem;
+    box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset;
 }
 .logo-wrapper {
     width: 45%;
