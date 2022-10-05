@@ -1,3 +1,13 @@
+.greeting-message {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.greeting-text {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
 .cards-wrapper {
     display: flex;
     justify-content: center;
