@@ -35,10 +35,17 @@
     letter-spacing: 0.35px;
     margin-bottom: 0;
 }
+.stats-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    color: #797979;
+}
 .stats-divider {
     border-right: 1px solid;
     border-color: #dadada;
 }
+
 .cards-wrapper {
     display: flex;
     justify-content: center;
