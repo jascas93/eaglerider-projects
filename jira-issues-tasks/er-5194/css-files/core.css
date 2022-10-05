@@ -1,3 +1,7 @@
+.home-header {
+    padding: 1rem 0;
+    background-color: #FCFCFC;
+}
 .greeting-message {
     display: flex;
     align-items: center;
