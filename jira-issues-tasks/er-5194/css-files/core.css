@@ -6,7 +6,17 @@
 .greeting-text {
     margin-bottom: 0;
 }
-
+.avatar-home {
+    background-image: url('https://www.helmade.com/media/catalog/category/thumbnail_motorrad.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 2px solid #f0f0f0;
+    position: relative;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
