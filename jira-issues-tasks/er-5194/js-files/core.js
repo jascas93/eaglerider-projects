@@ -7,6 +7,19 @@ function removeLoader() {
         $("#page_loading").hide();
     });
 }
+// Different Variations of the Page
+$(document).ready(function () {
+    setTimeout(function() {
+        if (window.location.href.indexOf("?dark=1") > 0) {
+            $(".home-header").attr("style", "background-color: #303030;");
+            $(".greeting-text").attr("style", "color: #fff;");
+            $(".sub-greeting-message").attr("style", "color: #efefef;");
+            $(".stats-label").attr("style", "color: #aeaeae;");
+            $(".stats-value").attr("style", "color: #efefef;");
+            $(".quick-link").attr("style", "color: #efefef;");
+        }
+    },10);
+});
 // Carousel Sliders
 const slider = document.querySelector(".carousel-inner");
 let isDown = false;
