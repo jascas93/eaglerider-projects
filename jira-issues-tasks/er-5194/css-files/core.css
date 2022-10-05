@@ -6,13 +6,18 @@
 .greeting-text {
     margin-bottom: 0;
 }
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 .avatar-home {
-    background-image: url('https://www.helmade.com/media/catalog/category/thumbnail_motorrad.jpg');
+    background-image: url('https://ca.slack-edge.com/T01225CC371-U012A5C1Y2J-b4b6122ab434-512');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    height: 28px;
-    width: 28px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     border: 2px solid #f0f0f0;
     position: relative;
