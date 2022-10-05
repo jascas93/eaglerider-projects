@@ -60,6 +60,13 @@
 .quick-link > span.material-icons {
     font-size: 1rem;
 }
+.quick-link-text {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    letter-spacing: 0.35px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
