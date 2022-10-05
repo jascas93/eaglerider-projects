@@ -98,6 +98,22 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+.expire_soon_text {
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+.expire_icon {
+    color: #019d9d;
+    font-size: 24px;
+}
+.expire_last_day {
+    font-size: 0.75rem;
+    color: #fe7b10;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
