@@ -1,0 +1,12 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.main-container-canvas {
+    min-height: 40rem;
+}
+div#main-canvas-wrapper {
+    margin-bottom: 55px;
+    height: 100%
+}
