@@ -65,10 +65,10 @@
 }
 .quick-link-text {
     text-transform: capitalize;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     letter-spacing: 0.35px;
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 400;
 }
 .cards-wrapper {
     display: flex;
