@@ -45,7 +45,21 @@
     border-right: 1px solid;
     border-color: #dadada;
 }
-
+.quick-link {
+    color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 10px 16px;
+    border-radius: 5rem;
+}
+.quick-link.active {
+    background-color: #fe7b10;
+    color: #fff;
+}
+.quick-link > span.material-icons {
+    font-size: 1rem;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
