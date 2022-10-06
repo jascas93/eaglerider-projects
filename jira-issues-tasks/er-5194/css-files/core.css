@@ -169,13 +169,17 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
-
 .carousel-card {
-    border: none;
     border-radius: 8px;
-    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
-    border-top: 1px solid #dadada;
     height: 100% !important;
+}
+.carousel-card-image {
+    max-height: 190px !important;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    border-radius: 8px;
+    max-width: calc(100% - 0.5rem);
 }
 .carousel-inner {
     overflow-x: scroll;
