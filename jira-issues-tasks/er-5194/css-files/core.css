@@ -1,6 +1,6 @@
 .home-header {
     padding: 1.5rem 0;
-    background-color: #F9F9F9;
+    background-color: #303030;
     border-radius: 1.5rem 1.5rem 0 0;
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
@@ -11,6 +11,7 @@
 }
 .greeting-text {
     margin-bottom: 0;
+    color: #FFFFFF;
 }
 .avatar-wrapper {
     display: flex;
@@ -31,7 +32,7 @@
 }
 .sub-greeting-message {
     font-size: 0.8rem;
-    color: #797979;
+    color: #efefef;
     font-weight: 300;
     letter-spacing: 0.35px;
     margin-bottom: 0;
@@ -40,17 +41,18 @@
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.75px;
-    color: #797979;
+    color: #aeaeae;
 }
 .stats-value {
     font-size: 0.875rem;
+    color: #efefef;
 }
 .stats-divider {
     border-right: 1px solid;
     border-color: #dadada;
 }
 .quick-link {
-    color: #3a3a3a;
+    color: #efefef;
     display: flex;
     align-items: center;
     gap: 0.25rem;
