@@ -17,6 +17,7 @@ div#main-canvas-footer {
     position: sticky;
     left: 0;
     bottom: 0;
+    background-color: #FFF
     padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
     z-index: 1000;
 }
