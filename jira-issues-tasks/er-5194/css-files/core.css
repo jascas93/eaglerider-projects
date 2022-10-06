@@ -283,8 +283,3 @@ span.material-icons.destinations {
 .card-title {
     margin-bottom: 0rem;
 }
-@media (min-width: 768px) {
-    .card img {
-        height: 11em;
-    }
-}
