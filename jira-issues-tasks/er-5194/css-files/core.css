@@ -158,14 +158,6 @@
     justify-content: center;
     width: fit-content;
 }
-.carousel-card {
-    border-radius: 8px;
-    max-width: 170px;
-}
-.card img {
-    max-width: 100%;
-    max-height: 100%;
-}
 .card-2 {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
@@ -176,7 +168,11 @@
 }
 .carousel-card {
     border-radius: 8px;
-    height: 100% !important;
+    max-width: 170px;
+}
+.card img {
+    max-width: 100%;
+    max-height: 100%;
 }
 .carousel-card-image {
     object-fit: cover;
@@ -214,6 +210,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.price-value {
+    font-weight: 600;
 }
 .card-footer {
     background-color: #F9F9F9 !important;
