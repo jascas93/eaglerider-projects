@@ -10,6 +10,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
+    z-index: 1000;
 }
 .main-container-canvas {
     min-height: 40rem;
