@@ -267,7 +267,34 @@ span.price-value.destinations {
 span.material-icons.destinations {
     margin-right: -8px;
 }
-
+.carousel-item.products {
+    width: auto;
+}
+.card.carousel-card.products {
+    border: 0;
+    max-width: 200px;
+    max-height: 330px;
+}
+.product-img-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(48, 48, 48, 0.3) 0.43%, #231F20 72.98%);
+    border-radius: 8px;
+}
+.card-img-header.products {
+    height: 250px;
+}
+.card-footer.products {
+    background-color: transparent !important;
+    border: 0 !important;
+    color: #efefef;
+    z-index: 1;
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    text-transform: uppercase;
+}
 .expl-moto-rntl-dest {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
