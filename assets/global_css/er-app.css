@@ -18,9 +18,11 @@ div#main-canvas-wrapper {
     color: #3A3A3A;
 }
 .logo-header {
-    /* background-color: #FFFFFF; */
     background-color: #303030;
     padding: 0.5rem 1rem;
+}
+.logo-header.wth-hdr {
+    background-color: #FFFFFF;
     /* box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset; */
 }
 .logo-wrapper {
