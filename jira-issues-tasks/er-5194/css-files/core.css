@@ -179,7 +179,41 @@
     object-position: center;
     margin: 0 auto;
     border-radius: 8px;
-    max-width: calc(100% - 0.5rem);
+}
+.model-info {
+    display: flex;
+    flex-flow: column;
+}
+.card-title-make {
+    margin-bottom: 0rem;
+    font-size: 0.75rem;
+}
+.card-title-model {
+    margin-bottom: 0rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.location-info {
+    display: flex;
+    align-items: flex-start;
+}
+.location-info > span.material-icons {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    margin-right: 0.125rem;
+}
+.location_name {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.card-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-footer {
+    background-color: #F9F9F9 !important;
+    border-radius: 0 0 8px 8px !important;
 }
 .carousel-inner {
     overflow-x: scroll;
