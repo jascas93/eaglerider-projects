@@ -4,6 +4,13 @@ body {
     font-weight: 400;
     color: #3A3A3A;
 }
+.app-navbar {
+    box-shadow: 0px -1px 4px rgb(0 0 0 / 5%);
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
+}
 .main-container-canvas {
     min-height: 40rem;
 }
