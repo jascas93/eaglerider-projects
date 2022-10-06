@@ -53,13 +53,31 @@
                 height: 800px;
                 background: white;
             }
+            .iframe-full {
+                width: 100%;
+                border: none;
+                height: calc(100vh - 10px);
+            }
+            body {
+                margin: 0;
+            }
         </style>
     </head>
     <body>
-        <div class="smartphone">
-            <div class="content">
-                <iframe src="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html" style="width: 100%; border: none; height: 100%;" />
+        <div id="smartphone_frame" class="smartphone">
+            <div id="smartphone_screen" class="content">
+                <iframe id="iframe_viewer" src="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html" style="width: 100%; border: none; height: 100%;" />
             </div>
         </div>
     </body>
+    <script>
+    // Different Variations of the Page
+        $(document).ready(function () {
+            if (window.screen.width < 422) {
+                $("#smartphone_frame").removeClass("smartphone");
+                $("#smartphone_screen").removeClass("content");
+                $("#iframe_viewer").addClass("iframe-full");
+            }
+        });
+    </script>
 </html>
