@@ -68,17 +68,17 @@
             <div id="smartphone_screen" class="content">
                 <iframe id="iframe_viewer" src="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html" style="width: 100%; border: none; height: 100%;" />
             </div>
-        </div>
+        </div>    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+        // Different Variations of the Page
+            $(document).ready(function () {
+                if (window.screen.width < 422) {
+                    $("#smartphone_frame").removeClass("smartphone");
+                    $("#smartphone_screen").removeClass("content");
+                    $("#iframe_viewer").addClass("iframe-full");
+                }
+            });
+        </script>
     </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-    // Different Variations of the Page
-        $(document).ready(function () {
-            if (window.screen.width < 422) {
-                $("#smartphone_frame").removeClass("smartphone");
-                $("#smartphone_screen").removeClass("content");
-                $("#iframe_viewer").addClass("iframe-full");
-            }
-        });
-    </script>
 </html>
