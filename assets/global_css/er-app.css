@@ -4,11 +4,10 @@ body {
     font-weight: 400;
     color: #3A3A3A;
 }
-.main-container-canvas {
-    min-height: 40rem;
-}
 div#main-canvas-wrapper {
     height: 100%;
+    max-width: 422px;
+    margin: 0 auto;
 }
 div#main-canvas-body {
     padding-bottom: 0.5rem;
