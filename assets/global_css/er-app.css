@@ -30,6 +30,10 @@ div#main-canvas-footer {
     font-size: 1.25rem;
     line-height: 24px;
 }
+.navbar-icon-text {
+    font-size: 0.75rem;
+    line-height: initial;
+}
 .color-secondary-1 {
     color: #303030;
 }
