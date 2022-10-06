@@ -82,6 +82,7 @@
     padding: 0 1rem 1rem 1rem;
     border-radius: 0 0 1.5rem 1.5rem;
     background-color: #f9f9f9;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 .benefits-label {
     font-size: 10px;
@@ -93,7 +94,8 @@
     align-items: center;
 }
 .expiration-data-wrapper {
-    padding: 1rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+    margin-top: -1.5rem;
     border-radius: 0 0 1.5rem 1.5rem;
     border: 1px solid;
     border-color: #efefef;
