@@ -17,12 +17,12 @@ div#main-canvas-footer {
     position: sticky;
     left: 0;
     bottom: 0;
-    background-color: #FFF
+    background-color: #FFFFFF
+    box-shadow: 0px -1px 4px rgb(0 0 0 / 5%);
     padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
     z-index: 1000;
 }
 .app-navbar {
-    box-shadow: 0px -1px 4px rgb(0 0 0 / 5%);
     padding: 0;
     margin-top: 0.5rem;
 }
