@@ -25,8 +25,7 @@ div#main-canvas-wrapper {
 }
 .top-divider {
     background-color: #303030;
-    padding: 1px;
-
+    padding-top: 1px;
 }
 .logo-wrapper {
     width: 45%;
