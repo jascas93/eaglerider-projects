@@ -143,7 +143,6 @@
 }
 .expire_last_day {
     font-size: 0.75rem;
-    color: #fe7b10;
     text-transform: uppercase;
     display: flex;
     justify-content: flex-end;
