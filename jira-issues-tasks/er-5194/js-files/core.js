@@ -21,6 +21,7 @@ $(document).ready(function () {
         //}
         //else
         if (window.location.href.indexOf("?dark=1") > 0) {
+            $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
             $(".greeting-text").attr("style", "color: #fff;");
