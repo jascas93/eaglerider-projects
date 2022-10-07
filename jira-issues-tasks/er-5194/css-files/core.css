@@ -334,8 +334,15 @@ span.material-icons.destinations {
     z-index: 1;
     padding: 0.5rem 1rem 1.5rem 1rem;
     text-transform: uppercase;
+    display: flex;
+    flex-flow: column;
 }
-
+.product-sub-title {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #aeaeae;
+    text-transform: capitalize;
+}
 .expl-moto-rntl-dest {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
