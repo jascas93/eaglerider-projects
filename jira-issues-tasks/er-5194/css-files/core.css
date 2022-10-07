@@ -126,6 +126,10 @@ a#color_mode {
     font-size: 0.8rem;
     color: #797979;
 }
+div#continue_icon>span.material-icons {
+    color: #fe7b10;
+    font-size: 2rem;
+}
 .benefits-data-wrapper {
     padding: 0 1rem 1rem 1rem;
     border-radius: 0 0 1.5rem 1.5rem;
