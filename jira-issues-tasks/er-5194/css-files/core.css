@@ -112,6 +112,20 @@ a#color_mode {
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset;
 }
+.continue-data-wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+}
+.continue-info-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.continue-info-details {
+    font-size: 0.8rem;
+    color: #797979;
+}
 .benefits-data-wrapper {
     padding: 0 1rem 1rem 1rem;
     border-radius: 0 0 1.5rem 1.5rem;
