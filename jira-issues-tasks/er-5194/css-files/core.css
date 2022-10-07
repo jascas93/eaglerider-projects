@@ -1,6 +1,7 @@
 .home-header {
     padding: 1.75rem 0;
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+    background-color: #FFF;
     border-radius: 0 0 1.75rem 1.75rem;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
