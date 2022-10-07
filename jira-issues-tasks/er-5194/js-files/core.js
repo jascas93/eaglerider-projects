@@ -10,22 +10,26 @@ function removeLoader() {
 // Different Variations of the Page
 $(document).ready(function () {
     setTimeout(function() {
-        if (window.location.href.indexOf("?light=1") > 0) {
-            $(".home-header").attr("style", "background-color: #F9F9F9;");
-            $(".greeting-text").attr("style", "color: inherit;");
-            $(".sub-greeting-message").attr("style", "color: inherit;");
-            $(".stats-label").attr("style", "color: #797979;");
-            $(".stats-value").attr("style", "color: inherit;");
-            $(".quick-link").attr("style", "color: inherit;");
+        //if (window.location.href.indexOf("?light=1") > 0) {
+        //    $(".home-header").attr("style", "background-color: #F9F9F9;");
+        //    $(".greeting-text").attr("style", "color: inherit;");
+        //    $(".sub-greeting-message").attr("style", "color: inherit;");
+        //    $(".stats-label").attr("style", "color: #797979;");
+        //    $(".stats-value").attr("style", "color: inherit;");
+        //    $(".quick-link").attr("style", "color: inherit;");
+        //    $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
+        //}
+        //else
+            if (window.location.href.indexOf("?dark=1") > 0) {
+            $(".home-header").attr("style", "background-color: #303030;");
+            $(".greeting-text").attr("style", "color: #fff;");
+            $(".sub-greeting-message").attr("style", "color: #efefef;");
+            $(".stats-label").attr("style", "color: #aeaeae;");
+            $(".stats-value").attr("style", "color: #efefef;");
+            $(".quick-link").attr("style", "color: #efefef;");
             $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
-        }
-        //else if (window.location.href.indexOf("?dark=1") > 0) {
-        //    $(".home-header").attr("style", "background-color: #303030;");
-        //    $(".greeting-text").attr("style", "color: #fff;");
-        //    $(".sub-greeting-message").attr("style", "color: #efefef;");
-        //    $(".stats-label").attr("style", "color: #aeaeae;");
-        //    $(".stats-value").attr("style", "color: #efefef;");
-        //    $(".quick-link").attr("style", "color: #efefef;");
+            $("#greeting_title").html("Good Evening, Hal");
+            $("#emoji_icon").html("🌙");
         //}
     },10);
 });
