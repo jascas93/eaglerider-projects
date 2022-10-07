@@ -129,6 +129,12 @@ a#color_mode {
 .continue-info-details>span.material-icons {
     font-size: 10px;
 }
+div#continue_icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 div#continue_icon>span.material-icons {
     color: #fe7b10;
     font-size: 2rem;
