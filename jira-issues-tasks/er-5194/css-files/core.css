@@ -9,7 +9,7 @@
     position: fixed;
     bottom: 75px;
     z-index: 1000;
-    width: 422px;
+    width: -webkit-fill-available;
 }
 .floating-btn-content {
     background: #fe7b10;
@@ -23,7 +23,7 @@
     font-size: 1.125rem;
     line-height: initial;
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 1rem;
     /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px; */
     box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
 }
