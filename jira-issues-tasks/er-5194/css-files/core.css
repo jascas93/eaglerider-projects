@@ -13,6 +13,10 @@
     margin-bottom: 0;
     color: #ffffff;
 }
+a#color_mode {
+    text-decoration: none;
+    color: inherit;
+}
 .avatar-wrapper {
     display: flex;
     align-items: center;
