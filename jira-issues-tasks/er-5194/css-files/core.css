@@ -137,6 +137,15 @@ a#color_mode {
     border-radius: 2rem;
     line-height: initial;
 }
+.current_status {
+    font-size: 0.75rem;
+    font-weight: 400;
+    background: #43A05C;
+    color: #efefef;
+    padding: 4px 12px;
+    border-radius: 2rem;
+    line-height: initial;
+}
 .expire_soon_text {
     font-size: 0.9375rem;
     font-weight: 500;
