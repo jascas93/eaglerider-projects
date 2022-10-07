@@ -10,6 +10,7 @@
     bottom: 75px;
     z-index: 1000;
     width: -webkit-fill-available;
+    padding-bottom: calc(0rem + env(safe-area-inset-bottom, 0rem));
 }
 .floating-btn-content {
     background: #fe7b10;
