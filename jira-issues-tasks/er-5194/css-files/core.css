@@ -220,6 +220,18 @@ div#continue_icon>span.material-icons {
     justify-content: flex-end;
     align-items: center;
 }
+.redeem-help {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fe7b10;
+    gap: 0.125rem;
+}
+.redeem-help > span.material-icons {
+    font-size: 16px;
+}
 .cards-wrapper {
     display: flex;
     justify-content: center;
