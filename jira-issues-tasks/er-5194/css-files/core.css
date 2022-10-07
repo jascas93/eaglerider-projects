@@ -126,6 +126,9 @@ a#color_mode {
     font-size: 0.8rem;
     color: #797979;
 }
+.continue-info-details>span.material-icons {
+    font-size: 10px;
+}
 div#continue_icon>span.material-icons {
     color: #fe7b10;
     font-size: 2rem;
