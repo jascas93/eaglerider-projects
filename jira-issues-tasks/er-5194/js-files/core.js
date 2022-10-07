@@ -21,7 +21,7 @@ $(document).ready(function () {
         //}
         //else
         if (window.location.href.indexOf("?align-btn") > 0) {
-            $(".floating-btn").attr("style", "width: 390px;");
+            $(".floating-btn").attr("style", "width: 422px;");
         }
         else if (window.location.href.indexOf("?dark=1") > 0) {
             $('meta[name="theme-color"]').attr("content", "#303030");
