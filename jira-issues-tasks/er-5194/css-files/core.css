@@ -86,7 +86,8 @@ a#color_mode {
 .membership-data-wrapper {
     background-color: #f9f9f9;
     padding: 1rem;
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: rgb(27 31 35 / 4%) 0px 1px 0px, rgb(255 255 255 / 25%) 0px 1px 0px inset;
 }
 .benefits-data-wrapper {
     padding: 0 1rem 1rem 1rem;
