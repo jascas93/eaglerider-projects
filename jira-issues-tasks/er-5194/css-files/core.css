@@ -383,6 +383,17 @@ span.material-icons.destinations {
     color: #aeaeae;
     text-transform: capitalize;
 }
+.rent-again-date {
+    position: absolute;
+    font-size: 0.8rem;
+    background-color: #202020;
+    opacity: 90%;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 8px 0px;
+    font-weight: 300;
+}
+
 .expl-moto-rntl-dest {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
