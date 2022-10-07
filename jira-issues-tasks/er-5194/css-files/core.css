@@ -291,7 +291,7 @@ div#continue_icon>span.material-icons {
 }
 .carousel-item {
     min-width: fit-content;
-    display: block;
+    display: flex;
     margin-right: 0.5rem;
     position: initial;
     float: initial;
