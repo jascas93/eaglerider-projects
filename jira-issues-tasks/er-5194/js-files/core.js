@@ -7,6 +7,7 @@ function removeLoader() {
         $("#page_loading").hide();
     });
 }
+// Align floating btn
 $(document).ready(function () {
     setTimeout(function() {
         if (window.innerWidth() > 422) {
