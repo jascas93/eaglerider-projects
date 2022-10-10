@@ -23,25 +23,11 @@ $(document).ready(function () {
         //if (window.location.href.indexOf("?align-btn") > 0) {
         //    $(".floating-btn").attr("style", "width: 422px;");
         //}
-        if (window.innerWidth() > 422 && window.location.href.indexOf("?dark=1") < 1) {
+        if ($(window).innerWidth() > 422 && window.location.href.indexOf("?dark=1") < 1) {
             $(".floating-btn").attr("style", "width: 422px;");
         }
-        else if (window.location.href.indexOf("?dark=1") > 0 && window.innerWidth() <= 422) {
-            $('meta[name="theme-color"]').attr("content", "#303030");
-            $(".top-divider").attr("style", "background-color: #303030;");
-            $(".home-header").attr("style", "background-color: #303030;");
-            $(".greeting-text").attr("style", "color: #fff;");
-            $(".sub-greeting-message").attr("style", "color: #efefef;");
-            $(".stats-label").attr("style", "color: #aeaeae;");
-            $(".stats-value").attr("style", "color: #efefef;");
-            $(".quick-link").attr("style", "color: #efefef;");
-            $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
-            $("#greeting_title").html("Good Evening, Hal");
-            $("#emoji_icon").html("🌙");
-        }
-        else if (window.location.href.indexOf("?dark=1") > 0 && window.innerWidth() > 422) {
+        else if ($(window).innerWidth() > 422 && window.location.href.indexOf("?dark=1") > 0) {
             $(".floating-btn").attr("style", "width: 422px;");
-            
             $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
