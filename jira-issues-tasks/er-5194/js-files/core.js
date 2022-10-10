@@ -7,6 +7,13 @@ function removeLoader() {
         $("#page_loading").hide();
     });
 }
+$(document).ready(function () {
+    setTimeout(function() {
+        if (window.innerWidth() > 422) {
+            $(".floating-btn").attr("style", "width: 422px;");
+        }
+    },10);
+});
 // Different Variations of the Page
 $(document).ready(function () {
     setTimeout(function() {
@@ -23,10 +30,7 @@ $(document).ready(function () {
         //if (window.location.href.indexOf("?align-btn") > 0) {
         //    $(".floating-btn").attr("style", "width: 422px;");
         //}
-        if (window.innerWidth() > 422) {
-            $(".floating-btn").attr("style", "width: 422px;");
-        }
-        else if (window.location.href.indexOf("?dark=1") > 0) {
+        if (window.location.href.indexOf("?dark=1") > 0) {
             $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
