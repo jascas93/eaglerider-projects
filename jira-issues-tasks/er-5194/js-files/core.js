@@ -26,7 +26,7 @@ $(document).ready(function () {
         if (window.innerWidth() > 422 && window.location.href.indexOf("?dark=1") < 1) {
             $(".floating-btn").attr("style", "width: 422px;");
         }
-        else if (window.location.href.indexOf("?dark=1") > 0) {
+        else if (window.location.href.indexOf("?dark=1") > 0 && window.innerWidth() <= 422) {
             $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
@@ -40,6 +40,8 @@ $(document).ready(function () {
             $("#emoji_icon").html("🌙");
         }
         else if (window.location.href.indexOf("?dark=1") > 0 && window.innerWidth() > 422) {
+            $(".floating-btn").attr("style", "width: 422px;");
+            
             $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
