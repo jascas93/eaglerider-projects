@@ -20,7 +20,10 @@ $(document).ready(function () {
         //    $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
         //}
         //else
-        if (window.location.href.indexOf("?align-btn") > 0) {
+        //if (window.location.href.indexOf("?align-btn") > 0) {
+        //    $(".floating-btn").attr("style", "width: 422px;");
+        //}
+        if ($(window).innerWidth() > 422) {
             $(".floating-btn").attr("style", "width: 422px;");
         }
         else if (window.location.href.indexOf("?dark=1") > 0) {
