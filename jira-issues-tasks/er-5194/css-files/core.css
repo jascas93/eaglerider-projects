@@ -85,7 +85,7 @@ a#color_mode {
     border-color: #dadada;
 }
 .quick-link {
-    color: inherit;
+    color: #5D5D5D;
     display: flex;
     align-items: center;
     gap: 0.25rem;
@@ -104,7 +104,7 @@ a#color_mode {
     font-size: 0.875rem;
     letter-spacing: 0.35px;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 300;
 }
 .section-header {
     display: flex;
