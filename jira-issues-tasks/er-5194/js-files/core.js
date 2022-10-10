@@ -40,7 +40,7 @@ $(document).ready(function () {
             $("#greeting_title").html("Good Evening, Hal");
             $("#emoji_icon").html("🌙");
         }
-        else if ($(window).innerWidth() < 423 && window.location.href.indexOf("?dark=1") > 0) {
+        else if ($(window).innerWidth() <= 422 && window.location.href.indexOf("?dark=1") > 0) {
             $('meta[name="theme-color"]').attr("content", "#303030");
             $(".top-divider").attr("style", "background-color: #303030;");
             $(".home-header").attr("style", "background-color: #303030;");
