@@ -5,6 +5,11 @@
     border-radius: 0 0 1.75rem 1.75rem;
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
+.avatar-btn-menu {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
 .floating-btn {
     position: fixed;
     bottom: 75px;

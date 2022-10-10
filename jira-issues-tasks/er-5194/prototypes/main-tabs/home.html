@@ -145,6 +145,13 @@
                         </div>
                     </div>
                 </header>
+                <div id="avatarMenu" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="avatarMenu" aria-hidden="true">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Hi, Hal!</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">...</div>
+                </div>
                 <div id="main-canvas-body">
                     <div id="floating-rentals" class="floating-btn">
                         <div class="floating-btn-content">
@@ -170,7 +177,9 @@
                                     </div>
                                     <div class="col-3">
                                         <div class="avatar-wrapper">
-                                            <div class="avatar-home"></div>
+                                            <button id="avatar_btn" class="avatar-btn-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#avatarMenu" aria-controls="avatarMenu">
+                                                <div class="avatar-home"></div>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
