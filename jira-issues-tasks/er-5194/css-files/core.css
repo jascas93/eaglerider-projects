@@ -392,6 +392,8 @@ span.material-icons.destinations {
     padding: 2px 10px;
     border-radius: 8px 0px;
     font-weight: 300;
+    top: 0;
+    left: 0;
 }
 
 .expl-moto-rntl-dest {
