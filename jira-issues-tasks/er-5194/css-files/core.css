@@ -219,6 +219,7 @@ div#continue_icon>span.material-icons {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 0.125rem;
 }
 .redeem-help {
     font-size: 0.75rem;
