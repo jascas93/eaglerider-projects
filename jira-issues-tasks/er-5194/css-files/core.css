@@ -221,7 +221,7 @@ div#continue_icon>span.material-icons {
     align-items: center;
     gap: 0.125rem;
 }
-.expire_last_day > span.material-icons {
+.last-day-icon {
     font-size: 1.25rem;
     color: #fe7b10;
 }
