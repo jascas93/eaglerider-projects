@@ -35,7 +35,7 @@
 }
 .greeting-message {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.125rem;
     flex-flow: column;
 }
