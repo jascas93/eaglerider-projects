@@ -36,7 +36,7 @@ $(document).ready(function () {
             $(".stats-label").attr("style", "color: #aeaeae;");
             $(".stats-value").attr("style", "color: #efefef;");
             $(".quick-link").attr("style", "color: #efefef;");
-            $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
+            $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home-b.html");
             $("#greeting_title").html("Good Evening, Hal");
             $("#emoji_icon").html("🌙");
         }
@@ -49,7 +49,7 @@ $(document).ready(function () {
             $(".stats-label").attr("style", "color: #aeaeae;");
             $(".stats-value").attr("style", "color: #efefef;");
             $(".quick-link").attr("style", "color: #efefef;");
-            $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home.html");
+            $("#color_mode").attr("href", "https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home-b.html");
             $("#greeting_title").html("Good Evening, Hal");
             $("#emoji_icon").html("🌙");
         }
