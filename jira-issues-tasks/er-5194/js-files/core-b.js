@@ -57,14 +57,16 @@ $(document).ready(function () {
 });
 
 // Show floating widget
-const checkpoint = 280;
+const checkpoint = 260;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
     if (currentScroll > checkpoint) {
         document.getElementById("floating-widget").classList.remove("hide-me");
+        document.getElementById("floating-widget").classList.add("sticky-top");
     } else {
         document.getElementById("floating-widget").classList.add("hide-me");
+        document.getElementById("floating-widget").classList.remove("sticky-top");
     }
 });
 
