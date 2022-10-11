@@ -164,6 +164,12 @@ a#color_mode {
     -webkit-transition: opacity 0.1s;
     transition: opacity 0.1s;
 }
+.widget-header.hide-me {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+}
 .widget-textfield.light {
     background-color: #fff;
     color: #5d5d5d !important;
