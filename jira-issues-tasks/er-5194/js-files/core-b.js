@@ -57,7 +57,7 @@ $(document).ready(function () {
 });
 
 // Show floating widget
-const checkpoint = 300;
+const checkpoint = 280;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
