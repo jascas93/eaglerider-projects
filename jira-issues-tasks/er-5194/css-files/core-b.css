@@ -198,10 +198,15 @@ span.widget-textfield-text.light {
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    font-size: 0.875rem;
 }
 .continue-info-details {
     font-size: 0.8rem;
     color: #797979;
+}
+.continue-bike-img {
+    width: 100%;
+    max-width: 75px;
 }
 .continue-info-details>span.material-icons {
     font-size: 10px;
