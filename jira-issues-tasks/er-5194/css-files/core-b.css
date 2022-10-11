@@ -161,7 +161,8 @@ a#color_mode {
 .widget-header {
     padding: 0.5rem 0 0.75rem 0;
     background-color: #FFF;
-    -webkit-transition: all 1s ease; transition: all 1s ease;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s;
 }
 .widget-textfield.light {
     background-color: #fff;
