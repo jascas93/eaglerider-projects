@@ -61,7 +61,7 @@ const checkpoint = 300;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= checkpoint) {
+    if (currentScroll > checkpoint) {
         document.getElementById("floating-widget").classList.remove("hide-me");
     } else {
         document.getElementById("floating-widget").classList.add("hide-me");
