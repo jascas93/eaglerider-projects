@@ -159,7 +159,7 @@ a#color_mode {
     font-size: 1rem;
 }
 .widget-header {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.75rem 0;
     background-color: #FFF;
 }
 .widget-textfield.light {
