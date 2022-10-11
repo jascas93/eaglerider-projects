@@ -106,7 +106,7 @@ a#color_mode {
     background-color: #fe7b10;
     color: #fff;
 }
-.quick-link > span.material-icons,span.material-icons-outlined {
+.quick-link > span.material-icons {
     font-size: 1rem;
 }
 .quick-link > span.material-icons-outlined {
