@@ -36,11 +36,13 @@
 .greeting-message {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.125rem;
+    flex-flow: column;
 }
 .greeting-text {
     margin-bottom: 0;
     color: inherit;
+    letter-spacing: 0.5px;
 }
 a#color_mode {
     text-decoration: none;
@@ -65,16 +67,16 @@ a#color_mode {
 }
 .sub-greeting-message {
     font-size: 0.8rem;
-    color: inherit;
+    color: #5d5d5d;
     font-weight: 300;
-    letter-spacing: 0.35px;
+    letter-spacing: 1.25px;
     margin-bottom: 0;
 }
 .stats-label {
     font-size: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.75px;
-    color: #797979;
+    letter-spacing: 1.5px;
+    color: #5d5d5d;
 }
 .stats-value {
     font-size: 0.875rem;
@@ -85,24 +87,25 @@ a#color_mode {
     border-color: #dadada;
 }
 .quick-link {
-    color: #5D5D5D;
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    /* padding: 10px 16px; */
     border-radius: 5rem;
 }
 .quick-link.active {
     background-color: #fe7b10;
     color: #fff;
 }
-.quick-link > span.material-icons {
+.quick-link > span.material-icons,span.material-icons-outlined {
+    font-size: 1rem;
+}
+.quick-link > span.material-icons-outlined {
     font-size: 1rem;
 }
 .quick-link-text {
     text-transform: capitalize;
-    font-size: 0.875rem;
-    letter-spacing: 0.35px;
+    font-size: 0.75rem;
+    letter-spacing: 0.75px;
     margin-bottom: 0;
     font-weight: 300;
 }
