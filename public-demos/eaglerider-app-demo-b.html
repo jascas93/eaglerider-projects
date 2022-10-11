@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>EagleRider App Demo</title>
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="https://www.eagleshare.com/_next/static/image/public/imgs/es/favicon.fac1b09176f8a0c1da1c29de2c739bdd.ico" />
+        <style>
+            body {
+                margin: 0;
+            }
+            /* The device with borders */
+            /* iPhone 12 Pro */
+            .smartphone {
+                position: relative;
+                width: 390px;
+                height: 800px;
+                margin: auto;
+                border: 10px black solid;
+                border-top-width: 60px;
+                border-bottom-width: 60px;
+                border-radius: 36px;
+            }
+
+            /* The horizontal line on the top of the device */
+            .smartphone:before {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 5px;
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #333;
+                border-radius: 10px;
+            }
+
+            /* The circle on the bottom of the device */
+            .smartphone:after {
+                content: "";
+                display: block;
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                left: 50%;
+                bottom: -65px;
+                transform: translate(-50%, -50%);
+                background: #333;
+                border-radius: 50%;
+            }
+
+            /* The screen (or content) of the device */
+            .smartphone .content {
+                width: 390px;
+                height: 800px;
+                background: white;
+            }
+
+            .iframe-normal {
+                width: 100%;
+                border: 0;
+                height: 100%;
+            }
+            .iframe-full {
+                height: calc(100vh - 10px) !important;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="smartphone_frame" class="smartphone">
+                <div id="smartphone_screen" class="content">
+                    <iframe id="iframe_viewer" class="iframe-normal" src="https://jascas93.github.io/eaglerider-projects/jira-issues-tasks/er-5194/prototypes/main-tabs/home-b.html" />
+                    </iframe>
+                </div>
+            </div>
+        </main>
+    <!--
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            // Different Variations of the Page
+            $(document).ready(function () {
+                if (window.screen.width < 410) {
+                    $("#smartphone_frame").removeClass("smartphone");
+                    $("#smartphone_screen").removeClass("content");
+                    $("#iframe_viewer").addClass("iframe-full");
+                }
+            });
+        </script>
+    -->
+    </body>
+</html>
