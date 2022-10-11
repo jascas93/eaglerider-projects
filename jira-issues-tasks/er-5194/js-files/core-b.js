@@ -56,23 +56,20 @@ $(document).ready(function () {
     },10);
 });
 
+// Show floating widget
+//const checkpoint = 300;
 
-$(document).ready(function() {
-    $(window).scroll( function(){
-        $('#floating-widget').each( function(i){
-            var top_of_object = $(this).offset().top;
-            var top_of_window = $(window).scrollTop();
-            if( top_of_window > top_of_object ){
-                $(this).removeClass('d-none');
-                $(this).addClass('sticky-top');
-            }
-            if( top_of_window < top_of_object ){
-                $(this).addClass('d-none');
-                $(this).removeClass('sticky-top');
-            }
-        });
-    });
-});
+//window.addEventListener("scroll", () => {
+//    const currentScroll = window.pageYOffset;
+//    if (currentScroll <= checkpoint) {
+//
+//        opacity = 1 - currentScroll / checkpoint;
+//    } else {
+//        opacity = 0;
+//    }
+//    document.querySelector("#floating-widget").style.opacity = opacity;
+//});
+
 
 // Carousel Sliders
 const slider = document.querySelector(".carousel-inner");
