@@ -62,9 +62,9 @@ const checkpoint = 300;
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
     if (currentScroll <= checkpoint) {
-        document.getElementById("floating-widget").remove("hide-me");
+        document.getElementById("floating-widget").classList.remove("hide-me");
     } else {
-        document.getElementById("floating-widget").add("hide-me");
+        document.getElementById("floating-widget").classList.add("hide-me");
     }
 });
 
