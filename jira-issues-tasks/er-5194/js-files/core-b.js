@@ -60,13 +60,13 @@ $(document).ready(function () {
 $(document).ready(function() {
     $(window).scroll( function(){
         $('#floating-widget').each( function(i){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
+            var top_of_object = $(this).offset().top;
+            var top_of_window = $(window).scrollTop();
+            if( top_of_window > top_of_object ){
                 $(this).removeClass('d-none');
                 $(this).addClass('sticky-top');
             }
-            if( bottom_of_window < bottom_of_object ){
+            if( top_of_window < top_of_object ){
                 $(this).addClass('d-none');
                 $(this).removeClass('sticky-top');
             }
