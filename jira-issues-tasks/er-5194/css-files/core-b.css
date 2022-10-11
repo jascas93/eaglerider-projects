@@ -158,6 +158,18 @@ a#color_mode {
 .widget-textfield > span.material-icons-outlined {
     font-size: 1rem;
 }
+.widget-header {
+    padding: 0.5rem 0;
+    background-color: #FFF;
+}
+.widget-textfield.light {
+    background-color: #fff;
+    color: #5d5d5d !important;
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+span.widget-textfield-text.light {
+    color: #5d5d5d;
+}
 .section-header {
     display: flex;
     align-items: center;
