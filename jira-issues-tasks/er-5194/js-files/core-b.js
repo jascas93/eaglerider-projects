@@ -57,18 +57,16 @@ $(document).ready(function () {
 });
 
 // Show floating widget
-//const checkpoint = 300;
+const checkpoint = 300;
 
-//window.addEventListener("scroll", () => {
-//    const currentScroll = window.pageYOffset;
-//    if (currentScroll <= checkpoint) {
-//
-//        opacity = 1 - currentScroll / checkpoint;
-//    } else {
-//        opacity = 0;
-//    }
-//    document.querySelector("#floating-widget").style.opacity = opacity;
-//});
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= checkpoint) {
+        document.getElementById("floating-widget").remove("hide-me");
+    } else {
+        document.getElementById("floating-widget").add("hide-me");
+    }
+});
 
 
 // Carousel Sliders
