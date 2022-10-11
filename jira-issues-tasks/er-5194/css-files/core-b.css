@@ -72,6 +72,11 @@ a#color_mode {
     letter-spacing: 1.25px;
     margin-bottom: 0;
 }
+.stats-wrapper {
+    background-color: #f9f9f9;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
 .stats-label {
     font-size: 10px;
     text-transform: uppercase;
@@ -79,8 +84,9 @@ a#color_mode {
     color: #5d5d5d;
 }
 .stats-value {
-    font-size: 0.875rem;
-    color: inherit;;
+    font-size: 1.25rem;
+    color: inherit;
+    letter-spacing: 1.5px;
 }
 .stats-divider {
     border-right: 1px solid;
